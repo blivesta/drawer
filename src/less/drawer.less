@@ -1,0 +1,123 @@
+// Bootstrap 3.1.1
+@import "../vendor/bootstrap/less/variables.less";
+@import "../vendor/bootstrap/less/mixins.less";
+
+@drawer-width: 280px;
+@drawer-width-tablet: 120px;
+@ease-in-expo:  cubic-bezier(0.950, 0.050, 0.795, 0.035);
+@ease-out-expo: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+
+.drawer-masta{
+  position: fixed;//*
+  top:0;//*
+  left: 0;//*
+  overflow: hidden;//*
+  width:@drawer-width;//*
+  height:100%;//*
+}
+.drawer-overlay{
+  position: relative; //*
+  left:0;//*
+}
+.drawer-toggle{
+  .transition(all 0.4s @ease-out-expo);
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index: @zindex-navbar;
+  display: block;
+  visibility: visible;
+  border: none;
+  border-radius: 0;
+  border-bottom-right-radius: 4px;
+  background: #000;
+  background: rgba(0,0,0,.4);
+  color:#fff;
+  font-size: 24px;
+  &:hover{
+    border: none;
+    background: #000;
+    background: rgba(0,0,0,.6);
+    color:#fff;
+    cursor: pointer;
+  }
+  &:focus{
+    border: none;
+  }
+}
+.drawer-open{
+   overflow:hidden;//*
+   overflow-x:hidden !important;//*
+  .drawer-masta{
+    overflow-y: auto;//*
+    -webkit-overflow-scrolling:touch;//*
+  }
+  .drawer-overlay{
+    position: absolute;//*
+    left:@drawer-width;//*
+    overflow-x: hidden;//*
+    width:100%;
+  }
+  .drawer-toggle{
+    left:(@drawer-width);//*
+  }
+}
+
+.drawer-default{
+  .box-shadow(inset 0 3px 9px rgba(0,0,0,.5));
+  background-color:#222;
+  & + .drawer-overlay{
+    .transition(left 0.4s @ease-out-expo);
+    background-color: #fff;
+  }
+  .drawer-brand a{
+    display: block;
+    padding:20px 15px;
+    width: 100%;
+    color: #fff;
+    font-size: 22px;
+    &:hover{
+      color: @gray;
+      text-decoration: none;
+    }
+  }
+  li{
+    a{
+      padding: 15px;
+      color: #888;
+      &:hover{
+        background-color: #333;
+      }
+    }
+    ul a{
+      padding:8px 20px;
+    }
+  }
+  
+}
+
+
+/*
+@media (min-width: (@screen-tablet - 1)) { // 768px以下
+  .drawer-toggle{
+    display: none;
+    visibility: hidden;
+  }
+}
+@media (min-width: @screen-tablet) { // 768px以上
+  .drawer-masta{
+    width:@drawer-width-tablet !important;
+  }
+  .drawer-overlay{
+    margin-left:@drawer-width-tablet;
+  }
+}
+@media (min-width: @screen-lg-desktop) { // 1200px以上
+  .drawer-masta{
+    width:@drawer-width!important;
+  }
+  .drawer-overlay{
+    margin-left:@drawer-width;
+  }
+}
+*/

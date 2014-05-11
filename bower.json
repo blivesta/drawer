@@ -1,0 +1,18 @@
+{
+  "name": "drawer",
+  "version": "1.0.0",
+  "main": [],
+  "ignore": [
+    ".*"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1"
+  },
+  "exportsOverride": {
+    "bootstrap": {
+      "js": "js/*.js",
+      "fonts": "dist/fonts/**",
+      "less": "less/**"
+    }
+  }
+}
