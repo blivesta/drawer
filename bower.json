@@ -1,18 +1,27 @@
 {
   "name": "drawer",
   "version": "1.0.0",
-  "main": [],
+	"keywords": [
+    "css",
+    "js",
+    "less",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "homepage": "http://git.blivesta.com/drawer",
+  "main": [
+    "src/less/drawer.less",
+    "dist/css/drawer.css",
+    "dist/js/drawer.js"
+  ],
   "ignore": [
-    ".*"
+    ".*",
+    "_config.yml"
   ],
   "dependencies": {
-    "bootstrap": "~3.1.1"
-  },
-  "exportsOverride": {
-    "bootstrap": {
-      "js": "js/*.js",
-      "fonts": "dist/fonts/**",
-      "less": "less/**"
-    }
+    "jquery": ">= 1.9.0"
   }
 }
