@@ -1,5 +1,5 @@
 /*!
- * drawer v1.0.0
+ * drawer v1.1.0
  * 
  * Licensed under MIT
  * Copyright 2013-2014 blivesta

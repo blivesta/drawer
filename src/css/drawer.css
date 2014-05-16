@@ -1,5 +1,5 @@
 /*!
- * drawer v1.0.0
+ * drawer v1.1.0
  * 
  * Licensed under MIT
  * Copyright 2013-2014 blivesta
@@ -107,34 +107,26 @@
 .drawer-default li ul a {
   padding: 8px 20px;
 }
-/*
-@media (min-width: (768px - 1)) { // 768px以下
-  .drawer-responsive{
-    .drawer-toggle{
-      display: none;
-      visibility: hidden;
-    }  
+@media (min-width: 767px) {
+  .drawer-responsive .drawer-toggle {
+    display: none;
+    visibility: hidden;
   }
 }
-@media (min-width: 768px) { // 768px以上
-  .drawer-responsive{
-    .drawer-masta{
-      width:@drawer-width-tablet !important;
-    }
-    .drawer-overlay{
-      margin-left:@drawer-width-tablet;
-    }
+@media (min-width: 768px) {
+  .drawer-responsive .drawer-masta {
+    width: 120px !important;
+  }
+  .drawer-responsive .drawer-overlay {
+    margin-left: 120px;
   }
 }
-@media (min-width: 1200px) { // 1200px以上
-  .drawer-responsive{
-    .drawer-masta{
-      width:@drawer-width!important;
-    }
-    .drawer-overlay{
-      margin-left:@drawer-width;
-    }  
+@media (min-width: 1200px) {
+  .drawer-responsive .drawer-masta {
+    width: 280px !important;
+  }
+  .drawer-responsive .drawer-overlay {
+    margin-left: 280px;
   }
 }
-*/
 /*# sourceMappingURL=drawer.css.map */
