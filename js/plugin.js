@@ -1,13 +1,15 @@
 (function($) {
-  var namespace = "drawer";
-  var agent =  navigator.userAgent;
-  var iphone = agent.search(/iPhone/) != -1;
-  var ipad =   agent.search(/iPad/) != -1;
-  var android = agent.search(/Android/) != -1;
-  var touches = iphone || ipad || android;
-  var methods = {
+  var namespace = "drawer",
+    agent =  navigator.userAgent,
+    iphone = agent.search(/iPhone/) != -1,
+    ipad =   agent.search(/iPad/) != -1,
+    android = agent.search(/Android/) != -1,
+    touches = iphone || ipad || android,
+    methods = {
+      
     init: function(options){
       options = $.extend({
+
         masta:        "drawer-masta",
         nav:          "drawer-nav",
         navList:      "drawer-nav-list",
@@ -17,11 +19,12 @@
         closeClass:   "drawer-close",
         desktopEvent: "click", // or mouseover 
         width:        280
+
       }, options);
       return this.each(function(){
-        var _this = this;
-        var $this = $(this);
-        var data = $this.data(namespace);
+        var _this = this,
+          $this = $(this),
+          data = $this.data(namespace);
         if (!data) {
           options = $.extend({
           }, options);
@@ -31,20 +34,20 @@
         }
 
         smY = 0;
-        var $toggle = $("."+options.toggle);
-        var $overlay = $("."+options.overlay);
-        var $navList = $("."+options.navList);
-        var $nav = $("."+options.nav);
-        var $masta = $("."+options.masta);
-        var drawerHeight = $this.height();
-        var navHeight = $nav.height();
-        var mastaHeight = $masta.height();
+        var $toggle = $("."+options.toggle),
+          $overlay = $("."+options.overlay),
+          $navList = $("."+options.navList),
+          $nav = $("."+options.nav),
+          $masta = $("."+options.masta),
+          drawerHeight = $this.height(),
+          navHeight = $nav.height(),
+          mastaHeight = $masta.height();
 
         methods.resize.call(_this);
         
         $(window).resize(function() {
           methods.resize.call(_this);          
-        }); 
+        });
                                 
         if(touches){        
         
@@ -113,67 +116,93 @@
 
           });
         } else {
-          $toggle.off(options.desktopEvent+"."+namespace).on(options.desktopEvent+"."+namespace, function(){
-             methods.toggle.apply(_this);
+          $toggle
+            .off(options.desktopEvent+"."+namespace)
+            .on(options.desktopEvent+"."+namespace, function(){
+            methods.toggle.apply(_this);
           });
-          $overlay.off("click."+namespace).on("click."+namespace, function(){
+          $overlay
+            .off("click."+namespace)
+            .on("click."+namespace, function(){
             methods.close.apply(_this);
           });               
         }
 
-    }); // end each
-  },    
-  resize: function(options){
-    var $this = $(this);
-    options = $this.data(namespace).options;
-    var windowHeight = $(window).height();
-    var $overlay = $("."+options.overlay);
-    methods.close.call(this, options);
-    $overlay.css({
-      "min-height": windowHeight
-    });
-  },
-  toggle: function(options){
-    var $this = $(this);
-    options = $this.data(namespace).options;
-    var open = $this.hasClass(options.openClass);
-    if(open){
-      methods.close.call(this);
-    }else{
-      methods.open.call(this);      
-    }
-  },
-  open: function(options){
-    var $this = $(this);
-    options = $this.data(namespace).options;
-    if(touches){
-      $this.on("touchmove."+namespace, function() {
-        event.preventDefault();
-      });
-      event.preventDefault();
-    }
-    $this
-      .removeClass(options.closeClass)
-      .addClass(options.openClass);
-  },
-  close: function(options){
-    var $this = $(this);
-    options = $this.data(namespace).options;
-    if(touches){
-      $this.off("touchmove."+namespace);
-    }
-    $this
-      .removeClass(options.openClass)
-      .addClass(options.closeClass);
-  },
-  destroy: function(){
-    return this.each(function(){
+      }); // end each
+    },    
+    resize: function(options){
       var $this = $(this);
-      $(window).unbind("."+namespace);
-      $this.removeData(namespace);
-    });
-  },
-};
+      options = $this.data(namespace).options;
+      var windowHeight = $(window).height();
+      var $overlay = $("."+options.overlay);
+      methods.close.call(this, options);
+      $overlay.css({
+        "min-height": windowHeight
+      });
+    },
+    toggle: function(options){
+      var $this = $(this);
+      options = $this.data(namespace).options;
+      var open = $this.hasClass(options.openClass);
+      if(open){
+        methods.close.call(this);
+      }else{
+        methods.open.call(this);      
+      }
+    },
+    open: function(options){
+      var $this = $(this);
+      options = $this.data(namespace).options;
+      if(touches){
+        $this.on("touchmove."+namespace, function() {
+          event.preventDefault();
+        });
+        event.preventDefault();
+      }
+      $this
+        .removeClass(options.closeClass)
+        .addClass(options.openClass);
+      
+      var duration = $('.'+options.overlay)
+        .css('transition-duration')
+        .replace(/s/g,'') * 1000;
+
+      setTimeout(function(){
+        $this.css({
+          "overflow":"hidden"
+        });
+      },duration);
+
+    },
+    close: function(options){
+      var $this = $(this);
+      options = $this.data(namespace).options;
+      if(touches){
+        $this.off("touchmove."+namespace);
+      }
+      $this
+        .removeClass(options.openClass)
+        .addClass(options.closeClass);
+
+      var duration = $('.'+options.overlay)
+        .css('transition-duration')
+        .replace(/s/g,'') * 1000;
+
+      setTimeout(function(){
+        $this.css({
+          "overflow":"auto"
+        });
+      },duration);
+
+    },
+    destroy: function(){
+      return this.each(function(){
+        var $this = $(this);
+        $(window).unbind("."+namespace);
+        $this.removeData(namespace);
+      });
+    },
+  };
   $.fn.drawer = function(method){
     if ( methods[method] ) {
       return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
