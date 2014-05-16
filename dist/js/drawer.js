@@ -1,18 +1,12 @@
 /*!
- * drawer v1.0.0
+ * drawer v1.1.0
  * 
  * Licensed under MIT
  * Copyright 2013-2014 blivesta
  * http://blivesta.com
  */
 (function($) {
-  var namespace = "drawer";
-  var agent = navigator.userAgent;
-  var iphone = agent.search(/iPhone/) != -1;
-  var ipad = agent.search(/iPad/) != -1;
-  var android = agent.search(/Android/) != -1;
-  var touches = iphone || ipad || android;
-  var methods = {
+  var namespace = "drawer", agent = navigator.userAgent, iphone = agent.search(/iPhone/) != -1, ipad = agent.search(/iPad/) != -1, android = agent.search(/Android/) != -1, touches = iphone || ipad || android, methods = {
     init: function(options) {
       options = $.extend({
         masta: "drawer-masta",
@@ -26,9 +20,7 @@
         width: 280
       }, options);
       return this.each(function() {
-        var _this = this;
-        var $this = $(this);
-        var data = $this.data(namespace);
+        var _this = this, $this = $(this), data = $this.data(namespace);
         if (!data) {
           options = $.extend({}, options);
           $this.data(namespace, {
@@ -36,14 +28,7 @@
           });
         }
         smY = 0;
-        var $toggle = $("." + options.toggle);
-        var $overlay = $("." + options.overlay);
-        var $navList = $("." + options.navList);
-        var $nav = $("." + options.nav);
-        var $masta = $("." + options.masta);
-        var drawerHeight = $this.height();
-        var navHeight = $nav.height();
-        var mastaHeight = $masta.height();
+        var $toggle = $("." + options.toggle), $overlay = $("." + options.overlay), $navList = $("." + options.navList), $nav = $("." + options.nav), $masta = $("." + options.masta), drawerHeight = $this.height(), navHeight = $nav.height(), mastaHeight = $masta.height();
         methods.resize.call(_this);
         $(window).resize(function() {
           methods.resize.call(_this);
@@ -145,6 +130,12 @@
         event.preventDefault();
       }
       $this.removeClass(options.closeClass).addClass(options.openClass);
+      var duration = $("." + options.overlay).css("transition-duration").replace(/s/g, "") * 1e3;
+      setTimeout(function() {
+        $this.css({
+          overflow: "hidden"
+        });
+      }, duration);
     },
     close: function(options) {
       var $this = $(this);
@@ -153,6 +144,12 @@
         $this.off("touchmove." + namespace);
       }
       $this.removeClass(options.openClass).addClass(options.closeClass);
+      var duration = $("." + options.overlay).css("transition-duration").replace(/s/g, "") * 1e3;
+      setTimeout(function() {
+        $this.css({
+          overflow: "auto"
+        });
+      }, duration);
     },
     destroy: function() {
       return this.each(function() {
