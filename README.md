@@ -17,7 +17,7 @@ http://blivesta.github.io/drawer/
 <!-- Vendor js -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!-- cooker.drawer -->
-<script src="./dist/js/drawer.js"></script>
+<script src="./dist/js/drawer.min.js"></script>
 
 <script type="text/javascript">
 $('.drawer').drawer({
