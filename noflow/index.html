@@ -1,53 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  
-  <title>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     
-      drawer
+    <title>
     
-  </title>
-  
-  <!-- icon -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../ico/touch-icon-144.png">
-  <link rel="shortcut icon" href="../ico/favicon.ico">
-
-  <!-- Vendor CSS -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//rawgithub.com/blivesta/0788a01a58f262b0b2b0/raw/syntax.css">
-  <link rel="stylesheet" href="//rawgithub.com/blivesta/ashiba/master/src/css/ashiba.min.css">
-
-  <!-- drawer CSS -->
-  <link rel="stylesheet" href="../css/drawer.css">
-  <style>
+    drawer
+    
+    </title>
+    
+    <!-- icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../ico/touch-icon-144.png">
+    <link rel="shortcut icon" href="../ico/favicon.ico">
+    <!-- Vendor CSS -->
+    <!-- drawer is work without having to load the bootstrap. However, there is a need to adjust the style. -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//rawgithub.com/blivesta/ashiba/master/src/css/ashiba.min.css">
+    <!-- drawer CSS -->
+    <link rel="stylesheet" href="../css/drawer.css">
+    <style>
     .site-masthead {
-      background-color: #d90034;
-      background-image: -webkit-linear-gradient(45deg, #f56314 0%, #d90034 100%);
-      background-image: -o-linear-gradient(45deg, #f56314 0%, #d90034 100%);
-      background-image: linear-gradient(45deg, #f56314 0%, #d90034 100%);
-      background-repeat: repeat-x;
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f56314, endColorstr=#d90034, GradientType=0);
+    background-color: #d90034;
+    background-image: -webkit-linear-gradient(45deg, #f56314 0%, #d90034 100%);
+    background-image: -o-linear-gradient(45deg, #f56314 0%, #d90034 100%);
+    background-image: linear-gradient(45deg, #f56314 0%, #d90034 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f56314, endColorstr=#d90034, GradientType=0);
     }
-  </style>
-  <!-- Google analytics -->
-  <script src="//git.blivesta.com/js/ga.js"></script>
-
-  <!-- Vendor js -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-  <!-- drawer js -->
-  <script src="../js/drawer.min.js"></script>
-
-  <script>
+    </style>
+    <!-- Google analytics -->
+    <script src="//git.blivesta.com/js/ga.js"></script>
+    <!-- Vendor js -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- drawer js -->
+    <script src="../js/drawer.min.js"></script>
+    <script>
     $(document).ready(function() {
-      $('.drawer').drawer();
+    $('.drawer').drawer();
     });
-  </script>
-
-</head>
+    </script>
+  </head>
 <body class="site-base drawer">
   <div class=" site-wrapper">
 
@@ -86,6 +80,7 @@
   <p class="lead"></p>
   <div class="site-section-body">
 <div class="highlight"><pre><code class="html"><span class="c">&lt;!-- Vendor CSS --&gt;</span>
+<span class="c">&lt;!-- drawer is work without having to load the bootstrap. However, there is a need to adjust the style. --&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css&quot;</span><span class="nt">&gt;</span>
 <span class="c">&lt;!-- drawer CSS --&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;./css/drawer.css&quot;</span><span class="nt">&gt;</span>
@@ -165,7 +160,7 @@
 	    <footer class="site-footer">
   <div class="site-footer-inner container">
 	  <h2>drawer</h2>
-    <p>Currently v1.1.0 / Author <a href="http://blivesta.com">blivesta</a>
+    <p>Currently v1.2.0 / Author <a href="http://blivesta.com">blivesta</a>
     <br>Code licensed under the MIT license.</p>
         <ul class="site-social">
   <li>
