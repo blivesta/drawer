@@ -1,26 +1,32 @@
 drawer
 ===
-Drawer is a jQuery plugin for creating a responsive, touch-enabled and css animated side menu that slides out from the edge of the screen when clicking or touching the trigger.
+Drawer is a jQuery plugin for displaying the drawer menu using CSS animations in the event of a trigger. Setting the position can be selected either the right or left. And also supports Responsive design.
 
 ![drawer](./src/images/drawer-small.gif)
 ![drawer-image](./src/images/drawer-image-small.jpg)
 
 ##example
-####Basic
+####Left drawer
 http://blivesta.github.io/drawer/
 
-####Responsive
+####Left drawer for responsive design
 http://blivesta.github.io/drawer/responsive
+
+####Right drawer
+http://blivesta.github.io/drawer/right
+
+####Right drawer for responsive design
+http://blivesta.github.io/drawer/right-responsive
 
 ##Setup
 ~~~ go
-<!-- vendor CSS -->
+<!-- vendor css -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
 <!-- drawer css -->
 <link rel="stylesheet" href="./dist/css/drawer.min.css">
 <!-- Vendor js -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<!-- cooker.drawer -->
+<!-- drawer js -->
 <script src="./dist/js/drawer.min.js"></script>
 
 <script type="text/javascript">
@@ -39,12 +45,12 @@ $('.drawer').drawer({
 });
 </script>
 
-<body class="drawer"> 
+<body class="drawer drawer-left"> 
   <button class="drawer-toggle btn">
     <i class="glyphicon glyphicon-align-justify"></i>
   </button>
   <div class="drawer-masta drawer-default">
-    <nav class="drawer-nav" role="navigation">
+    <nav class="drawer-nav">
       <div class="drawer-brand">
         <a href="#">Drawer</a>
       </div>
@@ -79,6 +85,7 @@ $('#element').drawer('destroy');
 
 ##Browsers
 - IE 10 +
+- chrome
 - Firefox
 - opera
 - Mac safari
