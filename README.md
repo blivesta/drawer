@@ -1,12 +1,16 @@
 drawer
 ===
-Drawer is a jQuery plugin for creating a responsive, touch-enabled and css animated side menu that slides out from the edge of the screen when clicking or touching the trigger. 
+Drawer is a jQuery plugin for creating a responsive, touch-enabled and css animated side menu that slides out from the edge of the screen when clicking or touching the trigger.
 
 ![drawer](./src/images/drawer-small.gif)
 ![drawer-image](./src/images/drawer-image-small.jpg)
 
 ##example
+####Basic
 http://blivesta.github.io/drawer/
+
+####Responsive
+http://blivesta.github.io/drawer/responsive
 
 ##Setup
 ~~~ go
