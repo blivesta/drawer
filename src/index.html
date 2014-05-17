@@ -1,14 +1,16 @@
 ---
 layout: home
-title: Drawer is a jQuery plugin for creating a responsive, touch-enabled and css animated side menu that slides out from the edge of the screen when clicking or touching the trigger. 
-class: site-home drawer
+slug: home
+title: drawer | blivesta
+lead: jQuery plugin for displaying the drawer menu using CSS animations in the event of a trigger. Setting the position can be selected either the right or left. And also supports Responsive design.
+class: site-home drawer drawer-left
 base_url: "./"
 ---
 <main class="site-masthead" role="main">
   <div class="container">
     <span class="text-icon text-icon-lg text-icon-outline">D</span>
     <h1>{{ site.title }}</h1>
-    <p class="lead">{{ page.title }}</p>
+    <p class="lead">{{ page.lead }}</p>
     <p><a href="{{ site.repo_url }}" class="btn btn- btn-lg">Download on GitHub</a></p>
     {% include social-buttons.html %}  
     <p>Currently v{{ site.current_version }}</p>
@@ -38,10 +40,9 @@ base_url: "./"
       <div class="site-section-body">
 {% highlight html %}
 <!-- Vendor CSS -->
-<!-- drawer is work without having to load the bootstrap. However, there is a need to adjust the style. -->
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 <!-- drawer CSS -->
-<link rel="stylesheet" href="./css/drawer.css">
+<link rel="stylesheet" href="./dist/css/drawer.min.css">
 <!-- Vendor js -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!-- drawer js -->
@@ -52,7 +53,7 @@ base_url: "./"
   });
 </script>
 </head>
-<body class="drawer">
+<body class="drawer drawer-left">
   <button class="drawer-toggle btn btn-outline-white">
     Drawer toggle
   </button>

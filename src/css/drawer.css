@@ -8,29 +8,37 @@
 .drawer-masta {
   position: fixed;
   top: 0;
-  left: 0;
   width: 280px;
   height: 100%;
   overflow: hidden;
 }
+.drawer-left .drawer-masta {
+  left: 0;
+}
+.drawer-right .drawer-masta {
+  right: 0;
+}
 .drawer-overlay {
   position: relative;
+}
+.dwawer-left .drawer-overlay {
   left: 0;
+}
+.dwawer-right .drawer-overlay {
+  right: 0;
 }
 .drawer-toggle {
   position: fixed;
   top: 0;
-  left: 0;
   z-index: 1000;
   display: block;
-  font-size: 24px;
+  font-size: 30px;
   color: #fff;
   visibility: visible;
   background: #000;
   background: rgba(0, 0, 0, .4);
   border: none;
   border-radius: 0;
-  border-bottom-right-radius: 4px;
 }
 .drawer-toggle:hover {
   color: #fff;
@@ -48,17 +56,11 @@
 }
 .drawer-open .drawer-overlay {
   position: absolute;
-  left: 280px;
   width: 100%;
   overflow-x: hidden;
-  -webkit-transition: left cubic-bezier(.19, 1, .22, 1);
-       -o-transition: left cubic-bezier(.19, 1, .22, 1);
-          transition: left cubic-bezier(.19, 1, .22, 1);
-  -webkit-transition-duration: .4s;
-       -o-transition-duration: .4s;
-          transition-duration: .4s;
 }
-.drawer-open .drawer-toggle {
+.drawer-left.drawer-open .drawer-overlay,
+.drawer-left.drawer-open .drawer-toggle {
   left: 280px;
   -webkit-transition: left cubic-bezier(.19, 1, .22, 1);
        -o-transition: left cubic-bezier(.19, 1, .22, 1);
@@ -67,12 +69,32 @@
        -o-transition-duration: .4s;
           transition-duration: .4s;
 }
-.drawer-close .drawer-overlay,
-.drawer-close .drawer-toggle {
+.drawer-right.drawer-open .drawer-overlay,
+.drawer-right.drawer-open .drawer-toggle {
+  right: 280px;
+  -webkit-transition: right cubic-bezier(.19, 1, .22, 1);
+       -o-transition: right cubic-bezier(.19, 1, .22, 1);
+          transition: right cubic-bezier(.19, 1, .22, 1);
+  -webkit-transition-duration: .4s;
+       -o-transition-duration: .4s;
+          transition-duration: .4s;
+}
+.drawer-left.drawer-close .drawer-overlay,
+.drawer-left.drawer-close .drawer-toggle {
   left: 0;
   -webkit-transition: left cubic-bezier(.19, 1, .22, 1);
        -o-transition: left cubic-bezier(.19, 1, .22, 1);
           transition: left cubic-bezier(.19, 1, .22, 1);
+  -webkit-transition-duration: .4s;
+       -o-transition-duration: .4s;
+          transition-duration: .4s;
+}
+.drawer-right.drawer-close .drawer-overlay,
+.drawer-right.drawer-close .drawer-toggle {
+  right: 0;
+  -webkit-transition: right cubic-bezier(.19, 1, .22, 1);
+       -o-transition: right cubic-bezier(.19, 1, .22, 1);
+          transition: right cubic-bezier(.19, 1, .22, 1);
   -webkit-transition-duration: .4s;
        -o-transition-duration: .4s;
           transition-duration: .4s;
@@ -107,25 +129,42 @@
   padding: 8px 20px;
 }
 @media (min-width: 767px) {
-  .drawer-responsive .drawer-toggle {
+  .drawer-responsive.drawer-left .drawer-toggle,
+  .drawer-responsive.drawer-right .drawer-toggle {
     display: none;
     visibility: hidden;
   }
 }
 @media (min-width: 768px) {
-  .drawer-responsive .drawer-masta {
-    width: 120px !important;
+  .drawer-responsive.drawer-left .drawer-masta,
+  .drawer-responsive.drawer-right .drawer-masta {
+    position: absolute;
+    width: 150px !important;
+    height: auto;
   }
-  .drawer-responsive .drawer-overlay {
-    margin-left: 120px;
+  .drawer-responsive.drawer-left .drawer-masta {
+    float: left;
+  }
+  .drawer-responsive.drawer-left .drawer-overlay {
+    margin-left: 150px;
+  }
+  .drawer-responsive.drawer-right .drawer-masta {
+    float: right;
+  }
+  .drawer-responsive.drawer-right .drawer-overlay {
+    margin-right: 150px;
   }
 }
 @media (min-width: 1200px) {
-  .drawer-responsive .drawer-masta {
+  .drawer-responsive.drawer-left .drawer-masta,
+  .drawer-responsive.drawer-right .drawer-masta {
     width: 280px !important;
   }
-  .drawer-responsive .drawer-overlay {
+  .drawer-responsive.drawer-left .drawer-overlay {
     margin-left: 280px;
+  }
+  .drawer-responsive.drawer-right .drawer-overlay {
+    margin-right: 280px;
   }
 }
 /*# sourceMappingURL=drawer.css.map */

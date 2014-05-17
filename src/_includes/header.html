@@ -1,31 +1,26 @@
 <button class="drawer-toggle btn btn-outline-white">
   D
 </button>
-<div class="drawer-masta drawer-default">
+<div class="drawer-masta drawer-default drawer-masta-left">
   <nav class="drawer-nav " role="navigation">
     <div class="drawer-brand">
-      <a href="{{ page.base_url }}">drawer</a>
+      <a href="{{ page.base_url }}">Example</a>
     </div>
     <ul class="nav drawer-nav-list">
-      <li><a href="{{ page.base_url }}noflow">Example(noflow)</a></li>
-      <li><a href="{{ page.base_url }}responsive">Responsive</a></li>
+      <li><a href="{{ page.base_url }}noflow">Left (noflow)</a></li>
+      <li><a href="{{ page.base_url }}responsive">Responsive( Left)</a></li>
+      <li><a href="{{ page.base_url }}right">Right</a></li>
+      <li><a href="{{ page.base_url }}right-responsive">Responsive (Right)</a></li>
+      {% if page.slug != 'noflow' %}
       <li><a href="#">&nbsp;</a></li>
       <li><a href="http://blivesta.com">blivesta</a></li>
       <li><a href="https://github.com/blivesta">GitHub</a></li>
-      {% if page.layout == 'home' %}
       <li><a href="#">&nbsp;</a></li>
       <li><a href="https://github.com/drawer">drawer</a></li>
       <li><a href="https://github.com/blivesta/clickstream">clickstream</a></li>
       <li><a href="https://github.com/blivesta/oblurlay">oblurlay</a></li>
       <li><a href="https://github.com/blivesta/chaffle">chaffle</a></li>
-      <li><a href="https://github.com/drawer">drawer</a></li>
-      <li><a href="https://github.com/blivesta/clickstream">clickstream</a></li>
-      <li><a href="https://github.com/blivesta/oblurlay">oblurlay</a></li>
-      <li><a href="https://github.com/blivesta/chaffle">chaffle</a></li>
-      <li><a href="https://github.com/drawer">drawer</a></li>
-      <li><a href="https://github.com/blivesta/clickstream">clickstream</a></li>
-      <li><a href="https://github.com/blivesta/oblurlay">oblurlay</a></li>
-      <li><a href="https://github.com/blivesta/chaffle">chaffle</a></li>
+      <li><a href="#">&nbsp;</a></li>
       <li><a href="https://github.com/drawer">drawer</a></li>
       <li><a href="https://github.com/blivesta/clickstream">clickstream</a></li>
       <li><a href="https://github.com/blivesta/oblurlay">oblurlay</a></li>
