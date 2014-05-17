@@ -1,5 +1,5 @@
 /*!
- * drawer v1.2.0
+ * drawer v1.3.0
  * 
  * Licensed under MIT
  * http://blivesta.com
@@ -32,7 +32,7 @@
   top: 0;
   z-index: 1000;
   display: block;
-  font-size: 24px;
+  font-size: 30px;
   color: #fff;
   visibility: visible;
   background: #000;
