@@ -1,5 +1,5 @@
 /*!
- * drawer v1.1.0
+ * drawer v1.2.0
  * 
  * Licensed under MIT
  * http://blivesta.com
@@ -41,7 +41,7 @@
           });
           $nav.bind("touchstart." + namespace, function() {
             sfY = event.touches[0].screenY;
-            startTime = new Date().getTime();
+            startTime = Date.now();
             startY = event.changedTouches[0].clientY;
           });
           $nav.bind("touchmove." + namespace, function() {
@@ -56,7 +56,7 @@
           });
           $nav.bind("touchend." + namespace, function() {
             var $self = $(this);
-            diffTime = new Date().getTime() - startTime;
+            diffTime = Date.now() - startTime;
             smY = smY + (mfY - sfY);
             var ease = function() {
               if (diffTime < 300 && draggedY > 0) {
