@@ -1,30 +1,70 @@
-@drawer-width: 280px;
-@drawer-width-tablet: 120px;
-@ease-in-expo:  cubic-bezier(0.950, 0.050, 0.795, 0.035);
-@ease-out-expo: cubic-bezier(0.190, 1.000, 0.220, 1.000);
 
+@drawer-width-phone:       280px;
+@drawer-width-tablet:      150px;
+@drawer-width-desktop:     @drawer-width-phone;
+
+@drawer-ease-in:           cubic-bezier(0.190, 1.000, 0.220, 1.000); //cubic-bezier(0.950, 0.050, 0.795, 0.035);
+@drawer-ease-out:          cubic-bezier(0.190, 1.000, 0.220, 1.000);
+
+@drawer-duration-in:       .4s;
+@drawer-duration-out:      .4s;
+
+
+// drawer masta
+// ======================================
 .drawer-masta{
   position: fixed;//*
   top:0;//*
-  left: 0;//*
   overflow: hidden;//*
-  width:@drawer-width;//*
+  width:@drawer-width-phone;//*
   height:100%;//*
 }
+
+//left
+.drawer-left{
+  .drawer-masta{
+    left: 0;//*
+  }
+}
+
+//left
+.drawer-right{
+  .drawer-masta{
+    right: 0;//*
+  }
+}
+
+// overlay class
+// ======================================
 .drawer-overlay{
   position: relative; //*
-  left:0;//*
 }
+
+// left
+.dwawer-left{
+  .drawer-overlay{
+    left:0;//*
+  }
+}
+
+// right
+.dwawer-right{
+  .drawer-overlay{
+    right:0;//*
+  }
+}
+
+
+// toggle style
+// ======================================
 .drawer-toggle{
   position: fixed;
   top:0px;
-  left:0px;
   z-index: 1000;
   display: block;
   visibility: visible;
   border: none;
   border-radius: 0;
-  border-bottom-right-radius: 4px;
   background: #000;
   background: rgba(0,0,0,.4);
   color:#fff;
@@ -40,38 +80,73 @@
     border: none;
   }
 }
+
+
+// open class
+// ======================================
 .drawer-open{
   //Firefoxでtransitionが効かないのはこのoverflow
-   // overflow:hidden;//*
-   // overflow-x:hidden !important;//*
+  //jsでタイマーを使っているのもこのバグ解消の為。
+  // overflow:hidden;//*
+  // overflow-x:hidden !important;//*
   .drawer-masta{
     overflow-y: auto;//*
     -webkit-overflow-scrolling:touch;//*
   }
   .drawer-overlay{
     position: absolute;//*
-    left:@drawer-width;//*
     overflow-x: hidden;//*
     width:100%;
-    transition:left @ease-out-expo;
-    transition-duration:0.4s;
-  }
-  .drawer-toggle{
-    left:(@drawer-width);//*
-    transition:left @ease-out-expo;
-    transition-duration:0.4s;
   }
 }
 
-.drawer-close {
+// left
+.drawer-left.drawer-open{
+  .drawer-overlay,
+  .drawer-toggle{
+    left:@drawer-width-phone;//*
+    transition:left @drawer-ease-in;
+    transition-duration:@drawer-duration-in;
+  }
+}
+
+// right
+.drawer-right.drawer-open{
+  .drawer-overlay,
+  .drawer-toggle{
+    right:@drawer-width-phone;//*
+    transition:right @drawer-ease-in;
+    transition-duration:@drawer-duration-in;
+  }
+}
+
+
+// close class
+// ======================================
+// left
+.drawer-left.drawer-close {
   .drawer-overlay,
   .drawer-toggle{
     left:0;
-    transition:left @ease-out-expo;
-    transition-duration:0.4s;
+    transition:left @drawer-ease-out;
+    transition-duration:@drawer-duration-out;
   }
 }
 
+// right
+.drawer-right.drawer-close {
+  .drawer-overlay,
+  .drawer-toggle{
+    right:0;
+    transition:right @drawer-ease-out;
+    transition-duration:@drawer-duration-out;
+  }
+}
+
+
+// .drawer-masta style
+// ======================================
+// default
 .drawer-default{
   background-color:#222;
   box-shadow:inset 0 3px 9px rgba(0,0,0,.5);
@@ -101,36 +176,72 @@
       padding:8px 20px;
     }
   }
-  
 }
 
 
-
+// Responsive style
+// ======================================
+// phone
 @media (min-width: (768px - 1)) { // 768px以下
-  .drawer-responsive{
+
+  .drawer-responsive.drawer-left,
+  .drawer-responsive.drawer-right{
     .drawer-toggle{
       display: none;
       visibility: hidden;
     }  
   }
+
 }
+
+// tablet
 @media (min-width: 768px) { // 768px以上
-  .drawer-responsive{
+
+  .drawer-responsive.drawer-left,
+  .drawer-responsive.drawer-right{
     .drawer-masta{
+      position: absolute;//*
       width:@drawer-width-tablet !important;
+      height:auto;//*
+    }
+  }
+  .drawer-responsive.drawer-left{
+    .drawer-masta{
+      float: left;
     }
     .drawer-overlay{
       margin-left:@drawer-width-tablet;
     }
   }
-}
-@media (min-width: 1200px) { // 1200px以上
-  .drawer-responsive{
+  .drawer-responsive.drawer-right{
     .drawer-masta{
-      width:@drawer-width!important;
+      float: right;
     }
     .drawer-overlay{
-      margin-left:@drawer-width;
-    }  
+      margin-right:@drawer-width-tablet;
+    }
   }
+
+}
+
+// desktop
+@media (min-width: 1200px) { // 1200px以上
+
+  .drawer-responsive.drawer-left,
+  .drawer-responsive.drawer-right{
+    .drawer-masta{
+      width:@drawer-width-desktop !important;
+    }
+  }
+  .drawer-responsive.drawer-left{
+    .drawer-overlay{
+      margin-left:@drawer-width-desktop;
+    }
+  }
+  .drawer-responsive.drawer-right{
+    .drawer-overlay{
+      margin-right:@drawer-width-desktop;
+    }
+  }
+
 }
