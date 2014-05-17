@@ -122,13 +122,13 @@
            ]
          }
        },
-       // minify:{
-       //   files :  { 
-       //     '<%= pkg.source %>/js/<%= pkg.name %>.min.js' : [
-       //       '<%= pkg.source %>/js/<%= pkg.name %>.js' 
-       //     ]
-       //   } 
-       // }
+       minify:{
+         files :  { 
+           '<%= pkg.source %>/js/<%= pkg.name %>.min.js' : [
+             '<%= pkg.source %>/js/<%= pkg.name %>.js' 
+           ]
+         } 
+       }
      },
      // ====================================================
      jshint: {
@@ -141,7 +141,7 @@
        source: {
          src: [
            '<%= pkg.source %>/js/<%= pkg.name %>.js',
-       //    '<%= pkg.source %>/js/<%= pkg.name %>.min.js'
+          '<%= pkg.source %>/js/<%= pkg.name %>.min.js'
          ]
        }
      },
