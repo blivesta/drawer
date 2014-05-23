@@ -17,7 +17,7 @@
     <!-- Vendor CSS -->
     <!-- drawer is work without having to load the bootstrap. However, there is a need to adjust the style. -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//rawgithub.com/blivesta/ashiba/master/src/css/ashiba.min.css">
+    <link rel="stylesheet" href="//rawgithub.com/blivesta/ashiba/master/archive/0.3.1/css/ashiba.min.css">
     <!-- drawer CSS -->
     <link rel="stylesheet" href="../css/drawer.css">
     <style>
@@ -35,10 +35,16 @@
     <!-- Vendor js -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- drawer js -->
-    <script src="../js/drawer.min.js"></script>
+    <script src="../js/drawer.js"></script>
     <script>
     $(document).ready(function() {
     $('.drawer').drawer();
+    
+    $("#js-toggle").on("click", function(){
+      $('.drawer').drawer("open");
+    });
+    
+    
     });
     </script>
   </head>
@@ -158,7 +164,7 @@
 	    <footer class="site-footer">
   <div class="site-footer-inner container">
 	  <h2>drawer</h2>
-    <p>Currently v1.3.0 / Author <a href="http://blivesta.com">blivesta</a>
+    <p>Currently v1.4.0 / Author <a href="http://blivesta.com">blivesta</a>
     <br>Code licensed under the MIT license.</p>
         <ul class="site-social">
   <li>
@@ -168,7 +174,7 @@
     <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=blivesta&amp;repo=drawer&amp;type=watch&amp;count=true" width="100" height="20"></iframe>
   </li>
   <li>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-text="jquery plugin for easily implement a sliding drawer into your website." data-url="http://blivesta.github.io/drawer/" data-related="blivesta" data-count="false" data-hashtags="">Tweet</a>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="jquery plugin for easily implement a sliding drawer into your website." data-url="http://git.blivesta.com/drawer/" data-related="blivesta" data-count="false" data-hashtags="">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   </li>
 </ul>       
