@@ -105,30 +105,13 @@
      },
      // ====================================================
      uglify: {
-       options: {
-         banner: '<%= banner %>',
-         report: 'min',
-         mangle: false,
-         compress: false
-       },
-       source: {
-         options: {
-           indentLevel: 2,
-           beautify: true
-         },
-         files: {
-           '<%= pkg.source %>/js/<%= pkg.name %>.js': [
-             '<%= pkg.source %>/js/<%= pkg.name %>.js'
-           ]
-         }
-       },
-       minify:{
-         files :  { 
-           '<%= pkg.source %>/js/<%= pkg.name %>.min.js' : [
-             '<%= pkg.source %>/js/<%= pkg.name %>.js' 
-           ]
-         } 
-       }
+      minify: {
+        options: {
+          banner: '<%= banner %>'
+        },
+        src: '<%= pkg.source %>/js/<%= pkg.name %>.js',
+        dest: '<%= pkg.source %>/js/<%= pkg.name %>.min.js'
+      }
      },
      // ====================================================
      jshint: {
@@ -141,7 +124,7 @@
        source: {
          src: [
            '<%= pkg.source %>/js/<%= pkg.name %>.js',
-          '<%= pkg.source %>/js/<%= pkg.name %>.min.js'
+           '<%= pkg.source %>/js/<%= pkg.name %>.min.js'
          ]
        }
      },
