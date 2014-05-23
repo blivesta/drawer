@@ -9,6 +9,8 @@
 @drawer-duration-in:       .4s;
 @drawer-duration-out:      .4s;
 
+@upper-z-index:            1100;
+@toggle-z-index:           1000;
 
 // drawer masta
 // ======================================
@@ -60,7 +62,7 @@
 .drawer-toggle{
   position: fixed;
   top:0px;
-  z-index: 1000;
+  z-index: @toggle-z-index;
   display: block;
   visibility: visible;
   border: none;
@@ -81,7 +83,6 @@
   }
 }
 
-
 // open class
 // ======================================
 .drawer-open{
@@ -97,6 +98,14 @@
     position: absolute;//*
     overflow-x: hidden;//*
     width:100%;
+  }
+  .drawer-upper{
+    position:fixed;
+    z-index:@upper-z-index;
+    top:0;
+    right:0;
+    height:100%;
+    display:none;
   }
 }
 

@@ -21,7 +21,7 @@
     <!-- Vendor CSS -->
     <!-- drawer is work without having to load the bootstrap. However, there is a need to adjust the style. -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//rawgithub.com/blivesta/ashiba/master/src/css/ashiba.min.css">
+    <link rel="stylesheet" href="//rawgithub.com/blivesta/ashiba/master/archive/0.3.1/css/ashiba.min.css">
     <!-- drawer CSS -->
     <link rel="stylesheet" href="{{ page.base_url }}css/drawer.css">
     <style>
@@ -39,10 +39,16 @@
     <!-- Vendor js -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- drawer js -->
-    <script src="{{ page.base_url }}js/drawer.min.js"></script>
+    <script src="{{ page.base_url }}js/drawer.js"></script>
     <script>
     $(document).ready(function() {
     $('.drawer').drawer();
+    
+    $("#js-toggle").on("click", function(){
+      $('.drawer').drawer("open");
+    });
+    
+    
     });
     </script>
   </head>
