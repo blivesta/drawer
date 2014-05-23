@@ -18,7 +18,7 @@
         navList: "drawer-nav-list",
         overlay: "drawer-overlay",
         toggle: "drawer-toggle",
-        upper: "drawer-upper",
+        upper: "drawer-overlay-upper",
         openClass: "drawer-open",
         closeClass: "drawer-close",
         desktopEvent: "click", // or mouseover 

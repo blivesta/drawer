@@ -1,5 +1,5 @@
 /*!
- * drawer v1.4.0
+ * drawer v1.4.1
  * 
  * Licensed under MIT
  * http://blivesta.com
@@ -24,7 +24,7 @@
         navList: "drawer-nav-list",
         overlay: "drawer-overlay",
         toggle: "drawer-toggle",
-        upper: "drawer-upper",
+        upper: "drawer-overlay-upper",
         openClass: "drawer-open",
         closeClass: "drawer-close",
         desktopEvent: "click", // or mouseover 

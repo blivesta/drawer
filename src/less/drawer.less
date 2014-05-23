@@ -99,11 +99,10 @@
     overflow-x: hidden;//*
     width:100%;
   }
-  .drawer-upper{
+  .drawer-overlay-upper{
     position:fixed;
     z-index:@upper-z-index;
     top:0;
-    right:0;
     height:100%;
     display:none;
   }
@@ -117,6 +116,9 @@
     transition:left @drawer-ease-in;
     transition-duration:@drawer-duration-in;
   }
+  .drawer-overlay-upper{
+    right:0;
+  }
 }
 
 // right
@@ -126,6 +128,9 @@
     right:@drawer-width-phone;//*
     transition:right @drawer-ease-in;
     transition-duration:@drawer-duration-in;
+  }
+  .drawer-overlay-upper{
+    left:0;
   }
 }
 

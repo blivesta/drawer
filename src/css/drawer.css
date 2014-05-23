@@ -1,5 +1,5 @@
 /*!
- * drawer v1.4.0
+ * drawer v1.4.1
  * 
  * Licensed under MIT
  * http://blivesta.com
@@ -59,10 +59,9 @@
   width: 100%;
   overflow-x: hidden;
 }
-.drawer-open .drawer-upper {
+.drawer-open .drawer-overlay-upper {
   position: fixed;
   top: 0;
-  right: 0;
   z-index: 1100;
   display: none;
   height: 100%;
@@ -77,6 +76,9 @@
        -o-transition-duration: .4s;
           transition-duration: .4s;
 }
+.drawer-left.drawer-open .drawer-overlay-upper {
+  right: 0;
+}
 .drawer-right.drawer-open .drawer-overlay,
 .drawer-right.drawer-open .drawer-toggle {
   right: 280px;
@@ -86,6 +88,9 @@
   -webkit-transition-duration: .4s;
        -o-transition-duration: .4s;
           transition-duration: .4s;
+}
+.drawer-right.drawer-open .drawer-overlay-upper {
+  left: 0;
 }
 .drawer-left.drawer-close .drawer-overlay,
 .drawer-left.drawer-close .drawer-toggle {

@@ -1,6 +1,6 @@
 {
   "name": "drawer",
-  "version": "1.4.0",
+  "version": "1.4.1",
 	"keywords": [
     "css",
     "js",
@@ -8,7 +8,6 @@
     "mobile-first",
     "responsive",
     "front-end",
-    "framework",
     "web"
   ],
   "homepage": "http://git.blivesta.com/drawer",
