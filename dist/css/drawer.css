@@ -1,5 +1,5 @@
 /*!
- * drawer v1.3.0
+ * drawer v1.4.0
  * 
  * Licensed under MIT
  * http://blivesta.com
@@ -58,6 +58,14 @@
   position: absolute;
   width: 100%;
   overflow-x: hidden;
+}
+.drawer-open .drawer-upper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1100;
+  display: none;
+  height: 100%;
 }
 .drawer-left.drawer-open .drawer-overlay,
 .drawer-left.drawer-open .drawer-toggle {
