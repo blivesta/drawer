@@ -312,14 +312,12 @@
 
    });
 
-   //publicに指定したディレクトリをgh-pagesブランチにデプロイ。
    // ====================================================
    grunt.registerTask('deploy', [
      'buildcontrol',
      'notify'
    ]);
 
-   // lessコンパイル
    // ====================================================
    grunt.registerTask('build-less', [
      'less:source',
@@ -329,21 +327,18 @@
      'less:minify',
    ]);
 
-   // jsコンパイル
    // ====================================================
    grunt.registerTask('build-js', [
      'concat',
      'uglify'
    ]);
 
-   // jekyllコンパイル
    // ====================================================
    grunt.registerTask('build-html', [
      'jekyll',
      //'htmlmin'
    ]);
 
-   // js,css,htmlのテスト
    // ====================================================
    grunt.registerTask('test', [
      'jshint:source',
@@ -352,7 +347,6 @@
      'validation'
    ]);
 
-   // ベンダーファイルのインストール →　コンパイル　→　テスト　→　ウォッチ
    // ====================================================
    grunt.registerTask('b', [
      'clean',
@@ -364,7 +358,6 @@
      'copy'
    ]);
 
-   // サーバー起動　→　ウオッチ
    // ====================================================
    grunt.registerTask('default', function() {
      grunt.log.warn('`grunt` to start a watch.');
