@@ -42,23 +42,23 @@
     <script src="{{ page.base_url }}js/drawer.js"></script>
     <script>
       
-      var chengeClass = function(a) {
-        switch(a) {
+      var chengeClass = function(valClass) {
+        switch(valClass) {
           case 'drawer-left':
-          $("#drawer").removeClass("drawer-right drawer-responsive").addClass(a).drawer("open");
-          $('.js-trigger').attr('disabled', false);
+            $("#drawer").removeClass("drawer-right drawer-responsive").addClass(valClass).drawer("open");
+            $('.js-trigger').attr('disabled', false);
           break;
           case 'drawer-right':
-          $("#drawer").removeClass("drawer-left drawer-responsive").addClass(a).drawer("open");
-          $('.js-trigger').attr('disabled', false);
+            $("#drawer").removeClass("drawer-left drawer-responsive").addClass(valClass).drawer("open");
+            $('.js-trigger').attr('disabled', false);
           break;
           case 'drawer-left drawer-responsive':
-          $("#drawer").removeClass("drawer-right drawer-open").addClass(a).drawer("resize");
-          $('.js-trigger').attr('disabled', true);
+            $("#drawer").removeClass("drawer-right drawer-open").addClass(valClass).drawer("resize");
+            $('.js-trigger').attr('disabled', true);
           break;
           case 'drawer-right drawer-responsive':
-          $("#drawer").removeClass("drawer-left drawer-open").addClass(a).drawer("resize");
-          $('.js-trigger').attr('disabled', true);
+            $("#drawer").removeClass("drawer-left drawer-open").addClass(valClass).drawer("resize");
+            $('.js-trigger').attr('disabled', true);
         }
       };
     
@@ -71,8 +71,8 @@
           chengeClass(selectVal);
         });
         $('.js-select').change(function(){
-          var val = $(this).val();
-          chengeClass(val);
+          var valClass = $(this).val();
+          chengeClass(valClass);
         });
       });
             
