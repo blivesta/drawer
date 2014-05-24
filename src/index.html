@@ -11,21 +11,41 @@ base_url: "./"
     <span class="text-icon text-icon-lg text-icon-outline">D</span>
     <h1>{{ site.title }}</h1>
     <p class="lead">{{ page.lead }}</p>
+
+    <p class="center-block form-inline" style="max-width:480px">
+ 
+      <select class="form-control input-lg js-select">
+        <optgroup label="Basic">
+          <option value="drawer-left">Left Drawer</option>
+          <option value="drawer-right">Right Drawer</option>
+        </optgroup>
+        <optgroup label="Responsive">
+          <option value="drawer-left drawer-responsive">Left Drawer</option>
+          <option value="drawer-right drawer-responsive">Right Drawer</option>
+        </optgroup>
+      </select>
+
+      <a class="btn btn-lg btn-outline js-trigger" style="padding:10px 16px">Open</a>
+    </p>
+
     <p><a href="{{ site.repo_url }}" class="btn btn- btn-lg">Download on GitHub</a></p>
+
     {% include social-buttons.html %}  
     <p>Currently v{{ site.current_version }}</p>
+    
   </div><!-- /.container -->
+  
 </main>
-
 
 <div class="site-body">
   <div class="site-body-inner container">
   
     <div class="site-section">
+
       <div class="site-section-body">
+                
         <img class="img-responsive" src="./images/drawer-image.jpg" alt="drawer"/>
         
-        <p><button class="drawer-overlay-toggle btn btn-lg btn-default" id="js-toggle">Drawer open</button></p>
       </div>
     </div>
     
@@ -37,13 +57,11 @@ base_url: "./"
       </div>
     </div>
 
-    <div class="site-section">
-      <h2 class="site-section-title">Setup</h2>
-      <p class="lead"></p>
-      <div class="site-section-body">
+<div class="site-section">
+  <h2 class="site-section-title">Setup Basic</h2>
+  <p class="lead"></p>
+  <div class="site-section-body">
 {% highlight html %}
-<!-- Vendor CSS -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 <!-- drawer CSS -->
 <link rel="stylesheet" href="./dist/css/drawer.min.css">
 <!-- Vendor js -->
@@ -51,32 +69,52 @@ base_url: "./"
 <!-- drawer js -->
 <script src="./dist/js/drawer.min.js"></script>
 <script>
-  $(document).ready(function() {
-    $('.drawer').drawer();
-  });
+$(document).ready(function() {
+$('#drawer').drawer();
+});
 </script>
 </head>
-<body class="drawer drawer-left">
-  <button class="drawer-toggle btn btn-outline-white">
-    Drawer toggle
-  </button>
-  <div class="drawer-masta drawer-default">
-    <nav class="drawer-nav " role="navigation">
-      <div class="drawer-brand">
-        <a href="./">drawer</a>
-      </div>
-      <ul class="nav drawer-nav-list">
-        <li><a href="./base">base</a></li>
-      </ul>
-    </nav>
+<body id="drawer" class="drawer-left">
+<button class="drawer-toggle btn btn-outline-white">
+Drawer toggle
+</button>
+<div class="drawer-masta drawer-default">
+<nav class="drawer-nav " role="navigation">
+  <div class="drawer-brand">
+    <a href="./">drawer</a>
   </div>
-  <div class="drawer-overlay">
-    <!-- contents -->
-  </div>
+  <ul class="nav drawer-nav-list">
+    <li><a href="./base">base</a></li>
+  </ul>
+</nav>
+</div>
+<div class="drawer-overlay">
+<!-- contents -->
+</div>
 </body>
 {% endhighlight %}
-      </div>
-    </div>
+  </div>
+</div>
+
+
+<div class="site-section">
+  <h2 class="site-section-title">Setup Responsive drawer</h2>
+  <p class="lead"></p>
+  <div class="site-section-body">
+<h3>Left</h3>
+{% highlight html %}
+<body id="drawer" class="drawer-left drawer-responsive">
+...
+</body>
+{% endhighlight %}
+<h3>Right</h3>
+{% highlight html %}
+<body id="drawer" class="drawer-right drawer-responsive">
+...
+</body>
+{% endhighlight %}
+  </div>
+</div>
 
     <div class="site-section">
       <h2 class="site-section-title">Options</h2>
@@ -84,15 +122,17 @@ base_url: "./"
       <div class="site-section-body">
 {% highlight js %}
 $('.drawer').drawer({
-  masta:        'drawer-masta',
-  nav:          'drawer-nav',
-  navList:      'drawer-nav-list',
-  overlay:      'drawer-overlay',
-  toggle:       'drawer-toggle',
-  openClass:    'drawer-open',
-  closeClass:   'drawer-close',
-  desktopEvent: 'click', // or mouseover 
-  width:        280
+  mastaClass:        "drawer-masta",
+  navClass:          "drawer-nav",
+  navListClass:      "drawer-nav-list",
+  overlayClass:      "drawer-overlay",
+  toggleClass:       "drawer-toggle",
+  upperClass:        "drawer-overlay-upper",
+  openClass:         "drawer-open",
+  closeClass:        "drawer-close",
+  responsiveClass:   "drawer-responsive",
+  desktopEvent:      "click",  // or mouseover 
+  drawerWidth:       280
 });
 {% endhighlight %}
     
@@ -108,9 +148,14 @@ $('.drawer').drawer({
 $('#element').drawer('open');
 {% endhighlight %}
 
-        <h4>Close</h4>
+<h4>Close</h4>
 {% highlight js %}
 $('#element').drawer('close');
+{% endhighlight %}
+
+<h4>Toggle</h4>
+{% highlight js %}
+$('#element').drawer('toggle');
 {% endhighlight %}
 
         <h4>Destroy</h4>

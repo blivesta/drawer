@@ -39,16 +39,52 @@
     <!-- Vendor js -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- drawer js -->
-    <script src="{{ page.base_url }}js/drawer.js"></script>
+    <script src="{{ page.base_url }}js/drawer.min.js"></script>
     <script>
-    $(document).ready(function() {
-    $('.drawer').drawer();
+      
+      var 
+      $drawerId = $("#drawer"),
+      chengeClass = function(a) {
+        switch(a) {
+          case 'drawer-left':
+          $drawerId
+            .removeClass("drawer-right drawer-responsive")
+            .addClass(a)
+            .drawer("open");
+          break;
+          case 'drawer-right':
+          $("#drawer")
+            .removeClass("drawer-left drawer-responsive")
+            .addClass(a)
+            .drawer("open");
+          break;
+          case 'drawer-left drawer-responsive':
+          $("#drawer")
+            .removeClass("drawer-right drawer-open")
+            .addClass(a)
+            .drawer("resize");
+          break;
+          case 'drawer-right drawer-responsive':
+          $("#drawer")
+            .removeClass("drawer-left drawer-open")
+            .addClass(a)
+            .drawer("resize");
+        }
+      };
     
-    $("#js-toggle").on("click", function(){
-      $('.drawer').drawer("open");
-    });
-    
-    
-    });
+      $(document).ready(function(){
+          
+        $('#drawer').drawer();
+                          
+        $('.js-trigger').click(function(){
+          var selectVal = $('.js-select').val();
+          chengeClass(selectVal);
+        });
+        $('.js-select').change(function(){
+          var val = $(this).val();
+          chengeClass(val);
+        });
+      });
+            
     </script>
   </head>

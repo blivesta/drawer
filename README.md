@@ -6,22 +6,10 @@ Drawer is a jQuery plugin for displaying the drawer menu using CSS animations in
 ![drawer-image](./src/images/drawer-image.jpg)
 
 ##example
-####Left drawer
-http://blivesta.github.io/drawer/
-
-####Left drawer for responsive design
-http://blivesta.github.io/drawer/responsive
-
-####Right drawer
-http://blivesta.github.io/drawer/right
-
-####Right drawer for responsive design
-http://blivesta.github.io/drawer/right-responsive
+http://git.blivesta.com/drawer/
 
 ##Setup
 ~~~ go
-<!-- vendor css -->
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
 <!-- drawer css -->
 <link rel="stylesheet" href="./dist/css/drawer.min.css">
 <!-- Vendor js -->
@@ -32,22 +20,23 @@ http://blivesta.github.io/drawer/right-responsive
 <script type="text/javascript">
 $('.drawer').drawer({
   // options
-  masta:        "drawer-masta"
-  nav:          "drawer-nav",
-  navList:      "drawer-nav-list",
-  overlay:      "drawer-overlay",
-  toggle:       "drawer-toggle",
-  body:         "drawer-body",
-  openClass:    "drawer-open",
-  closeClass:   "drawer-close",
-  desktopEvent: "click", // or mouseover
-  width:        280
+  mastaClass:        "drawer-masta",
+  navClass:          "drawer-nav",
+  navListClass:      "drawer-nav-list",
+  overlayClass:      "drawer-overlay",
+  toggleClass:       "drawer-toggle",
+  upperClass:        "drawer-overlay-upper",
+  openClass:         "drawer-open",
+  closeClass:        "drawer-close",
+  responsiveClass:   "drawer-responsive",
+  desktopEvent:      "click",  // or mouseover 
+  drawerWidth:       280
 });
 </script>
 
 <body class="drawer drawer-left"> 
-  <button class="drawer-toggle btn">
-    <i class="glyphicon glyphicon-align-justify"></i>
+  <button class="drawer-toggle">
+    drawer toggle...
   </button>
   <div class="drawer-masta drawer-default">
     <nav class="drawer-nav">
@@ -67,6 +56,23 @@ $('.drawer').drawer({
 </body>
 ~~~
 
+
+##Setup Responsive drawer
+####Left
+~~~ go
+<body id="drawer" class="drawer-left drawer-responsive">
+...
+</body>
+~~~
+
+####Right
+~~~ go
+<body id="drawer" class="drawer-right drawer-responsive">
+...
+</body>
+~~~
+
+
 ##API Methods
 ####Open
 ~~~ go
@@ -76,6 +82,11 @@ $('#element').drawer('open');
 ####Close
 ~~~ go
 $('#element').drawer('close');
+~~~
+
+####Toggle
+~~~ go
+$('#element').drawer('toggle');
 ~~~
 
 ####Destroy
