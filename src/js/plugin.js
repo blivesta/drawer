@@ -2,41 +2,38 @@
   
   var 
   namespace = "drawer",
-  agent = navigator.userAgent,
-  iphone = agent.search(/iPhone/) != -1,
-  ipad = agent.search(/iPad/) != -1,
-  android = agent.search(/Android/) != -1,
-  touches = iphone || ipad || android,
+  touches = window.ontouchstart === null,
   methods = {
     
     init: function(options) {
       
       options = $.extend({
 
-        masta: "drawer-masta",
-        nav: "drawer-nav",
-        navList: "drawer-nav-list",
-        overlay: "drawer-overlay",
-        toggle: "drawer-toggle",
-        upper: "drawer-overlay-upper",
-        openClass: "drawer-open",
-        closeClass: "drawer-close",
-        desktopEvent: "click", // or mouseover 
-        width: 280
+        mastaClass:        "drawer-masta",
+        navClass:          "drawer-nav",
+        navListClass:      "drawer-nav-list",
+        overlayClass:      "drawer-overlay",
+        toggleClass:       "drawer-toggle",
+        upperClass:        "drawer-overlay-upper",
+        openClass:         "drawer-open",
+        closeClass:        "drawer-close",
+        responsiveClass:   "drawer-responsive",
+        desktopEvent:      "click",  // or mouseover 
+        drawerWidth:       280
 
       }, options);
       
       return this.each(function() {
-        
+                
         var 
         _this = this,
         $this = $(this),
         data = $this.data(namespace),
-        $toggle = $("." + options.toggle),
-        $navList = $("." + options.navList),
-        $upper = $("<div>").addClass(options.upper),
-        $nav = $("." + options.nav),
-        $masta = $("." + options.masta),
+        $toggle = $("." + options.toggleClass),
+        $navList = $("." + options.navListClass),
+        $upper = $("<div>").addClass(options.upperClass),
+        $nav = $("." + options.navClass),
+        $masta = $("." + options.mastaClass),
         drawerHeight = $this.height(),
         navHeight = $nav.height(),
         mastaHeight = $masta.height();
@@ -47,8 +44,7 @@
             options: options
           });
         }
-                    
-        smY = 0;
+
         $this.append($upper);            
 
         methods.resize.call(_this);
@@ -58,6 +54,10 @@
         });
 
         if (touches) {
+
+          var 
+          smY = {},
+          mfY = {};
 
           $toggle.bind("touchend." + namespace, function() {
             methods.toggle.apply(_this);
@@ -141,39 +141,55 @@
 
       }); // end each
     },
+    
     resize: function(options) {
       
-      var $this = $(this);
+      var 
+      _this = this,
+      $this = $(this);
       
       options = $this.data(namespace).options;
       
       var 
-        windowHeight = $(window).height(),
-        $overlay = $("." + options.overlay);
-      
-      methods.close.call(this, options);
+      windowHeight = $(window).height(),
+      $masta = $("." + options.mastaClass),
+      $overlay = $("." + options.overlayClass),
+      overlayHeight =   $overlay.height();
+            
+      methods.close.call(_this, options);
       
       $overlay.css({
         "min-height": windowHeight
       });
       
+      if (!touches && $this.hasClass(options.responsiveClass)) {
+
+        $masta.css({
+          "min-height": overlayHeight
+        });
+
+      }      
     },
+    
     
     toggle: function(options) {
       
-      var $this = $(this);
+      var 
+      _this = this,
+      $this = $(this);
       
       options = $this.data(namespace).options;
       
       var open = $this.hasClass(options.openClass);
       
       if (open) {
-        methods.close.call(this);
+        methods.close.call(_this);
       } else {
-        methods.open.call(this);
+        methods.open.call(_this);
       }
       
     },
+    
     
     open: function(options) {
       
@@ -187,13 +203,13 @@
         });
         event.preventDefault();
       }
-      
+
       $this
         .removeClass(options.closeClass)
         .addClass(options.openClass);
 
       var 
-      duration = $('.' + options.overlay)
+      duration = $('.' + options.overlayClass)
         .css('transition-duration')
         .replace(/s/g, '') * 1000;
         
@@ -205,9 +221,9 @@
         
         var
         windowWidth = $(window).width(),
-        upperWidth = windowWidth - options.width;
+        upperWidth = windowWidth - options.drawerWidth;
 
-        $("."+options.upper).css({
+        $("."+options.upperClass).css({
           "width":upperWidth,
           "display":"block"
         });
@@ -216,8 +232,11 @@
 
     },
     
+    
     close: function(options) {
+      
       var $this = $(this);
+      
       options = $this.data(namespace).options;
       
       if (touches) {
@@ -229,7 +248,7 @@
         .addClass(options.closeClass);
 
       var 
-      duration = $('.' + options.overlay)
+      duration = $('.' + options.overlayClass)
         .css('transition-duration')
         .replace(/s/g, '') * 1000;
 
@@ -239,7 +258,7 @@
           "overflow": "auto"
         });
         
-        $("."+options.upper).css({
+        $("."+options.upperClass).css({
           "display":"none"
         });
         
@@ -247,13 +266,18 @@
 
     },
     
+    
     destroy: function() {
+      
       return this.each(function() {
+      
         var $this = $(this);
         $(window).unbind("." + namespace);
         $this.removeData(namespace);
+      
       });
     }
+    
     
   };
   
