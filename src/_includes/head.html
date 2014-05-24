@@ -39,36 +39,26 @@
     <!-- Vendor js -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- drawer js -->
-    <script src="{{ page.base_url }}js/drawer.min.js"></script>
+    <script src="{{ page.base_url }}js/drawer.js"></script>
     <script>
       
-      var 
-      $drawerId = $("#drawer"),
-      chengeClass = function(a) {
+      var chengeClass = function(a) {
         switch(a) {
           case 'drawer-left':
-          $drawerId
-            .removeClass("drawer-right drawer-responsive")
-            .addClass(a)
-            .drawer("open");
+          $("#drawer").removeClass("drawer-right drawer-responsive").addClass(a).drawer("open");
+          $('.js-trigger').attr('disabled', false);
           break;
           case 'drawer-right':
-          $("#drawer")
-            .removeClass("drawer-left drawer-responsive")
-            .addClass(a)
-            .drawer("open");
+          $("#drawer").removeClass("drawer-left drawer-responsive").addClass(a).drawer("open");
+          $('.js-trigger').attr('disabled', false);
           break;
           case 'drawer-left drawer-responsive':
-          $("#drawer")
-            .removeClass("drawer-right drawer-open")
-            .addClass(a)
-            .drawer("resize");
+          $("#drawer").removeClass("drawer-right drawer-open").addClass(a).drawer("resize");
+          $('.js-trigger').attr('disabled', true);
           break;
           case 'drawer-right drawer-responsive':
-          $("#drawer")
-            .removeClass("drawer-left drawer-open")
-            .addClass(a)
-            .drawer("resize");
+          $("#drawer").removeClass("drawer-left drawer-open").addClass(a).drawer("resize");
+          $('.js-trigger').attr('disabled', true);
         }
       };
     
