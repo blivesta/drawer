@@ -39,18 +39,44 @@
     <!-- drawer js -->
     <script src="./js/drawer.js"></script>
     <script>
-    $(document).ready(function() {
-    $('.drawer').drawer();
+      
+      var chengeClass = function(valClass) {
+        switch(valClass) {
+          case 'drawer-left':
+            $("#drawer").removeClass("drawer-right drawer-responsive").addClass(valClass).drawer("open");
+            $('.js-trigger').attr('disabled', false);
+          break;
+          case 'drawer-right':
+            $("#drawer").removeClass("drawer-left drawer-responsive").addClass(valClass).drawer("open");
+            $('.js-trigger').attr('disabled', false);
+          break;
+          case 'drawer-left drawer-responsive':
+            $("#drawer").removeClass("drawer-right drawer-open").addClass(valClass).drawer("resize");
+            $('.js-trigger').attr('disabled', true);
+          break;
+          case 'drawer-right drawer-responsive':
+            $("#drawer").removeClass("drawer-left drawer-open").addClass(valClass).drawer("resize");
+            $('.js-trigger').attr('disabled', true);
+        }
+      };
     
-    $("#js-toggle").on("click", function(){
-      $('.drawer').drawer("open");
-    });
-    
-    
-    });
+      $(document).ready(function(){
+          
+        $('#drawer').drawer();
+                          
+        $('.js-trigger').click(function(){
+          var selectVal = $('.js-select').val();
+          chengeClass(selectVal);
+        });
+        $('.js-select').change(function(){
+          var valClass = $(this).val();
+          chengeClass(valClass);
+        });
+      });
+            
     </script>
   </head>
-<body class="site-home drawer drawer-left">
+<body class="site-home drawer drawer-left" id="drawer">
   <div class="site-wrapper">
     <button class="drawer-toggle btn btn-outline-white">
   D
@@ -58,28 +84,17 @@
 <div class="drawer-masta drawer-default drawer-masta-left">
   <nav class="drawer-nav " role="navigation">
     <div class="drawer-brand">
-      <a href="./">Example</a>
+      <a href="./">Drawer</a>
     </div>
     <ul class="nav drawer-nav-list">
-      <li><a href="./noflow">Left (noflow)</a></li>
-      <li><a href="./responsive">Responsive( Left)</a></li>
-      <li><a href="./right">Right</a></li>
-      <li><a href="./right-responsive">Responsive (Right)</a></li>
-      
-      <li><a href="#">&nbsp;</a></li>
-      <li><a href="http://blivesta.com">blivesta</a></li>
+      <li><a href="http://blivesta.com">blivesta.com</a></li>
+      <li><a href="http://git.blivesta.com">git.blivesta.com</a></li>
+      <li><a href="https://twitter.com/blivesta">Twitter @blivesta</a></li>
       <li><a href="https://github.com/blivesta">GitHub</a></li>
-      <li><a href="#">&nbsp;</a></li>
-      <li><a href="https://github.com/drawer">drawer</a></li>
-      <li><a href="https://github.com/blivesta/clickstream">clickstream</a></li>
-      <li><a href="https://github.com/blivesta/oblurlay">oblurlay</a></li>
-      <li><a href="https://github.com/blivesta/chaffle">chaffle</a></li>
-      <li><a href="#">&nbsp;</a></li>
-      <li><a href="https://github.com/drawer">drawer</a></li>
-      <li><a href="https://github.com/blivesta/clickstream">clickstream</a></li>
-      <li><a href="https://github.com/blivesta/oblurlay">oblurlay</a></li>
-      <li><a href="https://github.com/blivesta/chaffle">chaffle</a></li>
-      
+      <li><a href="https://github.com/blivesta/drawer">drawer</a></li>
+      <li><a href="http://git.blivesta.com/clickstream">clickstream</a></li>
+      <li><a href="http://git.blivesta.com/oblurlay">oblurlay</a></li>
+      <li><a href="http://git.blivesta.com/chaffle">chaffle</a></li>
     </ul>
   </nav>
 </div>
@@ -89,7 +104,25 @@
     <span class="text-icon text-icon-lg text-icon-outline">D</span>
     <h1>drawer</h1>
     <p class="lead">jQuery plugin for displaying the drawer menu using CSS animations in the event of a trigger. Setting the position can be selected either the right or left. And also supports Responsive design.</p>
+
+    <p class="center-block form-inline" style="max-width:480px">
+ 
+      <select class="form-control input-lg js-select">
+        <optgroup label="Basic">
+          <option value="drawer-left">Left Drawer</option>
+          <option value="drawer-right">Right Drawer</option>
+        </optgroup>
+        <optgroup label="Responsive">
+          <option value="drawer-left drawer-responsive">Left Drawer</option>
+          <option value="drawer-right drawer-responsive">Right Drawer</option>
+        </optgroup>
+      </select>
+
+      <button class="btn btn-lg js-trigger" style="padding:10px 16px; background-color:#fff;color:#666;">Open</button>
+    </p>
+
     <p><a href="https://github.com/blivesta/drawer" class="btn btn- btn-lg">Download on GitHub</a></p>
+
     <ul class="site-social">
   <li>
     <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=blivesta&amp;repo=drawer&amp;type=fork&amp;count=true" width="100" height="20"></iframe>
@@ -103,19 +136,21 @@
   </li>
 </ul>       
   
-    <p>Currently v1.4.1</p>
+    <p>Currently v1.5.0</p>
+    
   </div><!-- /.container -->
+  
 </main>
-
 
 <div class="site-body">
   <div class="site-body-inner container">
   
     <div class="site-section">
+
       <div class="site-section-body">
+                
         <img class="img-responsive" src="./images/drawer-image.jpg" alt="drawer"/>
         
-        <p><button class="drawer-overlay-toggle btn btn-lg btn-default" id="js-toggle">Drawer open</button></p>
       </div>
     </div>
     
@@ -127,60 +162,78 @@
       </div>
     </div>
 
-    <div class="site-section">
-      <h2 class="site-section-title">Setup</h2>
-      <p class="lead"></p>
-      <div class="site-section-body">
-<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- Vendor CSS --&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css&quot;</span><span class="nt">&gt;</span>
-<span class="c">&lt;!-- drawer CSS --&gt;</span>
+<div class="site-section">
+  <h2 class="site-section-title">Setup Basic</h2>
+  <p class="lead"></p>
+  <div class="site-section-body">
+<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- drawer CSS --&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;./dist/css/drawer.min.css&quot;</span><span class="nt">&gt;</span>
 <span class="c">&lt;!-- Vendor js --&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="c">&lt;!-- drawer js --&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;./dist/js/drawer.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script&gt;</span>
-  <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.drawer&#39;</span><span class="p">).</span><span class="nx">drawer</span><span class="p">();</span>
-  <span class="p">});</span>
+<span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#drawer&#39;</span><span class="p">).</span><span class="nx">drawer</span><span class="p">();</span>
+<span class="p">});</span>
 <span class="nt">&lt;/script&gt;</span>
 <span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;drawer drawer-left&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;drawer-toggle btn btn-outline-white&quot;</span><span class="nt">&gt;</span>
-    Drawer toggle
-  <span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-masta drawer-default&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;drawer-nav &quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-brand&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>drawer<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav drawer-nav-list&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./base&quot;</span><span class="nt">&gt;</span>base<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-      <span class="nt">&lt;/ul&gt;</span>
-    <span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;body</span> <span class="na">id=</span><span class="s">&quot;drawer&quot;</span> <span class="na">class=</span><span class="s">&quot;drawer-left&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;drawer-toggle btn btn-outline-white&quot;</span><span class="nt">&gt;</span>
+Drawer toggle
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-masta drawer-default&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;drawer-nav &quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-brand&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>drawer<span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-overlay&quot;</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!-- contents --&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav drawer-nav-list&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./base&quot;</span><span class="nt">&gt;</span>base<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-overlay&quot;</span><span class="nt">&gt;</span>
+<span class="c">&lt;!-- contents --&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
 </code></pre></div>
-      </div>
-    </div>
+  </div>
+</div>
+
+
+<div class="site-section">
+  <h2 class="site-section-title">Setup Responsive drawer</h2>
+  <p class="lead"></p>
+  <div class="site-section-body">
+<h3>Left</h3>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;body</span> <span class="na">id=</span><span class="s">&quot;drawer&quot;</span> <span class="na">class=</span><span class="s">&quot;drawer-left drawer-responsive&quot;</span><span class="nt">&gt;</span>
+...
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div>
+<h3>Right</h3>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;body</span> <span class="na">id=</span><span class="s">&quot;drawer&quot;</span> <span class="na">class=</span><span class="s">&quot;drawer-right drawer-responsive&quot;</span><span class="nt">&gt;</span>
+...
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div>
+  </div>
+</div>
 
     <div class="site-section">
       <h2 class="site-section-title">Options</h2>
       <p class="lead"></p>
       <div class="site-section-body">
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.drawer&#39;</span><span class="p">).</span><span class="nx">drawer</span><span class="p">({</span>
-  <span class="nx">masta</span><span class="o">:</span>        <span class="s1">&#39;drawer-masta&#39;</span><span class="p">,</span>
-  <span class="nx">nav</span><span class="o">:</span>          <span class="s1">&#39;drawer-nav&#39;</span><span class="p">,</span>
-  <span class="nx">navList</span><span class="o">:</span>      <span class="s1">&#39;drawer-nav-list&#39;</span><span class="p">,</span>
-  <span class="nx">overlay</span><span class="o">:</span>      <span class="s1">&#39;drawer-overlay&#39;</span><span class="p">,</span>
-  <span class="nx">toggle</span><span class="o">:</span>       <span class="s1">&#39;drawer-toggle&#39;</span><span class="p">,</span>
-  <span class="nx">openClass</span><span class="o">:</span>    <span class="s1">&#39;drawer-open&#39;</span><span class="p">,</span>
-  <span class="nx">closeClass</span><span class="o">:</span>   <span class="s1">&#39;drawer-close&#39;</span><span class="p">,</span>
-  <span class="nx">desktopEvent</span><span class="o">:</span> <span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="c1">// or mouseover </span>
-  <span class="nx">width</span><span class="o">:</span>        <span class="mi">280</span>
+  <span class="nx">mastaClass</span><span class="o">:</span>        <span class="s2">&quot;drawer-masta&quot;</span><span class="p">,</span>
+  <span class="nx">navClass</span><span class="o">:</span>          <span class="s2">&quot;drawer-nav&quot;</span><span class="p">,</span>
+  <span class="nx">navListClass</span><span class="o">:</span>      <span class="s2">&quot;drawer-nav-list&quot;</span><span class="p">,</span>
+  <span class="nx">overlayClass</span><span class="o">:</span>      <span class="s2">&quot;drawer-overlay&quot;</span><span class="p">,</span>
+  <span class="nx">toggleClass</span><span class="o">:</span>       <span class="s2">&quot;drawer-toggle&quot;</span><span class="p">,</span>
+  <span class="nx">upperClass</span><span class="o">:</span>        <span class="s2">&quot;drawer-overlay-upper&quot;</span><span class="p">,</span>
+  <span class="nx">openClass</span><span class="o">:</span>         <span class="s2">&quot;drawer-open&quot;</span><span class="p">,</span>
+  <span class="nx">closeClass</span><span class="o">:</span>        <span class="s2">&quot;drawer-close&quot;</span><span class="p">,</span>
+  <span class="nx">responsiveClass</span><span class="o">:</span>   <span class="s2">&quot;drawer-responsive&quot;</span><span class="p">,</span>
+  <span class="nx">desktopEvent</span><span class="o">:</span>      <span class="s2">&quot;click&quot;</span><span class="p">,</span>  <span class="c1">// or mouseover </span>
+  <span class="nx">drawerWidth</span><span class="o">:</span>       <span class="mi">280</span>
 <span class="p">});</span>
 </code></pre></div>
     
@@ -195,8 +248,12 @@
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">drawer</span><span class="p">(</span><span class="s1">&#39;open&#39;</span><span class="p">);</span>
 </code></pre></div>
 
-        <h4>Close</h4>
+<h4>Close</h4>
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">drawer</span><span class="p">(</span><span class="s1">&#39;close&#39;</span><span class="p">);</span>
+</code></pre></div>
+
+<h4>Toggle</h4>
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">drawer</span><span class="p">(</span><span class="s1">&#39;toggle&#39;</span><span class="p">);</span>
 </code></pre></div>
 
         <h4>Destroy</h4>
@@ -212,7 +269,7 @@
 	    <footer class="site-footer">
   <div class="site-footer-inner container">
 	  <h2>drawer</h2>
-    <p>Currently v1.4.1 / Author <a href="http://blivesta.com">blivesta</a>
+    <p>Currently v1.5.0 / Author <a href="http://blivesta.com">blivesta</a>
     <br>Code licensed under the MIT license.</p>
         <ul class="site-social">
   <li>
