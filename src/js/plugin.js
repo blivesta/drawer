@@ -56,8 +56,8 @@
         if (touches) {
 
           var 
-          smY = {},
-          mfY = {};
+          smY = 0,
+          mfY = 0;
 
           $toggle.bind("touchend." + namespace, function() {
             methods.toggle.apply(_this);
@@ -165,7 +165,8 @@
       if (!touches && $this.hasClass(options.responsiveClass)) {
 
         $masta.css({
-          "min-height": overlayHeight
+          "min-height": windowHeight,
+          "height": overlayHeight
         });
 
       }      

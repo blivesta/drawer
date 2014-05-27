@@ -171,7 +171,8 @@
       if (!touches && $this.hasClass(options.responsiveClass)) {
 
         $masta.css({
-          "min-height": overlayHeight
+          "min-height": windowHeight,
+          "height": overlayHeight
         });
 
       }      
