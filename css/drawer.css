@@ -1,5 +1,5 @@
 /*!
- * drawer v1.5.0
+ * drawer v1.5.1
  * 
  * Licensed under MIT
  * http://blivesta.com

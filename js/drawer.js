@@ -1,5 +1,5 @@
 /*!
- * drawer v1.5.0
+ * drawer v1.5.1
  * 
  * Licensed under MIT
  * http://blivesta.com
@@ -171,7 +171,8 @@
       if (!touches && $this.hasClass(options.responsiveClass)) {
 
         $masta.css({
-          "min-height": overlayHeight
+          "min-height": windowHeight,
+          "height": overlayHeight
         });
 
       }      
