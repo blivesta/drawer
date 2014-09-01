@@ -38,8 +38,9 @@
     <script src="//git.blivesta.com/js/ga.js"></script>
     <!-- Vendor js -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="{{ page.base_url }}vendor/iscroll/js/iscroll.js"></script>
     <!-- drawer js -->
-    <script src="{{ page.base_url }}js/drawer.js"></script>
+    <script src="{{ page.base_url }}js/jquery.drawer.js"></script>
     <script>
       
       var chengeClass = function(valClass) {
@@ -66,14 +67,14 @@
           
         $('#drawer').drawer();
                           
-        $('.js-trigger').click(function(){
-          var selectVal = $('.js-select').val();
-          chengeClass(selectVal);
-        });
-        $('.js-select').change(function(){
-          var valClass = $(this).val();
-          chengeClass(valClass);
-        });
+        // $('.js-trigger').click(function(){
+        //   var selectVal = $('.js-select').val();
+        //   chengeClass(selectVal);
+        // });
+        // $('.js-select').change(function(){
+        //   var valClass = $(this).val();
+        //   chengeClass(valClass);
+        // });
       });
             
     </script>

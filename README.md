@@ -14,8 +14,9 @@ http://git.blivesta.com/drawer/
 <link rel="stylesheet" href="./dist/css/drawer.min.css">
 <!-- Vendor js -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="./dist/vendor/iscroll/iscroll.js"></script>
 <!-- drawer js -->
-<script src="./dist/js/drawer.min.js"></script>
+<script src="./dist/js/jquery.drawer.min.js"></script>
 
 <script type="text/javascript">
 $('.drawer').drawer({

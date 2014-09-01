@@ -1,20 +1,27 @@
+/*!
+ * drawer v1.5.1
+ * 
+ * Licensed under MIT
+ * Author : blivesta
+ * 
+ */
 (function($) {
   var namespace = "drawer";
   var touches = window.ontouchstart === null;
   var methods = {
-    init: function(options) {      
+    init: function(options) {
       options = $.extend({
-        mastaClass:        "drawer-masta",
-        navClass:          "drawer-nav",
-        navListClass:      "drawer-nav-list",
-        overlayClass:      "drawer-overlay",
-        toggleClass:       "drawer-toggle",
-        upperClass:        "drawer-overlay-upper",
-        openClass:         "drawer-open",
-        closeClass:        "drawer-close",
-        responsiveClass:   "drawer-responsive",
-        desktopEvent:      "click",  // or mouseover 
-        drawerWidth:       280
+        mastaClass: "drawer-masta",
+        navClass: "drawer-nav",
+        navListClass: "drawer-nav-list",
+        overlayClass: "drawer-overlay",
+        toggleClass: "drawer-toggle",
+        upperClass: "drawer-overlay-upper",
+        openClass: "drawer-open",
+        closeClass: "drawer-close",
+        responsiveClass: "drawer-responsive",
+        desktopEvent: "click",
+        drawerWidth: 280
       }, options);
       return this.each(function() {
         var _this = this;
@@ -28,16 +35,12 @@
             options: options
           });
         }
-
-        $this.append($upper);            
+        $this.append($upper);
         methods.resize.call(_this);
-        
         $(window).resize(function() {
           methods.resize.call(_this);
         });
-
         if (touches) {
-          
           $toggle.bind("touchend." + namespace, function() {
             methods.toggle.apply(_this);
           });
@@ -45,26 +48,18 @@
             event.preventDefault();
             methods.close.apply(_this);
           });
-          
-          var touchScroll = new iScroll(options.navClass,{});
+          var touchScroll = new iScroll(options.navClass, {});
           console.log(touchScroll);
-          
-        } else {          
-          $toggle
-            .off(options.desktopEvent + "." + namespace)
-            .on(options.desktopEvent + "." + namespace, function() {
-              methods.toggle.apply(_this);
-            });
-          $upper
-            .off("click." + namespace)
-            .on("click." + namespace, function() {
-              methods.close.apply(_this);
-            });
+        } else {
+          $toggle.off(options.desktopEvent + "." + namespace).on(options.desktopEvent + "." + namespace, function() {
+            methods.toggle.apply(_this);
+          });
+          $upper.off("click." + namespace).on("click." + namespace, function() {
+            methods.close.apply(_this);
+          });
         }
-
-      }); // end each
+      });
     },
-    
     resize: function(options) {
       var _this = this;
       var $this = $(this);
@@ -72,21 +67,17 @@
       var windowHeight = $(window).height();
       var $masta = $("." + options.mastaClass);
       var $overlay = $("." + options.overlayClass);
-      var overlayHeight =   $overlay.height();
-            
+      var overlayHeight = $overlay.height();
       methods.close.call(_this, options);
-      
       $overlay.css({
         "min-height": windowHeight
       });
-      
       if (!touches && $this.hasClass(options.responsiveClass)) {
         $masta.css({
-          "height": overlayHeight
+          height: overlayHeight
         });
-      }      
+      }
     },
-    
     toggle: function(options) {
       var _this = this;
       var $this = $(this);
@@ -98,57 +89,40 @@
         methods.open.call(_this);
       }
     },
-    
     open: function(options) {
       var $this = $(this);
       options = $this.data(namespace).options;
       if (touches) {
         event.preventDefault();
       }
-      $this
-        .removeClass(options.closeClass)
-        .addClass(options.openClass);
-
-      var duration = $('.' + options.overlayClass)
-        .css('transition-duration')
-        .replace(/s/g, '') * 1000;
-        
+      $this.removeClass(options.closeClass).addClass(options.openClass);
+      var duration = $("." + options.overlayClass).css("transition-duration").replace(/s/g, "") * 1e3;
       setTimeout(function() {
         $this.css({
-          "overflow": "hidden"
+          overflow: "hidden"
         });
         var windowWidth = $(window).width();
         var upperWidth = windowWidth - options.drawerWidth;
-        $("."+options.upperClass).css({
-          "width":upperWidth,
-          "display":"block"
+        $("." + options.upperClass).css({
+          width: upperWidth,
+          display: "block"
         });
       }, duration);
-
     },
-    
     close: function(options) {
       var $this = $(this);
       options = $this.data(namespace).options;
-      $this
-        .removeClass(options.openClass)
-        .addClass(options.closeClass);
-
-      var duration = $('.' + options.overlayClass)
-        .css('transition-duration')
-        .replace(/s/g, '') * 1000;
-
+      $this.removeClass(options.openClass).addClass(options.closeClass);
+      var duration = $("." + options.overlayClass).css("transition-duration").replace(/s/g, "") * 1e3;
       setTimeout(function() {
         $this.css({
-          "overflow": "auto"
+          overflow: "auto"
         });
-        $("."+options.upperClass).css({
-          "display":"none"
+        $("." + options.upperClass).css({
+          display: "none"
         });
       }, duration);
-
     },
-    
     destroy: function() {
       return this.each(function() {
         var $this = $(this);
@@ -156,9 +130,7 @@
         $this.removeData(namespace);
       });
     }
-    
   };
-  
   $.fn.drawer = function(method) {
     if (methods[method]) {
       return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
@@ -168,5 +140,4 @@
       $.error("Method " + method + " does not exist on jQuery." + namespace);
     }
   };
-  
 })(jQuery);
