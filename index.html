@@ -36,8 +36,9 @@
     <script src="//git.blivesta.com/js/ga.js"></script>
     <!-- Vendor js -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./vendor/iscroll/js/iscroll.js"></script>
     <!-- drawer js -->
-    <script src="./js/drawer.js"></script>
+    <script src="./js/jquery.drawer.js"></script>
     <script>
       
       var chengeClass = function(valClass) {
@@ -64,23 +65,23 @@
           
         $('#drawer').drawer();
                           
-        $('.js-trigger').click(function(){
-          var selectVal = $('.js-select').val();
-          chengeClass(selectVal);
-        });
-        $('.js-select').change(function(){
-          var valClass = $(this).val();
-          chengeClass(valClass);
-        });
+        // $('.js-trigger').click(function(){
+        //   var selectVal = $('.js-select').val();
+        //   chengeClass(selectVal);
+        // });
+        // $('.js-select').change(function(){
+        //   var valClass = $(this).val();
+        //   chengeClass(valClass);
+        // });
       });
             
     </script>
   </head>
 <body class="site-home drawer drawer-left" id="drawer">
   <div class="site-wrapper">
-    <button class="drawer-toggle btn btn-outline-white">
+    <a class="drawer-toggle btn btn-outline-white">
   D
-</button>
+</a>
 <div class="drawer-masta drawer-default drawer-masta-left">
   <nav class="drawer-nav " role="navigation">
     <div class="drawer-brand">
@@ -92,7 +93,7 @@
       <li><a href="https://twitter.com/blivesta">Twitter @blivesta</a></li>
       <li><a href="https://github.com/blivesta">GitHub</a></li>
       <li><a href="https://github.com/blivesta/drawer">drawer</a></li>
-      <li><a href="http://git.blivesta.com/clickstream">clickstream</a></li>
+      <li><a href="http://git.blivesta.com/animsition">animsition</a></li>
       <li><a href="http://git.blivesta.com/oblurlay">oblurlay</a></li>
       <li><a href="http://git.blivesta.com/chaffle">chaffle</a></li>
     </ul>
@@ -136,7 +137,7 @@
   </li>
 </ul>       
   
-    <p>Currently v1.5.1</p>
+    <p>Currently v2.0.0</p>
     
   </div><!-- /.container -->
   
@@ -170,8 +171,9 @@
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;./dist/css/drawer.min.css&quot;</span><span class="nt">&gt;</span>
 <span class="c">&lt;!-- Vendor js --&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;./dist/vendor/iscroll/iscroll.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="c">&lt;!-- drawer js --&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;./dist/js/drawer.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;./dist/js/jquery.drawer.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script&gt;</span>
 <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#drawer&#39;</span><span class="p">).</span><span class="nx">drawer</span><span class="p">();</span>
@@ -269,7 +271,7 @@ Drawer toggle
 	    <footer class="site-footer">
   <div class="site-footer-inner container">
 	  <h2>drawer</h2>
-    <p>Currently v1.5.1 / Author <a href="http://blivesta.com">blivesta</a>
+    <p>Currently v2.0.0 / Author <a href="http://blivesta.com">blivesta</a>
     <br>Code licensed under the MIT license.</p>
         <ul class="site-social">
   <li>
