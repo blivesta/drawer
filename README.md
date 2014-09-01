@@ -2,8 +2,8 @@ drawer
 ===
 Drawer is a jQuery plugin for displaying the drawer menu using CSS animations in the event of a trigger. Setting the position can be selected either the right or left. And also supports Responsive design.
 
-![drawer](./src/images/drawer-sample.gif)
-![drawer-image](./src/images/drawer-image.jpg)
+![drawer](./docs/images/drawer-sample.gif)
+![drawer-image](./docs/images/drawer-image.jpg)
 
 ##example
 http://git.blivesta.com/drawer/
