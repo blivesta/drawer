@@ -3,4 +3,7 @@ validation-*.json
 _gh_pages
 bower_components
 src/vendor
+docs/vendor
+docs/css
+docs/js
 *.psd
