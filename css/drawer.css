@@ -58,6 +58,7 @@
 .drawer-open .drawer-overlay {
   position: absolute;
   width: 100%;
+  overflow: hidden;
   overflow-x: hidden;
 }
 .drawer-open .drawer-overlay-upper {
@@ -66,6 +67,8 @@
   z-index: 1100;
   display: none;
   height: 100%;
+  background-color: #222;
+  background-color: rgba(0, 0, 0, .5);
 }
 .drawer-left.drawer-open .drawer-overlay,
 .drawer-left.drawer-open .drawer-toggle {

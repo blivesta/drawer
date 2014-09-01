@@ -48,8 +48,9 @@
             event.preventDefault();
             methods.close.apply(_this);
           });
-          var touchScroll = new iScroll(options.navClass, {});
-          console.log(touchScroll);
+          $(window).on("scroll." + namespace, function() {
+            methods.close.apply(_this);
+          });
         } else {
           $toggle.off(options.desktopEvent + "." + namespace).on(options.desktopEvent + "." + namespace, function() {
             methods.toggle.apply(_this);
