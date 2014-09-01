@@ -1,5 +1,5 @@
 /*!
- * drawer v1.5.1
+ * drawer v2.0.0
  * 
  * Licensed under MIT
  * Author : blivesta
@@ -48,8 +48,8 @@
             event.preventDefault();
             methods.close.apply(_this);
           });
-          var myScroll = new iScroll(options.navClass);
-          console.log(myScroll);
+          var touchScroll = new iScroll(options.navClass, {});
+          console.log(touchScroll);
         } else {
           $toggle.off(options.desktopEvent + "." + namespace).on(options.desktopEvent + "." + namespace, function() {
             methods.toggle.apply(_this);

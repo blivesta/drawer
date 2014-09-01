@@ -73,28 +73,6 @@ $('.drawer').drawer({
 </body>
 ~~~
 
-
-##API Methods
-####Open
-~~~ go
-$('#element').drawer('open');
-~~~
-
-####Close
-~~~ go
-$('#element').drawer('close');
-~~~
-
-####Toggle
-~~~ go
-$('#element').drawer('toggle');
-~~~
-
-####Destroy
-~~~ go
-$('#element').drawer('destroy');
-~~~ 
-
 ##Browsers
 - IE 10 +
 - chrome
