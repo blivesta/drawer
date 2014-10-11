@@ -23,6 +23,8 @@
         '<%= pkg.dist %>',
         '<%= pkg.docs %>/js/*.js',
         '<%= pkg.docs %>/css/*.css',
+        '<%= pkg.docs %>/vendor',
+        '<%= pkg.assets %>/css/*.css',
         '<%= pkg.public %>'
       ]
     },
@@ -48,26 +50,26 @@
           '<%= pkg.docs %>/css/<%= pkg.name %>.min.css': '<%= pkg.docs %>/css/<%= pkg.name %>.css'
         }
       },
-      // docs: {
-      //   options: {
-      //     strictMath: true,
-      //     sourceMap: true,
-      //     outputSourceFiles: true,
-      //     sourceMapURL: ['<%= pkg.name %>.css.map'],
-      //     sourceMapFilename: '<%= pkg.assets %>/css/docs.css.map'
-      //   },
-      //   files: {
-      //     '<%= pkg.assets %>/css/docs.css': '<%= pkg.assets %>/less/docs.less'
-      //   } 
-      // },
-      // docsMin: {
-      //   options: {
-      //     cleancss: true
-      //   },
-      //   files: {
-      //     '<%= pkg.assets %>/css/docs.min.css': '<%= pkg.assets %>/css/docs.css'
-      //   }
-      // }
+      docs: {
+        options: {
+          strictMath: true,
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapURL: ['<%= pkg.name %>.css.map'],
+          sourceMapFilename: '<%= pkg.assets %>/css/docs.css.map'
+        },
+        files: {
+          '<%= pkg.assets %>/css/docs.css': '<%= pkg.assets %>/less/docs.less'
+        } 
+      },
+      docsMin: {
+        options: {
+          cleancss: true
+        },
+        files: {
+          '<%= pkg.assets %>/css/docs.min.css': '<%= pkg.assets %>/css/docs.css'
+        }
+      }
 
     },
     // ====================================================
@@ -90,12 +92,12 @@
         },
         src: '<%= pkg.docs %>/css/<%= pkg.name %>.css'
       },
-      // docs: {
-      //   options: {
-      //     map: true
-      //   },
-      //   src: '<%= pkg.assets %>/css/docs.css'
-      // }
+      docs: {
+        options: {
+          map: true
+        },
+        src: '<%= pkg.assets %>/css/docs.css'
+      }
     },
     // ====================================================
     csscomb: {
@@ -108,12 +110,12 @@
         src: ['*.css', '!*.min.css'],
         dest: '<%= pkg.docs %>/css/'
       },
-      // docs: {
-      //   expand: true,
-      //   cwd: '<%= pkg.assets %>/css/',
-      //   src: ['*.css', '!*.min.css'],
-      //   dest: '<%= pkg.assets %>/css/'
-      // }
+      docs: {
+        expand: true,
+        cwd: '<%= pkg.assets %>/css/',
+        src: ['*.css', '!*.min.css'],
+        dest: '<%= pkg.assets %>/css/'
+      }
     },    
     // ====================================================
     usebanner: {
@@ -124,9 +126,9 @@
       source: {
         src: '<%= pkg.docs %>/css/*.css'
       },
-      // docs: {
-      //   src: '<%= pkg.assets %>/css/*.css'
-      // }
+      docs: {
+        src: '<%= pkg.assets %>/css/*.css'
+      }
     },
     // ====================================================
     csslint: {
@@ -135,7 +137,11 @@
       },
       source: [
         '<%= pkg.docs %>/css/<%= pkg.name %>.css',
-        // '<%= pkg.assets %>/css/docs.css'
+        '<%= pkg.assets %>/css/docs.css'
+      ],
+      dist: [
+        '<%= pkg.dist %>/css/<%= pkg.name %>.css',
+        '<%= pkg.dist %>/css/<%= pkg.name %>.min.css'
       ]
     },
     // ====================================================
@@ -181,25 +187,6 @@
       }
     },
     // ====================================================
-    validation: {
-      options: {
-        charset: 'utf-8',
-        doctype: 'HTML5',
-        failHard: true,
-        reset: true,
-        relaxerror: [
-          'Bad value X-UA-Compatible for attribute http-equiv on element meta.',
-          'Element img is missing required attribute src.'
-        ]
-      },
-      files: {
-        src: [
-          '<%= pkg.public %>/index.html',
-          '<%= pkg.public %>/**/*.html'
-        ]
-      }
-    },
-    // ====================================================
     copy: {
       dist: {
         expand: true,
@@ -212,6 +199,14 @@
           'css/*.map'
         ],
         dest: './<%= pkg.dist %>'
+      },
+      vendor: {
+        expand: true,
+        cwd: './',
+        src: [
+          'vendor/**'
+        ],
+        dest: './<%= pkg.docs %>'
       }
     },
     // ====================================================
@@ -244,7 +239,7 @@
     bower: {
       install: {
         options: {
-          targetDir: '<%= pkg.docs %>/vendor',
+          targetDir: './vendor',
           layout: 'byComponent',
           install: true,
           verbose: false,
@@ -309,18 +304,18 @@
           'notify'
         ]
       },
-      // docsLess: {
-      //   files: [
-      //     '<%= pkg.assets %>/less/*.less',
-      //     '<%= pkg.assets %>/less/**/*.less'
-      //   ],
-      //   tasks: [
-      //     'build-docsLess',
-      //     'csslint',
-      //     'jekyll',
-      //     'notify'
-      //   ]
-      // }
+      docsLess: {
+        files: [
+          '<%= pkg.assets %>/less/*.less',
+          '<%= pkg.assets %>/less/**/*.less'
+        ],
+        tasks: [
+          'build-docsLess',
+          'csslint',
+          'jekyll',
+          'notify'
+        ]
+      }
     },
     // ====================================================
     buildcontrol: {
@@ -362,6 +357,7 @@
     'usebanner:docs', 
     'csscomb:docs', 
     'less:docsMin',
+    'csslint'
   ]);
 
   // ====================================================
@@ -376,21 +372,21 @@
 
   // ====================================================
   grunt.registerTask('test', [
-    'jshint:source',
-    'csslint',
-    //'validation'
+    'jshint',
+    'csslint'
   ]);
 
   // ====================================================
   grunt.registerTask('b', [
     'clean',
     'bower',
+    'copy:vendor',
     'build-less',
-    // 'build-docsLess',
+    'build-docsLess',
     'build-js',
     'build-html',
     'test',
-    'copy'
+    'copy:dist'
   ]);
   
   // ====================================================
