@@ -23,11 +23,11 @@
   ],
   "dependencies": {
     "jquery": ">= 1.9.0",
-    "iscroll": "~5.1.2"
+    "iscroll": "~5.1.3"
   },
   "exportsOverride": {
     "iscroll": {
-      "js": "build/"
+      "js": "build/iscroll.js"
     }
   }
 }
