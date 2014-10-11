@@ -1,0 +1,28 @@
+.drawer-hamberger{
+  position: fixed;
+  top:0px;
+  z-index: @toggle-z-index;
+  display: block;
+  visibility: visible;
+  border: none;
+  border-radius: 0;
+  background-color: #000;
+  background-color: rgba(0,0,0,.4);
+  color:#fff;
+  font-size: 30px;
+  &:hover{
+    border: none;
+    background-color: #000;
+    background-color: rgba(0,0,0,.6);
+    color:#fff;
+    cursor: pointer;
+  }
+  &:focus{
+    border: none;
+  }
+  .drawer-left &:extend(.drawer-left .drawer-overlay) {}
+  .drawer-left.drawer-open &:extend(.drawer-left.drawer-open .drawer-overlay) {}
+    
+  .drawer-right &:extend(.drawer-right .drawer-overlay) {}
+  .drawer-right.drawer-open &:extend(.drawer-right.drawer-open .drawer-overlay) {}
+}
