@@ -1,12 +1,12 @@
 markdown:         redcarpet
 pygments:         true
 permalink:        pretty
-exclude:          ['less','*.json','Gruntfile.js','bower_components','node_modules']
+exclude:          ['less','*.json','Gruntfile.js','bower_components','node_modules','_*.html']
 source:           ./docs
 destination:      ./_gh_pages
 encoding:         UTF-8
 title:            drawer
-discription:      jquery plugin for easily implement a sliding drawer into your website.
+discription:      jQuery plugin for displaying the drawer menu using CSS animations in the event of a trigger. Setting the position can be selected either the right or left. And also supports Responsive design.
 url:              http://git.blivesta.com/drawer/
 repo:             drawer
 repo_url:         https://github.com/blivesta/drawer
@@ -17,3 +17,4 @@ twitter:          blivesta
 tag:              
 git_fork_btn:     http://ghbtns.com/github-btn.html?user=blivesta&amp;repo=drawer&amp;type=fork&amp;count=true
 git_star_btn:     http://ghbtns.com/github-btn.html?user=blivesta&amp;repo=drawer&amp;type=watch&amp;count=true
+git_follow_btn:   http://ghbtns.com/github-btn.html?user=blivesta&type=follow&count=false

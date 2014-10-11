@@ -1,172 +1,64 @@
 ---
 layout: home
-slug: home
-title: drawer | blivesta
-lead: jQuery plugin for displaying the drawer menu using CSS animations in the event of a trigger. Setting the position can be selected either the right or left. And also supports Responsive design.
-class: site-home drawer drawer-left
+class: drawer drawer-right
 base_url: "./"
 ---
-<main class="site-masthead" role="main">
+<main class="masthead" role="main">
   <div class="container">
-    <span class="text-icon text-icon-lg text-icon-outline">D</span>
     <h1>{{ site.title }}</h1>
-    <p class="lead">{{ page.lead }}</p>
-
+    <p class="lead">{{ site.discription }}</p>
     <p class="center-block form-inline" style="max-width:480px">
- 
-      <select class="form-control input-lg js-select">
-        <optgroup label="Basic">
-          <option value="drawer-left">Left Drawer</option>
-          <option value="drawer-right">Right Drawer</option>
-        </optgroup>
-        <optgroup label="Responsive">
-          <option value="drawer-left drawer-responsive">Left Drawer</option>
-          <option value="drawer-right drawer-responsive">Right Drawer</option>
-        </optgroup>
-      </select>
-
-      <button class="btn btn-lg js-trigger" style="padding:10px 16px; background-color:#fff;color:#666;">Open</button>
-    </p>
-
-    <p><a href="{{ site.repo_url }}" class="btn btn- btn-lg">Download on GitHub</a></p>
-
-    {% include social-buttons.html %}  
-    <p>Currently v{{ site.current_version }}</p>
+      <a class="button button-border button-lg js-trigger">Open</a>
+    </p>    
+    {% include social-link.html %}  
+    <p>Currently v{{ site.current_version }}  ･  Authtor :&nbsp; 
+      <span class="icon-blivesta icon-sm"></span>&nbsp;
+      <a href="http://blivesta.com/" target="_blank">blivesta</a>
+    <br>
+    Licensed under the MIT.</p>
+        
+    {% include adpacks.html %}
     
   </div><!-- /.container -->
-  
 </main>
 
-<div class="site-body">
-  <div class="site-body-inner container">
-  
-    <div class="site-section">
-
-      <div class="site-section-body">
-                
-        <img class="img-responsive" src="./images/drawer-image.jpg" alt="drawer"/>
-        
-      </div>
-    </div>
+<div class="body">
     
-    <div class="site-section">
-      <!-- <h2 class="site-section-title">Setup</h2> -->
-      <p class="lead"></p>
-      <div class="site-section-body">
-        
-      </div>
-    </div>
-
-<div class="site-section">
-  <h2 class="site-section-title">Setup Basic</h2>
-  <p class="lead"></p>
-  <div class="site-section-body">
-{% highlight html %}
-<!-- drawer CSS -->
-<link rel="stylesheet" href="./dist/css/drawer.min.css">
-<!-- Vendor js -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="./dist/vendor/iscroll/iscroll.js"></script>
-<!-- drawer js -->
-<script src="./dist/js/jquery.drawer.min.js"></script>
-<script>
-$(document).ready(function() {
-$('#drawer').drawer();
-});
-</script>
-</head>
-<body id="drawer" class="drawer-left">
-<button class="drawer-toggle btn btn-outline-white">
-Drawer toggle
-</button>
-<div class="drawer-masta drawer-default">
-<nav class="drawer-nav " role="navigation">
-  <div class="drawer-brand">
-    <a href="./">drawer</a>
-  </div>
-  <ul class="nav drawer-nav-list">
-    <li><a href="./base">base</a></li>
-  </ul>
-</nav>
-</div>
-<div class="drawer-overlay">
-<!-- contents -->
-</div>
-</body>
-{% endhighlight %}
-  </div>
-</div>
-
-
-<div class="site-section">
-  <h2 class="site-section-title">Setup Responsive drawer</h2>
-  <p class="lead"></p>
-  <div class="site-section-body">
-<h3>Left</h3>
-{% highlight html %}
-<body id="drawer" class="drawer-left drawer-responsive">
-...
-</body>
-{% endhighlight %}
-<h3>Right</h3>
-{% highlight html %}
-<body id="drawer" class="drawer-right drawer-responsive">
-...
-</body>
-{% endhighlight %}
-  </div>
-</div>
-
-    <div class="site-section">
-      <h2 class="site-section-title">Options</h2>
-      <p class="lead"></p>
-      <div class="site-section-body">
-{% highlight js %}
-$('.drawer').drawer({
-  mastaClass:        "drawer-masta",
-  navClass:          "drawer-nav",
-  navListClass:      "drawer-nav-list",
-  overlayClass:      "drawer-overlay",
-  toggleClass:       "drawer-toggle",
-  upperClass:        "drawer-overlay-upper",
-  openClass:         "drawer-open",
-  closeClass:        "drawer-close",
-  responsiveClass:   "drawer-responsive",
-  desktopEvent:      "click",  // or mouseover 
-  drawerWidth:       280
-});
-{% endhighlight %}
+  <div class="container">
     
+    <div class="section">
+      <h2 class="section-title">Demo</h2>
+      <p class="icon-mark"><span class="oi oi-beaker"></span></p>
+      <div class="section-body">
+        {% include example-links.html %}  
+     </div>
+    </div>    
+
+    <!-- <div class="section">
+      <h2 class="section-title">Browser support</h2>
+      <p class="icon-mark"><span class="oi oi-browser"></span></p>
+      <p class="lead">Requires a browser that supports CSS3.</p>
+      <div class="section-body">
+        <ul class="list-inline">
+          <li><span class="labels">IE10+</span></li>
+          <li><span class="labels">Safari</span></li>
+          <li><span class="labels">Chrome</span></li>
+          <li><span class="labels">Firefox</span></li>
+        </ul>
       </div>
-    </div>
+    </div>     -->
 
-    <div class="site-section">
-      <h2 class="site-section-title">API Methods</h2>
+    <div class="section">
+      <h2 class="section-title">Installation</h2>
+      <p class="icon-mark"><span class="oi oi-code"></span></p>
       <p class="lead"></p>
-      <div class="site-section-body">
-        <h4>Open</h4>
-{% highlight js %}
-$('#element').drawer('open');
-{% endhighlight %}
+      <div class="section-body">
+          <p><a href="{{ site.repo_url }}" class="button button-border-primary button-lg">Download on GitHub</a></p>
 
-<h4>Close</h4>
-{% highlight js %}
-$('#element').drawer('close');
-{% endhighlight %}
-
-<h4>Toggle</h4>
-{% highlight js %}
-$('#element').drawer('toggle');
-{% endhighlight %}
-
-        <h4>Destroy</h4>
-{% highlight js %}
-$('#element').drawer('destroy');
-{% endhighlight %}
-    
+        {% include example-setup.html %}
       </div>
     </div>
 
   </div><!-- /.container -->
-</div><!-- /.site-body -->
+</div><!-- /.body -->
   

@@ -1,11 +1,9 @@
 {% include head.html %}
-<body class="{{ page.class }}" id="drawer">
-  <div class="site-wrapper">
-    {% include header.html %}
-    <div class="drawer-overlay">
-	    {{ content }}
-	    {% include footer.html %}
-    </div>
-  </div><!-- /.site-wrapper -->
+<body class="{{ page.class }} site-home" id="drawer">
+  {% include header.html %}
+  <div class="drawer-overlay">
+    {{ content }}
+    {% include footer.html %}
+  </div>
 </body>
 </html>

@@ -1,0 +1,83 @@
+<p class="lead">Step 1: Link required files</p>
+{% highlight html %}
+<!-- drawer css -->
+<link rel="stylesheet" href="{{ page.base_url }}css/drawer.min.css">
+
+<!-- jquery & iscroll -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="{{ page.base_url }}dist/vendor/iscroll/js/iscroll.js"></script>
+
+<!-- drawer js -->
+<script src="{{ page.base_url }}dist/js/jquery.drawer.min.js"></script>
+{% endhighlight %}
+
+<p class="lead">Step 2: HTML markup</p>
+{% highlight html %}
+<body id="drawer" class="drawer-right">
+  <div class="drawer-toggle drawer-hamberger"><span></span></div>
+  <div class="drawer-masta drawer-default">
+    <nav class="drawer-nav" role="navigation">
+      <div class="drawer-brand">
+        <a href="./">drawer</a>
+      </div>
+      <ul class="nav drawer-nav-list">
+        <li><a href="./base">base</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="drawer-overlay">
+  <!-- contents -->
+  </div>
+</body>
+{% endhighlight %}
+
+<p class="lead">Step 3: Call the animsition</p>
+{% highlight js %}
+$(document).ready(function() {
+  $(".drawer").drawer({
+    mastaClass:        "drawer-masta",
+    overlayClass:      "drawer-overlay",
+    toggleClass:       "drawer-toggle",
+    upperClass:        "drawer-overlay-upper",
+    openClass:         "drawer-open",
+    closeClass:        "drawer-close",
+    responsiveClass:   "drawer-responsive"
+  });
+}); 
+{% endhighlight %}
+
+
+
+
+<h2 class="section-title">Responsive markup</h2>
+<p class="lead">Left position</p>
+{% highlight html %}
+<body class="drawer drawer-left drawer-responsive">
+...
+</body>
+{% endhighlight %}
+<p class="lead">Right position</p>
+{% highlight html %}
+<body class="drawer drawer-right drawer-responsive">
+...
+</body>
+{% endhighlight %}
+
+
+
+<h2 class="section-title">API Methods</h2>
+
+{% highlight js %}
+// Open
+$('#element').drawer('open');
+
+// close
+$('#element').drawer('close');
+
+// toggle
+$('#element').drawer('toggle');
+
+// destroy
+$('#element').drawer('destroy');
+
+{% endhighlight %}

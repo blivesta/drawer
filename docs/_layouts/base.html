@@ -1,0 +1,32 @@
+{% include head.html %}
+<body class="{{ page.class }} site-base" id="drawer">
+  
+  {% include header.html %}
+  
+  <div class="drawer-overlay">
+    
+		<main class="masthead" role="main">
+			<div class="container">
+				<h1>{{ page.title }}</h1>
+				<p class="lead">{{ site.discription }}</p>
+        <p class="center-block form-inline" style="max-width:480px">
+          <a class="button button-border button-lg js-trigger">Open</a>
+        </p>
+        {% include adpacks.html %}
+			</div><!-- /.container -->
+		</main>
+
+		<div class="site-body">
+      
+		  <div class="site-body-inner container">
+
+		    {{ content }}
+		  
+		  </div><!-- /.container -->
+		</div><!-- /.site-body -->
+
+    {% include footer.html %}
+
+  </div><!-- /.drawer-overlay -->
+</body>
+</html>
