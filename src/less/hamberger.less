@@ -1,28 +1,63 @@
-.drawer-hamberger{
-  position: fixed;
-  top:0px;
+.drawer-hamberger { 
+  position:fixed;  
+  padding:20px;
+  width:70px;
+  height:70px;
+  background-color: transparent; 
+  border: 0;
   z-index: @toggle-z-index;
   display: block;
-  visibility: visible;
-  border: none;
-  border-radius: 0;
-  background-color: #000;
-  background-color: rgba(0,0,0,.4);
-  color:#fff;
-  font-size: 30px;
+  span {
+   margin-top:10px;
+  }
+  span, 
+  span:before, 
+  span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2px;
+    width: 30px;
+    background: #fff;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all @drawer-duration @drawer-ease;
+  }
+  span:before {
+    top: -10px; 
+  }
+  span:after {
+    bottom: -10px;
+  }
+  span {
+    .drawer-open &{
+      background-color: transparent;
+    }
+  }
+  span:before, 
+  span:after {
+    .drawer-open &{
+      top: 0;
+    }
+  }
+  span:before {
+    .drawer-open &{
+      transform: rotate(45deg);
+    }
+  }
+  span:after {
+    .drawer-open &{
+      transform: rotate(-45deg);
+    }
+  }
   &:hover{
-    border: none;
-    background-color: #000;
-    background-color: rgba(0,0,0,.6);
-    color:#fff;
     cursor: pointer;
   }
-  &:focus{
-    border: none;
-  }
+  
   .drawer-left &:extend(.drawer-left .drawer-overlay) {}
   .drawer-left.drawer-open &:extend(.drawer-left.drawer-open .drawer-overlay) {}
     
   .drawer-right &:extend(.drawer-right .drawer-overlay) {}
   .drawer-right.drawer-open &:extend(.drawer-right.drawer-open .drawer-overlay) {}
+  
 }

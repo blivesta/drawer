@@ -9,16 +9,14 @@
   height:100%;
   .drawer-left & {
     left : (-@drawer-width-phone);
-    transition:left @drawer-ease;
-    transition-duration:@drawer-duration;
+    transition:left @drawer-duration @drawer-ease ;
   }  
   .drawer-left.drawer-open & {
     left: 0;
   }
   .drawer-right & {
     right: (-@drawer-width-phone);
-    transition:right @drawer-ease;
-    transition-duration:@drawer-duration;
+    transition:right @drawer-duration @drawer-ease;
   }
   .drawer-right.drawer-open & {
     right:0;
@@ -30,18 +28,15 @@
 .drawer-overlay{
   position: relative;
   .drawer-left & {
-    left:0;//*
-    transition:left @drawer-ease;
-    transition-duration:@drawer-duration;
+    left:0;
+    transition:left @drawer-duration @drawer-ease;
   }
   .drawer-left.drawer-open & {
-    // leftがバグ?
     left:@drawer-width-phone;
   }
   .drawer-right & {
     right:0;
-    transition:right @drawer-ease;
-    transition-duration:@drawer-duration;
+    transition:right @drawer-duration @drawer-ease;
   }
   .drawer-right.drawer-open & {
     right:@drawer-width-phone;
@@ -57,7 +52,7 @@
   height:100%;
   display:none;
   background-color: #000;
-  background-color:rgba(0,0,0,.5);
+  background-color: rgba(0,0,0,.5);
   .drawer-left.drawer-open & {
     right:0;
   }
