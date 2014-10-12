@@ -6,29 +6,25 @@
  * 
  */
 (function($) {
+  "use strict";
   var namespace = "drawer";
-  var touches = window.ontouchstart === null;
+  var touches = typeof document.ontouchstart != "undefined";
   var methods = {
     init: function(options) {
       options = $.extend({
-        mastaClass: "drawer-masta",
-        navClass: "drawer-nav",
-        navListClass: "drawer-nav-list",
+        mastaClass: "drawer-main",
         overlayClass: "drawer-overlay",
         toggleClass: "drawer-toggle",
         upperClass: "drawer-overlay-upper",
         openClass: "drawer-open",
         closeClass: "drawer-close",
-        responsiveClass: "drawer-responsive",
-        desktopEvent: "click",
-        drawerWidth: 280
+        responsiveClass: "drawer-responsive"
       }, options);
       return this.each(function() {
         var _this = this;
         var $this = $(this);
         var data = $this.data(namespace);
-        var $toggle = $("." + options.toggleClass);
-        var $upper = $("<div>").addClass(options.upperClass);
+        var $upper = $("<div>").addClass(options.upperClass + " " + options.toggleClass);
         if (!data) {
           options = $.extend({}, options);
           $this.data(namespace, {
@@ -36,92 +32,66 @@
           });
         }
         $this.append($upper);
-        methods.resize.call(_this);
+        var drawerScroll = new IScroll("." + options.mastaClass, {
+          scrollbars: true,
+          mouseWheel: true,
+          click: true,
+          fadeScrollbars: true
+        });
+        $("." + options.toggleClass).off("click." + namespace).on("click." + namespace, function() {
+          methods.toggle.call(_this);
+          drawerScroll.refresh();
+        });
         $(window).resize(function() {
-          methods.resize.call(_this);
+          methods.close.call(_this);
+          drawerScroll.refresh();
         });
-        if (touches) {
-          $toggle.bind("touchend." + namespace, function() {
-            methods.toggle.apply(_this);
-          });
-          $upper.bind("touchend." + namespace, function(event) {
-            event.preventDefault();
-            methods.close.apply(_this);
-          });
-          var touchScroll = new iScroll(options.navClass, {});
-          console.log(touchScroll);
-        } else {
-          $toggle.off(options.desktopEvent + "." + namespace).on(options.desktopEvent + "." + namespace, function() {
-            methods.toggle.apply(_this);
-          });
-          $upper.off("click." + namespace).on("click." + namespace, function() {
-            methods.close.apply(_this);
-          });
-        }
       });
-    },
-    resize: function(options) {
-      var _this = this;
-      var $this = $(this);
-      options = $this.data(namespace).options;
-      var windowHeight = $(window).height();
-      var $masta = $("." + options.mastaClass);
-      var $overlay = $("." + options.overlayClass);
-      var overlayHeight = $overlay.height();
-      methods.close.call(_this, options);
-      $overlay.css({
-        "min-height": windowHeight
-      });
-      if (!touches && $this.hasClass(options.responsiveClass)) {
-        $masta.css({
-          height: overlayHeight
-        });
-      }
     },
     toggle: function(options) {
       var _this = this;
       var $this = $(this);
       options = $this.data(namespace).options;
       var open = $this.hasClass(options.openClass);
-      if (open) {
-        methods.close.call(_this);
-      } else {
-        methods.open.call(_this);
-      }
+      open ? methods.close.call(_this) : methods.open.call(_this);
     },
     open: function(options) {
       var $this = $(this);
       options = $this.data(namespace).options;
+      var windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
+      var upperWidth = windowWidth - $("." + options.mastaClass).outerWidth();
       if (touches) {
-        event.preventDefault();
-      }
-      $this.removeClass(options.closeClass).addClass(options.openClass);
-      var duration = $("." + options.overlayClass).css("transition-duration").replace(/s/g, "") * 1e3;
-      setTimeout(function() {
-        $this.css({
-          overflow: "hidden"
+        $this.on("touchmove." + namespace, function(event) {
+          event.preventDefault();
         });
-        var windowWidth = $(window).width();
-        var upperWidth = windowWidth - options.drawerWidth;
+      }
+      $this.removeClass(options.closeClass).addClass(options.openClass).transitionEnd(function() {
         $("." + options.upperClass).css({
           width: upperWidth,
           display: "block"
         });
-      }, duration);
+        $this.css({
+          overflow: "hidden"
+        });
+      });
     },
     close: function(options) {
       var $this = $(this);
       options = $this.data(namespace).options;
-      $this.removeClass(options.openClass).addClass(options.closeClass);
-      var duration = $("." + options.overlayClass).css("transition-duration").replace(/s/g, "") * 1e3;
-      setTimeout(function() {
+      if (touches) {
+        $this.off("touchmove." + namespace);
+      }
+      $("." + options.upperClass).css({
+        display: "none"
+      });
+      $this.removeClass(options.openClass).addClass(options.closeClass).transitionEnd(function() {
         $this.css({
           overflow: "auto"
         });
         $("." + options.upperClass).css({
           display: "none"
         });
-      }, duration);
+      });
     },
     destroy: function() {
       return this.each(function() {
@@ -139,5 +109,33 @@
     } else {
       $.error("Method " + method + " does not exist on jQuery." + namespace);
     }
+  };
+})(jQuery);
+
+(function($) {
+  "use strict";
+  $.fn.transitionEnd = function(callback) {
+    var $this = $(this);
+    var props = "transitionend webkitTransitionEnd mozTransitionEnd oTransitionEnd MSTransitionEnd";
+    if ($this.length > 0) {
+      $this.bind(props, function(event) {
+        if ($.isFunction(callback)) {
+          callback.call($this, event);
+        }
+      });
+    }
+    return $this;
+  };
+  $.fn.animationEnd = function(callback) {
+    var $this = $(this);
+    var props = "animationend webkitAnimationEnd mozAnimationEnd oAnimationEnd MSAnimationEnd";
+    if ($this.length > 0) {
+      $this.bind(props, function(event) {
+        if ($.isFunction(callback)) {
+          callback.call($this, event);
+        }
+      });
+    }
+    return $this;
   };
 })(jQuery);
