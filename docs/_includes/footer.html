@@ -5,10 +5,12 @@
     {% endif %}
     {% include social-follow.html %}
     
-    <hr>
+    <!-- <hr> -->
     
     <ul class="list-inline">
-      <li>Currently v{{ site.current_version }}</li>
+      <li><img src="http://img.shields.io/travis/blivesta/drawer.svg" alt="travis" /></li>
+      <li>·</li>
+      <li><img src="http://img.shields.io/bower/v/drawer.svg" alt="bower" /></li>
       <li>·</li>
       <li>Code licensed under the MIT.</li>
       <li>·</li>
@@ -33,3 +35,24 @@
     </ul>
   </div>
 </footer>
+
+
+<!-- Vendor js -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js"></script>
+
+<!-- drawer js -->
+<script src="{{ page.base_url }}js/jquery.drawer.js"></script>
+
+<script>
+    
+  $(document).ready(function(){
+      
+    $('.drawer').drawer();
+                      
+    $('.js-trigger').click(function(){
+      $('.drawer').drawer("open");
+    });
+  });
+        
+</script> 

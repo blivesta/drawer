@@ -8,10 +8,15 @@ base_url: "./"
     <h1>{{ site.title }}</h1>
     <p class="lead">{{ site.discription }}</p>
     <p class="center-block form-inline" style="max-width:480px">
-      <a class="button button-border button-lg js-trigger">Open</a>
+      <a class="button button-border button-lg js-trigger"><span class="oi oi-menu"></span> Open</a>
     </p>    
     {% include social-link.html %}  
-    <p>Currently v{{ site.current_version }}  ･  Authtor :&nbsp; 
+    <p>
+      <img src="http://img.shields.io/travis/blivesta/drawer.svg" alt="travis" />
+        ･  
+      <img src="http://img.shields.io/bower/v/drawer.svg" alt="bower" />
+        ･  
+      Authtor :&nbsp; 
       <span class="icon-blivesta icon-sm"></span>&nbsp;
       <a href="http://blivesta.com/" target="_blank">blivesta</a>
     <br>
@@ -53,7 +58,7 @@ base_url: "./"
       <p class="icon-mark"><span class="oi oi-code"></span></p>
       <p class="lead"></p>
       <div class="section-body">
-          <p><a href="{{ site.repo_url }}" class="button button-border-primary button-lg">Download on GitHub</a></p>
+          <p><a href="{{ site.repo_url }}" class="button button-border-warning button-lg">Download on GitHub</a></p>
 
         {% include example-setup.html %}
       </div>

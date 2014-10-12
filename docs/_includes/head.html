@@ -13,8 +13,7 @@
     {% else %}
       {{ page.title }} &middot; {{ site.title }} &middot; {{ site.discription }}
     {% endif %}
-  </title>
-  
+  </title>  
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//blivesta.com/ico/touch-icon-144.png">
   <link rel="shortcut icon" href="//blivesta.com/ico/favicon.ico">
   <link href='//fonts.googleapis.com/css?family=Roboto:900,100,700,400' rel='stylesheet' type='text/css'>
@@ -22,29 +21,8 @@
   <link rel="stylesheet" href="//cdn.rawgit.com/teq-inc/cooker/v0.4.8/dist/css/cooker.css">
   <link rel="stylesheet" href="{{ page.base_url }}assets/css/docs.css">
   
-  
   <!-- drawer CSS -->
-  <link rel="stylesheet" href="{{ page.base_url }}css/drawer.css">
-  
-  <!-- Vendor js -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="{{ page.base_url }}vendor/iscroll/js/iscroll.js"></script>
-  
-  <!-- drawer js -->
-  <script src="{{ page.base_url }}js/jquery.drawer.js"></script>
-
-  <script>
-      
-    $(document).ready(function(){
-        
-      $('#drawer').drawer();
-                        
-      $('.js-trigger').click(function(){
-        $('#drawer').drawer("open");
-      });
-    });
-          
-  </script>  
+  <link rel="stylesheet" href="{{ page.base_url }}css/drawer.css"> 
   
   <!-- Google analytics -->
   <script src="//git.blivesta.com/js/ga.js"></script>
