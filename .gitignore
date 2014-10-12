@@ -7,3 +7,4 @@ docs/css
 docs/assets/css
 docs/js
 *.psd
+vendor/jquery
