@@ -192,7 +192,6 @@
         expand: true,
         cwd: './<%= pkg.docs %>',
         src: [
-          'vendor/iscroll/js/iscroll.js',
           'js/jquery.<%= pkg.name %>.js',
           'js/jquery.<%= pkg.name %>.min.js',
           'css/*.css',
