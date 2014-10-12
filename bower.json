@@ -1,5 +1,6 @@
 {
   "name": "drawer",
+  "description": "A small jQuery plugin for app style drawer navigation.",
   "version": "2.0.0",
 	"keywords": [
     "css",
@@ -12,14 +13,18 @@
   ],
   "homepage": "http://git.blivesta.com/drawer",
   "main": [
-    "src/less/drawer.less",
     "dist/css/drawer.css",
-    "dist/js/drawer.js",
-    "dist/js/drawer.min.js"
+    "dist/css/drawer.min.css",
+    "dist/js/jquery.drawer.js",
+    "dist/js/jquery.drawer.min.js"
   ],
   "ignore": [
     ".*",
-    "_config.yml"
+    "src",
+    "*.yml",
+    "*.html",
+    "*.json",
+    "Gruntfile.js"
   ],
   "dependencies": {
     "jquery": ">= 1.9.0",

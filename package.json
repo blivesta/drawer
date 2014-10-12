@@ -1,6 +1,6 @@
 {
   "name": "drawer",
-  "description": "",
+  "description": "A small jQuery plugin for app style drawer navigation.",
   "version": "2.0.0",
   "keywords": [],
   "homepage": "http://git.blivesta.com/drawer",
