@@ -1,0 +1,42 @@
+// default style
+// ======================================
+.drawer-default{
+  background-color:@drawer-nav-bg-color;
+  box-shadow:inset 0 0px 0px rgba(0,0,0,.5);
+  & + .drawer-overlay{
+    background-color: #fff;
+  }
+  .drawer-brand a{
+    display: block;
+    padding:20px 15px;
+    width: 100%;
+    color: #fff;
+    font-size: 22px;
+    &:hover{
+      color: #444;
+      text-decoration: none;
+    }
+  }
+  .drawer-nav-title {
+    display:block;
+    padding: 15px 15px 0 15px;
+    font-size: 18px;
+  }
+  .drawer-nav-list {
+    list-style:none;
+    padding:0;
+    margin:0 0 20px 0;
+    li{
+      display:block;
+      a{
+        display:block;
+        padding: 15px;
+        color: #888;
+      }
+      ul a{
+        padding:8px 20px;
+      }
+    }
+    
+  }
+}
