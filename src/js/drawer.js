@@ -5,7 +5,7 @@
   var methods = {
     init: function(options) {
       options = $.extend({
-        mastaClass:        "drawer-masta",
+        mastaClass:        "drawer-main",
         overlayClass:      "drawer-overlay",
         toggleClass:       "drawer-toggle",
         upperClass:        "drawer-overlay-upper",
@@ -18,8 +18,7 @@
         var $this = $(this);
         var data = $this.data(namespace);
         var $upper = $("<div>").addClass(options.upperClass+" "+options.toggleClass);
-        var drawerScroll;
-
+                
         if (!data) {
           options = $.extend({}, options);
           $this.data(namespace, {
@@ -28,23 +27,14 @@
         }
 
         $this.append($upper);
-        
-        methods.resize.call(_this);
-        
-        drawerScroll = new IScroll("."+options.mastaClass, {
+                
+        var drawerScroll = new IScroll("."+options.mastaClass, {
           scrollbars:true,
           mouseWheel:true,
           click:true,
-          fadeScrollbars:true
+          fadeScrollbars:true,
         });
-        
-        if (!touches && $this.hasClass(options.responsiveClass)) { 
-          drawerScroll.destroy();
-          $("."+options.mastaClass).css({
-            "height":"auto"
-          })
-        }
-        
+                
         $("." + options.toggleClass)
           .off("click." + namespace)
           .on("click." + namespace, function() {
@@ -53,40 +43,13 @@
           });
           
         $(window).resize(function() {
-          methods.resize.call(_this);
+          methods.close.call(_this);
           drawerScroll.refresh();
-          if (!touches && $this.hasClass(options.responsiveClass)) {
-            drawerScroll.destroy();
-            $("."+options.mastaClass).css({
-              "height":"auto"
-            })
-          }
         });
         
       }); // end each
     },
-        
-    resize: function(options) {
-      var _this = this;
-      var $this = $(this);
-      options = $this.data(namespace).options;
-      var windowHeight = window.innerHeight ? window.innerHeight : $(window).height();
-      var $masta = $("." + options.mastaClass);
-      var $overlay = $("." + options.overlayClass);
-      var overlayHeight =   $overlay.height();
-            
-      methods.close.call(_this, options);
-      $overlay.css({
-        "min-height": windowHeight
-      });            
-      if (!touches && $this.hasClass(options.responsiveClass)) {
-        $masta.css({
-          "min-height": windowHeight,
-          "height": overlayHeight
-        });
-      }    
-    },
-    
+
     toggle: function(options) {  
       var _this = this;
       var $this = $(this);
