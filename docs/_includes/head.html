@@ -5,13 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   {% if page.layout == 'home' %}
-  <meta name="description" content="{{ site.discription }}">
+  <meta name="description" content="{{ site.description }}">
   {% endif %}
   <title>
     {% if page.layout == 'home' %}
-      {{ site.title }} &middot; {{ site.discription }}
+      {{ site.title }} &middot; {{ site.description }}
     {% else %}
-      {{ page.title }} &middot; {{ site.title }} &middot; {{ site.discription }}
+      {{ page.title }} &middot; {{ site.title }} &middot; {{ site.description }}
     {% endif %}
   </title>  
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//blivesta.com/ico/touch-icon-144.png">

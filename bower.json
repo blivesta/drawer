@@ -1,6 +1,6 @@
 {
   "name": "drawer",
-  "description": "A small jQuery plugin for app style drawer navigation.",
+  "description": "A small CSS3 and jQuery plugin for app style drawer menu.",
   "version": "2.0.0",
 	"keywords": [
     "css",
