@@ -5,7 +5,7 @@ exclude:          ['less','*.json','Gruntfile.js','bower_components','node_modul
 source:           ./docs
 destination:      ./_gh_pages
 encoding:         UTF-8
-title:            drawer
+title:            Drawer
 description:      A small CSS3 and jQuery plugin for app style drawer menu.
 url:              http://git.blivesta.com/drawer/
 repo:             drawer
