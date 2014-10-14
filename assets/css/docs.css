@@ -292,7 +292,9 @@ html {
   background: #eee;
 }
 hr {
-  border-color: #ddd;
+  width: 60px;
+  margin: 40px auto;
+  border: 2px solid #ddd;
 }
 .container {
   max-width: 768px;
@@ -523,7 +525,9 @@ h4 {
   border-top: 1px solid #fff;
 }
 .footer hr {
-  border-color: #d3c184;
+  width: 60px;
+  margin: 40px auto;
+  border: 2px solid #d3c184;
 }
 .site-home .footer {
   text-align: center;
