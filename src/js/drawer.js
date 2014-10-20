@@ -79,7 +79,7 @@
           });
           $this.css({
             "overflow": "hidden"
-          });          
+          }).trigger('drawer.opened');
         });      
     },
     
@@ -98,7 +98,7 @@
         .transitionEnd(function(){
           $this.css({
             "overflow": "auto"
-          });
+          }).trigger('drawer.closed');
           $("."+options.upperClass).css({
             "display":"none"
           });
