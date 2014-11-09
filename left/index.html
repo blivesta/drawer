@@ -108,7 +108,7 @@
   <h2 class="section-title">Installation</h2>
   <div class="section-body">
     <p class="lead">Step 1: Link required files</p>
-<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- drawer css --&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- drawer css --&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;../css/drawer.min.css&quot;</span><span class="nt">&gt;</span>
 
 <span class="c">&lt;!-- jquery &amp; iscroll --&gt;</span>
@@ -116,11 +116,10 @@
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;../vendor/iscroll/js/iscroll.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 
 <span class="c">&lt;!-- drawer js --&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;../dist/js/jquery.drawer.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre></div>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;../dist/js/jquery.drawer.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></div>
 
 <p class="lead">Step 2: HTML markup</p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;drawer drawer-right&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;drawer drawer-right&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-toggle drawer-hamberger&quot;</span><span class="nt">&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-masta drawer-default&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;drawer-nav&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
@@ -135,35 +134,31 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-overlay&quot;</span><span class="nt">&gt;</span>
   <span class="c">&lt;!-- contents --&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-</code></pre></div>
+<span class="nt">&lt;/body&gt;</span></code></pre></div>
 
 <p class="lead">Step 3: Call the Drawer</p>
-<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.drawer&quot;</span><span class="p">).</span><span class="nx">drawer</span><span class="p">();</span>
-<span class="p">});</span> 
-</code></pre></div>
+<span class="p">});</span></code></pre></div>
 
 
 
 
 <h2 class="section-title">Responsive markup</h2>
 <p class="lead">Left position</p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;drawer drawer-left drawer-responsive&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;drawer drawer-left drawer-responsive&quot;</span><span class="nt">&gt;</span>
 ...
-<span class="nt">&lt;/body&gt;</span>
-</code></pre></div>
+<span class="nt">&lt;/body&gt;</span></code></pre></div>
 <p class="lead">Right position</p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;drawer drawer-right drawer-responsive&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;drawer drawer-right drawer-responsive&quot;</span><span class="nt">&gt;</span>
 ...
-<span class="nt">&lt;/body&gt;</span>
-</code></pre></div>
+<span class="nt">&lt;/body&gt;</span></code></pre></div>
 
 
 
 <h2 class="section-title">API Methods</h2>
 
-<div class="highlight"><pre><code class="js"><span class="c1">// Open</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Open</span>
 <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">drawer</span><span class="p">(</span><span class="s1">&#39;open&#39;</span><span class="p">);</span>
 
 <span class="c1">// close</span>
@@ -173,8 +168,15 @@
 <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">drawer</span><span class="p">(</span><span class="s1">&#39;toggle&#39;</span><span class="p">);</span>
 
 <span class="c1">// destroy</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">drawer</span><span class="p">(</span><span class="s1">&#39;destroy&#39;</span><span class="p">);</span>
-</code></pre></div>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">drawer</span><span class="p">(</span><span class="s1">&#39;destroy&#39;</span><span class="p">);</span></code></pre></div>
+
+<h2 class="section-title">Events</h2>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Opened</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;drawer.opened&#39;</span><span class="p">);</span>
+
+<span class="c1">// Closed</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;drawer.closed&#39;</span><span class="p">);</span></code></pre></div>
 
   </div>
 </div>
@@ -258,6 +260,15 @@
     $('.js-trigger').click(function(){
       $('.drawer').drawer("open");
     });
+
+    $('.drawer').on('drawer.opened',function(){
+      console.log('opened');
+    });
+
+    $('.drawer').on('drawer.closed',function(){
+      console.log('closed');
+    });
+
   });
         
 </script> 

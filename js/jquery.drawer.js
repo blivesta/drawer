@@ -72,7 +72,7 @@
         });
         $this.css({
           overflow: "hidden"
-        });
+        }).trigger("drawer.opened");
       });
     },
     close: function(options) {
@@ -87,7 +87,7 @@
       $this.removeClass(options.openClass).addClass(options.closeClass).transitionEnd(function() {
         $this.css({
           overflow: "auto"
-        });
+        }).trigger("drawer.closed");
         $("." + options.upperClass).css({
           display: "none"
         });
@@ -115,27 +115,12 @@
 (function($) {
   "use strict";
   $.fn.transitionEnd = function(callback) {
-    var $this = $(this);
-    var props = "transitionend webkitTransitionEnd mozTransitionEnd oTransitionEnd MSTransitionEnd";
-    if ($this.length > 0) {
-      $this.bind(props, function(event) {
-        if ($.isFunction(callback)) {
-          callback.call($this, event);
-        }
+    var end = "transitionend webkitTransitionEnd mozTransitionEnd oTransitionEnd MSTransitionEnd";
+    return this.each(function() {
+      $(this).bind(end, function() {
+        $(this).unbind(end);
+        return callback.call(this);
       });
-    }
-    return $this;
-  };
-  $.fn.animationEnd = function(callback) {
-    var $this = $(this);
-    var props = "animationend webkitAnimationEnd mozAnimationEnd oAnimationEnd MSAnimationEnd";
-    if ($this.length > 0) {
-      $this.bind(props, function(event) {
-        if ($.isFunction(callback)) {
-          callback.call($this, event);
-        }
-      });
-    }
-    return $this;
+    });
   };
 })(jQuery);
