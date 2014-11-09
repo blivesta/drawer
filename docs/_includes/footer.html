@@ -63,6 +63,15 @@
     $('.js-trigger').click(function(){
       $('.drawer').drawer("open");
     });
+
+    $('.drawer').on('drawer.opened',function(){
+      console.log('opened');
+    });
+
+    $('.drawer').on('drawer.closed',function(){
+      console.log('closed');
+    });
+
   });
         
 </script> 
