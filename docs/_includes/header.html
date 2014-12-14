@@ -14,6 +14,7 @@
       <a href="{{ page.base_url }}">Drawer</a>
     </div>
     
+    {% if page.mode == 'default' or page.mode == 'responsive' %}
     <ul>
       <li>Demo
         <ul>
@@ -21,6 +22,8 @@
         <li><a href="{{ page.base_url }}right">Right</a></li>
         <li><a href="{{ page.base_url }}responsive-left">Responsive Left</a></li>
         <li><a href="{{ page.base_url }}responsive-right">Responsive Right</a></li>
+        <li><a href="{{ page.base_url }}fixed-navbar-left">Fixed navbar left</a></li>
+        <li><a href="{{ page.base_url }}fixed-navbar-right">Fixed navbar Right</a></li>
         </ul>
       </li>
       <li>Other Projects
@@ -41,6 +44,43 @@
         </ul>
       </li>
     </ul>
+
+    {% else %}
+
+    <ul>
+      <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Demo <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+        <li><a href="{{ page.base_url }}left">Left</a></li>
+        <li><a href="{{ page.base_url }}right">Right</a></li>
+        <li><a href="{{ page.base_url }}responsive-left">Responsive Left</a></li>
+        <li><a href="{{ page.base_url }}responsive-right">Responsive Right</a></li>
+        <li><a href="{{ page.base_url }}fixed-navbar-left">Fixed navbar left</a></li>
+        <li><a href="{{ page.base_url }}fixed-navbar-right">Fixed navbar Right</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Other Projects <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+        <li><a href="http://git.blivesta.com/animsition">Animsition</a></li>
+        <li><a href="http://git.blivesta.com/chaffle">Chaffle</a></li>
+        <li><a href="https://github.com/blivesta/drawer">Drawer</a></li>
+        <li><a href="http://git.blivesta.com/oblurlay">Oblurlay</a></li>
+        <li><a href="http://git.blivesta.com/ripller">Ripller</a></li>
+        </ul>
+      </li>
+      <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Author <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+        <li><a href="http://blivesta.com">blivesta.com</a></li>
+        <li><a href="https://twitter.com/blivesta">Twitter</a></li>
+        <li><a href="https://github.com/blivesta">GitHub</a></li>
+        <li><a href="https://dribbble.com/blivesta">Dribbble</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    {% endif %}
+
+
     
     <!-- Dealing with the bottom browser bar on mobile safari. http://cubiq.org/dealing-with-the-bottom-browser-bar-on-mobile-safari -->
     <div class="drawer-footer"><span></span></div>
