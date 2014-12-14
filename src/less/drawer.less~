@@ -1,6 +1,6 @@
-@drawer-width-phone:       280px;
+@drawer-width-phone:       260px;
 @drawer-width-tablet:       150px;
-@drawer-width-desktop:       @drawer-width-phone;
+@drawer-width-desktop:       280px;
 
 @drawer-nav-height:       50px;
 @drawer-nav-lineHeight:       50px;
