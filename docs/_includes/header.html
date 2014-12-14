@@ -8,8 +8,8 @@
   </button>
 </div>
 
-<div class="drawer-main drawer-default">
-  <nav class="drawer-nav" role="navigation" aria-label="Navigation">
+<div class="drawer-main {{ page.theme }}">
+  <nav class="{% if page.mode == 'navbar' %}container{% endif %} drawer-nav" role="navigation" aria-label="Navigation">
     <div class="drawer-brand">
       <a href="{{ page.base_url }}">Drawer</a>
     </div>
