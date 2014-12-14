@@ -10,8 +10,10 @@ A small CSS3 and jQuery plugin for app style drawer menu.
 ##Demo & Installation
 http://git.blivesta.com/drawer/
 
-##Author
-[blivesta](http://blivesta.com)
+## Credit
+- [blivesta](http://blivesta.com)
+- [ungki](http://markquery.com/) (contributor / maintainer)
+- [tylerball](http://www.tylerball.net/) (contributor)
 
 ##License
 Released under the MIT license.
