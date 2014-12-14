@@ -71,6 +71,12 @@
     $('.drawer').on('drawer.closed',function(){
       console.log('closed');
     });
+   
+    if( !mobileCheck.isMobile){
+      $('.drawer-dropdown-hover').hover(function(){ 
+        $('[data-toggle="dropdown"]', this).trigger('click'); 
+      });
+    };
 
   });
         
