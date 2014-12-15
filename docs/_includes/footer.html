@@ -50,9 +50,7 @@
 <!-- Vendor js -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js"></script>
-<script src="http://markquery.com/demo/vendor/modernizr-2.6.2.min.js"></script>
-<script src="http://markquery.com/demo/vendor/mobileCheck.js"></script>
-<script src="http://markquery.com/demo/vendor/dropdown.js"></script>
+<script src="http://markquery.com/demo/vendor/drawer.dropdown.min.js"></script>
 
 <!-- drawer js -->
 <script src="{{ page.base_url }}js/jquery.drawer.js"></script>
@@ -74,12 +72,10 @@
     $('.drawer').on('drawer.closed',function(){
       console.log('closed');
     });
-   
-    if( !mobileCheck.isMobile){
-      $('.drawer-dropdown-hover').hover(function(){ 
-        $('[data-toggle="dropdown"]', this).trigger('click'); 
-      });
-    };
+
+    $('.drawer-dropdown-hover').hover(function(){ 
+      $('[data-toggle="dropdown"]', this).trigger('click'); 
+    });
 
   });
         
