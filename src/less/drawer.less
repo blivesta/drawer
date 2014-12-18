@@ -5,8 +5,8 @@
 @drawer-nav-height:       50px;
 @drawer-nav-lineHeight:       50px;
 
-@drawer-nav-bg-color:       #222; // mobile default
-@drawer-navbar-bg-color:       #fff; // desktop default
+@drawer-nav-bg-color:       #222;
+@drawer-navbar-bg-color:       #fff; // navbar desktop only
 @drawer-hamberger-bg-color:       #ddd;
 @drawer-text-color:       #555;
 @drawer-link-color:       #888;
@@ -49,4 +49,12 @@
     overflow: visible;
     clip: auto;
   }
+}
+.dropdown-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 990;
 }
