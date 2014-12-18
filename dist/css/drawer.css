@@ -1,5 +1,5 @@
 /*!
- * drawer v2.1.0
+ * drawer v2.2.0
  * 
  * Licensed under MIT
  * Author : blivesta
@@ -397,9 +397,6 @@ body.drawer-navbar.drawer-fixed {
     width: auto;
   }
 }
-.no-js .drawer-navbar-default ul li:hover .dropdown-menu {
-  display: block;
-}
 .drawer-dropdown .caret,
 .drawer-dropdown-hover .caret {
   display: inline-block;
@@ -599,5 +596,13 @@ body.drawer-navbar.drawer-fixed {
   margin: 0;
   overflow: visible;
   clip: auto;
+}
+.dropdown-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 990;
 }
 /*# sourceMappingURL=drawer.css.map */
