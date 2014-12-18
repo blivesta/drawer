@@ -8,3 +8,4 @@ docs/assets/css
 docs/js
 *.psd
 vendor/jquery
+vendor/bootstrap.dropdown
