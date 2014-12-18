@@ -36,7 +36,7 @@
       "js": "build/iscroll.js"
     },
     "bootstrap.dropdown": {
-      "js": "dropdown.min.js"
+      "js": "dropdown.js"
     }
   }
 }
