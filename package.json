@@ -1,7 +1,7 @@
 {
   "name": "drawer",
   "description": "A small CSS3 and jQuery plugin for app style drawer menu.",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "keywords": [],
   "homepage": "http://git.blivesta.com/drawer",
   "author": "blivesta",
@@ -38,8 +38,10 @@
     "grunt-jekyll": "~0.4.1",
     "grunt-build-control": "~0.1.3",
     "grunt-notify": "~0.2.13",
-    "grunt-bower-install": "~0.7.0",
     "grunt-bower-task": "~0.3.4"
+  },
+  "scripts":{
+    "preinstall":"bower install"
   },
   "engines": {
     "node": ">=0.10.1"
