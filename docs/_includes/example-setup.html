@@ -15,45 +15,109 @@
 <p class="lead">Step 2: HTML markup</p>
 {% highlight html %}
 <body class="drawer drawer-right">
-  <div class="drawer-toggle drawer-hamberger"><span></span></div>
+
+  <header role="banner">
+  <div class="drawer-header">
+    <button type="botton" class="drawer-toggle drawer-hamberger">
+      <span class="sr-only">toggle navigation</span> 
+      <span class="hamberger"></span>
+    </button>
+  </div>
+
   <div class="drawer-main drawer-default">
     <nav class="drawer-nav" role="navigation">
-      <div class="drawer-brand">
-        <a href="./">drawer</a>
-      </div>
-      <ul class="drawer-nav-list">
+      <div class="drawer-brand"><a href="./">drawer</a></div>
+
+      <ul>
         <li><a href="./base">base</a></li>
       </ul>
+
+      <div class="drawer-footer"><span></span></div>
     </nav>
   </div>
+  </header>
+
   <div class="drawer-overlay">
-  <!-- contents -->
+  <!-- content -->
   </div>
+
 </body>
 {% endhighlight %}
+
+
+
+<p class="lead">Responsive markup</p>
+<p>Left position</p>
+{% highlight html %}
+<body class="drawer drawer-left drawer-responsive">
+...
+</body>
+{% endhighlight %}
+<p>Right position</p>
+{% highlight html %}
+<body class="drawer drawer-right drawer-responsive">
+...
+</body>
+{% endhighlight %}
+
+
+
+<p class="lead">Navbar markup</p>
+<p>basic</p>
+{% highlight html %}
+<!-- relative navbar -->
+<body class="drawer drawer-left drawer-navbar">
+
+<!-- static navbar -->
+<body class="drawer drawer-left drawer-navbar drawer-static">
+
+<!-- fixed navbar -->
+<body class="drawer drawer-left drawer-navbar drawer-fixed">
+{% endhighlight %}
+
+<p class="lead">Fixed navbar & dropdown menu</p>
+{% highlight html %}
+<body class="drawer drawer-left drawer-navbar drawer-fixed">
+
+  <header role="banner">
+  <div class="drawer-header">
+    ...
+  </div>
+  <div class="drawer-main drawer-navbar-default">
+    <nav class="drawer-nav" role="navigation">
+      <div class="drawer-brand"><a href="./">drawer</a></div>
+
+      <ul>
+        <li class="dropdown drawer-dropdown">
+          <a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Demo <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+          <li><a href="./">About</a></li>
+          </ul>
+        </li>
+        <li class="dropdown drawer-dropdown-hover">
+          ...
+      </ul>
+
+    ...
+</body>
+{% endhighlight %}
+
+
+
+<p class="lead">CSS</p>
+<p>Theme</p>
+{% highlight css %}
+.drawer-defult
+.drawer-navbar-default 
+{% endhighlight %}
+
+
 
 <p class="lead">Step 3: Call the Drawer</p>
 {% highlight js %}
 $(document).ready(function() {
   $(".drawer").drawer();
 }); 
-{% endhighlight %}
-
-
-
-
-<h2 class="section-title">Responsive markup</h2>
-<p class="lead">Left position</p>
-{% highlight html %}
-<body class="drawer drawer-left drawer-responsive">
-...
-</body>
-{% endhighlight %}
-<p class="lead">Right position</p>
-{% highlight html %}
-<body class="drawer drawer-right drawer-responsive">
-...
-</body>
 {% endhighlight %}
 
 
@@ -84,3 +148,9 @@ $('#element').on('drawer.opened');
 // Closed
 $('#element').on('drawer.closed');
 {% endhighlight %}
+
+
+
+<h2 class="section-title">Documentation</h2>
+<p>Drawer is designed to support the cross-browser. Compatible with IE7+ including old mobile browsers.</p> 
+<p class="lead">Read more <a href="https://github.com/blivesta/drawer/wiki">drawer wiki</a></p>
