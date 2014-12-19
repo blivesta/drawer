@@ -9,7 +9,7 @@
 </div>
 
 <div class="drawer-main {{ page.theme }}">
-  <nav class="{% if page.mode == 'navbar' %}container{% endif %} drawer-nav" role="navigation" aria-label="Navigation">
+  <nav class="{% if page.mode == 'navbar' %}container{% endif %} drawer-nav" role="navigation">
     <div class="drawer-brand">
       <a href="{{ page.base_url }}">Drawer</a>
     </div>
@@ -80,7 +80,6 @@
 
     {% endif %}
 
-    <!-- Dealing with the bottom browser bar on mobile safari. http://cubiq.org/dealing-with-the-bottom-browser-bar-on-mobile-safari -->
     <div class="drawer-footer"><span></span></div>
   </nav>
 </div><!-- /.drawer-main -->
