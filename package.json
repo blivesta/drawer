@@ -40,9 +40,6 @@
     "grunt-notify": "~0.2.13",
     "grunt-bower-task": "~0.3.4"
   },
-  "scripts":{
-    "preinstall":"bower install"
-  },
   "engines": {
     "node": ">=0.10.1"
   }
