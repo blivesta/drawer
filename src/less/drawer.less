@@ -1,77 +1,32 @@
-@drawer-width-phone:       280px;
-@drawer-width-tablet:       150px;
+@drawer-width-phone:         280px;
+@drawer-width-tablet:        150px;
 @drawer-width-desktop:       @drawer-width-phone;
 
-@drawer-nav-height:       50px;
-@drawer-nav-lineHeight:       50px;
+@drawer-nav-height:          50px;
+@drawer-nav-lineHeight:      50px;
 
-@drawer-nav-bg-color:       #222;
-@drawer-navbar-bg-color:       #fff; // navbar desktop only
-@drawer-hamberger-bg-color:       #ddd;
-@drawer-text-color:       #555;
-@drawer-link-color:       #888;
-@drawer-hover-color:       #fff;
-@drawer-dropdown-link-color:       #ddd;
-@drawer-dropdown-hover-color:       #fff;
+@drawer-nav-bg-color:        #222;
+@drawer-navbar-bg-color:     #fff; // navbar desktop only
+@drawer-hamberger-bg-color:  #ddd;
+@drawer-text-color:          #555;
+@drawer-link-color:          #888;
+@drawer-hover-color:         #fff;
+@drawer-dropdown-link-color: #ddd;
+@drawer-dropdown-hover-color:#fff;
 
-@drawer-upper-zIndex:       1100;
+@drawer-upper-zIndex:        1100;
 @drawer-toggle-zIndex:       1030;
-@drawer-navbar-static-zIndex:       1000;
-@drawer-navbar-fixed-zIndex:       1030;
-@drawer-dropdown-zIndex:       1000;
+@drawer-navbar-static-zIndex:1000;
+@drawer-navbar-fixed-zIndex: 1030;
+@drawer-dropdown-zIndex:     1000;
 
-@drawer-ease:       cubic-bezier(0.190, 1.000, 0.220, 1.000);
-@drawer-duration:       .4s;
+@drawer-ease:                cubic-bezier(0.190, 1.000, 0.220, 1.000);
+@drawer-duration:            .4s;
 
 @import "core.less";
 @import "hamberger.less";
 @import "nav.less";
 @import "navbar.less";
+@import "dropdown.less";
+@import "screenreader.less";
 @import "responsive.less";
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-.sr-only-focusable {
-  &:active,
-  &:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-  }
-}
-.drawer-dropdown .caret,
-.drawer-dropdown-hover .caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-  border-top: 4px solid;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-  transform: rotate(0deg);
-}
-.drawer-dropdown.open .caret,
-.drawer-dropdown-hover.open .caret {
-  transform: rotate(180deg);
-}
-.dropdown-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 990;
-}
