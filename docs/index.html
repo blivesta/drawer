@@ -5,12 +5,12 @@ theme: drawer-default
 mode: default
 base_url: "./"
 ---
-<main class="masthead" role="main">
+<main id="content" class="masthead" role="main">
   <div class="container">
     <h1>{{ site.title }}</h1>
     <p class="lead">{{ site.description }}</p>
     <p class="center-block form-inline" style="max-width:480px">
-      <a class="button button-border button-lg js-trigger"><span class="oi oi-menu"></span> Open</a>
+      <a class="button button-border button-lg drawer-api"><span class="oi oi-menu"></span> Open</a>
     </p>    
     {% include social-link.html %}  
     <p>
