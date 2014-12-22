@@ -3,62 +3,70 @@
 body.drawer-navbar.drawer-fixed {
   padding-top: 0; //Account for fixed navbar
 }
-.drawer-main{
+.drawer-main {
   position: fixed;
-  top:0;
+  z-index: @drawer-main-zIndex;
+  top: 0;
   overflow: hidden;
-  width:@drawer-width-phone;
-  height:100%;
+  width: @drawer-width-phone;
+  height: 100%;
   .drawer-left & {
-    left : (-@drawer-width-phone);
-    transition:left @drawer-duration @drawer-ease ;
-  }  
+    display: none;
+    transition: left @drawer-duration @drawer-ease;
+    transform: translateX(-@drawer-width-phone) translateY(0px);
+  }
   .drawer-left.drawer-open & {
-    left: 0;
+    display: block;
+    transform: translateX(0px) translateY(0px);
   }
   .drawer-right & {
-    right: (-@drawer-width-phone);
-    transition:right @drawer-duration @drawer-ease;
+    display: none;
+    right: 0;
+    transition: right @drawer-duration @drawer-ease;
+    transform: translateX(@drawer-width-phone) translateY(0px);
   }
   .drawer-right.drawer-open & {
-    right:0;
+    display: block;
+    transform: translateX(0px) translateY(0px);
   }
 }
 
 // overlay
 // ======================================
-.drawer-overlay{
+.drawer-overlay {
   position: relative;
-  .drawer-left & {
-    left:0;
-    transition:left @drawer-duration @drawer-ease;
-  }
-  .drawer-left.drawer-open & {
-    left:@drawer-width-phone;
-  }
-  .drawer-right & {
-    right:0;
-    transition:right @drawer-duration @drawer-ease;
-  }
-  .drawer-right.drawer-open & {
-    right:@drawer-width-phone;
-  }
+}
+
+// hamberger
+// ======================================
+.drawer-left .drawer-hamberger {
+  transform: translateX(0px) translateY(0px);
+}
+.drawer-left.drawer-open .drawer-hamberger {
+  transform: translateX(@drawer-width-phone) translateY(0px);
+}
+.drawer-right .drawer-hamberger {
+  right: 0;
+  transform: translateX(0px) translateY(0px);
+}
+.drawer-right.drawer-open .drawer-hamberger {
+  transform: translateX(-@drawer-width-phone) translateY(0px);
 }
 
 // upper
 // ======================================
-.drawer-overlay-upper{
-  position:fixed;
-  z-index:@drawer-upper-zIndex;
-  top:0;
-  height:100%;
-  display:none;
+.drawer-overlay-upper {
+  position: fixed;
+  z-index: @drawer-upper-zIndex;
+  top: 0;
+  height: 100%;
+  display: none;
   background-color: rgb(0,0,0,.5);
   background-color: rgba(0,0,0,.5);
   .drawer-left.drawer-open & {
-    right:0;
+    right: 0;
   }
   .drawer-right.drawer-open & {
-    left:0;
+    left: 0;
   }
 }

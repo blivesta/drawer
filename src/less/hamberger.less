@@ -5,11 +5,11 @@
   }
 }
 .drawer-hamberger {
-  position:fixed;
+  position: fixed;
   display: block;
-  padding:20px;
-  width:70px;
-  height:70px;
+  padding: 20px;
+  width: 70px;
+  height: 70px;
   background-color: transparent;
   border: 0;
   z-index: @drawer-toggle-zIndex;
@@ -17,7 +17,7 @@
   span.hamberger {
   position: relative;
   display: block;
-  margin-top:10px;
+  margin-top: 10px;
   }
   span.hamberger,
   span.hamberger:before,
@@ -33,8 +33,8 @@
   span.hamberger:after {
     position: absolute;
     content: " ";
-    top:-10px;
-    left:0;
+    top: -10px;
+    left: 0;
   }
  span.hamberger:after {
    top: 10px;
@@ -63,10 +63,4 @@
   &:hover {
     cursor: pointer;
   }
-
-  .drawer-left &:extend(.drawer-left .drawer-overlay) {}
-  .drawer-left.drawer-open &:extend(.drawer-left.drawer-open .drawer-overlay) {}
-    
-  .drawer-right &:extend(.drawer-right .drawer-overlay) {}
-  .drawer-right.drawer-open &:extend(.drawer-right.drawer-open .drawer-overlay) {}
 }

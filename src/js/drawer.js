@@ -11,17 +11,18 @@
         upperClass:        "drawer-overlay-upper",
         openClass:         "drawer-open",
         closeClass:        "drawer-close",
+        apiClass:        "drawer-api",
         responsiveClass:   "drawer-responsive",
         dropdownClass:     "dropdown",
         dropdownShown:     "shown.bs.dropdown",
         dropdownHidden:    "hidden.bs.dropdown"
-      }, options);      
+      }, options);
       return this.each(function() {
         var _this = this;
         var $this = $(this);
         var data = $this.data(namespace);
         var $upper = $("<div>").addClass(options.upperClass+" "+options.toggleClass);
-                
+
         if (!data) {
           options = $.extend({}, options);
           $this.data(namespace, {
@@ -44,6 +45,13 @@
             methods.toggle.call(_this);
             drawerScroll.refresh();
           });
+
+        $("." + options.apiClass)
+          .off("click." + namespace)
+          .on("click." + namespace, function() {
+            methods.toggle.call(_this);
+            drawerScroll.refresh();
+          });
           
         $(window).resize(function() {
           methods.close.call(_this);
@@ -57,7 +65,7 @@
       }); // end each
     },
 
-    toggle: function(options) {  
+    toggle: function(options) {
       var _this = this;
       var $this = $(this);
       options = $this.data(namespace).options;
@@ -65,7 +73,7 @@
       open ? methods.close.call(_this) : methods.open.call(_this);
     },
     
-    open: function(options) {  
+    open: function(options) {
       var $this = $(this);
       options = $this.data(namespace).options;
       var windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
@@ -89,7 +97,7 @@
           }).trigger('drawer.opened');
         });      
     },
-    
+
     close: function(options) {
       var $this = $(this);
       options = $this.data(namespace).options;
@@ -109,7 +117,7 @@
           $("."+options.upperClass).css({
             "display":"none"
           });
-        });          
+        });
     },
     
     destroy: function() {
@@ -121,7 +129,7 @@
     }
     
   };
-  
+
   $.fn.drawer = function(method) {
     if (methods[method]) {
       return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
@@ -131,7 +139,7 @@
       $.error("Method " + method + " does not exist on jQuery." + namespace);
     }
   };
-  
+
 })(jQuery);
 
 (function($) {
