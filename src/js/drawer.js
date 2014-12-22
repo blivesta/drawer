@@ -33,9 +33,7 @@
         $this.append($upper);
                 
         var drawerScroll = new IScroll("."+options.mastaClass, {
-          scrollbars:true,
           mouseWheel:true,
-          fadeScrollbars:true,
           preventDefault: false
         });
                 

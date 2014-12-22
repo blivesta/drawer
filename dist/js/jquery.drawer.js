@@ -37,9 +37,7 @@
         }
         $this.append($upper);
         var drawerScroll = new IScroll("." + options.mastaClass, {
-          scrollbars: true,
           mouseWheel: true,
-          fadeScrollbars: true,
           preventDefault: false
         });
         $("." + options.toggleClass).off("click." + namespace).on("click." + namespace, function() {
