@@ -12,7 +12,7 @@ body.drawer-navbar.drawer-fixed {
   height: 100%;
   .drawer-left & {
     display: none;
-    transition: left @drawer-duration @drawer-ease;
+    transition: all @drawer-duration @drawer-ease;
     transform: translateX(-@drawer-width-phone) translateY(0px);
   }
   .drawer-left.drawer-open & {
@@ -22,7 +22,7 @@ body.drawer-navbar.drawer-fixed {
   .drawer-right & {
     display: none;
     right: 0;
-    transition: right @drawer-duration @drawer-ease;
+    transition: all @drawer-duration @drawer-ease;
     transform: translateX(@drawer-width-phone) translateY(0px);
   }
   .drawer-right.drawer-open & {
