@@ -46,6 +46,20 @@ $('#element').on('drawer.opened');
 $('#element').on('drawer.closed');
 ```
 
+## Configuring the iScroll
+
+Don't use scrollbars, click options for cross broswer.
+
+`drawer.js`
+
+``` javascript
+var drawerScroll = new IScroll("."+options.mastaClass, {
+  mouseWheel:true,
+  preventDefault: false
+});
+```
+
+
 ## Dropdown seletor
 
 `dropdown.js`
