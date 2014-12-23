@@ -1,0 +1,15 @@
+---
+layout: base
+title: Getting started
+class: drawer drawer-left drawer-navbar drawer-fixed
+theme: drawer-navbar-default
+mode: navbar
+base_url: "../"
+---
+
+<div class="section">
+  <div class="section-body">
+    {% capture include %}{% include documentation/getting-started.md %}{% endcapture %}
+    {{ include | markdownify }}
+  </div>
+</div>

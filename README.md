@@ -5,14 +5,14 @@
 
 A small CSS3 and jQuery plugin for app style drawer menu.
 
-![drawer-image](./docs/images/drawer-image.jpg)
+![drawer documentation image](./docs/images/drawer-sample.gif)
 
-##Demo & Installation
+## Demo & Documentation
 http://git.blivesta.com/drawer/
 
 ## Credit
-- [blivesta](http://blivesta.com)
-- [ungki](http://markquery.com/) (contributor / maintainer)
+- [blivesta](http://blivesta.com) (Author)
+- [ungki](http://markquery.com/) (maintainer)
 - [tylerball](http://www.tylerball.net/) (contributor)
 
 ##License
