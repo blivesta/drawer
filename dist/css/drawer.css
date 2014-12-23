@@ -19,9 +19,9 @@ body.drawer-navbar.drawer-fixed {
 }
 .drawer-left .drawer-main {
   display: none;
-  -webkit-transition: left .4s cubic-bezier(.19, 1, .22, 1);
-       -o-transition: left .4s cubic-bezier(.19, 1, .22, 1);
-          transition: left .4s cubic-bezier(.19, 1, .22, 1);
+  -webkit-transition: all .4s cubic-bezier(.19, 1, .22, 1);
+       -o-transition: all .4s cubic-bezier(.19, 1, .22, 1);
+          transition: all .4s cubic-bezier(.19, 1, .22, 1);
   -webkit-transform: translateX(-280px) translateY(0px);
       -ms-transform: translateX(-280px) translateY(0px);
        -o-transform: translateX(-280px) translateY(0px);
@@ -37,9 +37,9 @@ body.drawer-navbar.drawer-fixed {
 .drawer-right .drawer-main {
   right: 0;
   display: none;
-  -webkit-transition: right .4s cubic-bezier(.19, 1, .22, 1);
-       -o-transition: right .4s cubic-bezier(.19, 1, .22, 1);
-          transition: right .4s cubic-bezier(.19, 1, .22, 1);
+  -webkit-transition: all .4s cubic-bezier(.19, 1, .22, 1);
+       -o-transition: all .4s cubic-bezier(.19, 1, .22, 1);
+          transition: all .4s cubic-bezier(.19, 1, .22, 1);
   -webkit-transform: translateX(280px) translateY(0px);
       -ms-transform: translateX(280px) translateY(0px);
        -o-transform: translateX(280px) translateY(0px);
