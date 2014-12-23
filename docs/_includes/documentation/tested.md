@@ -1,6 +1,6 @@
 ## iOS
 
-<table>
+<table class="table table-border">
 <thead>
 <tr>
 <th>Version</th>
@@ -23,9 +23,9 @@
 
 Distribution of version 2.3 Gingerbread is 9.1%, December 1, 2014, according to Android Developers [Platform versions](http://developer.android.com/about/dashboards/index.html)
 
-**Phone**
+### Phone
 
-<table>
+<table class="table table-border">
 <thead>
 <tr>
 <th>Version</th>
@@ -50,9 +50,9 @@ Distribution of version 2.3 Gingerbread is 9.1%, December 1, 2014, according to 
 </tbody>
 </table>
 
-**Tablet**
+### Tablet
 
-<table>
+<table class="table table-border">
 <thead>
 <tr>
 <th>Version</th>

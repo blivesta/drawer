@@ -220,13 +220,13 @@ ul.drawer-navbar-right
 
 ## Form tag
 
-If you want to add `<form>` tag for search Follow code.
+If you want to add `<form>` tag for search. Follow code.
 
 ![drawer form](https://lh5.googleusercontent.com/-NwCOXQ-8J2A/VJlWPLrPnAI/AAAAAAAABck/D5gAT9lZljs/w714-h397-no/drawer-from.gif)
 
 **Add HTML**
 
-`in .drawer-main`
+In `<nav>` tag
 
 ``` html
 <form class="drawer-form drawer-form-right" role="search">
