@@ -16,4 +16,4 @@ http://git.blivesta.com/drawer/
 - [tylerball](http://www.tylerball.net/) (contributor)
 
 ##License
-Released under the MIT license.
+Released under the [MIT license](https://github.com/blivesta/drawer/blob/master/LICENSE.md).
