@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <title>
+    
+      Drawer - HTML markup &middot; Drawer &middot; A small CSS3 and jQuery plugin for app style drawer menu.
+    
+  </title>  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//blivesta.com/ico/touch-icon-144.png">
+  <link rel="shortcut icon" href="//blivesta.com/ico/favicon.ico">
+  <link href='//fonts.googleapis.com/css?family=Roboto:900,100,700,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/open-iconic/1.1.0/font/css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="//cdn.rawgit.com/teq-inc/cooker/v0.4.8/dist/css/cooker.css">
+  <link rel="stylesheet" href="../assets/css/docs.css">
+  
+  <!-- drawer CSS -->
+  <link rel="stylesheet" href="../css/drawer.css">
+
+  <!--[if lt IE 9]>
+  <script async src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  
+  <!-- Google analytics -->
+  <script src="//git.blivesta.com/js/ga.js"></script>
+
+</head>
+<body class="drawer drawer-left drawer-navbar drawer-fixed site-base">
+  
+  <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+<header role="banner">
+<div class="drawer-header">
+  <button type="botton" class="drawer-toggle drawer-hamberger">
+    <span class="sr-only">toggle navigation</span>
+    <span class="hamberger"></span>
+  </button>
+</div>
+
+<div class="drawer-main drawer-navbar-default">
+  <nav class="container drawer-nav" role="navigation">
+    <div class="drawer-brand">
+      <a href="../">Drawer</a>
+    </div>
+
+    
+
+    <ul>
+      <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Demo <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+        <li><a href="../left">Left</a></li>
+        <li><a href="../right">Right</a></li>
+        <li><a href="../responsive-left">Responsive Left</a></li>
+        <li><a href="../responsive-right">Responsive Right</a></li>
+        <li><a href="../fixed-navbar-left">Fixed navbar left</a></li>
+        <li><a href="../fixed-navbar-right">Fixed navbar Right</a></li>
+        </ul>
+      </li>
+      <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Documentation <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+        <li><a href="../getting-started">Getting started</a></li>
+        <li><a href="../html-markup">HTML markup</a></li>
+        <li><a href="../css">CSS</a></li>
+        <li><a href="../javascript">Javascript</a></li>
+        <li><a href="../browser-support">Browser support</a></li>
+        <li><a href="../tested">Tested</a></li>
+        </ul>
+      </li>
+      <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Other Projects <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+        <li><a href="http://git.blivesta.com/animsition">Animsition</a></li>
+        <li><a href="http://git.blivesta.com/chaffle">Chaffle</a></li>
+        <li><a href="https://github.com/blivesta/drawer">Drawer</a></li>
+        <li><a href="http://git.blivesta.com/kicss">Kicss</a></li>
+        <li><a href="http://git.blivesta.com/oblurlay">Oblurlay</a></li>
+        </ul>
+      </li>
+      <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Credit <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="http://blivesta.com">@blivesta</a></li>
+          <li><a href="http://markquery.com/">@ungki</a></li>
+          <li><a href="http://www.tylerball.net/">@tylerball</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    
+
+    <div class="drawer-footer"><span></span></div>
+  </nav>
+</div><!-- /.drawer-main -->
+</header><!-- /.site-header -->
+
+  
+  <div class="drawer-overlay">
+    
+		<main id="content" class="masthead" role="main">
+			<div class="container">
+				<h1>Drawer - HTML markup</h1>
+				<p class="lead">A small CSS3 and jQuery plugin for app style drawer menu.</p>
+        
+        
+        <p class="center-block form-inline visible-xs" style="max-width:480px">
+        
+          <a class="button button-border button-lg drawer-api-toggle"><span class="oi oi-menu"></span> Open</a>
+        </p>
+
+        <div class="adpacks">
+  <script async type="text/javascript" src="//cdn.adpacks.com/adpacks.js?zoneid=1386&serve=C6SI42Y&placement=blivesta" id="_adpacks_js"></script>
+</div>
+
+			</div><!-- /.container -->
+		</main>
+
+		<div class="site-body">
+		  <div class="site-body-inner container">
+
+		    <div class="section">
+  <div class="section-body">
+    
+    <h2>What&#39;s your menu</h2>
+
+<p>Drawer markup can be used in various ways such as lovely sites: </p>
+
+<ul>
+<li><a href="http://www.awwwards.com/">Awwwards</a></li>
+<li><a href="http://html5doctor.com/">HTML5 Doctor</a></li>
+<li><a href="http://alistapart.com/">A List Apart</a> </li>
+</ul>
+
+<h2>Step 1: Link required files</h2>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- drawer css --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;../css/drawer.min.css&quot;</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- jquery &amp; iscroll &amp; dropdown --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.1/dropdown.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="c">&lt;!-- drawer js --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;../dist/js/jquery.drawer.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+<h2>Step 2: HTML markup</h2>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;drawer drawer-right&quot;</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;header</span> <span class="na">role=</span><span class="s">&quot;banner&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-header&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;botton&quot;</span> <span class="na">class=</span><span class="s">&quot;drawer-toggle drawer-hamberger&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>toggle navigation<span class="nt">&lt;/span&gt;</span> 
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;hamberger&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-main drawer-default&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;drawer-nav&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-brand&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>drawer<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+
+      <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./base&quot;</span><span class="nt">&gt;</span>base<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-footer&quot;</span><span class="nt">&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-overlay&quot;</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- content --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div>
+<p><strong>Responsive markup</strong></p>
+
+<ul>
+<li>Left position</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;drawer drawer-left drawer-responsive&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<ul>
+<li>Right position</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;drawer drawer-right drawer-responsive&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<p><strong>Navbar markup</strong></p>
+
+<ul>
+<li>basic</li>
+</ul>
+<div class="highlight"><pre><code class="language-html" data-lang="html">  <span class="c">&lt;!-- relative navbar --&gt;</span>
+  <span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;drawer drawer-left drawer-navbar&quot;</span><span class="nt">&gt;</span>
+
+  <span class="c">&lt;!-- static navbar --&gt;</span>
+  <span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;drawer drawer-left drawer-navbar drawer-static&quot;</span><span class="nt">&gt;</span>
+
+  <span class="c">&lt;!-- fixed navbar --&gt;</span>
+  <span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;drawer drawer-left drawer-navbar drawer-fixed&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<h2>Example</h2>
+
+<p>Fixed navbar &amp; dropdown menu</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;drawer drawer-left drawer-navbar drawer-fixed&quot;</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;header</span> <span class="na">role=</span><span class="s">&quot;banner&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-header&quot;</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-main drawer-navbar-default&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;drawer-nav&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-brand&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>drawer<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+
+      <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown drawer-dropdown&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">role=</span><span class="s">&quot;button&quot;</span> <span class="na">aria-expanded=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>Demo <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown drawer-dropdown-hover&quot;</span><span class="nt">&gt;</span>
+          ...
+      <span class="nt">&lt;/ul&gt;</span>
+
+    ...
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div>
+<h2>Step 3: Call the Drawer</h2>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.drawer&quot;</span><span class="p">).</span><span class="nx">drawer</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></div>
+<h2>Using lists tag</h2>
+
+<p><strong>default</strong></p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Title <span class="c">&lt;!-- No linked --&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>Menu<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div>
+<p><strong>level 1</strong></p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>Menu<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div>
+<p><strong>level 2</strong></p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>Menu<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div>
+<h2>Dropdown</h2>
+
+<p><strong>Click &amp; Touch</strong></p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown drawer-dropdown&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">role=</span><span class="s">&quot;button&quot;</span> <span class="na">aria-expanded=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>Title <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>Menu<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/li&gt;</span>
+</code></pre></div>
+<p><strong>Click &amp; Touch &amp; hover for desktop</strong></p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown drawer-dropdown-hover&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">role=</span><span class="s">&quot;button&quot;</span> <span class="na">aria-expanded=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>Title <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>Menu<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/li&gt;</span>
+</code></pre></div>
+<p><strong>hover javascript in your html footer</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.drawer-dropdown-hover&#39;</span><span class="p">).</span><span class="nx">hover</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span> 
+  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[data-toggle=&quot;dropdown&quot;]&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">);</span> 
+<span class="p">});</span>
+</code></pre></div>
+<p><strong>Seletor</strong></p>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.drawer-dropdown</span>
+<span class="nc">.drawer-dropdown-hover</span>
+
+  <span class="nt">or</span> <span class="nt">custom</span> <span class="nt">class</span> <span class="nt">of</span> <span class="nt">your</span> <span class="nt">platform</span> <span class="nt">menu</span>
+</code></pre></div>
+<h2>Floating navbar</h2>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;drawer-navbar-right&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown drawer-dropdown&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">role=</span><span class="s">&quot;button&quot;</span> <span class="na">aria-expanded=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>Right Title <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>Right<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div>
+<p><strong>Seletor</strong></p>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">ul</span><span class="nc">.drawer-navbar-right</span>
+</code></pre></div>
+<h2>Form tag</h2>
+
+<p>If you want to add <code>&lt;form&gt;</code> tag for search. Follow code.</p>
+
+<p><img src="https://lh5.googleusercontent.com/-NwCOXQ-8J2A/VJlWPLrPnAI/AAAAAAAABck/D5gAT9lZljs/w714-h397-no/drawer-from.gif" alt="drawer form"></p>
+
+<p><strong>Add HTML</strong></p>
+
+<p>In <code>&lt;nav&gt;</code> tag</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;drawer-form drawer-form-right&quot;</span> <span class="na">role=</span><span class="s">&quot;search&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>search<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-input-group&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;drawer-input&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Search&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">class=</span><span class="s">&quot;drawer-form-btn&quot;</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
+ <span class="nt">&lt;/form&gt;</span>
+</code></pre></div>
+<p><strong>Add CSS</strong> </p>
+
+<p><code>navbar.less</code></p>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.drawer-navbar-default</span> <span class="p">{</span>
+
+  <span class="o">...</span> 
+
+  <span class="o">.</span><span class="n">drawer</span><span class="o">-</span><span class="n">form</span> <span class="err">{</span>
+    <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+    <span class="k">float</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">margin</span><span class="o">:</span> <span class="m">10px</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">15px</span><span class="p">;</span>
+    <span class="k">border</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="m">#ddd</span><span class="p">;</span>
+    <span class="o">&amp;.</span><span class="n">drawer</span><span class="o">-</span><span class="n">form</span><span class="o">-</span><span class="k">right</span> <span class="err">{</span>
+      <span class="k">float</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nc">.drawer-input-group</span> <span class="p">{</span>
+      <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+      <span class="o">.</span><span class="n">drawer</span><span class="o">-</span><span class="n">input</span> <span class="err">{</span>
+        <span class="k">height</span><span class="o">:</span><span class="m">25px</span><span class="p">;</span>
+        <span class="k">width</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+        <span class="k">padding</span><span class="o">:</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
+        <span class="k">border</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="err">}</span>
+    <span class="nc">.drawer-form-btn</span> <span class="p">{</span>
+      <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+      <span class="k">padding</span><span class="o">:</span> <span class="m">0</span> <span class="m">12px</span><span class="p">;</span>
+      <span class="k">height</span><span class="o">:</span> <span class="m">25px</span><span class="p">;</span>
+      <span class="k">font-weight</span><span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+      <span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
+      <span class="k">white-space</span><span class="o">:</span> <span class="k">nowrap</span><span class="p">;</span>
+      <span class="k">vertical-align</span><span class="o">:</span> <span class="k">middle</span><span class="p">;</span>
+      <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">touch</span><span class="o">-</span><span class="n">action</span><span class="o">:</span> <span class="n">manipulation</span><span class="p">;</span>
+      <span class="n">touch</span><span class="o">-</span><span class="n">action</span><span class="o">:</span> <span class="n">manipulation</span><span class="p">;</span>
+      <span class="k">cursor</span><span class="o">:</span> <span class="k">pointer</span><span class="p">;</span>
+      <span class="k">border</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+      <span class="k">background-color</span><span class="o">:</span> <span class="m">#d5d5d5</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+</code></pre></div>
+<p><code>responsive.less</code></p>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nc">.drawer-navbar-default</span> <span class="p">{</span>
+
+  <span class="o">...</span>
+
+    <span class="o">.</span><span class="n">drawer</span><span class="o">-</span><span class="n">form</span> <span class="err">{</span>
+    <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+    <span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">10px</span> <span class="m">15px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="m">#ddd</span><span class="p">;</span>
+      <span class="o">&amp;.</span><span class="n">drawer</span><span class="o">-</span><span class="n">form</span><span class="o">-</span><span class="k">right</span> <span class="err">{</span>
+        <span class="k">float</span><span class="o">:</span> <span class="k">right</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nc">.drawer-input-group</span> <span class="p">{</span>
+         <span class="o">.</span><span class="n">drawer</span><span class="o">-</span><span class="n">input</span> <span class="err">{</span>
+          <span class="k">height</span><span class="o">:</span> <span class="m">30px</span><span class="p">;</span>
+          <span class="k">width</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+      <span class="nc">.drawer-form-btn</span> <span class="p">{</span>
+        <span class="k">height</span><span class="o">:</span> <span class="m">30px</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="err">}</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+</code></pre></div>
+  </div>
+</div>
+		  
+		  </div><!-- /.container -->
+		</div><!-- /.site-body -->
+
+    <footer class="footer">
+  <div class="container">
+    
+    <h1>Drawer</h1>
+    <ul class="list-inline">
+      <li><img src="http://img.shields.io/travis/blivesta/drawer.svg" alt="travis" /></li>
+      <li>·</li>
+      <li><img src="http://img.shields.io/bower/v/drawer.svg" alt="bower" /></li>
+    </ul>
+    
+
+    <ul class="list-inline">
+      <li>Code licensed under the MIT.</li>
+    </ul>
+
+    <hr>
+    
+        
+    <h3>Other projects</h3>
+    <ul class="list-inline">
+      <li><a href="/animsition">Animsition</a></li>
+      <li>·</li>
+      <li><a href="/conv">Conv</a></li>
+      <li>·</li>
+      <li><a href="/drawer">Drawer</a></li>
+      <li>·</li>
+      <li><a href="/rippler">Rippler</a></li>
+      <li>·</li>
+      <li><a href="/oblurlay">Oblurlay</a></li>
+      <li>·</li>
+      <li><a href="/chaffle">Chaffle</a></li>
+    </ul>
+    <hr>
+    <ul class="list-inline">
+      <li>
+        Author&nbsp;<span class="icon-blivesta icon-sm icon-circle"></span>&nbsp;
+        <a href="http://blivesta.com">blivesta</a>
+      </li>
+    </ul>
+    
+    <ul class="social-folow list-inline">
+	<li style="width:126px">
+	  <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=blivesta&type=follow&count=false" allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
+	</li>
+	<li>
+		<a href="https://twitter.com/blivesta" class="twitter-follow-button" data-show-count="false">Follow @blivesta</a>
+	  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+		</script>		
+	</li>
+
+</ul>       
+
+    
+
+  </div>
+</footer>
+
+
+<!-- Vendor js -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js"></script>
+<script src="//cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.1/dropdown.min.js"></script>
+
+<!-- drawer js -->
+<script src="../js/jquery.drawer.js"></script>
+
+<script>
+    
+  $(document).ready(function(){
+      
+    $('.drawer').drawer();
+                      
+    $('.drawer-api-toggle').on(function(){
+      $('.drawer').drawer("open");
+    });
+
+    $('.drawer').on('drawer.opened',function(){
+      console.log('opened');
+    });
+
+    $('.drawer').on('drawer.closed',function(){
+      console.log('closed');
+    });
+
+    $('.drawer-dropdown-hover').hover(function(){ 
+      $('[data-toggle="dropdown"]', this).trigger('click'); 
+    });
+
+  });
+        
+</script> 
+
+  </div><!-- /.drawer-overlay -->
+</body>
+</html>

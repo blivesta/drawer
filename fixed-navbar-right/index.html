@@ -7,7 +7,7 @@
   
   <title>
     
-      Responsive right &middot; Drawer &middot; A small CSS3 and jQuery plugin for app style drawer menu.
+      fixed navbar right &middot; Drawer &middot; A small CSS3 and jQuery plugin for app style drawer menu.
     
   </title>  
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//blivesta.com/ico/touch-icon-144.png">
@@ -29,7 +29,7 @@
   <script src="//git.blivesta.com/js/ga.js"></script>
 
 </head>
-<body class="drawer drawer-right drawer-responsive site-base">
+<body class="drawer drawer-right drawer-navbar drawer-fixed site-base">
   
   <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
@@ -41,16 +41,17 @@
   </button>
 </div>
 
-<div class="drawer-main drawer-default">
-  <nav class=" drawer-nav" role="navigation">
+<div class="drawer-main drawer-navbar-default">
+  <nav class="container drawer-nav" role="navigation">
     <div class="drawer-brand">
       <a href="../">Drawer</a>
     </div>
 
     
+
     <ul>
-      <li>Demo
-        <ul>
+      <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Demo <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
         <li><a href="../left">Left</a></li>
         <li><a href="../right">Right</a></li>
         <li><a href="../responsive-left">Responsive Left</a></li>
@@ -59,26 +60,27 @@
         <li><a href="../fixed-navbar-right">Fixed navbar Right</a></li>
         </ul>
       </li>
-      <li>
-        <ul>Documentation
-          <li><a href="../getting-started">Getting started</a></li>
-          <li><a href="../html-markup">HTML markup</a></li>
-          <li><a href="../css">CSS</a></li>
-          <li><a href="../javascript">Javascript</a></li>
-          <li><a href="../browser-support">Browser support</a></li>
-          <li><a href="../tested">Tested</a></li>
+      <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Documentation <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+        <li><a href="../getting-started">Getting started</a></li>
+        <li><a href="../html-markup">HTML markup</a></li>
+        <li><a href="../css">CSS</a></li>
+        <li><a href="../javascript">Javascript</a></li>
+        <li><a href="../browser-support">Browser support</a></li>
+        <li><a href="../tested">Tested</a></li>
         </ul>
       </li>
-      <li>Other Projects
-        <ul>
+      <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Other Projects <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
         <li><a href="http://git.blivesta.com/animsition">Animsition</a></li>
         <li><a href="http://git.blivesta.com/chaffle">Chaffle</a></li>
+        <li><a href="https://github.com/blivesta/drawer">Drawer</a></li>
         <li><a href="http://git.blivesta.com/kicss">Kicss</a></li>
         <li><a href="http://git.blivesta.com/oblurlay">Oblurlay</a></li>
         </ul>
       </li>
-      <li>Credit
-        <ul>
+      <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Credit <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
           <li><a href="http://blivesta.com">@blivesta</a></li>
           <li><a href="http://markquery.com/">@ungki</a></li>
           <li><a href="http://www.tylerball.net/">@tylerball</a></li>
@@ -98,7 +100,7 @@
     
 		<main id="content" class="masthead" role="main">
 			<div class="container">
-				<h1>Responsive right</h1>
+				<h1>fixed navbar right</h1>
 				<p class="lead">A small CSS3 and jQuery plugin for app style drawer menu.</p>
         
         

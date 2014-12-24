@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <title>
+    
+      Drawer - Getting started &middot; Drawer &middot; A small CSS3 and jQuery plugin for app style drawer menu.
+    
+  </title>  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//blivesta.com/ico/touch-icon-144.png">
+  <link rel="shortcut icon" href="//blivesta.com/ico/favicon.ico">
+  <link href='//fonts.googleapis.com/css?family=Roboto:900,100,700,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/open-iconic/1.1.0/font/css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="//cdn.rawgit.com/teq-inc/cooker/v0.4.8/dist/css/cooker.css">
+  <link rel="stylesheet" href="../assets/css/docs.css">
+  
+  <!-- drawer CSS -->
+  <link rel="stylesheet" href="../css/drawer.css">
+
+  <!--[if lt IE 9]>
+  <script async src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  
+  <!-- Google analytics -->
+  <script src="//git.blivesta.com/js/ga.js"></script>
+
+</head>
+<body class="drawer drawer-left drawer-navbar drawer-fixed site-base">
+  
+  <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+<header role="banner">
+<div class="drawer-header">
+  <button type="botton" class="drawer-toggle drawer-hamberger">
+    <span class="sr-only">toggle navigation</span>
+    <span class="hamberger"></span>
+  </button>
+</div>
+
+<div class="drawer-main drawer-navbar-default">
+  <nav class="container drawer-nav" role="navigation">
+    <div class="drawer-brand">
+      <a href="../">Drawer</a>
+    </div>
+
+    
+
+    <ul>
+      <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Demo <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+        <li><a href="../left">Left</a></li>
+        <li><a href="../right">Right</a></li>
+        <li><a href="../responsive-left">Responsive Left</a></li>
+        <li><a href="../responsive-right">Responsive Right</a></li>
+        <li><a href="../fixed-navbar-left">Fixed navbar left</a></li>
+        <li><a href="../fixed-navbar-right">Fixed navbar Right</a></li>
+        </ul>
+      </li>
+      <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Documentation <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+        <li><a href="../getting-started">Getting started</a></li>
+        <li><a href="../html-markup">HTML markup</a></li>
+        <li><a href="../css">CSS</a></li>
+        <li><a href="../javascript">Javascript</a></li>
+        <li><a href="../browser-support">Browser support</a></li>
+        <li><a href="../tested">Tested</a></li>
+        </ul>
+      </li>
+      <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Other Projects <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+        <li><a href="http://git.blivesta.com/animsition">Animsition</a></li>
+        <li><a href="http://git.blivesta.com/chaffle">Chaffle</a></li>
+        <li><a href="https://github.com/blivesta/drawer">Drawer</a></li>
+        <li><a href="http://git.blivesta.com/kicss">Kicss</a></li>
+        <li><a href="http://git.blivesta.com/oblurlay">Oblurlay</a></li>
+        </ul>
+      </li>
+      <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Credit <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="http://blivesta.com">@blivesta</a></li>
+          <li><a href="http://markquery.com/">@ungki</a></li>
+          <li><a href="http://www.tylerball.net/">@tylerball</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    
+
+    <div class="drawer-footer"><span></span></div>
+  </nav>
+</div><!-- /.drawer-main -->
+</header><!-- /.site-header -->
+
+  
+  <div class="drawer-overlay">
+    
+		<main id="content" class="masthead" role="main">
+			<div class="container">
+				<h1>Drawer - Getting started</h1>
+				<p class="lead">A small CSS3 and jQuery plugin for app style drawer menu.</p>
+        
+        
+        <p class="center-block form-inline visible-xs" style="max-width:480px">
+        
+          <a class="button button-border button-lg drawer-api-toggle"><span class="oi oi-menu"></span> Open</a>
+        </p>
+
+        <div class="adpacks">
+  <script async type="text/javascript" src="//cdn.adpacks.com/adpacks.js?zoneid=1386&serve=C6SI42Y&placement=blivesta" id="_adpacks_js"></script>
+</div>
+
+			</div><!-- /.container -->
+		</main>
+
+		<div class="site-body">
+		  <div class="site-body-inner container">
+
+		    <div class="section">
+  <div class="section-body">
+    
+    <h2>Download</h2>
+
+<p>There are a couple ways to download drawer.</p>
+
+<ul>
+<li><a href="https://github.com/blivesta/drawer/releases" title="download">download</a> the ZIP released.</li>
+<li>clone the reop <code>https://github.com/blivesta/drawer.git</code></li>
+</ul>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">  <span class="nv">$ </span>npm install
+  <span class="nv">$ </span>grunt b
+  <span class="nv">$ </span>grunt
+</code></pre></div>
+<p>And finally, open <code>http://0.0.0.0:9999</code> in your browser.</p>
+
+<h2>Requirements</h2>
+
+<ul>
+<li><a href="http://www.nodejs.org/" title="nodejs">nodejs</a></li>
+<li><a href="https://www.npmjs.com/" title="npm">npm</a></li>
+<li><a href="http://jekyllrb.com/" title="jekyll">jekyll</a></li>
+<li><a href="http://bower.io/" title="bower">bower</a></li>
+</ul>
+
+<h3>dependencies</h3>
+
+<ul>
+<li><a href="https://github.com/jquery/jquery" title="jQuery">jQuery</a></li>
+<li><a href="https://github.com/cubiq/iscroll" title="iScroll">iScroll</a></li>
+<li><a href="https://github.com/ungki/bootstrap.dropdown" title="Dropdown">Dropdown</a></li>
+</ul>
+
+  </div>
+</div>
+		  
+		  </div><!-- /.container -->
+		</div><!-- /.site-body -->
+
+    <footer class="footer">
+  <div class="container">
+    
+    <h1>Drawer</h1>
+    <ul class="list-inline">
+      <li><img src="http://img.shields.io/travis/blivesta/drawer.svg" alt="travis" /></li>
+      <li>·</li>
+      <li><img src="http://img.shields.io/bower/v/drawer.svg" alt="bower" /></li>
+    </ul>
+    
+
+    <ul class="list-inline">
+      <li>Code licensed under the MIT.</li>
+    </ul>
+
+    <hr>
+    
+        
+    <h3>Other projects</h3>
+    <ul class="list-inline">
+      <li><a href="/animsition">Animsition</a></li>
+      <li>·</li>
+      <li><a href="/conv">Conv</a></li>
+      <li>·</li>
+      <li><a href="/drawer">Drawer</a></li>
+      <li>·</li>
+      <li><a href="/rippler">Rippler</a></li>
+      <li>·</li>
+      <li><a href="/oblurlay">Oblurlay</a></li>
+      <li>·</li>
+      <li><a href="/chaffle">Chaffle</a></li>
+    </ul>
+    <hr>
+    <ul class="list-inline">
+      <li>
+        Author&nbsp;<span class="icon-blivesta icon-sm icon-circle"></span>&nbsp;
+        <a href="http://blivesta.com">blivesta</a>
+      </li>
+    </ul>
+    
+    <ul class="social-folow list-inline">
+	<li style="width:126px">
+	  <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=blivesta&type=follow&count=false" allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
+	</li>
+	<li>
+		<a href="https://twitter.com/blivesta" class="twitter-follow-button" data-show-count="false">Follow @blivesta</a>
+	  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+		</script>		
+	</li>
+
+</ul>       
+
+    
+
+  </div>
+</footer>
+
+
+<!-- Vendor js -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js"></script>
+<script src="//cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.1/dropdown.min.js"></script>
+
+<!-- drawer js -->
+<script src="../js/jquery.drawer.js"></script>
+
+<script>
+    
+  $(document).ready(function(){
+      
+    $('.drawer').drawer();
+                      
+    $('.drawer-api-toggle').on(function(){
+      $('.drawer').drawer("open");
+    });
+
+    $('.drawer').on('drawer.opened',function(){
+      console.log('opened');
+    });
+
+    $('.drawer').on('drawer.closed',function(){
+      console.log('closed');
+    });
+
+    $('.drawer-dropdown-hover').hover(function(){ 
+      $('[data-toggle="dropdown"]', this).trigger('click'); 
+    });
+
+  });
+        
+</script> 
+
+  </div><!-- /.drawer-overlay -->
+</body>
+</html>

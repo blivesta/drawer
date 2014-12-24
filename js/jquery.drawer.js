@@ -1,5 +1,5 @@
 /*!
- * drawer v2.1.0
+ * drawer v2.2.0
  * 
  * Licensed under MIT
  * Author : blivesta
@@ -18,7 +18,11 @@
         upperClass: "drawer-overlay-upper",
         openClass: "drawer-open",
         closeClass: "drawer-close",
-        responsiveClass: "drawer-responsive"
+        apiToggleClass: "drawer-api-toggle",
+        responsiveClass: "drawer-responsive",
+        dropdownClass: "dropdown",
+        dropdownShown: "shown.bs.dropdown",
+        dropdownHidden: "hidden.bs.dropdown"
       }, options);
       return this.each(function() {
         var _this = this;
@@ -33,17 +37,20 @@
         }
         $this.append($upper);
         var drawerScroll = new IScroll("." + options.mastaClass, {
-          scrollbars: true,
           mouseWheel: true,
-          click: true,
-          fadeScrollbars: true
+          preventDefault: false
         });
-        $("." + options.toggleClass).off("click." + namespace).on("click." + namespace, function() {
+        $("." + options.toggleClass + ", ." + options.apiToggleClass).off("click." + namespace).on("click." + namespace, function() {
           methods.toggle.call(_this);
           drawerScroll.refresh();
         });
         $(window).resize(function() {
           methods.close.call(_this);
+          drawerScroll.refresh();
+        });
+        $("." + options.dropdownClass).on(options.dropdownShown, function() {
+          drawerScroll.refresh();
+        }).on(options.dropdownHidden, function() {
           drawerScroll.refresh();
         });
       });
