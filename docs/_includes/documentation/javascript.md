@@ -59,6 +59,7 @@ var drawerScroll = new IScroll("."+options.mastaClass, {
 });
 ```
 
+If you want to use [iscroll](https://github.com/cubiq/iscroll) lite version, can build with Wheel. It's a lightweight iscroll.
 
 ## Dropdown seletor
 
