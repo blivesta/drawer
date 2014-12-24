@@ -12,7 +12,7 @@ $(document).ready(function() {
 ``` javascript
 // Option
 $(".drawer").drawer({
-  apiClass: "element"
+  apiToggleClass: "element"
 });
 
 // Open

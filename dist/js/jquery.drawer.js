@@ -18,7 +18,7 @@
         upperClass: "drawer-overlay-upper",
         openClass: "drawer-open",
         closeClass: "drawer-close",
-        apiClass: "drawer-api",
+        apiToggleClass: "drawer-api-toggle",
         responsiveClass: "drawer-responsive",
         dropdownClass: "dropdown",
         dropdownShown: "shown.bs.dropdown",
@@ -40,11 +40,7 @@
           mouseWheel: true,
           preventDefault: false
         });
-        $("." + options.toggleClass).off("click." + namespace).on("click." + namespace, function() {
-          methods.toggle.call(_this);
-          drawerScroll.refresh();
-        });
-        $("." + options.apiClass).off("click." + namespace).on("click." + namespace, function() {
+        $("." + options.toggleClass + ", ." + options.apiToggleClass).off("click." + namespace).on("click." + namespace, function() {
           methods.toggle.call(_this);
           drawerScroll.refresh();
         });

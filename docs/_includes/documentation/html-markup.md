@@ -60,16 +60,12 @@ Drawer markup can be used in various ways such as lovely sites:
 
   ``` html
   <body class="drawer drawer-left drawer-responsive">
-  ...
-  </body>
   ```
 
 - Right position
 
   ``` html
   <body class="drawer drawer-right drawer-responsive">
-  ...
-  </body>
   ```
 
 **Navbar markup**
