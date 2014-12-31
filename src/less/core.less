@@ -1,7 +1,7 @@
 // main
 // ======================================
 body.drawer-navbar.drawer-fixed {
-  padding-top: 0; //Account for fixed navbar
+  padding-top: 0;
 }
 .drawer-main {
   position: fixed;
@@ -12,22 +12,24 @@ body.drawer-navbar.drawer-fixed {
   height: 100%;
   .drawer-left & {
     display: none;
-    transition: all @drawer-duration @drawer-ease;
-    transform: translateX(-@drawer-width-phone) translateY(0px);
+    left: -280px;
+    transition: transform @drawer-duration @drawer-ease;
+    transform: translate3d(-@drawer-width-phone, 0px, 0px);
   }
   .drawer-left.drawer-open & {
     display: block;
-    transform: translateX(0px) translateY(0px);
+    left: 0;
+    transform: translate3d(0px, 0px, 0px);
   }
   .drawer-right & {
     display: none;
     right: 0;
     transition: all @drawer-duration @drawer-ease;
-    transform: translateX(@drawer-width-phone) translateY(0px);
+    transform: translate3d(@drawer-width-phone, 0px, 0px);
   }
   .drawer-right.drawer-open & {
     display: block;
-    transform: translateX(0px) translateY(0px);
+    transform: translate3d(0px, 0px, 0px);
   }
 }
 
@@ -40,17 +42,18 @@ body.drawer-navbar.drawer-fixed {
 // hamberger
 // ======================================
 .drawer-left .drawer-hamberger {
-  transform: translateX(0px) translateY(0px);
+  left: 0;
+  transform: translate3d(0px, 0px, 0px);
 }
 .drawer-left.drawer-open .drawer-hamberger {
-  transform: translateX(@drawer-width-phone) translateY(0px);
+  transform: translate3d(@drawer-width-phone, 0px, 0px);
 }
 .drawer-right .drawer-hamberger {
   right: 0;
-  transform: translateX(0px) translateY(0px);
+  transform: translate3d(0px, 0px, 0px);
 }
 .drawer-right.drawer-open .drawer-hamberger {
-  transform: translateX(-@drawer-width-phone) translateY(0px);
+  transform: translate3d(-@drawer-width-phone, 0px, 0px);
 }
 
 // upper
