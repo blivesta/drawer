@@ -5,30 +5,30 @@
   
   <div class="drawer-overlay">
     
-		<main id="content" class="masthead" role="main">
-			<div class="container">
-				<h1>{{ page.title }}</h1>
-				<p class="lead">{{ site.description }}</p>
+    <main id="content" class="masthead" role="main">
+      <div class="container">
+        <h1>{{ page.title }}</h1>
+          <p class="lead">{{ site.description }}</p>
         
-        {% if page.mode == 'responsive' or page.mode == 'navbar' %}
-        <p class="center-block form-inline visible-xs" style="max-width:480px">
-        {% else %}
-        <p class="center-block form-inline" style="max-width:480px">
-        {% endif %}
+          {% if page.mode == 'responsive' or page.mode == 'navbar' %}
+          <p class="center-block form-inline visible-xs" style="max-width:480px">
+          {% else %}
+          <p class="center-block form-inline" style="max-width:480px">
+          {% endif %}
           <a class="button button-border button-lg drawer-api-toggle"><span class="oi oi-menu"></span> Open</a>
-        </p>
+          </p>
 
-        {% include adpacks.html %}
-			</div><!-- /.container -->
-		</main>
+          {% include adpacks.html %}
+      </div><!-- /.container -->
+    </main>
 
-		<div class="site-body">
-		  <div class="site-body-inner container">
+  <div class="site-body">
+    <div class="site-body-inner container">
 
-		    {{ content }}
+    {{ content }}
 		  
-		  </div><!-- /.container -->
-		</div><!-- /.site-body -->
+    </div><!-- /.container -->
+  </div><!-- /.site-body -->
 
     {% include footer.html %}
 

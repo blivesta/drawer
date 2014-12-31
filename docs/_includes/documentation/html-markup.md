@@ -83,7 +83,7 @@ Drawer markup can be used in various ways such as lovely sites:
   <body class="drawer drawer-left drawer-navbar drawer-fixed">
   ```
 
-## Example 
+### Example 
 
 Fixed navbar & dropdown menu
 
@@ -121,7 +121,7 @@ $(document).ready(function() {
 });
 ```
 
-## Using lists tag
+### Using lists tag
 
 **default**
 
@@ -155,7 +155,7 @@ $(document).ready(function() {
 </ul>
 ```
 
-## Dropdown
+### Using dropdown
 
 **Click & Touch**
 
@@ -196,7 +196,7 @@ $('.drawer-dropdown-hover').hover(function(){
   or custom class of your platform menu
 ```
 
-## Floating navbar
+### Floating navbar
 
 ``` html
 <ul class="drawer-navbar-right">
@@ -214,7 +214,7 @@ $('.drawer-dropdown-hover').hover(function(){
 ul.drawer-navbar-right
 ```
 
-## Form tag
+### Using form tag
 
 If you want to add `<form>` tag for search. Follow code.
 

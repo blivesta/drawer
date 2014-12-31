@@ -46,9 +46,9 @@ $('#element').on('drawer.opened');
 $('#element').on('drawer.closed');
 ```
 
-## Configuring the iScroll
+### Configuring the iScroll
 
-Don't use scrollbars, click options for cross broswer.
+Do not use `click: true`, `preventDefault: true` options in order to improve cross browser and web accessibility. If you want to use [iscroll](https://github.com/cubiq/iscroll) lite version, can build with Wheel. It's a lightweight custom [iscroll](https://github.com/ungki/iscroll.lite).
 
 `drawer.js`
 
@@ -59,9 +59,7 @@ var drawerScroll = new IScroll("."+options.mastaClass, {
 });
 ```
 
-If you want to use [iscroll](https://github.com/cubiq/iscroll) lite version, can build with Wheel. It's a lightweight iscroll.
-
-## Dropdown seletor
+### Dropdown seletor
 
 `dropdown.js`
 
@@ -69,7 +67,7 @@ If you want to use [iscroll](https://github.com/cubiq/iscroll) lite version, can
 var nav = '.drawer-nav'
 ```
 
-## Dropdown hover
+### Dropdown hover
 
 `HTML footer`
 

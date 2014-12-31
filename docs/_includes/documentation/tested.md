@@ -28,24 +28,76 @@ Distribution of version 2.3 Gingerbread is 9.1%, December 1, 2014, according to 
 <table class="table table-border">
 <thead>
 <tr>
-<th>Version</th>
-<th>Code Name</th>
-<th>Product</th>
-<th>Release date</th>
+  <th>Version</th>
+  <th>Product</th>
+  <th>Release date</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>4.4</td>
-<td>KitKat</td>
-<td>Galaxy S4</td>
-<td>October 31, 2013</td>
+  <td>2.3</td>
+  <td>Motorola Atrix</td>
+  <td>2011</td>
 </tr>
 <tr>
-<td>2.3</td>
-<td>Gingerbread</td>
-<td>Motorola Atrix</td>
-<td>February 9, 2011</td>
+  <td>4.0</td>
+  <td>hTC Sensation</td>
+  <td>2011</td>
+</tr>
+<tr>
+  <td>4.3</td>
+  <td>Galaxy Nexus</td>
+  <td>2011</td>
+</tr>
+<tr>
+  <td>4.1</td>
+  <td>Galaxy S2</td>
+  <td>2011</td>
+</tr>
+<tr>
+  <td>4.1</td>
+  <td>Galaxy Note1</td>
+  <td>2011</td>
+</tr>
+<tr>
+  <td>5.0</td>
+  <td>Nexus 4</td>
+  <td>2012</td>
+</tr>
+<tr>
+  <td>4.1</td>
+  <td>Galaxy Note2</td>
+  <td>2012</td>
+</tr>
+<tr>
+  <td>4.1</td>
+  <td>LG G2</td>
+  <td>2012</td>
+</tr>
+<tr>
+  <td>4.4</td>
+  <td>Galaxy mega</td>
+  <td>2013</td>
+</tr>
+<tr>
+  <td>4.4</td>
+  <td>Galaxy S4</td>
+  <td>2013</td>
+</tr>
+<tr>
+  <td>4.2</td>
+  <td>LG G3</td>
+  <td>2013</td>
+</tr>
+<tr>
+  <td>4.2</td>
+  <td>LG Optimus G Pro</td>
+  <td>2013</td>
+</tr>
+<tr>
+  <td>4.1</td>
+  <td>Galaxy Note4</td>
+  <td>2014</td>
 </tr>
 </tbody>
 </table>
@@ -56,7 +108,6 @@ Distribution of version 2.3 Gingerbread is 9.1%, December 1, 2014, according to 
 <thead>
 <tr>
 <th>Version</th>
-<th>Code Name</th>
 <th>Product</th>
 <th>Release date</th>
 </tr>
@@ -64,9 +115,8 @@ Distribution of version 2.3 Gingerbread is 9.1%, December 1, 2014, according to 
 <tbody>
 <tr>
 <td>4.1</td>
-<td>Jelly Bean</td>
 <td>Nexus 7</td>
-<td>July 13, 2012</td>
+<td>2012</td>
 </tr>
 </tbody>
 </table>

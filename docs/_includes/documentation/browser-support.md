@@ -85,9 +85,9 @@ $(document).ready(function(){
 </div>
 ```
 
-#### Toggle dropdown menu
+#### dropdown **Enter** or **keyDown**
 
-**Enter** or **keyDown**
+Toggle dropdown menu
 
 ``` html
 <ul>
