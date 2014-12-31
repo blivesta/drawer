@@ -37,9 +37,9 @@ body.drawer-navbar.drawer-fixed {
 .drawer-right .drawer-main {
   right: 0;
   display: none;
-  -webkit-transition: all .4s cubic-bezier(.19, 1, .22, 1);
-       -o-transition: all .4s cubic-bezier(.19, 1, .22, 1);
-          transition: all .4s cubic-bezier(.19, 1, .22, 1);
+  -webkit-transition: -webkit-transform .4s cubic-bezier(.19, 1, .22, 1);
+       -o-transition:      -o-transform .4s cubic-bezier(.19, 1, .22, 1);
+          transition:         transform .4s cubic-bezier(.19, 1, .22, 1);
   -webkit-transform: translate3d(280px, 0px, 0px);
        -o-transform: translate3d(280px, 0px, 0px);
           transform: translate3d(280px, 0px, 0px);
@@ -55,25 +55,29 @@ body.drawer-navbar.drawer-fixed {
 }
 .drawer-left .drawer-hamberger {
   left: 0;
-  -webkit-transform: translate3d(0px, 0px, 0px);
-       -o-transform: translate3d(0px, 0px, 0px);
-          transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translateX(0px) translateY(0px);
+      -ms-transform: translateX(0px) translateY(0px);
+       -o-transform: translateX(0px) translateY(0px);
+          transform: translateX(0px) translateY(0px);
 }
 .drawer-left.drawer-open .drawer-hamberger {
-  -webkit-transform: translate3d(280px, 0px, 0px);
-       -o-transform: translate3d(280px, 0px, 0px);
-          transform: translate3d(280px, 0px, 0px);
+  -webkit-transform: translateX(280px) translateY(0px);
+      -ms-transform: translateX(280px) translateY(0px);
+       -o-transform: translateX(280px) translateY(0px);
+          transform: translateX(280px) translateY(0px);
 }
 .drawer-right .drawer-hamberger {
   right: 0;
-  -webkit-transform: translate3d(0px, 0px, 0px);
-       -o-transform: translate3d(0px, 0px, 0px);
-          transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translateX(0px) translateY(0px);
+      -ms-transform: translateX(0px) translateY(0px);
+       -o-transform: translateX(0px) translateY(0px);
+          transform: translateX(0px) translateY(0px);
 }
 .drawer-right.drawer-open .drawer-hamberger {
-  -webkit-transform: translate3d(-280px, 0px, 0px);
-       -o-transform: translate3d(-280px, 0px, 0px);
-          transform: translate3d(-280px, 0px, 0px);
+  -webkit-transform: translateX(-280px) translateY(0px);
+      -ms-transform: translateX(-280px) translateY(0px);
+       -o-transform: translateX(-280px) translateY(0px);
+          transform: translateX(-280px) translateY(0px);
 }
 .drawer-overlay-upper {
   position: fixed;
