@@ -24,7 +24,7 @@ body.drawer-navbar.drawer-fixed {
   .drawer-right & {
     display: none;
     right: 0;
-    transition: all @drawer-duration @drawer-ease;
+    transition: transform @drawer-duration @drawer-ease;
     transform: translate3d(@drawer-width-phone, 0px, 0px);
   }
   .drawer-right.drawer-open & {
@@ -43,17 +43,17 @@ body.drawer-navbar.drawer-fixed {
 // ======================================
 .drawer-left .drawer-hamberger {
   left: 0;
-  transform: translate3d(0px, 0px, 0px);
+  transform: translateX(0px) translateY(0px);
 }
 .drawer-left.drawer-open .drawer-hamberger {
-  transform: translate3d(@drawer-width-phone, 0px, 0px);
+  transform: translateX(@drawer-width-phone) translateY(0px);
 }
 .drawer-right .drawer-hamberger {
   right: 0;
-  transform: translate3d(0px, 0px, 0px);
+  transform: translateX(0px) translateY(0px);
 }
 .drawer-right.drawer-open .drawer-hamberger {
-  transform: translate3d(-@drawer-width-phone, 0px, 0px);
+  transform: translateX(-@drawer-width-phone) translateY(0px);
 }
 
 // upper
