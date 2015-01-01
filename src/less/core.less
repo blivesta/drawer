@@ -11,24 +11,21 @@ body.drawer-navbar.drawer-fixed {
   width: @drawer-width-phone;
   height: 100%;
   .drawer-left & {
-    display: none;
-    left: -280px;
+    left: -@drawer-width-phone;
     transition: transform @drawer-duration @drawer-ease;
     transform: translate3d(-@drawer-width-phone, 0px, 0px);
   }
   .drawer-left.drawer-open & {
-    display: block;
     left: 0;
     transform: translate3d(0px, 0px, 0px);
   }
   .drawer-right & {
-    display: none;
-    right: 0;
+    right: -@drawer-width-phone;
     transition: transform @drawer-duration @drawer-ease;
     transform: translate3d(@drawer-width-phone, 0px, 0px);
   }
   .drawer-right.drawer-open & {
-    display: block;
+    right: 0;
     transform: translate3d(0px, 0px, 0px);
   }
 }

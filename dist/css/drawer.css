@@ -19,7 +19,6 @@ body.drawer-navbar.drawer-fixed {
 }
 .drawer-left .drawer-main {
   left: -280px;
-  display: none;
   -webkit-transition: -webkit-transform .4s cubic-bezier(.19, 1, .22, 1);
        -o-transition:      -o-transform .4s cubic-bezier(.19, 1, .22, 1);
           transition:         transform .4s cubic-bezier(.19, 1, .22, 1);
@@ -29,14 +28,12 @@ body.drawer-navbar.drawer-fixed {
 }
 .drawer-left.drawer-open .drawer-main {
   left: 0;
-  display: block;
   -webkit-transform: translate3d(0px, 0px, 0px);
        -o-transform: translate3d(0px, 0px, 0px);
           transform: translate3d(0px, 0px, 0px);
 }
 .drawer-right .drawer-main {
-  right: 0;
-  display: none;
+  right: -280px;
   -webkit-transition: -webkit-transform .4s cubic-bezier(.19, 1, .22, 1);
        -o-transition:      -o-transform .4s cubic-bezier(.19, 1, .22, 1);
           transition:         transform .4s cubic-bezier(.19, 1, .22, 1);
@@ -45,7 +42,7 @@ body.drawer-navbar.drawer-fixed {
           transform: translate3d(280px, 0px, 0px);
 }
 .drawer-right.drawer-open .drawer-main {
-  display: block;
+  right: 0;
   -webkit-transform: translate3d(0px, 0px, 0px);
        -o-transform: translate3d(0px, 0px, 0px);
           transform: translate3d(0px, 0px, 0px);
