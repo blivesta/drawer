@@ -74,7 +74,6 @@
         <ul class="dropdown-menu" role="menu">
         <li><a href="http://git.blivesta.com/animsition">Animsition</a></li>
         <li><a href="http://git.blivesta.com/chaffle">Chaffle</a></li>
-        <li><a href="https://github.com/blivesta/drawer">Drawer</a></li>
         <li><a href="http://git.blivesta.com/kicss">Kicss</a></li>
         <li><a href="http://git.blivesta.com/oblurlay">Oblurlay</a></li>
         </ul>
@@ -98,28 +97,28 @@
   
   <div class="drawer-overlay">
     
-		<main id="content" class="masthead" role="main">
-			<div class="container">
-				<h1>Drawer - Javascript</h1>
-				<p class="lead">A small CSS3 and jQuery plugin for app style drawer menu.</p>
+    <main id="content" class="masthead" role="main">
+      <div class="container">
+        <h1>Drawer - Javascript</h1>
+          <p class="lead">A small CSS3 and jQuery plugin for app style drawer menu.</p>
         
-        
-        <p class="center-block form-inline visible-xs" style="max-width:480px">
-        
+          
+          <p class="center-block form-inline visible-xs" style="max-width:480px">
+          
           <a class="button button-border button-lg drawer-api-toggle"><span class="oi oi-menu"></span> Open</a>
-        </p>
+          </p>
 
-        <div class="adpacks">
+          <div class="adpacks">
   <script async type="text/javascript" src="//cdn.adpacks.com/adpacks.js?zoneid=1386&serve=C6SI42Y&placement=blivesta" id="_adpacks_js"></script>
 </div>
 
-			</div><!-- /.container -->
-		</main>
+      </div><!-- /.container -->
+    </main>
 
-		<div class="site-body">
-		  <div class="site-body-inner container">
+  <div class="site-body">
+    <div class="site-body-inner container">
 
-		    <div class="section">
+    <div class="section">
   <div class="section-body">
     
     <h2>Call the Drawer</h2>
@@ -160,9 +159,9 @@
 <span class="c1">// Closed</span>
 <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;drawer.closed&#39;</span><span class="p">);</span>
 </code></pre></div>
-<h2>Configuring the iScroll</h2>
+<h3>Configuring the iScroll</h3>
 
-<p>Don&#39;t use scrollbars, click options for cross broswer.</p>
+<p>Do not use <code>click: true</code>, <code>preventDefault: true</code> options in order to improve cross browser and web accessibility. If you want to use <a href="https://github.com/cubiq/iscroll">iscroll</a> lite version, can build with Wheel. It&#39;s a lightweight custom <a href="https://github.com/ungki/iscroll.lite">iscroll</a>.</p>
 
 <p><code>drawer.js</code></p>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">drawerScroll</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IScroll</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="o">+</span><span class="nx">options</span><span class="p">.</span><span class="nx">mastaClass</span><span class="p">,</span> <span class="p">{</span>
@@ -170,14 +169,12 @@
   <span class="nx">preventDefault</span><span class="o">:</span> <span class="kc">false</span>
 <span class="p">});</span>
 </code></pre></div>
-<p>If you want to use <a href="https://github.com/cubiq/iscroll">iscroll</a> lite version, can build with Wheel. It&#39;s a lightweight iscroll.</p>
-
-<h2>Dropdown seletor</h2>
+<h3>Dropdown seletor</h3>
 
 <p><code>dropdown.js</code></p>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nav</span> <span class="o">=</span> <span class="s1">&#39;.drawer-nav&#39;</span>
 </code></pre></div>
-<h2>Dropdown hover</h2>
+<h3>Dropdown hover</h3>
 
 <p><code>HTML footer</code></p>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.drawer-dropdown-hover&#39;</span><span class="p">).</span><span class="nx">hover</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span> 
@@ -187,8 +184,8 @@
   </div>
 </div>
 		  
-		  </div><!-- /.container -->
-		</div><!-- /.site-body -->
+    </div><!-- /.container -->
+  </div><!-- /.site-body -->
 
     <footer class="footer">
   <div class="container">
@@ -207,14 +204,11 @@
 
     <hr>
     
-        
     <h3>Other projects</h3>
     <ul class="list-inline">
       <li><a href="/animsition">Animsition</a></li>
       <li>·</li>
       <li><a href="/conv">Conv</a></li>
-      <li>·</li>
-      <li><a href="/drawer">Drawer</a></li>
       <li>·</li>
       <li><a href="/rippler">Rippler</a></li>
       <li>·</li>
@@ -243,10 +237,8 @@
 </ul>       
 
     
-
   </div>
 </footer>
-
 
 <!-- Vendor js -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -257,7 +249,7 @@
 <script src="../js/jquery.drawer.js"></script>
 
 <script>
-    
+
   $(document).ready(function(){
       
     $('.drawer').drawer();
@@ -275,11 +267,11 @@
     });
 
     $('.drawer-dropdown-hover').hover(function(){ 
-      $('[data-toggle="dropdown"]', this).trigger('click'); 
+      $('[data-toggle="dropdown"]', this).trigger('click');
     });
 
   });
-        
+
 </script> 
 
   </div><!-- /.drawer-overlay -->

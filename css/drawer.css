@@ -1,5 +1,5 @@
 /*!
- * drawer v2.2.0
+ * drawer v2.2.1
  * 
  * Licensed under MIT
  * Author : blivesta
@@ -18,67 +18,60 @@ body.drawer-navbar.drawer-fixed {
   overflow: hidden;
 }
 .drawer-left .drawer-main {
-  display: none;
-  -webkit-transition: all .4s cubic-bezier(.19, 1, .22, 1);
-       -o-transition: all .4s cubic-bezier(.19, 1, .22, 1);
-          transition: all .4s cubic-bezier(.19, 1, .22, 1);
-  -webkit-transform: translateX(-280px) translateY(0px);
-      -ms-transform: translateX(-280px) translateY(0px);
-       -o-transform: translateX(-280px) translateY(0px);
-          transform: translateX(-280px) translateY(0px);
+  left: -280px;
+  -webkit-transition: -webkit-transform .4s cubic-bezier(.19, 1, .22, 1);
+       -o-transition:      -o-transform .4s cubic-bezier(.19, 1, .22, 1);
+          transition:         transform .4s cubic-bezier(.19, 1, .22, 1);
+  -webkit-transform: translate3d(-280px, 0px, 0px);
+       -o-transform: translate3d(-280px, 0px, 0px);
+          transform: translate3d(-280px, 0px, 0px);
 }
 .drawer-left.drawer-open .drawer-main {
+  left: 0;
   display: block;
-  -webkit-transform: translateX(0px) translateY(0px);
-      -ms-transform: translateX(0px) translateY(0px);
-       -o-transform: translateX(0px) translateY(0px);
-          transform: translateX(0px) translateY(0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+       -o-transform: translate3d(0px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
 }
 .drawer-right .drawer-main {
   right: 0;
-  display: none;
   -webkit-transition: all .4s cubic-bezier(.19, 1, .22, 1);
        -o-transition: all .4s cubic-bezier(.19, 1, .22, 1);
           transition: all .4s cubic-bezier(.19, 1, .22, 1);
-  -webkit-transform: translateX(280px) translateY(0px);
-      -ms-transform: translateX(280px) translateY(0px);
-       -o-transform: translateX(280px) translateY(0px);
-          transform: translateX(280px) translateY(0px);
+  -webkit-transform: translate3d(280px, 0px, 0px);
+       -o-transform: translate3d(280px, 0px, 0px);
+          transform: translate3d(280px, 0px, 0px);
 }
 .drawer-right.drawer-open .drawer-main {
   display: block;
-  -webkit-transform: translateX(0px) translateY(0px);
-      -ms-transform: translateX(0px) translateY(0px);
-       -o-transform: translateX(0px) translateY(0px);
-          transform: translateX(0px) translateY(0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+       -o-transform: translate3d(0px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
 }
 .drawer-overlay {
   position: relative;
 }
 .drawer-left .drawer-hamberger {
-  -webkit-transform: translateX(0px) translateY(0px);
-      -ms-transform: translateX(0px) translateY(0px);
-       -o-transform: translateX(0px) translateY(0px);
-          transform: translateX(0px) translateY(0px);
+  left: 0;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+       -o-transform: translate3d(0px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
 }
 .drawer-left.drawer-open .drawer-hamberger {
-  -webkit-transform: translateX(280px) translateY(0px);
-      -ms-transform: translateX(280px) translateY(0px);
-       -o-transform: translateX(280px) translateY(0px);
-          transform: translateX(280px) translateY(0px);
+  -webkit-transform: translate3d(280px, 0px, 0px);
+       -o-transform: translate3d(280px, 0px, 0px);
+          transform: translate3d(280px, 0px, 0px);
 }
 .drawer-right .drawer-hamberger {
   right: 0;
-  -webkit-transform: translateX(0px) translateY(0px);
-      -ms-transform: translateX(0px) translateY(0px);
-       -o-transform: translateX(0px) translateY(0px);
-          transform: translateX(0px) translateY(0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+       -o-transform: translate3d(0px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
 }
 .drawer-right.drawer-open .drawer-hamberger {
-  -webkit-transform: translateX(-280px) translateY(0px);
-      -ms-transform: translateX(-280px) translateY(0px);
-       -o-transform: translateX(-280px) translateY(0px);
-          transform: translateX(-280px) translateY(0px);
+  -webkit-transform: translate3d(-280px, 0px, 0px);
+       -o-transform: translate3d(-280px, 0px, 0px);
+          transform: translate3d(-280px, 0px, 0px);
 }
 .drawer-overlay-upper {
   position: fixed;
@@ -101,6 +94,7 @@ body.drawer-navbar.drawer-fixed {
 }
 .drawer-hamberger {
   position: fixed;
+  top: 0;
   z-index: 1030;
   display: block;
   width: 70px;
@@ -120,12 +114,11 @@ body.drawer-navbar.drawer-fixed {
 .drawer-hamberger span.hamberger:after {
   width: 100%;
   height: 3px;
-  cursor: pointer;
   background-color: #ddd;
   border-radius: 1px;
-  -webkit-transition: all .4s cubic-bezier(.19, 1, .22, 1);
-       -o-transition: all .4s cubic-bezier(.19, 1, .22, 1);
-          transition: all .4s cubic-bezier(.19, 1, .22, 1);
+  -webkit-transition: -webkit-transform .4s cubic-bezier(.19, 1, .22, 1);
+       -o-transition:      -o-transform .4s cubic-bezier(.19, 1, .22, 1);
+          transition:         transform .4s cubic-bezier(.19, 1, .22, 1);
 }
 .drawer-hamberger span.hamberger:before,
 .drawer-hamberger span.hamberger:after {
@@ -193,9 +186,9 @@ body.drawer-navbar.drawer-fixed {
 }
 .drawer-default .drawer-footer {
   position: relative;
-  height: 44px;
+  height: 50px;
   padding: 0 15px;
-  line-height: 44px;
+  line-height: 50px;
   background-color: transparent;
 }
 .drawer-default .drawer-footer span:before,
@@ -323,9 +316,9 @@ body.drawer-navbar.drawer-fixed {
 }
 .drawer-navbar-default .drawer-footer {
   position: relative;
-  height: 44px;
+  height: 50px;
   padding: 0 15px;
-  line-height: 44px;
+  line-height: 50px;
   background-color: transparent;
 }
 .drawer-navbar-default .drawer-footer span:before,
@@ -514,8 +507,8 @@ body.drawer-navbar.drawer-fixed {
   .drawer-responsive.drawer-right .drawer-main {
     position: absolute;
     width: 150px !important;
-    height: auto !important;
-    overflow: visible !important;
+    height: auto!important;
+    overflow: visible!important;
   }
   .drawer-responsive.drawer-left .drawer-main {
     float: left;
@@ -547,9 +540,9 @@ body.drawer-navbar.drawer-fixed {
     top: 0;
     left: 0;
     display: block;
-    width: 100% !important;
-    height: auto !important;
-    overflow: visible !important;
+    width: 100%!important;
+    height: auto!important;
+    overflow: visible!important;
     -webkit-transform: none;
         -ms-transform: none;
          -o-transform: none;
@@ -610,7 +603,7 @@ body.drawer-navbar.drawer-fixed {
   }
   .drawer-navbar-default ul li ul li a {
     width: 160px;
-    padding: 0 15px !important;
+    padding: 0 15px!important;
     /* conflict by cooker */
     color: #fff;
     background-color: #444;
