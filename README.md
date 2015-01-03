@@ -12,8 +12,14 @@ http://git.blivesta.com/drawer/
 
 ## CDN
 
-[jsDelivr](http://jsdelivr.com/#!drawer)
+[cdnjs](https://cdnjs.com/libraries/drawer)
+ - css/drawer.css
+ - css/drawer.css.map
+ - css/drawer.min.css
+ - js/jquery.drawer.js
+ - js/jquery.drawer.min.js
 
+[jsDelivr](http://jsdelivr.com/#!drawer)
 - drawer.min.css
 - drawer.css.map
 - jquery.drawer.min.js
