@@ -78,7 +78,7 @@ $(document).ready(function(){
 
 ``` html
 <div class="drawer-header">
-  <button type="botton" class="drawer-toggle drawer-hamberger">
+  <button type="button" class="drawer-toggle drawer-hamberger">
     <span class="sr-only">toggle navigation</span> 
     <span class="hamberger"></span>
   </button>
