@@ -15,49 +15,49 @@
   border: 0;
   z-index: @drawer-toggle-zIndex;
   outline: 0;
-  span.hamberger {
-  position: relative;
-  display: block;
-  margin-top: 10px;
-  }
-  span.hamberger,
-  span.hamberger:before,
-  span.hamberger:after {
-    height: 3px;
-    width: 100%;
-    border-radius: 1px;
-    background-color: @drawer-hamberger-bg-color;
-    transition: all @drawer-duration @drawer-ease;
-  }
-  span.hamberger:before,
-  span.hamberger:after {
-    position: absolute;
-    content: " ";
-    top: -10px;
-    left: 0;
-  }
- span.hamberger:after {
-   top: 10px;
-  }
-  span.hamberger {
-    .drawer-open & {
-      background-color: transparent;
+  .drawer-hamberger-icon {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    &,
+    &:before,
+    &:after {
+      height: 3px;
+      width: 100%;
+      border-radius: 1px;
+      background-color: @drawer-hamberger-bg-color;
+      transition: all @drawer-duration @drawer-ease;
     }
-  }
-  span.hamberger:before,
-  span.hamberger:after {
-    .drawer-open & {
-      top: 0;
+    &:before,
+    &:after {
+      position: absolute;
+      content: " ";
+      top: -10px;
+      left: 0;
     }
-  }
-  span.hamberger:before {
-    .drawer-open & {
-      transform: rotate(45deg);
+    &:after {
+      top: 10px;
     }
-  }
-  span.hamberger:after {
-    .drawer-open & {
-      transform: rotate(-45deg);
+    & {
+      .drawer-open & {
+        background-color: transparent;
+      }
+    }
+    &:before,
+    &:after {
+      .drawer-open & {
+        top: 0;
+      }
+    }
+    &:before {
+      .drawer-open & {
+        transform: rotate(45deg);
+      }
+    }
+    &:after {
+      .drawer-open & {
+        transform: rotate(-45deg);
+      }
     }
   }
   &:hover {
