@@ -215,6 +215,7 @@
           port: 9999,
           hostname: '0.0.0.0',
           base: '<%= pkg.public %>/',
+          livereload: true,
           open: {
             server: {
               path: 'http://<%= connect.server.options.hostname %>:<%= connect.server.options.port %>'
