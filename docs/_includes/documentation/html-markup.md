@@ -30,7 +30,7 @@ Drawer markup can be used in various ways such as lovely sites:
   <div class="drawer-header">
     <button type="button" class="drawer-toggle drawer-hamberger">
       <span class="sr-only">toggle navigation</span> 
-      <span class="hamberger"></span>
+      <span class="drawer-hamberger-icon"></span>
     </button>
   </div>
 
@@ -163,9 +163,10 @@ $(document).ready(function() {
 <ul>
   <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Title <span class="caret"></span></a>
     <ul class="dropdown-menu" role="menu">
-    <li><a href="./">Menu</a></li>
-  </ul>
-</li>
+      <li><a href="./">Menu</a></li>
+    </ul>
+  </li>
+</ul>
 ```
 
 **Click & Touch & hover for desktop**
@@ -174,9 +175,10 @@ $(document).ready(function() {
 <ul>
   <li class="dropdown drawer-dropdown-hover"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Title <span class="caret"></span></a>
     <ul class="dropdown-menu" role="menu">
-    <li><a href="./">Menu</a></li>
-  </ul>
-</li>
+      <li><a href="./">Menu</a></li>
+    </ul>
+  </li>
+</ul>
 ```
 
 **hover javascript in your html footer**
@@ -202,7 +204,7 @@ $('.drawer-dropdown-hover').hover(function(){
 <ul class="drawer-navbar-right">
   <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Right Title <span class="caret"></span></a>
     <ul class="dropdown-menu" role="menu">
-    <li><a href="./">Right</a></li>
+      <li><a href="./">Right</a></li>
     </ul>
   </li>
 </ul>
@@ -226,12 +228,12 @@ In `<nav>` tag
 
 ``` html
 <form class="drawer-form drawer-form-right" role="search">
-<label class="sr-only">search</label>
+  <label class="sr-only">search</label>
   <div class="drawer-input-group">
   <input type="text" class="drawer-input" placeholder="Search">
   </div>
   <button type="submit" class="drawer-form-btn">Submit</button>
- </form>
+</form>
 ```
 
 **Add CSS** 

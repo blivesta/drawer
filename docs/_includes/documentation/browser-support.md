@@ -80,7 +80,7 @@ $(document).ready(function(){
 <div class="drawer-header">
   <button type="button" class="drawer-toggle drawer-hamberger">
     <span class="sr-only">toggle navigation</span> 
-    <span class="hamberger"></span>
+    <span class="drawer-hamberger-icon"></span>
   </button>
 </div>
 ```

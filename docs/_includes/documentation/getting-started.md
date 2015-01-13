@@ -7,7 +7,7 @@ There are a couple ways to download drawer.
 
   ``` bash
   $ npm install
-  $ grunt b
+  $ grunt build
   $ grunt
   ```
 
