@@ -103,14 +103,17 @@ body.drawer-navbar.drawer-fixed {
   border: 0;
   outline: 0;
   }
-.drawer-hamberger .drawer-hamberger-icon {
+.drawer-hamberger:hover {
+  cursor: pointer;
+  }
+.drawer-hamberger-icon {
   position: relative;
   display: block;
   margin-top: 10px;
   }
-.drawer-hamberger .drawer-hamberger-icon,
-.drawer-hamberger .drawer-hamberger-icon:before,
-.drawer-hamberger .drawer-hamberger-icon:after {
+.drawer-hamberger-icon,
+.drawer-hamberger-icon:before,
+.drawer-hamberger-icon:after {
   width: 100%;
   height: 3px;
   background-color: #ddd;
@@ -119,37 +122,34 @@ body.drawer-navbar.drawer-fixed {
        -o-transition: all .4s cubic-bezier(.19, 1, .22, 1);
           transition: all .4s cubic-bezier(.19, 1, .22, 1);
   }
-.drawer-hamberger .drawer-hamberger-icon:before,
-.drawer-hamberger .drawer-hamberger-icon:after {
+.drawer-hamberger-icon:before,
+.drawer-hamberger-icon:after {
   position: absolute;
   top: -10px;
   left: 0;
   content: " ";
   }
-.drawer-hamberger .drawer-hamberger-icon:after {
+.drawer-hamberger-icon:after {
   top: 10px;
   }
-.drawer-open .drawer-hamberger .drawer-hamberger-icon {
+.drawer-open .drawer-hamberger-icon {
   background-color: transparent;
   }
-.drawer-open .drawer-hamberger .drawer-hamberger-icon:before,
-.drawer-open .drawer-hamberger .drawer-hamberger-icon:after {
+.drawer-open .drawer-hamberger-icon:before,
+.drawer-open .drawer-hamberger-icon:after {
   top: 0;
   }
-.drawer-open .drawer-hamberger .drawer-hamberger-icon:before {
+.drawer-open .drawer-hamberger-icon:before {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
        -o-transform: rotate(45deg);
           transform: rotate(45deg);
   }
-.drawer-open .drawer-hamberger .drawer-hamberger-icon:after {
+.drawer-open .drawer-hamberger-icon:after {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
        -o-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  }
-.drawer-hamberger:hover {
-  cursor: pointer;
   }
 .drawer-default {
   background-color: #222;
