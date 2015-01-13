@@ -12,10 +12,10 @@
     banner:
       '/*!\n' +
       ' * <%= pkg.name %> v<%= pkg.version %>\n' +
-      ' * <%= pkg.url %>\n' +
+      ' * <%= pkg.homepage %>\n' +
       ' * Licensed under <%= pkg.licenses %>\n' +
       ' * Author : <%= pkg.author %>\n' +
-      ' * <%= pkg.author_url %>\n' +
+      ' * <%= pkg.authorUrl %>\n' +
       ' */\n',
     // ====================================================
     clean: {
