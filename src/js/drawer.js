@@ -11,7 +11,7 @@
         upperClass:        "drawer-overlay-upper",
         openClass:         "drawer-open",
         closeClass:        "drawer-close",
-        apiToggleClass:          "drawer-api-toggle",
+        apiToggleClass:    "drawer-api-toggle",
         responsiveClass:   "drawer-responsive",
         dropdownClass:     "dropdown",
         dropdownShown:     "shown.bs.dropdown",
