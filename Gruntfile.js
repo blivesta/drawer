@@ -376,7 +376,7 @@
   ]);
 
   // ====================================================
-  grunt.registerTask('b', [
+  grunt.registerTask('build', [
     'clean',
     'bower',
     'copy:vendor',
