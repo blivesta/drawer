@@ -31,13 +31,13 @@
 </head>
 <body class="drawer drawer-left drawer-navbar drawer-fixed site-base">
   
-  <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+  <a class="sr-only sr-only-focusable" href="#content" tabindex="1">Skip to main content</a>
 
 <header role="banner">
 <div class="drawer-header">
   <button type="button" class="drawer-toggle drawer-hamberger">
     <span class="sr-only">toggle navigation</span>
-    <span class="hamberger"></span>
+    <span class="drawer-hamberger-icon"></span>
   </button>
 </div>
 
@@ -97,7 +97,7 @@
   
   <div class="drawer-overlay">
     
-    <main id="content" class="masthead" role="main">
+    <main id="content" class="masthead" role="main" tabindex="-1">
       <div class="container">
         <h1>Drawer - Tested</h1>
           <p class="lead">A small CSS3 and jQuery plugin for app style drawer menu.</p>

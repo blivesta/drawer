@@ -31,13 +31,13 @@
 </head>
 <body class="drawer drawer-left drawer-navbar drawer-fixed site-base">
   
-  <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+  <a class="sr-only sr-only-focusable" href="#content" tabindex="1">Skip to main content</a>
 
 <header role="banner">
 <div class="drawer-header">
   <button type="button" class="drawer-toggle drawer-hamberger">
     <span class="sr-only">toggle navigation</span>
-    <span class="hamberger"></span>
+    <span class="drawer-hamberger-icon"></span>
   </button>
 </div>
 
@@ -97,7 +97,7 @@
   
   <div class="drawer-overlay">
     
-    <main id="content" class="masthead" role="main">
+    <main id="content" class="masthead" role="main" tabindex="-1">
       <div class="container">
         <h1>Drawer - HTML markup</h1>
           <p class="lead">A small CSS3 and jQuery plugin for app style drawer menu.</p>
@@ -150,7 +150,7 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-header&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;drawer-toggle drawer-hamberger&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>toggle navigation<span class="nt">&lt;/span&gt;</span> 
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;hamberger&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;drawer-hamberger-icon&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 
@@ -262,17 +262,19 @@
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown drawer-dropdown&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">role=</span><span class="s">&quot;button&quot;</span> <span class="na">aria-expanded=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>Title <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>Menu<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-  <span class="nt">&lt;/ul&gt;</span>
-<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>Menu<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
 </code></pre></div>
 <p><strong>Click &amp; Touch &amp; hover for desktop</strong></p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown drawer-dropdown-hover&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">role=</span><span class="s">&quot;button&quot;</span> <span class="na">aria-expanded=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>Title <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>Menu<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-  <span class="nt">&lt;/ul&gt;</span>
-<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>Menu<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
 </code></pre></div>
 <p><strong>hover javascript in your html footer</strong></p>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.drawer-dropdown-hover&#39;</span><span class="p">).</span><span class="nx">hover</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span> 
@@ -289,7 +291,7 @@
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;drawer-navbar-right&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown drawer-dropdown&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">role=</span><span class="s">&quot;button&quot;</span> <span class="na">aria-expanded=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>Right Title <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>Right<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>Right<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span>
@@ -307,12 +309,12 @@
 
 <p>In <code>&lt;nav&gt;</code> tag</p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;drawer-form drawer-form-right&quot;</span> <span class="na">role=</span><span class="s">&quot;search&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>search<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>search<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-input-group&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;drawer-input&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Search&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">class=</span><span class="s">&quot;drawer-form-btn&quot;</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
- <span class="nt">&lt;/form&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
 </code></pre></div>
 <p><strong>Add CSS</strong> </p>
 

@@ -1,9 +1,9 @@
 /*!
- * drawer v2.2.2
- * 
+ * drawer v2.2.3
+ * http://git.blivesta.com/drawer
  * Licensed under MIT
  * Author : blivesta
- * 
+ * http://blivesta.com
  */
 (function($) {
   "use strict";
