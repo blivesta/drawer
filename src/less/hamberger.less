@@ -15,52 +15,52 @@
   border: 0;
   z-index: @drawer-toggle-zIndex;
   outline: 0;
-  .drawer-hamberger-icon {
-    position: relative;
-    display: block;
-    margin-top: 10px;
-    &,
-    &:before,
-    &:after {
-      height: 3px;
-      width: 100%;
-      border-radius: 1px;
-      background-color: @drawer-hamberger-bg-color;
-      transition: all @drawer-duration @drawer-ease;
-    }
-    &:before,
-    &:after {
-      position: absolute;
-      content: " ";
-      top: -10px;
-      left: 0;
-    }
-    &:after {
-      top: 10px;
-    }
-    & {
-      .drawer-open & {
-        background-color: transparent;
-      }
-    }
-    &:before,
-    &:after {
-      .drawer-open & {
-        top: 0;
-      }
-    }
-    &:before {
-      .drawer-open & {
-        transform: rotate(45deg);
-      }
-    }
-    &:after {
-      .drawer-open & {
-        transform: rotate(-45deg);
-      }
-    }
-  }
   &:hover {
     cursor: pointer;
+  }
+}
+.drawer-hamberger-icon {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  &,
+  &:before,
+  &:after {
+    height: 3px;
+    width: 100%;
+    border-radius: 1px;
+    background-color: @drawer-hamberger-bg-color;
+    transition: all @drawer-duration @drawer-ease;
+  }
+  &:before,
+  &:after {
+    position: absolute;
+    content: " ";
+    top: -10px;
+    left: 0;
+  }
+  &:after {
+    top: 10px;
+  }
+  & {
+    .drawer-open & {
+      background-color: transparent;
+    }
+  }
+  &:before,
+  &:after {
+    .drawer-open & {
+      top: 0;
+    }
+  }
+  &:before {
+    .drawer-open & {
+      transform: rotate(45deg);
+    }
+  }
+  &:after {
+    .drawer-open & {
+      transform: rotate(-45deg);
+    }
   }
 }
