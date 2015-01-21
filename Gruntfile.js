@@ -42,9 +42,9 @@
           '<%= pkg.docs %>/css/<%= pkg.name %>.css': '<%= pkg.source %>/less/<%= pkg.name %>.less'
         }
       },
-      minify: {
+      compress: {
         options: {
-          cleancss: true
+          compress: true
         },
         files: {
           '<%= pkg.docs %>/css/<%= pkg.name %>.min.css': '<%= pkg.docs %>/css/<%= pkg.name %>.css'
@@ -346,7 +346,7 @@
     'autoprefixer:source',
     'usebanner:source',
     'csscomb:source',
-    'less:minify',
+    'less:compress',
   ]);
 
   // ====================================================
