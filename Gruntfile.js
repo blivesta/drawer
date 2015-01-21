@@ -11,7 +11,7 @@
 
     banner:
       '/*!\n' +
-      ' * <%= pkg.name %> v<%= pkg.version %>\n' +
+      ' * <%= pkg.filename %> v<%= pkg.version %>\n' +
       ' * <%= pkg.homepage %>\n' +
       ' * Licensed under <%= pkg.licenses %>\n' +
       ' * Author : <%= pkg.author %>\n' +
@@ -35,11 +35,11 @@
           strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
-          sourceMapURL: ['<%= pkg.name %>.css.map'],
-          sourceMapFilename: '<%= pkg.docs %>/css/<%= pkg.name %>.css.map'
+          sourceMapURL: ['<%= pkg.filename %>.css.map'],
+          sourceMapFilename: '<%= pkg.docs %>/css/<%= pkg.filename %>.css.map'
         },
         files: {
-          '<%= pkg.docs %>/css/<%= pkg.name %>.css': '<%= pkg.source %>/less/<%= pkg.name %>.less'
+          '<%= pkg.docs %>/css/<%= pkg.filename %>.css': '<%= pkg.source %>/less/<%= pkg.filename %>.less'
         }
       },
       compress: {
@@ -47,7 +47,7 @@
           compress: true
         },
         files: {
-          '<%= pkg.docs %>/css/<%= pkg.name %>.min.css': '<%= pkg.docs %>/css/<%= pkg.name %>.css'
+          '<%= pkg.docs %>/css/<%= pkg.filename %>.min.css': '<%= pkg.docs %>/css/<%= pkg.filename %>.css'
         }
       },
       docs: {
@@ -55,7 +55,7 @@
           strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
-          sourceMapURL: ['<%= pkg.name %>.css.map'],
+          sourceMapURL: ['<%= pkg.filename %>.css.map'],
           sourceMapFilename: '<%= pkg.assets %>/css/docs.css.map'
         },
         files: {
@@ -90,7 +90,7 @@
         options: {
           map: true
         },
-        src: '<%= pkg.docs %>/css/<%= pkg.name %>.css'
+        src: '<%= pkg.docs %>/css/<%= pkg.filename %>.css'
       },
       docs: {
         options: {
@@ -136,12 +136,12 @@
         csslintrc: '<%= pkg.source %>/less/.csslintrc'
       },
       source: [
-        '<%= pkg.docs %>/css/<%= pkg.name %>.css',
+        '<%= pkg.docs %>/css/<%= pkg.filename %>.css',
         '<%= pkg.assets %>/css/docs.css'
       ],
       dist: [
-        '<%= pkg.dist %>/css/<%= pkg.name %>.css',
-        '<%= pkg.dist %>/css/<%= pkg.name %>.min.css'
+        '<%= pkg.dist %>/css/<%= pkg.filename %>.css',
+        '<%= pkg.dist %>/css/<%= pkg.filename %>.min.css'
       ]
     },
     // ====================================================
@@ -158,15 +158,15 @@
           compress:false
         },
         files :  {
-          '<%= pkg.docs %>/js/jquery.<%= pkg.name %>.js' : [
-            '<%= pkg.source %>/js/<%= pkg.name %>.js'
+          '<%= pkg.docs %>/js/jquery.<%= pkg.filename %>.js' : [
+            '<%= pkg.source %>/js/<%= pkg.filename %>.js'
           ]
         }
       },
       minify:{
         files :  {
-          '<%= pkg.docs %>/js/jquery.<%= pkg.name %>.min.js' : [
-            '<%= pkg.docs %>/js/jquery.<%= pkg.name %>.js'
+          '<%= pkg.docs %>/js/jquery.<%= pkg.filename %>.min.js' : [
+            '<%= pkg.docs %>/js/jquery.<%= pkg.filename %>.js'
           ]
         }
       }
@@ -181,8 +181,8 @@
       },
       source: {
         src: [
-          '<%= pkg.docs %>/js/jquery.<%= pkg.name %>.js',
-          '<%= pkg.docs %>/js/jquery.<%= pkg.name %>.min.js'
+          '<%= pkg.docs %>/js/jquery.<%= pkg.filename %>.js',
+          '<%= pkg.docs %>/js/jquery.<%= pkg.filename %>.min.js'
         ]
       }
     },
@@ -192,8 +192,8 @@
         expand: true,
         cwd: './<%= pkg.docs %>',
         src: [
-          'js/jquery.<%= pkg.name %>.js',
-          'js/jquery.<%= pkg.name %>.min.js',
+          'js/jquery.<%= pkg.filename %>.js',
+          'js/jquery.<%= pkg.filename %>.min.js',
           'css/*.css',
           'css/*.map'
         ],
@@ -226,7 +226,7 @@
     // ====================================================
     notify: {
       options: {
-        title: '<%= pkg.name %> Grunt Notify',
+        title: '<%= pkg.filename %> Grunt Notify',
       },
       success:{
         options: {
@@ -326,7 +326,7 @@
       },
       pages: {
         options: {
-          remote: 'git@github.com:<%= pkg.repository.user %>/<%= pkg.name %>.git',
+          remote: 'git@github.com:<%= pkg.repository.user %>/<%= pkg.filename %>.git',
           branch: 'gh-pages'
         }
       }

@@ -1,5 +1,5 @@
 {
-  "name": "drawer",
+  "name": "jquery-drawer",
   "description": "A small CSS3 and jQuery plugin for app style drawer menu.",
   "version": "2.2.3",
   "keywords": [],
@@ -7,6 +7,7 @@
   "author": "blivesta",
   "authorUrl": "http://blivesta.com",
   "licenses": "MIT",
+  "filename": "drawer",
   "source": "./src",
   "docs": "./docs",
   "dist": "./dist",
