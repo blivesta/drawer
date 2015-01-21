@@ -389,6 +389,18 @@
   ]);
 
   // ====================================================
+  grunt.registerTask('travis', [
+    'clean',
+    'bower',
+    'copy:vendor',
+    'build-less',
+    'build-docsLess',
+    'build-js',
+    'test',
+    'copy:dist'
+  ]);
+
+  // ====================================================
   grunt.registerTask('default', function () {
     grunt.log.warn('`grunt` to start a watch.');
     grunt.task.run([
