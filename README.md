@@ -34,6 +34,28 @@ http://git.blivesta.com/drawer/
 
 Drawer is designed to support the cross-browser. You can use an innovative fixed menu. Open your all browsers and submit report or your theme on [issue](https://github.com/blivesta/drawer/issues).
 
+## Development
+
+Install : `nodejs` `npm` `grunt` `jekyll` `ruby` `bower`
+
+```bash
+$ git clone https://github.com/blivesta/drawer.git
+$ cd drawer
+$ git checkout -b patch-1
+$ npm install && grunt build && grunt
+```
+
+Build
+```bash
+$ grunt build
+```
+
+Watch & Connect
+```bash
+$ grunt
+```
+And finally, open http://0.0.0.0:9999 in your browser.
+
 ## Credit
 - [@blivesta](http://blivesta.com) (Author)
 - [@ungki](http://markquery.com/) (maintainer)
