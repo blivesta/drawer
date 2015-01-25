@@ -326,7 +326,7 @@
       },
       pages: {
         options: {
-          remote: 'git@github.com:<%= pkg.repository.user %>/<%= pkg.filename %>.git',
+          remote: 'git@github.com:<%= pkg.author %>/<%= pkg.filename %>.git',
           branch: 'gh-pages'
         }
       }
