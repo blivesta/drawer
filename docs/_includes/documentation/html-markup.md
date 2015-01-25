@@ -38,8 +38,8 @@ Drawer markup can be used in various ways such as lovely sites:
     <nav class="drawer-nav" role="navigation">
       <div class="drawer-brand"><a href="./">drawer</a></div>
 
-      <ul>
-        <li><a href="./base">base</a></li>
+      <ul class="drawer-menu">
+        <li class="drawer-menu-item"><a href="./base">base</a></li>
       </ul>
 
       <div class="drawer-footer"><span></span></div>
@@ -98,14 +98,14 @@ Fixed navbar & dropdown menu
     <nav class="drawer-nav" role="navigation">
       <div class="drawer-brand"><a href="./">drawer</a></div>
 
-      <ul>
-        <li class="dropdown drawer-dropdown">
+      <ul class="drawer-menu">
+        <li class="drawer-menu-item dropdown drawer-dropdown">
           <a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Demo <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-          <li><a href="./">About</a></li>
+          <ul class="drawer-submenu dropdown-menu" role="menu">
+          <li class="drawer-submenu-item"><a href="./">About</a></li>
         </ul>
         </li>
-        <li class="dropdown drawer-dropdown-hover">
+        <li class="drawer-menu-item dropdown drawer-dropdown-hover">
           ...
       </ul>
 
@@ -126,10 +126,12 @@ $(document).ready(function() {
 **default**
 
 ``` html
-<ul>
-  <li>Title <!-- No linked -->
-    <ul>
-    <li><a href="./">Menu</a></li>
+<ul class="drawer-menu">
+  <li class="drawer-menu-item">Item
+    <ul class="drawer-submenu">
+      <li class="drawer-submenu-item">
+        <a href="./">Sub Item</a>
+      </li>
     </ul>
   </li>
 </ul>
@@ -138,18 +140,18 @@ $(document).ready(function() {
 **level 1**
 
 ``` html
-<ul>
-  <li><a href="./">Menu</a></li>
+<ul class="drawer-menu">
+  <li class="drawer-menu-item"><a href="./">Item</a></li>
 </ul>
 ```
 
 **level 2**
 
 ``` html
-<ul>
-  <li><a href="./">Title</a>
-    <ul>
-    <li><a href="./">Menu</a></li>
+<ul class="drawer-menu">
+  <li class="drawer-menu-item"><a href="./">Item</a>
+    <ul class="drawer-submenu">
+      <li class="drawer-submenu-item"><a href="./">Sub Item</a></li>
     </ul>
   </li>
 </ul>
@@ -160,10 +162,10 @@ $(document).ready(function() {
 **Click & Touch**
 
 ``` html
-<ul>
-  <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Title <span class="caret"></span></a>
-    <ul class="dropdown-menu" role="menu">
-      <li><a href="./">Menu</a></li>
+<ul class="drawer-menu">
+  <li class="drawer-menu-item dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Item <span class="caret"></span></a>
+    <ul class="drawer-submenu dropdown-menu" role="menu">
+      <li class="drawer-submenu-item"><a href="./">Sub Item</a></li>
     </ul>
   </li>
 </ul>
@@ -172,10 +174,10 @@ $(document).ready(function() {
 **Click & Touch & hover for desktop**
 
 ``` html
-<ul>
-  <li class="dropdown drawer-dropdown-hover"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Title <span class="caret"></span></a>
-    <ul class="dropdown-menu" role="menu">
-      <li><a href="./">Menu</a></li>
+<ul class="drawer-menu">
+  <li class="drawer-menu-item dropdown drawer-dropdown-hover"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Item <span class="caret"></span></a>
+    <ul class="drawer-submenu dropdown-menu" role="menu">
+      <li class="drawer-submenu-item"><a href="./">Sub Item</a></li>
     </ul>
   </li>
 </ul>
@@ -201,10 +203,10 @@ $('.drawer-dropdown-hover').hover(function(){
 ### Floating navbar
 
 ``` html
-<ul class="drawer-navbar-right">
-  <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Right Title <span class="caret"></span></a>
-    <ul class="dropdown-menu" role="menu">
-      <li><a href="./">Right</a></li>
+<ul class="drawer-menu drawer-navbar-right">
+  <li class="drawer-menu-item dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Item <span class="caret"></span></a>
+    <ul class="drawer-submenu dropdown-menu" role="menu">
+      <li class="drawer-submenu-item"><a href="./">Sub Item</a></li>
     </ul>
   </li>
 </ul>
@@ -213,7 +215,7 @@ $('.drawer-dropdown-hover').hover(function(){
 **Seletor**
 
 ``` css
-ul.drawer-navbar-right
+.drawer-navbar-right
 ```
 
 ### Using form tag

@@ -27,7 +27,7 @@ To consider [screen readers don’t use JavaScript](http://a11yproject.com/posts
 **drawer-navbar.less**
 
 ``` css
-.no-js .drawer-navbar-default ul li:hover .dropdown-menu {
+.no-js .drawer-navbar-default li:hover .dropdown-menu {
   display: block;
 }
 ```
@@ -90,10 +90,10 @@ $(document).ready(function(){
 Toggle dropdown menu
 
 ``` html
-<ul>
-  <li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Demo <span class="caret"></span></a>
-    <ul class="dropdown-menu" role="menu">
-    <li><a href="./">base</a></li>
+<ul class="drawer-menu">
+  <li class="drawer-menu-item dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Item <span class="caret"></span></a>
+    <ul class="drawer-submenu dropdown-menu" role="menu">
+    <li class="drawer-submenu-item"><a href="./">Sub Item</a></li>
     </ul>
   </li>
 </ul>

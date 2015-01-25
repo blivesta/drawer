@@ -4,20 +4,20 @@
   .drawer-responsive.drawer-right,
   .drawer-navbar.drawer-left, 
   .drawer-navbar.drawer-right {
-    .drawer-toggle{
+    .drawer-toggle {
       display: none;
       visibility: hidden;
     }  
   }
   .drawer-responsive.drawer-left {
-    .drawer-main{
+    .drawer-main {
       left: 0;
       display: block;
       transform: none;
     }
   }
   .drawer-responsive.drawer-right {
-    .drawer-main{
+    .drawer-main {
       right: 0;
       display: block;
       transform: none;
@@ -30,7 +30,7 @@
   body.drawer-navbar.drawer-fixed {
     padding-top: @drawer-nav-height;
   }
-  .drawer-responsive{
+  .drawer-responsive {
     background-color: @drawer-nav-bg-color;
   }
   .drawer-responsive .drawer-overlay {
@@ -118,43 +118,39 @@
     .drawer-footer {
       display: none;
     }
-    ul {
-      &.drawer-navbar-right {
-        float: right;
-        .dropdown-menu {
-          right: 0;
-          left: auto;
+    .drawer-menu.drawer-navbar-right {
+      float: right;
+      .dropdown-menu {
+        right: 0;
+        left: auto;
+      }
+    }
+    .drawer-menu-item {
+      padding: 0;
+      font-size: 14px;
+      a {
+        &:hover,
+        &:focus {
+          color: @drawer-link-color;
+          background-color: #eee;
         }
       }
-      li {
-        padding: 0;
-        font-size: 14px;
-        a {
+    }
+    .dropdown-menu {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+      > li {
+        float: none; /* for IE7+ */
+        > a {
+          width: 160px;
+          padding: 0 15px!important; /* conflict by cooker */
+          color: #fff;
+          background-color: #444;
+          border-bottom: 1px solid #555;
+          opacity: 0.9;
           &:hover,
           &:focus {
-            color: @drawer-link-color;
-            background-color: #eee;
-          }
-        }
-        ul {
-          &.dropdown-menu {
-            box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-          }
-          li {
-            float: none; /* for IE7+ */
-            a {
-              width: 160px;
-              padding: 0 15px!important; /* conflict by cooker */
-              color: #fff;
-              background-color: #444;
-              border-bottom: 1px solid #555;
-              opacity: 0.9;
-              &:hover,
-              &:focus {
-                color: #999;
-                background-color: #333;
-              }
-            }
+            color: #999;
+            background-color: #333;
           }
         }
       }
