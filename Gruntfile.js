@@ -20,7 +20,7 @@
     // ====================================================
     clean: {
       files: [
-        '<%= pkg.dist %>',
+        '<%= pkg.distribution %>',
         '<%= pkg.docs %>/js/*.js',
         '<%= pkg.docs %>/css/*.css',
         '<%= pkg.docs %>/vendor',
@@ -140,8 +140,8 @@
         '<%= pkg.assets %>/css/docs.css'
       ],
       dist: [
-        '<%= pkg.dist %>/css/<%= pkg.filename %>.css',
-        '<%= pkg.dist %>/css/<%= pkg.filename %>.min.css'
+        '<%= pkg.distribution %>/css/<%= pkg.filename %>.css',
+        '<%= pkg.distribution %>/css/<%= pkg.filename %>.min.css'
       ]
     },
     // ====================================================
@@ -197,7 +197,7 @@
           'css/*.css',
           'css/*.map'
         ],
-        dest: './<%= pkg.dist %>'
+        dest: './<%= pkg.distribution %>'
       },
       vendor: {
         expand: true,
