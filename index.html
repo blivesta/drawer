@@ -49,40 +49,40 @@
     </div>
 
     
-    <ul>
-      <li>Demo
-        <ul>
-        <li><a href="./left">Left</a></li>
-        <li><a href="./right">Right</a></li>
-        <li><a href="./responsive-left">Responsive Left</a></li>
-        <li><a href="./responsive-right">Responsive Right</a></li>
-        <li><a href="./fixed-navbar-left">Fixed navbar left</a></li>
-        <li><a href="./fixed-navbar-right">Fixed navbar Right</a></li>
+    <ul class="drawer-menu">
+      <li class="drawer-menu-item">Demo
+        <ul class="drawer-submenu">
+        <li class="drawer-submenu-item"><a href="./left">Left</a></li>
+        <li class="drawer-submenu-item"><a href="./right">Right</a></li>
+        <li class="drawer-submenu-item"><a href="./responsive-left">Responsive Left</a></li>
+        <li class="drawer-submenu-item"><a href="./responsive-right">Responsive Right</a></li>
+        <li class="drawer-submenu-item"><a href="./fixed-navbar-left">Fixed navbar left</a></li>
+        <li class="drawer-submenu-item"><a href="./fixed-navbar-right">Fixed navbar Right</a></li>
         </ul>
       </li>
-      <li>
-        <ul>Documentation
-          <li><a href="./getting-started">Getting started</a></li>
-          <li><a href="./html-markup">HTML markup</a></li>
-          <li><a href="./css">CSS</a></li>
-          <li><a href="./javascript">Javascript</a></li>
-          <li><a href="./browser-support">Browser support</a></li>
-          <li><a href="./tested">Tested</a></li>
+      <li class="drawer-menu-item">Documentation
+        <ul class="drawer-submenu">
+          <li class="drawer-submenu-item"><a href="./getting-started">Getting started</a></li>
+          <li class="drawer-submenu-item"><a href="./html-markup">HTML markup</a></li>
+          <li class="drawer-submenu-item"><a href="./css">CSS</a></li>
+          <li class="drawer-submenu-item"><a href="./javascript">Javascript</a></li>
+          <li class="drawer-submenu-item"><a href="./browser-support">Browser support</a></li>
+          <li class="drawer-submenu-item"><a href="./tested">Tested</a></li>
         </ul>
       </li>
-      <li>Other Projects
-        <ul>
-        <li><a href="http://git.blivesta.com/animsition">Animsition</a></li>
-        <li><a href="http://git.blivesta.com/chaffle">Chaffle</a></li>
-        <li><a href="http://git.blivesta.com/kicss">Kicss</a></li>
-        <li><a href="http://git.blivesta.com/oblurlay">Oblurlay</a></li>
+      <li class="drawer-menu-item">Other Projects
+        <ul class="drawer-submenu">
+        <li class="drawer-submenu-item"><a href="http://git.blivesta.com/animsition">Animsition</a></li>
+        <li class="drawer-submenu-item"><a href="http://git.blivesta.com/chaffle">Chaffle</a></li>
+        <li class="drawer-submenu-item"><a href="http://git.blivesta.com/kicss">Kicss</a></li>
+        <li class="drawer-submenu-item"><a href="http://git.blivesta.com/oblurlay">Oblurlay</a></li>
         </ul>
       </li>
-      <li>Credit
-        <ul>
-          <li><a href="http://blivesta.com">@blivesta</a></li>
-          <li><a href="http://markquery.com/">@ungki</a></li>
-          <li><a href="http://www.tylerball.net/">@tylerball</a></li>
+      <li class="drawer-menu-item">Credit
+        <ul class="drawer-submenu">
+          <li class="drawer-submenu-item"><a href="http://blivesta.com">@blivesta</a></li>
+          <li class="drawer-submenu-item"><a href="http://markquery.com/">@ungki</a></li>
+          <li class="drawer-submenu-item"><a href="http://www.tylerball.net/">@tylerball</a></li>
         </ul>
       </li>
     </ul>
@@ -193,8 +193,8 @@
     <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;drawer-nav&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-brand&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>drawer<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
 
-      <span class="nt">&lt;ul&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./base&quot;</span><span class="nt">&gt;</span>base<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;drawer-menu&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;drawer-menu-item&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./base&quot;</span><span class="nt">&gt;</span>base<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
 
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-footer&quot;</span><span class="nt">&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</span>
@@ -240,14 +240,14 @@
     <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;drawer-nav&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;drawer-brand&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>drawer<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
 
-      <span class="nt">&lt;ul&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown drawer-dropdown&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">role=</span><span class="s">&quot;button&quot;</span> <span class="na">aria-expanded=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>Demo <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
-          <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;drawer-menu&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;drawer-menu-item dropdown drawer-dropdown&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">role=</span><span class="s">&quot;button&quot;</span> <span class="na">aria-expanded=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>base <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;drawer-submenu dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;drawer-submenu-item&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;./&quot;</span><span class="nt">&gt;</span>demo<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
           <span class="nt">&lt;/ul&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown drawer-dropdown-hover&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;drawer-menu-item dropdown drawer-dropdown-hover&quot;</span><span class="nt">&gt;</span>
           ...
       <span class="nt">&lt;/ul&gt;</span>
 
@@ -316,9 +316,11 @@
     
     <h1>Drawer</h1>
     <ul class="list-inline">
-      <li><img src="http://img.shields.io/travis/blivesta/drawer.svg" alt="travis" /></li>
-      <li>·</li>
       <li><img src="http://img.shields.io/bower/v/drawer.svg" alt="bower" /></li>
+      <li>·</li>
+      <li><a href="https://www.npmjs.com/package/jquery-drawer" target="_blank"><img src="http://img.shields.io/npm/v/jquery-drawer.svg" alt="npm" /></a></li>
+      <li>·</li>
+      <li><a href="https://travis-ci.org/blivesta/drawer" target="_blank"><img src="http://img.shields.io/travis/blivesta/drawer.svg" alt="travis" /></a></li>
     </ul>
     
       <ul class="social list-inline">
