@@ -2,7 +2,11 @@
   "name": "jquery-drawer",
   "description": "A small CSS3 and jQuery plugin for app style drawer menu.",
   "version": "2.2.3",
-  "keywords": [],
+  "keywords": [
+    "jquery",
+    "css3",
+    "responsive"
+  ],
   "homepage": "http://git.blivesta.com/drawer",
   "author": "blivesta",
   "authorUrl": "http://blivesta.com",
@@ -14,8 +18,8 @@
   "public": "./_gh_pages",
   "assets": "./docs/assets",
   "repository": {
-    "user": "blivesta",
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/blivesta/drawer.git"
   },
   "dependencies": {
     "jquery": ">= 1.9.0",
