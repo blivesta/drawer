@@ -58,10 +58,11 @@ $ grunt
 And finally, open http://0.0.0.0:9999 in your browser.
 
 ## Credit
-- [@blivesta](http://blivesta.com) (Author)
-- [@ungki](http://markquery.com/) (maintainer)
-- [@tylerball](http://www.tylerball.net/) (contributor)
-- [@PeterDaveHello](https://www.peterdavehello.org/) (contributor)
+- [@blivesta](https://github.com/blivesta)
+- [@ungki](https://github.com/ungki)
+- [@tylerball](https://github.com/tylerball)
+- [@PeterDaveHello](https://github.com/PeterDaveHello)
+- [@jasonniebauer](https://github.com/jasonniebauer)
 
 ##License
 Copyright 2014-2015 Released under the [MIT license](https://github.com/blivesta/drawer/blob/master/LICENSE.md).
