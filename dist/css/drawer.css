@@ -46,27 +46,27 @@ body.drawer-navbar.drawer-fixed {
 .drawer-overlay {
   position: relative;
   }
-.drawer-left .drawer-hamberger {
+.drawer-left .drawer-hamburger {
   left: 0;
   -webkit-transform: translateX(0px) translateY(0px);
       -ms-transform: translateX(0px) translateY(0px);
        -o-transform: translateX(0px) translateY(0px);
           transform: translateX(0px) translateY(0px);
   }
-.drawer-left.drawer-open .drawer-hamberger {
+.drawer-left.drawer-open .drawer-hamburger {
   -webkit-transform: translateX(280px) translateY(0px);
       -ms-transform: translateX(280px) translateY(0px);
        -o-transform: translateX(280px) translateY(0px);
           transform: translateX(280px) translateY(0px);
   }
-.drawer-right .drawer-hamberger {
+.drawer-right .drawer-hamburger {
   right: 0;
   -webkit-transform: translateX(0px) translateY(0px);
       -ms-transform: translateX(0px) translateY(0px);
        -o-transform: translateX(0px) translateY(0px);
           transform: translateX(0px) translateY(0px);
   }
-.drawer-right.drawer-open .drawer-hamberger {
+.drawer-right.drawer-open .drawer-hamburger {
   -webkit-transform: translateX(-280px) translateY(0px);
       -ms-transform: translateX(-280px) translateY(0px);
        -o-transform: translateX(-280px) translateY(0px);
@@ -91,7 +91,7 @@ body.drawer-navbar.drawer-fixed {
   background: 0;
   border: 0;
   }
-.drawer-hamberger {
+.drawer-hamburger {
   position: fixed;
   top: 0;
   z-index: 1030;
@@ -103,17 +103,17 @@ body.drawer-navbar.drawer-fixed {
   border: 0;
   outline: 0;
   }
-.drawer-hamberger:hover {
+.drawer-hamburger:hover {
   cursor: pointer;
   }
-.drawer-hamberger-icon {
+.drawer-hamburger-icon {
   position: relative;
   display: block;
   margin-top: 10px;
   }
-.drawer-hamberger-icon,
-.drawer-hamberger-icon:before,
-.drawer-hamberger-icon:after {
+.drawer-hamburger-icon,
+.drawer-hamburger-icon:before,
+.drawer-hamburger-icon:after {
   width: 100%;
   height: 3px;
   background-color: #ddd;
@@ -122,30 +122,30 @@ body.drawer-navbar.drawer-fixed {
        -o-transition: all .4s cubic-bezier(.19, 1, .22, 1);
           transition: all .4s cubic-bezier(.19, 1, .22, 1);
   }
-.drawer-hamberger-icon:before,
-.drawer-hamberger-icon:after {
+.drawer-hamburger-icon:before,
+.drawer-hamburger-icon:after {
   position: absolute;
   top: -10px;
   left: 0;
   content: " ";
   }
-.drawer-hamberger-icon:after {
+.drawer-hamburger-icon:after {
   top: 10px;
   }
-.drawer-open .drawer-hamberger-icon {
+.drawer-open .drawer-hamburger-icon {
   background-color: transparent;
   }
-.drawer-open .drawer-hamberger-icon:before,
-.drawer-open .drawer-hamberger-icon:after {
+.drawer-open .drawer-hamburger-icon:before,
+.drawer-open .drawer-hamburger-icon:after {
   top: 0;
   }
-.drawer-open .drawer-hamberger-icon:before {
+.drawer-open .drawer-hamburger-icon:before {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
        -o-transform: rotate(45deg);
           transform: rotate(45deg);
   }
-.drawer-open .drawer-hamberger-icon:after {
+.drawer-open .drawer-hamburger-icon:after {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
        -o-transform: rotate(-45deg);
