@@ -52,8 +52,22 @@
         $("." + options.dropdownClass)
         .on(options.dropdownShown, function() { drawerScroll.refresh(); })
         .on(options.dropdownHidden, function() { drawerScroll.refresh(); });
-      
+
       }); // end each
+    },
+
+    positionCheck: function(){
+      var $this = $(this);
+      var props = ["drawer-left", "drawer-right"];
+      var propsNum = props.length;
+      var styleX  = false;
+      for (var i = 0; i < propsNum; i++) {
+        if ($this.hasClass(props[i])) {
+          styleX = true;
+          break;
+        }
+      }
+      return styleX;
     },
 
     toggle: function(options) {
@@ -63,13 +77,10 @@
       var open = $this.hasClass(options.openClass);
       open ? methods.close.call(_this) : methods.open.call(_this);
     },
-    
+
     open: function(options) {
       var $this = $(this);
       options = $this.data(namespace).options;
-      var windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
-      var upperWidth = windowWidth - $("." + options.mastaClass).outerWidth();
-
       if (touches) {
         $this.on("touchmove." + namespace, function(event) {
           event.preventDefault();
@@ -79,10 +90,6 @@
         .removeClass(options.closeClass)
         .addClass(options.openClass)
         .transitionEnd(function(){
-          $("."+options.upperClass).css({
-            "width":upperWidth,
-            "display":"block"
-          });
           $this.css({
             "overflow": "hidden"
           }).trigger('drawer.opened');

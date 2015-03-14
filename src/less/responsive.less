@@ -2,12 +2,13 @@
 @media (min-width: (768px - 1)) {
   .drawer-responsive.drawer-left,
   .drawer-responsive.drawer-right,
-  .drawer-navbar.drawer-left, 
-  .drawer-navbar.drawer-right {
+  .drawer-navbar.drawer-left,
+  .drawer-navbar.drawer-right,
+  .drawer-navbar.drawer-top {
     .drawer-toggle {
       display: none;
       visibility: hidden;
-    }  
+    }
   }
   .drawer-responsive.drawer-left {
     .drawer-main {
@@ -65,20 +66,24 @@
     }
   }
   .drawer-navbar.drawer-left .drawer-main,
-  .drawer-navbar.drawer-right .drawer-main {
-    position: relative; 
+  .drawer-navbar.drawer-right .drawer-main,
+  .drawer-navbar.drawer-top .drawer-main {
+    position: relative;
   }
   .drawer-navbar.drawer-static.drawer-left .drawer-main,
-  .drawer-navbar.drawer-static.drawer-right .drawer-main {
+  .drawer-navbar.drawer-static.drawer-right .drawer-main,
+  .drawer-navbar.drawer-static.drawer-top .drawer-main {
     z-index: @drawer-navbar-static-zIndex;
   }
   .drawer-navbar.drawer-fixed.drawer-left .drawer-main,
-  .drawer-navbar.drawer-fixed.drawer-right .drawer-main {
+  .drawer-navbar.drawer-fixed.drawer-right .drawer-main,
+  .drawer-navbar.drawer-fixed.drawer-top .drawer-main {
     position: fixed;
     z-index: @drawer-navbar-fixed-zIndex;
   }
   .drawer-navbar.drawer-left .drawer-main,
-  .drawer-navbar.drawer-right .drawer-main {
+  .drawer-navbar.drawer-right .drawer-main,
+  .drawer-navbar.drawer-top .drawer-main {
     display: block;
     top: 0;
     left: 0;
