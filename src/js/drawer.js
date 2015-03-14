@@ -88,9 +88,6 @@
       if (touches) {
         $this.off("touchmove." + namespace);
       }
-      $("."+options.upperClass).css({
-        "display":"none"
-      });
       $this
         .removeClass(options.openClass)
         .addClass(options.closeClass)
@@ -98,9 +95,6 @@
           $this.css({
             "overflow": "auto"
           }).trigger('drawer.closed');
-          $("."+options.upperClass).css({
-            "display":"none"
-          });
         });
     },
 
