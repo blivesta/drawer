@@ -13,7 +13,6 @@
     init: function(options) {
       options = $.extend({
         mastaClass: "drawer-main",
-        overlayClass: "drawer-overlay",
         toggleClass: "drawer-toggle",
         upperClass: "drawer-overlay-upper",
         openClass: "drawer-open",
@@ -65,18 +64,12 @@
     open: function(options) {
       var $this = $(this);
       options = $this.data(namespace).options;
-      var windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
-      var upperWidth = windowWidth - $("." + options.mastaClass).outerWidth();
       if (touches) {
         $this.on("touchmove." + namespace, function(event) {
           event.preventDefault();
         });
       }
       $this.removeClass(options.closeClass).addClass(options.openClass).transitionEnd(function() {
-        $("." + options.upperClass).css({
-          width: upperWidth,
-          display: "block"
-        });
         $this.css({
           overflow: "hidden"
         }).trigger("drawer.opened");
@@ -88,16 +81,10 @@
       if (touches) {
         $this.off("touchmove." + namespace);
       }
-      $("." + options.upperClass).css({
-        display: "none"
-      });
       $this.removeClass(options.openClass).addClass(options.closeClass).transitionEnd(function() {
         $this.css({
           overflow: "auto"
         }).trigger("drawer.closed");
-        $("." + options.upperClass).css({
-          display: "none"
-        });
       });
     },
     destroy: function() {
