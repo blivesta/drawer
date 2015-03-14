@@ -31,7 +31,7 @@
         }
 
         $this.append($upper);
-                
+
         var drawerScroll = new IScroll("."+options.mastaClass, {
           mouseWheel:true,
           preventDefault: false
@@ -43,7 +43,7 @@
             methods.toggle.call(_this);
             drawerScroll.refresh();
           });
-          
+
         $(window).resize(function() {
           methods.close.call(_this);
           drawerScroll.refresh();
@@ -54,20 +54,6 @@
         .on(options.dropdownHidden, function() { drawerScroll.refresh(); });
 
       }); // end each
-    },
-
-    positionCheck: function(){
-      var $this = $(this);
-      var props = ["drawer-left", "drawer-right"];
-      var propsNum = props.length;
-      var styleX  = false;
-      for (var i = 0; i < propsNum; i++) {
-        if ($this.hasClass(props[i])) {
-          styleX = true;
-          break;
-        }
-      }
-      return styleX;
     },
 
     toggle: function(options) {
@@ -117,7 +103,7 @@
           });
         });
     },
-    
+
     destroy: function() {
       return this.each(function() {
         var $this = $(this);
@@ -125,7 +111,7 @@
         $this.removeData(namespace);
       });
     }
-    
+
   };
 
   $.fn.drawer = function(method) {
