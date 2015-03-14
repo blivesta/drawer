@@ -12,7 +12,7 @@ body.drawer-navbar.drawer-fixed {
 .drawer-main {
   position: fixed;
   top: 0;
-  z-index: 2000;
+  z-index: 5300;
   width: 280px;
   height: 100%;
   overflow: hidden;
@@ -43,6 +43,20 @@ body.drawer-navbar.drawer-fixed {
   -webkit-transform: translate3d(0px, 0px, 0px);
           transform: translate3d(0px, 0px, 0px);
   }
+.drawer-top .drawer-main {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  -webkit-transition: -webkit-transform .4s cubic-bezier(.19, 1, .22, 1);
+       -o-transition:      -o-transform .4s cubic-bezier(.19, 1, .22, 1);
+          transition:         transform .4s cubic-bezier(.19, 1, .22, 1);
+  -webkit-transform: translate3d(0, -100%, 0px);
+          transform: translate3d(0, -100%, 0px);
+  }
+.drawer-top.drawer-open .drawer-main {
+  -webkit-transform: translate3d(0, 0, 0px);
+          transform: translate3d(0, 0, 0px);
+  }
 .drawer-overlay {
   position: relative;
   }
@@ -72,33 +86,36 @@ body.drawer-navbar.drawer-fixed {
        -o-transform: translateX(-280px) translateY(0px);
           transform: translateX(-280px) translateY(0px);
   }
+.drawer-top .drawer-hamburger {
+  right: 0;
+  }
+.drawer-top.drawer-open .drawer-hamburger {
+  right: 0;
+  z-index: 5400;
+  }
 .drawer-overlay-upper {
   position: fixed;
   top: 0;
-  z-index: 1100;
+  left: 0;
+  z-index: 5200;
   display: none;
+  width: 100%;
   height: 100%;
   background-color: #000;
   background-color: rgba(0, 0, 0, .5);
   }
-.drawer-left.drawer-open .drawer-overlay-upper {
-  right: 0;
-  }
-.drawer-right.drawer-open .drawer-overlay-upper {
-  left: 0;
-  }
-.drawer-header button {
-  background: 0;
-  border: 0;
+.drawer-open .drawer-overlay-upper {
+  display: block !important;
   }
 .drawer-hamburger {
   position: fixed;
   top: 0;
-  z-index: 1030;
+  z-index: 5100;
   display: block;
   width: 70px;
   height: 70px;
   padding: 20px;
+  background: 0;
   background-color: transparent;
   border: 0;
   outline: 0;
@@ -245,7 +262,7 @@ body.drawer-navbar.drawer-fixed {
   }
 .drawer-default .dropdown-menu {
   position: absolute;
-  z-index: 1000;
+  z-index: 5000;
   display: none;
   background-color: #222;
   border: 0;
@@ -369,7 +386,7 @@ body.drawer-navbar.drawer-fixed {
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 1000;
+  z-index: 5000;
   display: none;
   background-color: #222;
   border: 0;
@@ -464,7 +481,8 @@ body.drawer-navbar.drawer-fixed {
   .drawer-responsive.drawer-left .drawer-toggle,
   .drawer-responsive.drawer-right .drawer-toggle,
   .drawer-navbar.drawer-left .drawer-toggle,
-  .drawer-navbar.drawer-right .drawer-toggle {
+  .drawer-navbar.drawer-right .drawer-toggle,
+  .drawer-navbar.drawer-top .drawer-toggle {
     display: none;
     visibility: hidden;
     }
@@ -518,20 +536,24 @@ body.drawer-navbar.drawer-fixed {
     margin-right: 150px;
     }
   .drawer-navbar.drawer-left .drawer-main,
-  .drawer-navbar.drawer-right .drawer-main {
+  .drawer-navbar.drawer-right .drawer-main,
+  .drawer-navbar.drawer-top .drawer-main {
     position: relative;
     }
   .drawer-navbar.drawer-static.drawer-left .drawer-main,
-  .drawer-navbar.drawer-static.drawer-right .drawer-main {
-    z-index: 1000;
+  .drawer-navbar.drawer-static.drawer-right .drawer-main,
+  .drawer-navbar.drawer-static.drawer-top .drawer-main {
+    z-index: 5000;
     }
   .drawer-navbar.drawer-fixed.drawer-left .drawer-main,
-  .drawer-navbar.drawer-fixed.drawer-right .drawer-main {
+  .drawer-navbar.drawer-fixed.drawer-right .drawer-main,
+  .drawer-navbar.drawer-fixed.drawer-top .drawer-main {
     position: fixed;
-    z-index: 1030;
+    z-index: 5100;
     }
   .drawer-navbar.drawer-left .drawer-main,
-  .drawer-navbar.drawer-right .drawer-main {
+  .drawer-navbar.drawer-right .drawer-main,
+  .drawer-navbar.drawer-top .drawer-main {
     top: 0;
     left: 0;
     display: block;

@@ -9,14 +9,14 @@
     
       Drawer - CSS &middot; Drawer &middot; A small CSS3 and jQuery plugin for app style drawer menu.
     
-  </title>  
+  </title>
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//blivesta.com/ico/touch-icon-144.png">
   <link rel="shortcut icon" href="//blivesta.com/ico/favicon.ico">
   <link href='//fonts.googleapis.com/css?family=Roboto:900,100,700,400' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/open-iconic/1.1.0/font/css/open-iconic-bootstrap.min.css">
   <link rel="stylesheet" href="//cdn.rawgit.com/teq-inc/cooker/v0.4.8/dist/css/cooker.css">
   <link rel="stylesheet" href="../assets/css/docs.css">
-  
+
   <!-- drawer CSS -->
   <link rel="stylesheet" href="../css/drawer.css">
 
@@ -24,75 +24,111 @@
   <script async src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-  
-  <!-- Google analytics -->
-  <script src="//git.blivesta.com/js/ga.js"></script>
 
 </head>
+
 <body class="drawer drawer-left drawer-navbar drawer-fixed site-base">
   
   <a class="sr-only sr-only-focusable" href="#content" tabindex="1">Skip to main content</a>
 
 <header role="banner">
-<div class="drawer-header">
-  <button type="button" class="drawer-toggle drawer-hamburger">
-    <span class="sr-only">toggle navigation</span>
-    <span class="drawer-hamburger-icon"></span>
-  </button>
-</div>
+  <div class="drawer-header">
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="sr-only">toggle navigation</span>
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+  </div>
 
-<div class="drawer-main drawer-navbar-default">
-  <nav class="container drawer-nav" role="navigation">
-    <div class="drawer-brand">
-      <a href="../">Drawer</a>
-    </div>
+  <div class="drawer-main drawer-navbar-default">
+    <nav class="container drawer-nav" role="navigation">
+      <div class="drawer-brand">
+        <a href="../">Drawer</a>
+      </div>
 
-    
+      
 
-    <ul class="drawer-menu">
-      <li class="drawer-menu-item dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Demo <span class="caret"></span></a>
-        <ul class="drawer-submenu dropdown-menu" role="menu">
-        <li class="drawer-submenu-item"><a href="../left">Left</a></li>
-        <li class="drawer-submenu-item"><a href="../right">Right</a></li>
-        <li class="drawer-submenu-item"><a href="../responsive-left">Responsive Left</a></li>
-        <li class="drawer-submenu-item"><a href="../responsive-right">Responsive Right</a></li>
-        <li class="drawer-submenu-item"><a href="../fixed-navbar-left">Fixed navbar left</a></li>
-        <li class="drawer-submenu-item"><a href="../fixed-navbar-right">Fixed navbar Right</a></li>
-        </ul>
-      </li>
-      <li class="drawer-menu-item dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Documentation <span class="caret"></span></a>
-        <ul class="drawer-submenu dropdown-menu" role="menu">
-        <li class="drawer-submenu-item"><a href="../getting-started">Getting started</a></li>
-        <li class="drawer-submenu-item"><a href="../html-markup">HTML markup</a></li>
-        <li class="drawer-submenu-item"><a href="../css">CSS</a></li>
-        <li class="drawer-submenu-item"><a href="../javascript">Javascript</a></li>
-        <li class="drawer-submenu-item"><a href="../browser-support">Browser support</a></li>
-        <li class="drawer-submenu-item"><a href="../tested">Tested</a></li>
-        </ul>
-      </li>
-      <li class="drawer-menu-item dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Other Projects <span class="caret"></span></a>
-        <ul class="drawer-submenu dropdown-menu" role="menu">
-        <li class="drawer-submenu-item"><a href="http://git.blivesta.com/animsition">Animsition</a></li>
-        <li class="drawer-submenu-item"><a href="http://git.blivesta.com/chaffle">Chaffle</a></li>
-        <li class="drawer-submenu-item"><a href="http://git.blivesta.com/kicss">Kicss</a></li>
-        <li class="drawer-submenu-item"><a href="http://git.blivesta.com/oblurlay">Oblurlay</a></li>
-        </ul>
-      </li>
-      <li class="drawer-menu-item dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Credit <span class="caret"></span></a>
-        <ul class="drawer-submenu dropdown-menu" role="menu">
-          <li class="drawer-submenu-item"><a href="http://blivesta.com">@blivesta</a></li>
-          <li class="drawer-submenu-item"><a href="http://markquery.com/">@ungki</a></li>
-          <li class="drawer-submenu-item"><a href="http://www.tylerball.net/">@tylerball</a></li>
-        </ul>
-      </li>
-    </ul>
+      <ul class="drawer-menu">
+        <li class="drawer-menu-item">
+          <a href="https://github.com/blivesta/drawer" target="_blank">Download on GitHub</a>
+        </li>
+        <li class="drawer-menu-item dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Demo <span class="caret"></span></a>
+          <ul class="drawer-submenu dropdown-menu" role="menu">
+            <li class="drawer-submenu-item"><a href="../left">Left</a></li>
+            <li class="drawer-submenu-item"><a href="../right">Right</a></li>
+            <li class="drawer-submenu-item"><a href="../top">Top</a></li>
+            <li class="drawer-submenu-item"><a href="../responsive-left">Responsive Left</a></li>
+            <li class="drawer-submenu-item"><a href="../responsive-right">Responsive Right</a></li>
+            <li class="drawer-submenu-item"><a href="../fixed-navbar-left">Fixed navbar left</a></li>
+            <li class="drawer-submenu-item"><a href="../fixed-navbar-right">Fixed navbar Right</a></li>
+            <li class="drawer-submenu-item"><a href="../fixed-navbar-top">Fixed navbar Top</a></li>
+          </ul>
+        </li>
+        <li class="drawer-menu-item dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Documentation <span class="caret"></span></a>
+          <ul class="drawer-submenu dropdown-menu" role="menu">
+            <li class="drawer-submenu-item"><a href="../getting-started">Getting started</a></li>
+            <li class="drawer-submenu-item"><a href="../html-markup">HTML markup</a></li>
+            <li class="drawer-submenu-item"><a href="../css">CSS</a></li>
+            <li class="drawer-submenu-item"><a href="../javascript">Javascript</a></li>
+            <li class="drawer-submenu-item"><a href="../browser-support">Browser support</a></li>
+            <li class="drawer-submenu-item"><a href="../tested">Tested</a></li>
+          </ul>
+        </li>
+        <li class="drawer-menu-item dropdown drawer-dropdown">
+          <a href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+            Other Projects <span class="caret"></span>
+          </a>
+          <ul class="drawer-submenu dropdown-menu" role="menu">
+            <li class="drawer-submenu-item">
+              <a href="http://sircus.blivesta.com" target="_blank">Sircus</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/blivesta/gulptasks" target="_blank">Gulptasks</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="http://git.blivesta.com/animsition" target="_blank">Animsition</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="http://git.blivesta.com/chaffle" target="_blank">Chaffle</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="http://git.blivesta.com/oblurlay" target="_blank">Oblurlay</a>
+            </li>
+          </ul>
+        </li>
+        <li class="drawer-menu-item dropdown drawer-dropdown">
+          <a href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+            Credit <span class="caret"></span>
+          </a>
+          <ul class="drawer-submenu dropdown-menu" role="menu">
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/blivesta">@blivesta</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/ungki">@ungki</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/tylerball">@tylerball</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/PeterDaveHello">@PeterDaveHello</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/jasonniebauer">@jasonniebauer</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
 
-    
+      
 
-    <div class="drawer-footer"><span></span></div>
-  </nav>
-</div><!-- /.drawer-main -->
-</header><!-- /.site-header -->
+      <div class="drawer-footer">
+        <span></span>
+      </div>
+    </nav>
+  </div>
+  <!-- /.drawer-main -->
+</header>
+<!-- /.site-header -->
 
   
   <div class="drawer-overlay">
@@ -151,7 +187,7 @@
 
     <footer class="footer">
   <div class="container">
-    
+
     <h1>Drawer</h1>
     <ul class="list-inline">
       <li><img src="http://img.shields.io/bower/v/drawer.svg" alt="bower" /></li>
@@ -166,28 +202,42 @@
       <li>Code licensed under the MIT.</li>
     </ul>
 
-    <hr>
-    
+    <!-- <hr> -->
+
     <h3>Other projects</h3>
     <ul class="list-inline">
-      <li><a href="/animsition">Animsition</a></li>
+      <li>
+        <a href="http://sircus.blivesta.com" target="_blank">Sircus</a>
+      </li>
       <li>·</li>
-      <li><a href="/conv">Conv</a></li>
+      <li>
+        <a href="https://github.com/blivesta/gulptasks" target="_blank">Gulptasks</a>
+      </li>
       <li>·</li>
-      <li><a href="/rippler">Rippler</a></li>
+      <li>
+        <a href="http://git.blivesta.com/animsition" target="_blank">Animsition</a>
+      </li>
       <li>·</li>
-      <li><a href="/oblurlay">Oblurlay</a></li>
+      <li>
+        <a href="http://git.blivesta.com/chaffle" target="_blank">Chaffle</a>
+      </li>
       <li>·</li>
-      <li><a href="/chaffle">Chaffle</a></li>
+      <li>
+        <a href="http://git.blivesta.com/oblurlay" target="_blank">Oblurlay</a>
+      </li>
+      <li>·</li>
+      <li>
+        <a href="http://git.blivesta.com/rippler" target="_blank">Rippler</a>
+      </li>
     </ul>
-    <hr>
+    <!-- <hr> -->
     <ul class="list-inline">
       <li>
         Author&nbsp;<span class="icon-blivesta icon-sm icon-circle"></span>&nbsp;
         <a href="http://blivesta.com">blivesta</a>
       </li>
     </ul>
-    
+
     <ul class="social-folow list-inline">
 	<li style="width:126px">
 	  <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=blivesta&type=follow&count=false" allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
@@ -200,7 +250,7 @@
 
 </ul>       
 
-    
+
   </div>
 </footer>
 
@@ -215,9 +265,9 @@
 <script>
 
   $(document).ready(function(){
-      
+
     $('.drawer').drawer();
-                      
+
     $('.drawer-api-toggle').on(function(){
       $('.drawer').drawer("open");
     });
@@ -230,13 +280,17 @@
       console.log('closed');
     });
 
-    $('.drawer-dropdown-hover').hover(function(){ 
+    $('.drawer-dropdown-hover').hover(function(){
       $('[data-toggle="dropdown"]', this).trigger('click');
     });
 
   });
 
-</script> 
+</script>
+
+<!-- Google analytics -->
+<script src="//git.blivesta.com/js/ga.js"></script>
+
 
   </div><!-- /.drawer-overlay -->
 </body>
