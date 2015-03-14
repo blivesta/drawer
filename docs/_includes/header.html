@@ -1,109 +1,167 @@
 <a class="sr-only sr-only-focusable" href="#content" tabindex="1">Skip to main content</a>
 
 <header role="banner">
-<div class="drawer-header">
-  <button type="button" class="drawer-toggle drawer-hamburger">
-    <span class="sr-only">toggle navigation</span>
-    <span class="drawer-hamburger-icon"></span>
-  </button>
-</div>
+  <div class="drawer-header">
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="sr-only">toggle navigation</span>
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+  </div>
 
-<div class="drawer-main {{ page.theme }}">
-  <nav class="{% if page.mode == 'navbar' %}container{% endif %} drawer-nav" role="navigation">
-    <div class="drawer-brand">
-      <a href="{{ page.base_url }}">Drawer</a>
-    </div>
+  <div class="drawer-main {{ page.theme }}">
+    <nav class="{% if page.mode == 'navbar' %}container{% endif %} drawer-nav" role="navigation">
+      <div class="drawer-brand">
+        <a href="{{ page.base_url }}">Drawer</a>
+      </div>
 
-    {% if page.mode == 'default' or page.mode == 'responsive' %}
-    <ul class="drawer-menu">
-      <li class="drawer-menu-item">Demo
-        <ul class="drawer-submenu">
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}left">Left</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}right">Right</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}top">Top</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}responsive-left">Responsive Left</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}responsive-right">Responsive Right</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}fixed-navbar-left">Fixed navbar left</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}fixed-navbar-right">Fixed navbar Right</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}fixed-navbar-top">Fixed navbar Top</a></li>
-        </ul>
-      </li>
-      <li class="drawer-menu-item">Documentation
-        <ul class="drawer-submenu">
-          <li class="drawer-submenu-item"><a href="{{ page.base_url }}getting-started">Getting started</a></li>
-          <li class="drawer-submenu-item"><a href="{{ page.base_url }}html-markup">HTML markup</a></li>
-          <li class="drawer-submenu-item"><a href="{{ page.base_url }}css">CSS</a></li>
-          <li class="drawer-submenu-item"><a href="{{ page.base_url }}javascript">Javascript</a></li>
-          <li class="drawer-submenu-item"><a href="{{ page.base_url }}browser-support">Browser support</a></li>
-          <li class="drawer-submenu-item"><a href="{{ page.base_url }}tested">Tested</a></li>
-        </ul>
-      </li>
-      <li class="drawer-menu-item">Other Projects
-        <ul class="drawer-submenu">
-        <li class="drawer-submenu-item"><a href="http://sircus.blivesta.com">Sircus</a></li>
-        <li class="drawer-submenu-item"><a href="http://git.blivesta.com/animsition">Animsition</a></li>
-        <li class="drawer-submenu-item"><a href="http://git.blivesta.com/chaffle">Chaffle</a></li>
-        <li class="drawer-submenu-item"><a href="http://git.blivesta.com/oblurlay">Oblurlay</a></li>
-        </ul>
-      </li>
-      <li class="drawer-menu-item">Credit
-        <ul class="drawer-submenu">
-          <li class="drawer-submenu-item"><a href="https://github.com/blivesta">@blivesta</a></li>
-          <li class="drawer-submenu-item"><a href="https://github.com/ungki">@ungki</a></li>
-          <li class="drawer-submenu-item"><a href="https://github.com/tylerball">@tylerball</a></li>
-          <li class="drawer-submenu-item"><a href="https://github.com/PeterDaveHello">@PeterDaveHello</a></li>
-          <li class="drawer-submenu-item"><a href="https://github.com/jasonniebauer">@jasonniebauer</a></li>
-        </ul>
-      </li>
-    </ul>
+      {% if page.mode == 'default' or page.mode == 'responsive' %}
+      <ul class="drawer-menu">
+        <li class="drawer-menu-item">
+          <a href="https://github.com/blivesta/drawer" target="_blank">Download on GitHub</a>
+        </li>
+        <li class="drawer-menu-item">Demo
+          <ul class="drawer-submenu">
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}left">Left</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}right">Right</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}top">Top</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}responsive-left">Responsive Left</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}responsive-right">Responsive Right</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}fixed-navbar-left">Fixed navbar left</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}fixed-navbar-right">Fixed navbar Right</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}fixed-navbar-top">Fixed navbar Top</a></li>
+          </ul>
+        </li>
+        <li class="drawer-menu-item">Documentation
+          <ul class="drawer-submenu">
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}getting-started">Getting started</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}html-markup">HTML markup</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}css">CSS</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}javascript">Javascript</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}browser-support">Browser support</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}tested">Tested</a></li>
+          </ul>
+        </li>
+        <li class="drawer-menu-item">Other Projects
+          <ul class="drawer-submenu">
+            <li class="drawer-submenu-item">
+              <a href="http://sircus.blivesta.com" target="_blank">Sircus</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/blivesta/gulptasks" target="_blank">Gulptasks</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="http://git.blivesta.com/animsition" target="_blank">Animsition</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="http://git.blivesta.com/chaffle" target="_blank">Chaffle</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="http://git.blivesta.com/oblurlay" target="_blank">Oblurlay</a>
+            </li>
+          </ul>
+        </li>
+        <li class="drawer-menu-item">Credit
+          <ul class="drawer-submenu">
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/blivesta">@blivesta</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/ungki">@ungki</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/tylerball">@tylerball</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/PeterDaveHello">@PeterDaveHello</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/jasonniebauer">@jasonniebauer</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
 
-    {% else %}
+      {% else %}
 
-    <ul class="drawer-menu">
-      <li class="drawer-menu-item dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Demo <span class="caret"></span></a>
-        <ul class="drawer-submenu dropdown-menu" role="menu">
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}left">Left</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}right">Right</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}top">Top</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}responsive-left">Responsive Left</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}responsive-right">Responsive Right</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}fixed-navbar-left">Fixed navbar left</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}fixed-navbar-right">Fixed navbar Right</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}fixed-navbar-top">Fixed navbar Top</a></li>
-        </ul>
-      </li>
-      <li class="drawer-menu-item dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Documentation <span class="caret"></span></a>
-        <ul class="drawer-submenu dropdown-menu" role="menu">
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}getting-started">Getting started</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}html-markup">HTML markup</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}css">CSS</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}javascript">Javascript</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}browser-support">Browser support</a></li>
-        <li class="drawer-submenu-item"><a href="{{ page.base_url }}tested">Tested</a></li>
-        </ul>
-      </li>
-      <li class="drawer-menu-item dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Other Projects <span class="caret"></span></a>
-        <ul class="drawer-submenu dropdown-menu" role="menu">
-        <li class="drawer-submenu-item"><a href="http://sircus.blivesta.com">Sircus</a></li>
-        <li class="drawer-submenu-item"><a href="http://git.blivesta.com/animsition">Animsition</a></li>
-        <li class="drawer-submenu-item"><a href="http://git.blivesta.com/chaffle">Chaffle</a></li>
-        <li class="drawer-submenu-item"><a href="http://git.blivesta.com/oblurlay">Oblurlay</a></li>
-        </ul>
-      </li>
-      <li class="drawer-menu-item dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Credit <span class="caret"></span></a>
-        <ul class="drawer-submenu dropdown-menu" role="menu">
-          <li class="drawer-submenu-item"><a href="https://github.com/blivesta">@blivesta</a></li>
-          <li class="drawer-submenu-item"><a href="https://github.com/ungki">@ungki</a></li>
-          <li class="drawer-submenu-item"><a href="https://github.com/tylerball">@tylerball</a></li>
-          <li class="drawer-submenu-item"><a href="https://github.com/PeterDaveHello">@PeterDaveHello</a></li>
-          <li class="drawer-submenu-item"><a href="https://github.com/jasonniebauer">@jasonniebauer</a></li>
-        </ul>
-      </li>
-    </ul>
+      <ul class="drawer-menu">
+        <li class="drawer-menu-item">
+          <a href="https://github.com/blivesta/drawer" target="_blank">Download on GitHub</a>
+        </li>
+        <li class="drawer-menu-item dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Demo <span class="caret"></span></a>
+          <ul class="drawer-submenu dropdown-menu" role="menu">
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}left">Left</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}right">Right</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}top">Top</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}responsive-left">Responsive Left</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}responsive-right">Responsive Right</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}fixed-navbar-left">Fixed navbar left</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}fixed-navbar-right">Fixed navbar Right</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}fixed-navbar-top">Fixed navbar Top</a></li>
+          </ul>
+        </li>
+        <li class="drawer-menu-item dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Documentation <span class="caret"></span></a>
+          <ul class="drawer-submenu dropdown-menu" role="menu">
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}getting-started">Getting started</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}html-markup">HTML markup</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}css">CSS</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}javascript">Javascript</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}browser-support">Browser support</a></li>
+            <li class="drawer-submenu-item"><a href="{{ page.base_url }}tested">Tested</a></li>
+          </ul>
+        </li>
+        <li class="drawer-menu-item dropdown drawer-dropdown">
+          <a href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+            Other Projects <span class="caret"></span>
+          </a>
+          <ul class="drawer-submenu dropdown-menu" role="menu">
+            <li class="drawer-submenu-item">
+              <a href="http://sircus.blivesta.com" target="_blank">Sircus</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/blivesta/gulptasks" target="_blank">Gulptasks</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="http://git.blivesta.com/animsition" target="_blank">Animsition</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="http://git.blivesta.com/chaffle" target="_blank">Chaffle</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="http://git.blivesta.com/oblurlay" target="_blank">Oblurlay</a>
+            </li>
+          </ul>
+        </li>
+        <li class="drawer-menu-item dropdown drawer-dropdown">
+          <a href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+            Credit <span class="caret"></span>
+          </a>
+          <ul class="drawer-submenu dropdown-menu" role="menu">
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/blivesta">@blivesta</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/ungki">@ungki</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/tylerball">@tylerball</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/PeterDaveHello">@PeterDaveHello</a>
+            </li>
+            <li class="drawer-submenu-item">
+              <a href="https://github.com/jasonniebauer">@jasonniebauer</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
 
-    {% endif %}
+      {% endif %}
 
-    <div class="drawer-footer"><span></span></div>
-  </nav>
-</div><!-- /.drawer-main -->
-</header><!-- /.site-header -->
+      <div class="drawer-footer">
+        <span></span>
+      </div>
+    </nav>
+  </div>
+  <!-- /.drawer-main -->
+</header>
+<!-- /.site-header -->
