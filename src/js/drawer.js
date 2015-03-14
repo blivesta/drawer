@@ -6,7 +6,6 @@
     init: function(options) {
       options = $.extend({
         mastaClass:        "drawer-main",
-        overlayClass:      "drawer-overlay",
         toggleClass:       "drawer-toggle",
         upperClass:        "drawer-overlay-upper",
         openClass:         "drawer-open",
