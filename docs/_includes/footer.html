@@ -1,6 +1,6 @@
 <footer class="footer">
   <div class="container">
-    
+
     <h1>{{ site.title }}</h1>
     <ul class="list-inline">
       <li><img src="http://img.shields.io/bower/v/{{ site.repo }}.svg" alt="bower" /></li>
@@ -17,30 +17,44 @@
       <li>Code licensed under the MIT.</li>
     </ul>
 
-    <hr>
-    
+    <!-- <hr> -->
+
     <h3>Other projects</h3>
     <ul class="list-inline">
-      <li><a href="/animsition">Animsition</a></li>
+      <li>
+        <a href="http://sircus.blivesta.com" target="_blank">Sircus</a>
+      </li>
       <li>·</li>
-      <li><a href="/conv">Conv</a></li>
+      <li>
+        <a href="https://github.com/blivesta/gulptasks" target="_blank">Gulptasks</a>
+      </li>
       <li>·</li>
-      <li><a href="/rippler">Rippler</a></li>
+      <li>
+        <a href="http://git.blivesta.com/animsition" target="_blank">Animsition</a>
+      </li>
       <li>·</li>
-      <li><a href="/oblurlay">Oblurlay</a></li>
+      <li>
+        <a href="http://git.blivesta.com/chaffle" target="_blank">Chaffle</a>
+      </li>
       <li>·</li>
-      <li><a href="/chaffle">Chaffle</a></li>
+      <li>
+        <a href="http://git.blivesta.com/oblurlay" target="_blank">Oblurlay</a>
+      </li>
+      <li>·</li>
+      <li>
+        <a href="http://git.blivesta.com/rippler" target="_blank">Rippler</a>
+      </li>
     </ul>
-    <hr>
+    <!-- <hr> -->
     <ul class="list-inline">
       <li>
         Author&nbsp;<span class="icon-blivesta icon-sm icon-circle"></span>&nbsp;
         <a href="{{ site.author_url }}">{{ site.author }}</a>
       </li>
     </ul>
-    
+
     {% include social-follow.html %}
-    
+
   </div>
 </footer>
 
@@ -55,9 +69,9 @@
 <script>
 
   $(document).ready(function(){
-      
+
     $('.drawer').drawer();
-                      
+
     $('.drawer-api-toggle').on(function(){
       $('.drawer').drawer("open");
     });
@@ -70,10 +84,13 @@
       console.log('closed');
     });
 
-    $('.drawer-dropdown-hover').hover(function(){ 
+    $('.drawer-dropdown-hover').hover(function(){
       $('[data-toggle="dropdown"]', this).trigger('click');
     });
 
   });
 
-</script> 
+</script>
+
+<!-- Google analytics -->
+<script src="//git.blivesta.com/js/ga.js"></script>
