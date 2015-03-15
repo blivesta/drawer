@@ -9,14 +9,7 @@
   ],
   "homepage": "http://git.blivesta.com/drawer",
   "author": "blivesta",
-  "authorUrl": "http://blivesta.com",
-  "licenses": "MIT",
-  "filename": "drawer",
-  "source": "./src",
-  "docs": "./docs",
-  "distribution": "./dist",
-  "public": "./_gh_pages",
-  "assets": "./docs/assets",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/blivesta/drawer.git"
@@ -26,26 +19,12 @@
     "iscroll": "~5.1.3"
   },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-csslint": "~0.4.0",
-    "grunt-csscomb": "~3.0.0",
-    "grunt-autoprefixer": "~2.2.0",
-    "grunt-contrib-less": "~1.0.0",
-    "grunt-banner": "~0.3.1",
-    "grunt-contrib-jshint": "~0.10.0",
-    "grunt-contrib-uglify": "~0.7.0",
-    "grunt-contrib-copy": "~0.7.0",
-    "grunt-contrib-clean": "~0.6.0",
-    "grunt-contrib-connect": "~0.9.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "load-grunt-tasks": "~2.0.0",
-    "time-grunt": "~1.0.0",
-    "grunt-jekyll": "~0.4.1",
-    "grunt-build-control": "~0.2.2",
-    "grunt-notify": "~0.4.1",
-    "grunt-bower-task": "~0.4.0"
-  },
-  "engines": {
-    "node": ">=0.10.1"
+    "browser-sync": "^2.2.1",
+    "del": "^1.1.1",
+    "gulp": "^3.8.10",
+    "gulp-rename": "^1.2.0",
+    "gulptasks":"^0.9.0",
+    "lodash": "^3.0.1",
+    "run-sequence": "^1.0.2"
   }
 }

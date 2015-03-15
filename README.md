@@ -43,17 +43,17 @@ Install : `nodejs` `npm` `grunt` `jekyll` `ruby` `bower`
 $ git clone https://github.com/blivesta/drawer.git
 $ cd drawer
 $ git checkout -b patch-1
-$ npm install && grunt build && grunt
+$ npm install && gulp build
 ```
 
 Build
 ```bash
-$ grunt build
+$ gulp build
 ```
 
 Watch & Connect
 ```bash
-$ grunt
+$ gulp
 ```
 And finally, open http://0.0.0.0:9999 in your browser.
 

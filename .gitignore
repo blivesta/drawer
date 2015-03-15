@@ -1,10 +1,8 @@
 node_modules
 _gh_pages
 bower_components
-src/vendor
 docs/vendor
-docs/css
+docs/drawer
 docs/assets/css
-docs/js
 *.psd
 vendor
