@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="../assets/css/docs.css">
 
   <!-- drawer CSS -->
-  <link rel="stylesheet" href="../css/drawer.css">
+  <link rel="stylesheet" href="../drawer/drawer.css">
 
   <!--[if lt IE 9]>
   <script async src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -168,17 +168,17 @@
 
 <h2>Development</h2>
 
-<p>Install : <code>nodejs</code> <code>npm</code> <code>grunt</code> <code>jekyll</code> <code>ruby</code> <code>bower</code></p>
+<p>Install : <code>nodejs</code> <code>npm</code> <code>gulp</code> <code>jekyll</code> <code>ruby</code> <code>bower</code></p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git clone https://github.com/blivesta/drawer.git
 <span class="nv">$ </span><span class="nb">cd </span>drawer
 <span class="nv">$ </span>git checkout -b patch-1
-<span class="nv">$ </span>npm install <span class="o">&amp;&amp;</span> grunt build <span class="o">&amp;&amp;</span> grunt
+<span class="nv">$ </span>npm install <span class="o">&amp;&amp;</span> gulp build
 </code></pre></div>
 <p>Build  </p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>grunt build
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>gulp build
 </code></pre></div>
 <p>Watch &amp; Connect  </p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>grunt
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>gulp
 </code></pre></div>
 <p>And finally, open http://0.0.0.0:9999 in your browser.</p>
 
@@ -187,7 +187,7 @@
 <ul>
 <li><a href="http://www.nodejs.org/" title="nodejs">nodejs</a></li>
 <li><a href="https://www.npmjs.com/" title="npm">npm</a></li>
-<li><a href="http://gruntjs.com/" title="grunt">grunt</a></li>
+<li><a href="http://gulpjs.com/" title="gulp">gulp</a></li>
 <li><a href="http://jekyllrb.com/" title="jekyll">jekyll</a></li>
 <li><a href="https://www.ruby-lang.org" title="ruby">ruby</a></li>
 <li><a href="http://bower.io/" title="bower">bower</a></li>
@@ -282,7 +282,7 @@
 <script src="//cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.1/dropdown.min.js"></script>
 
 <!-- drawer js -->
-<script src="../js/jquery.drawer.js"></script>
+<script src="../drawer/jquery.drawer.js"></script>
 
 <script>
 
