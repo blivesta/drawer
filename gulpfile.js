@@ -72,9 +72,9 @@ module.exports = {
     banner:headerBanner
   },
   'ghpage' : {
-    src : './_public/**/*',
+    src : './_gh_pages/**/*',
     remoteUrl : 'https://github.com/blivesta/drawer.git',
-    branch : '_gh_pages'
+    branch : 'gh-pages'
   },
   'bump': {
     version: pkg.version,
