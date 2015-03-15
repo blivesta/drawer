@@ -1,0 +1,187 @@
+// phone
+@media (min-width: (768px - 1)) {
+  .drawer-responsive.drawer-left,
+  .drawer-responsive.drawer-right,
+  .drawer-navbar.drawer-left,
+  .drawer-navbar.drawer-right,
+  .drawer-navbar.drawer-top {
+    .drawer-toggle {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  .drawer-responsive.drawer-left {
+    .drawer-main {
+      left: 0;
+      display: block;
+      transform: none;
+    }
+  }
+  .drawer-responsive.drawer-right {
+    .drawer-main {
+      right: 0;
+      display: block;
+      transform: none;
+    }
+  }
+}
+
+// tablet
+@media (min-width: 768px) {
+  body.drawer-navbar.drawer-fixed {
+    padding-top: $drawer-nav-height;
+  }
+  .drawer-responsive {
+    background-color: $drawer-nav-bg-color;
+  }
+  .drawer-responsive .drawer-overlay {
+    background-color: #fff;
+  }
+  .drawer-responsive .container {
+    max-width: (768px - $drawer-width-tablet);
+  }
+  .drawer-responsive.drawer-left,
+  .drawer-responsive.drawer-right {
+    .drawer-main {
+      position: absolute;
+      width: $drawer-width-tablet!important;
+      height: auto!important;
+      overflow: visible!important;
+    }
+  }
+  .drawer-responsive.drawer-left {
+    .drawer-main {
+      float: left;
+    }
+    .drawer-overlay {
+      margin-left: $drawer-width-tablet;
+    }
+  }
+  .drawer-responsive.drawer-right {
+    .drawer-main {
+      float: right;
+    }
+    .drawer-overlay {
+      margin-right: $drawer-width-tablet;
+    }
+  }
+  .drawer-navbar.drawer-left .drawer-main,
+  .drawer-navbar.drawer-right .drawer-main,
+  .drawer-navbar.drawer-top .drawer-main {
+    position: relative;
+  }
+  .drawer-navbar.drawer-static.drawer-left .drawer-main,
+  .drawer-navbar.drawer-static.drawer-right .drawer-main,
+  .drawer-navbar.drawer-static.drawer-top .drawer-main {
+    z-index: $drawer-navbar-static-zIndex;
+  }
+  .drawer-navbar.drawer-fixed.drawer-left .drawer-main,
+  .drawer-navbar.drawer-fixed.drawer-right .drawer-main,
+  .drawer-navbar.drawer-fixed.drawer-top .drawer-main {
+    position: fixed;
+    z-index: $drawer-navbar-fixed-zIndex;
+  }
+  .drawer-navbar.drawer-left .drawer-main,
+  .drawer-navbar.drawer-right .drawer-main,
+  .drawer-navbar.drawer-top .drawer-main {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%!important;
+    height: auto!important;
+    overflow: visible!important;
+    transform: none;
+  }
+
+// drawer navbar default  >= 768px
+// ======================================
+  .drawer-navbar-default {
+    position: relative;
+    background-color: $drawer-navbar-bg-color;
+    border-bottom: 1px solid #ccc;
+    li, a, .drawer-brand {
+      float: left;
+    }
+    a {
+      padding: 0 15px;
+      height: $drawer-nav-height;
+      line-height: $drawer-nav-lineHeight;
+      font-size: 14px;
+    }
+    .drawer-brand {
+      a {
+        padding: 0 15px;
+        color: $drawer-text-color;
+        font-size: 90%;
+        &:hover,
+        &:focus {
+          color: #333;
+          background-color: #eee;
+        }
+      }
+    }
+    .drawer-footer {
+      display: none;
+    }
+    .drawer-menu.drawer-navbar-right {
+      float: right;
+      .dropdown-menu {
+        right: 0;
+        left: auto;
+      }
+    }
+    .drawer-menu-item {
+      padding: 0;
+      font-size: 14px;
+      a {
+        &:hover,
+        &:focus {
+          color: $drawer-link-color;
+          background-color: #eee;
+        }
+      }
+    }
+    .dropdown-menu {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+      > li {
+        float: none; /* for IE7+ */
+        > a {
+          width: 160px;
+          padding: 0 15px!important; /* conflict by cooker */
+          color: #fff;
+          background-color: #444;
+          border-bottom: 1px solid #555;
+          opacity: 0.9;
+          &:hover,
+          &:focus {
+            color: #999;
+            background-color: #333;
+          }
+        }
+      }
+    }
+  }
+}
+
+// desktop
+@media (min-width: 1200px) {
+  .drawer-responsive .container {
+    max-width: 768px;
+  }
+  .drawer-responsive.drawer-left,
+  .drawer-responsive.drawer-right {
+    .drawer-main {
+      width: $drawer-width-desktop!important;
+    }
+  }
+  .drawer-responsive.drawer-left {
+    .drawer-overlay {
+      margin-left: $drawer-width-desktop;
+    }
+  }
+  .drawer-responsive.drawer-right {
+    .drawer-overlay {
+      margin-right: $drawer-width-desktop;
+    }
+  }
+}

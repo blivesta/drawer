@@ -1,0 +1,90 @@
+// main
+// ======================================
+body.drawer-navbar.drawer-fixed {
+  padding-top: 0;
+}
+.drawer-main {
+  position: fixed;
+  z-index: $drawer-main-zIndex;
+  top: 0;
+  overflow: hidden;
+  width: $drawer-width-phone;
+  height: 100%;
+  .drawer-left & {
+    left: -$drawer-width-phone;
+    transition: transform $drawer-duration $drawer-ease;
+    transform: translate3d(-$drawer-width-phone, 0px, 0px);
+  }
+  .drawer-left.drawer-open & {
+    left: 0;
+    transform: translate3d(0px, 0px, 0px);
+  }
+  .drawer-right & {
+    right: -$drawer-width-phone;
+    transition: transform $drawer-duration $drawer-ease;
+    transform: translate3d($drawer-width-phone, 0px, 0px);
+  }
+  .drawer-right.drawer-open & {
+    right: 0;
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  .drawer-top & {
+    width:100%;
+    height:auto;
+    max-height:100%;
+    transition: transform $drawer-duration $drawer-ease;
+    transform: translate3d(0, -100%, 0px);
+  }
+  .drawer-top.drawer-open & {
+    transform: translate3d(0, 0, 0px);
+  }
+
+}
+
+// overlay
+// ======================================
+.drawer-overlay {
+  position: relative;
+}
+
+// hamburger
+// ======================================
+.drawer-left .drawer-hamburger {
+  left: 0;
+  transform: translateX(0px) translateY(0px);
+}
+.drawer-left.drawer-open .drawer-hamburger {
+  transform: translateX($drawer-width-phone) translateY(0px);
+}
+.drawer-right .drawer-hamburger {
+  right: 0;
+  transform: translateX(0px) translateY(0px);
+}
+.drawer-right.drawer-open .drawer-hamburger {
+  transform: translateX(-$drawer-width-phone) translateY(0px);
+}
+.drawer-top .drawer-hamburger {
+  right: 0;
+}
+.drawer-top.drawer-open .drawer-hamburger {
+  z-index:$drawer-hamburger-zIndex;
+  right: 0;
+}
+
+// upper
+// ======================================
+.drawer-overlay-upper {
+  position: fixed;
+  z-index: $drawer-upper-zIndex;
+  height: 100%;
+  width:100%;
+  left: 0;
+  top: 0;
+  display: none;
+  // background-color: rgb(0,0,0,.5);
+  background-color: rgba(0,0,0,.5);
+  .drawer-open & {
+    display: block !important;
+  }
+}

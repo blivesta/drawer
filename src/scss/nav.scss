@@ -1,0 +1,121 @@
+// drawer default
+// ======================================
+.drawer-default {
+  background-color: $drawer-nav-bg-color;
+  box-shadow: inset 0 0px 0px rgba(0,0,0,.5);
+  & + .drawer-overlay {
+    background-color: #fff;
+  }
+  li, a, .drawer-brand {
+    position: relative;
+    display: block;
+  }
+  a {
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+  .drawer-brand {
+    a {
+      padding: 20px 15px;
+      color: $drawer-hover-color;
+      font-size: 22px;
+      &:hover {
+        color: $drawer-text-color;
+      }
+    }
+    > img {
+      display: block;
+    }
+  }
+  .drawer-footer {
+    position: relative;
+    padding: 0 15px;
+    height: $drawer-nav-height;
+    line-height: $drawer-nav-lineHeight;    
+    background-color: transparent;
+    span:before,
+    span:after {
+      content: " ";
+      display: block;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .drawer-menu-item {
+    padding: 15px 15px 0;
+    font-size: 18px;
+    color: $drawer-text-color;
+    &.disabled a {
+      color: #333;
+      &:hover,
+      &:focus {
+        cursor:not-allowed;
+        color: #333;
+        background-color: transparent;
+      }
+    }
+    a {
+      color: $drawer-link-color;
+      &:hover,
+      &:focus {
+        color: $drawer-hover-color;
+        background-color: transparent;
+      }
+      img {
+        max-width: none;
+      }
+    }
+  }
+  .drawer-submenu {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .drawer-submenu-item {
+    padding: 0;
+    a {
+      height: $drawer-nav-height;
+      line-height: $drawer-nav-lineHeight;
+      font-size: 14px;
+      &:hover,
+      &:focus {
+        color: $drawer-hover-color;
+      }
+    }
+  }
+// dropdown
+  .dropdown-menu {
+    position: absolute;
+    display: none;
+    z-index: $drawer-dropdown-zIndex;
+    background-color: $drawer-nav-bg-color;
+    border: 0;
+    box-shadow: none;
+    > li > a {
+      padding: 0!important; // conflict by cooker
+    }
+  }
+  .dropdown.open > .dropdown-menu {
+    position: static;
+    display: block;
+    float: none;
+    width: auto;
+  }
+
+  @media (max-width: 767px) {
+    a {
+      &:hover,
+      &:focus {
+        color: $drawer-link-color!important;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.drawer-dropdown .caret,
+.drawer-dropdown-hover .caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  transform: rotate(0deg);
+}
+.drawer-dropdown.open .caret,
+.drawer-dropdown-hover.open .caret {
+  transform: rotate(180deg);
+}
+.dropdown-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 990;
+}
