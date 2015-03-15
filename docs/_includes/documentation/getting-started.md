@@ -7,25 +7,25 @@ There are a couple ways to download drawer.
 
 ## Development
 
-Install : `nodejs` `npm` `grunt` `jekyll` `ruby` `bower`
+Install : `nodejs` `npm` `gulp` `jekyll` `ruby` `bower`
 
 ```bash
 $ git clone https://github.com/blivesta/drawer.git
 $ cd drawer
 $ git checkout -b patch-1
-$ npm install && grunt build && grunt
+$ npm install && gulp build
 ```
 
 Build  
 
 ``` bash
-$ grunt build
+$ gulp build
 ```
 
 Watch & Connect  
 
 ```bash
-$ grunt
+$ gulp
 ```
 And finally, open http://0.0.0.0:9999 in your browser.
 
@@ -33,7 +33,7 @@ And finally, open http://0.0.0.0:9999 in your browser.
 
 - [nodejs][2]
 - [npm][3]
-- [grunt][4]
+- [gulp][4]
 - [jekyll][5]
 - [ruby][6]
 - [bower][7]
@@ -47,7 +47,7 @@ And finally, open http://0.0.0.0:9999 in your browser.
 [1]: https://github.com/blivesta/drawer/releases        "download"
 [2]: http://www.nodejs.org/                             "nodejs"
 [3]: https://www.npmjs.com/                             "npm"
-[4]: http://gruntjs.com/                                 "grunt" 
+[4]: http://gulpjs.com/                                 "gulp"
 [5]: http://jekyllrb.com/                               "jekyll"
 [6]: https://www.ruby-lang.org                    "ruby"
 [7]: http://bower.io/                                   "bower"
