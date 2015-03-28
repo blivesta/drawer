@@ -37,7 +37,7 @@ Drawer is designed to support the cross-browser. You can use an innovative fixed
 
 ## Development
 
-Install : `nodejs` `npm` `grunt` `jekyll` `ruby` `bower`
+Install : `nodejs` `npm` `gulp` `jekyll` `ruby` `bower`
 
 ```bash
 $ git clone https://github.com/blivesta/drawer.git
