@@ -1,15 +1,15 @@
 {% include head.html %}
 <body class="{{ page.class }} site-base">
-  
+
   {% include header.html %}
-  
+
   <div class="drawer-overlay">
-    
+
     <main id="content" class="masthead" role="main" tabindex="-1">
       <div class="container">
         <h1>{{ page.title }}</h1>
           <p class="lead">{{ site.description }}</p>
-        
+
           {% if page.mode == 'responsive' or page.mode == 'navbar' %}
           <p class="center-block form-inline visible-xs" style="max-width:480px">
           {% else %}
@@ -18,7 +18,7 @@
           <a class="button button-border button-lg drawer-api-toggle"><span class="oi oi-menu"></span> Open</a>
           </p>
 
-          {% include adpacks.html %}
+          {% include carbon.html %}
       </div><!-- /.container -->
     </main>
 
@@ -26,7 +26,7 @@
     <div class="site-body-inner container">
 
     {{ content }}
-		  
+
     </div><!-- /.container -->
   </div><!-- /.site-body -->
 
