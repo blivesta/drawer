@@ -55,7 +55,6 @@ Watch & Connect
 ```bash
 $ gulp
 ```
-And finally, open http://0.0.0.0:9999 in your browser.
 
 ## Credit
 - [@blivesta](https://github.com/blivesta)
