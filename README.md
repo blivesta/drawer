@@ -56,12 +56,13 @@ Watch & Connect
 $ gulp
 ```
 
-## Credit
+## Contributors
 - [@blivesta](https://github.com/blivesta)
-- [@ungki](https://github.com/ungki)
+- [@ungki](https://github.com/ungki)(Maintainer)
 - [@tylerball](https://github.com/tylerball)
 - [@PeterDaveHello](https://github.com/PeterDaveHello)
 - [@jasonniebauer](https://github.com/jasonniebauer)
+- [@mrDinckleman](https://github.com/mrDinckleman)
 
 ##License
 Copyright 2014-2015 Released under the [MIT license](https://github.com/blivesta/drawer/blob/master/LICENSE.md).
