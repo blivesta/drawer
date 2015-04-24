@@ -42,10 +42,7 @@ module.exports = {
       noCache: true
     },
     autoprefixer: autoprefixerBrowsers,
-    fallback:{
-      use:true,
-      colorHexOptions:{rgba: true}
-    },
+    fallback:false,
     filter:'**/*.css',
     headerBanner : true,
     banner:headerBanner,
@@ -102,7 +99,7 @@ gulp.task('default',['browsersync'],function() {
 });
 
 gulp.task('distCss',function() {
-  return gulp.src('./docs/drawer/*.{css,map}')
+  return gulp.src('./docs/drawer/*.css')
     .pipe(gulp.dest('./dist/css'));
 });
 
