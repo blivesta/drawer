@@ -1,29 +1,29 @@
-$drawer-width-phone:         280px;
-$drawer-width-tablet:        150px;
-$drawer-width-desktop:       $drawer-width-phone;
+$drawer-width-phone:         280px !default;
+$drawer-width-tablet:        150px !default;
+$drawer-width-desktop:       $drawer-width-phone !default;
 
-$drawer-nav-height:          50px;
-$drawer-nav-lineHeight:      50px;
+$drawer-nav-height:          50px !default;
+$drawer-nav-lineHeight:      50px !default;
 
-$drawer-nav-bg-color:        #222;
-$drawer-navbar-bg-color:     #fff; // navbar desktop only
-$drawer-hamburger-bg-color:  #ddd;
-$drawer-text-color:          #555;
-$drawer-link-color:          #888;
-$drawer-hover-color:         #fff;
-$drawer-dropdown-link-color: #ddd;
-$drawer-dropdown-hover-color:#fff;
+$drawer-nav-bg-color:        #222 !default;
+$drawer-navbar-bg-color:     #fff !default; // navbar desktop only
+$drawer-hamburger-bg-color:  #ddd !default;
+$drawer-text-color:          #555 !default;
+$drawer-link-color:          #888 !default;
+$drawer-hover-color:         #fff !default;
+$drawer-dropdown-link-color: #ddd !default;
+$drawer-dropdown-hover-color:#fff !default;
 
-$drawer-main-zIndex:         5300;
-$drawer-upper-zIndex:        5200;
-$drawer-toggle-zIndex:       5100;
-$drawer-navbar-static-zIndex:5000;
-$drawer-navbar-fixed-zIndex: 5100;
-$drawer-dropdown-zIndex:     5000;
-$drawer-hamburger-zIndex:    5400;
+$drawer-main-zIndex:         5300 !default;
+$drawer-upper-zIndex:        5200 !default;
+$drawer-toggle-zIndex:       5100 !default;
+$drawer-navbar-static-zIndex:5000 !default;
+$drawer-navbar-fixed-zIndex: 5100 !default;
+$drawer-dropdown-zIndex:     5000 !default;
+$drawer-hamburger-zIndex:    5400 !default;
 
-$drawer-ease:                cubic-bezier(0.190, 1.000, 0.220, 1.000);
-$drawer-duration:            .4s;
+$drawer-ease:                cubic-bezier(0.190, 1.000, 0.220, 1.000) !default;
+$drawer-duration:            .4s !default;
 
 @import "core";
 @import "hamburger";
