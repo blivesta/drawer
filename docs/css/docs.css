@@ -88,15 +88,6 @@ h1, h2, h3, h4 {
 .social .btn-tw {
   width: 99px;
 }
-.social .btn-gg {
-  width: 73px;
-}
-.social .btn-fb {
-  width: 115px;
-}
-.social .btn-fb iframe {
-  overflow: hidden;
-}
 
 
 .header {
