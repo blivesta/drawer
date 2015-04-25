@@ -3,6 +3,5 @@ _gh_pages
 bower_components
 docs/vendor
 docs/drawer
-docs/assets/css
 *.psd
 vendor
