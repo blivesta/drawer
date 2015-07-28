@@ -94,7 +94,6 @@ body.drawer-navbar.drawer-fixed {
   left: 0;
   top: 0;
   display: none;
-  background-color: #000000;
   background-color: rgba(0, 0, 0, 0.5); }
   .drawer-open .drawer-overlay-upper {
     display: block !important; }
@@ -151,9 +150,7 @@ body.drawer-navbar.drawer-fixed {
 
 .drawer-default {
   background-color: #222;
-  -webkit-box-shadow: inset 0 0px 0px #000000;
   -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0 0px 0px #000000;
           box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.5); }
   .drawer-default + .drawer-overlay {
     background-color: #fff; }
@@ -237,9 +234,7 @@ body.drawer-navbar.drawer-fixed {
 
 .drawer-navbar-default {
   background-color: #222;
-  -webkit-box-shadow: inset 0 0px 0px #000000;
   -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0 0px 0px #000000;
           box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.5); }
   .drawer-navbar-default + .drawer-overlay {
     background-color: #fff; }
@@ -503,9 +498,7 @@ body.drawer-navbar.drawer-fixed {
         color: #888;
         background-color: #eee; }
     .drawer-navbar-default .dropdown-menu {
-      -webkit-box-shadow: 0 6px 12px #000000;
       -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-              box-shadow: 0 6px 12px #000000;
               box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); }
       .drawer-navbar-default .dropdown-menu > li {
         float: none;
@@ -517,8 +510,7 @@ body.drawer-navbar.drawer-fixed {
           color: #fff;
           background-color: #444;
           border-bottom: 1px solid #555;
-          opacity: 0.9;
-          filter: alpha(opacity=90); }
+          opacity: 0.9; }
           .drawer-navbar-default .dropdown-menu > li > a:hover, .drawer-navbar-default .dropdown-menu > li > a:focus {
             color: #999;
             background-color: #333; } }
