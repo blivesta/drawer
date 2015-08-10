@@ -1,7 +1,4 @@
+~*
+
 node_modules
-_gh_pages
 bower_components
-docs/vendor
-docs/drawer
-*.psd
-vendor
