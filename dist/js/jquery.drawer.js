@@ -1,11 +1,20 @@
 /*!
- * jquery-drawer - A small CSS3 and jQuery plugin for app style drawer menu.
- * @version v2.4.0
- * @link    http://git.blivesta.com/drawer
- * @author  blivesta
- * @license MIT
+ * jquery-drawer v3.0.0-beta.1
+ * A small CSS3 and jQuery plugin for app style drawer menu.
+ * http://git.blivesta.com/drawer
+ * License : MIT
+ * Author : Yasuyuki Enomoto <enmt@blivesta.com> (http://blivesta.com/)
  */
-(function($) {
+;(function (factory) {
+  'use strict';
+  if (typeof define === 'function' && define.amd) {
+    define(['jquery'], factory);
+  } else if (typeof exports === 'object') {
+    module.exports = factory(require('jquery'));
+  } else {
+    factory(jQuery);
+  }
+}(function($) {
   "use strict";
   var namespace = "drawer";
   var touches = typeof document.ontouchstart != "undefined";
@@ -81,7 +90,7 @@
       $this
         .removeClass(options.closeClass)
         .addClass(options.openClass)
-        .transitionEnd(function(){
+        .drawerCallback(function(){
           $this.css({
             "overflow": "hidden"
           }).trigger('drawer.opened');
@@ -97,7 +106,7 @@
       $this
         .removeClass(options.openClass)
         .addClass(options.closeClass)
-        .transitionEnd(function(){
+        .drawerCallback(function(){
           $this.css({
             "overflow": "auto"
           }).trigger('drawer.closed');
@@ -114,6 +123,16 @@
 
   };
 
+  $.fn.drawerCallback = function(callback){
+    var end = "transitionend webkitTransitionEnd mozTransitionEnd oTransitionEnd MSTransitionEnd";
+    return this.each(function() {
+      $(this).bind(end, function(){
+        $(this).unbind(end);
+        return callback.call(this);
+      });
+    });
+  };
+
   $.fn.drawer = function(method) {
     if (methods[method]) {
       return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
@@ -124,17 +143,4 @@
     }
   };
 
-})(jQuery);
-
-(function($) {
-  "use strict";
-  $.fn.transitionEnd = function(callback){
-    var end = "transitionend webkitTransitionEnd mozTransitionEnd oTransitionEnd MSTransitionEnd";
-    return this.each(function() {
-      $(this).bind(end, function(){
-        $(this).unbind(end);
-        return callback.call(this);
-      });
-    });
-  };
-})(jQuery);
+}));
