@@ -1,0 +1,166 @@
+@media (--drawer-tablet) {
+  .drawer-responsive.drawer-left .drawer-toggle,
+  .drawer-responsive.drawer-right .drawer-toggle,
+  .drawer-navbar.drawer-left .drawer-toggle,
+  .drawer-navbar.drawer-right .drawer-toggle,
+  .drawer-navbar.drawer-top .drawer-toggle {
+    display: none;
+    visibility: hidden;
+  }
+
+  .drawer-responsive.drawer-left .drawer-main {
+    left: 0;
+    display: block;
+    transform: none;
+  }
+
+  .drawer-responsive.drawer-right .drawer-main {
+    right: 0;
+    display: block;
+    transform: none;
+  }
+}
+
+@media (--drawer-tablet) {
+  body.drawer-navbar.drawer-fixed {
+    padding-top: var(--drawer-nav-height);
+  }
+  .drawer-responsive {
+    background-color: var(--drawer-nav-bg-color);
+  }
+  .drawer-responsive .drawer-overlay {
+    background-color: #fff;
+  }
+  .drawer-responsive .Container {
+    max-width: calc(768px - var(--drawer-width-tablet));
+  }
+  .drawer-responsive.drawer-left .drawer-main,
+  .drawer-responsive.drawer-right .drawer-main {
+    position: absolute;
+    overflow: visible !important;
+    width: var(--drawer-width-tablet) !important;
+    height: auto !important;
+  }
+  .drawer-responsive.drawer-left .drawer-main {
+    float: left;
+  }
+  .drawer-responsive.drawer-left .drawer-overlay {
+    margin-left: var(--drawer-width-tablet);
+  }
+  .drawer-responsive.drawer-right .drawer-main {
+    float: right;
+  }
+  .drawer-responsive.drawer-right .drawer-overlay {
+    margin-right: var(--drawer-width-tablet);
+  }
+
+  .drawer-navbar.drawer-left .drawer-main,
+  .drawer-navbar.drawer-right .drawer-main,
+  .drawer-navbar.drawer-top .drawer-main {
+    position: relative;
+  }
+  .drawer-navbar.drawer-static.drawer-left .drawer-main,
+  .drawer-navbar.drawer-static.drawer-right .drawer-main,
+  .drawer-navbar.drawer-static.drawer-top .drawer-main {
+    z-index: var(--drawer-navbar-static-zIndex);
+  }
+  .drawer-navbar.drawer-fixed.drawer-left .drawer-main,
+  .drawer-navbar.drawer-fixed.drawer-right .drawer-main,
+  .drawer-navbar.drawer-fixed.drawer-top .drawer-main {
+    position: fixed;
+    z-index: var(--drawer-navbar-fixed-zIndex);
+  }
+  .drawer-navbar.drawer-left .drawer-main,
+  .drawer-navbar.drawer-right .drawer-main,
+  .drawer-navbar.drawer-top .drawer-main {
+    top: 0;
+    left: 0;
+    display: block;
+    overflow: visible !important;
+    width: 100% !important;
+    height: auto !important;
+    transform: none;
+  }
+
+/* drawer navbar
+ * -------------------------------------- */
+  .drawer-navbar-default {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    background-color: var(--drawer-navbar-bg-color);
+  }
+  .drawer-navbar-default li,
+  .drawer-navbar-default a,
+  .drawer-navbar-default .drawer-brand {
+    float: left;
+  }
+  .drawer-navbar-default a {
+    font-size: 14px;
+    line-height: var(--drawer-nav-lineHeight);
+    height: var(--drawer-nav-height);
+    padding: 0 15px;
+  }
+  .drawer-navbar-default .drawer-brand a {
+    font-size: 90%;
+    padding: 0 15px;
+    color: var(--drawer-text-color);
+  }
+  .drawer-navbar-default .drawer-brand a:hover,
+  .drawer-navbar-default .drawer-brand a:focus {
+    color: #333;
+    background-color: #eee;
+  }
+
+  .drawer-navbar-default .drawer-footer {
+    display: none;
+  }
+  .drawer-navbar-default .drawer-menu.drawer-navbar-right {
+    float: right;
+  }
+  .drawer-navbar-default .drawer-menu.drawer-navbar-right .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+
+  .drawer-navbar-default .drawer-menu-item {
+    font-size: 14px;
+    padding: 0;
+  }
+  .drawer-navbar-default .drawer-menu-item a:hover,
+  .drawer-navbar-default .drawer-menu-item a:focus {
+    color: var(--drawer-link-color);
+    background-color: #eee;
+  }
+
+  .drawer-navbar-default .dropdown-menu {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  }
+  .drawer-navbar-default .dropdown-menu > li > a {
+    width: 160px;
+    opacity: .9;
+    color: #fff;
+    border-bottom: 1px solid #555;
+    background-color: #444;
+  }
+
+  .drawer-navbar-default .dropdown-menu > li > a:hover,
+  .drawer-navbar-default .dropdown-menu > li > a:focus {
+    color: #999;
+    background-color: #333;
+  }
+}
+
+@media (--drawer-desktop) {
+  .drawer-responsive.drawer-left .drawer-main,
+  .drawer-responsive.drawer-right .drawer-main {
+    width: var(--drawer-width-desktop) !important;
+  }
+
+  .drawer-responsive.drawer-left .drawer-overlay {
+    margin-left: var(--drawer-width-desktop);
+  }
+
+  .drawer-responsive.drawer-right .drawer-overlay {
+    margin-right: var(--drawer-width-desktop);
+  }
+}

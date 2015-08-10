@@ -1,0 +1,39 @@
+@import "core.css";
+@import "hamburger.css";
+@import "nav.css";
+@import "navbar.css";
+@import "responsive.css";
+@import "dropdown.css";
+@import "accessibility.css";
+
+@custom-media --drawer-phone (width <= 47.938em);
+@custom-media --drawer-tablet (width >= 48em);
+@custom-media --drawer-desktop (width >= 75em);
+
+:root {
+  --drawer-width-phone:         280px;
+  --drawer-width-tablet:        150px;
+  --drawer-width-desktop:       var(--drawer-width-phone);
+
+  --drawer-nav-height:          50px;
+  --drawer-nav-lineHeight:      50px;
+
+  --drawer-nav-bg-color:        #222;
+  --drawer-navbar-bg-color:     #fff;
+  --drawer-hamburger-bg-color:  #ddd;
+  --drawer-text-color:          #555;
+  --drawer-link-color:          #888;
+  --drawer-hover-color:         #fff;
+  --drawer-dropdown-link-color: #ddd;
+  --drawer-dropdown-hover-color:#fff;
+
+  --drawer-main-zIndex:         5300;
+  --drawer-upper-zIndex:        5200;
+  --drawer-toggle-zIndex:       5100;
+  --drawer-navbar-static-zIndex:5000;
+  --drawer-navbar-fixed-zIndex: 5100;
+  --drawer-dropdown-zIndex:     5000;
+  --drawer-hamburger-zIndex:    5400;
+
+  --drawer-transition:          all .4s ease-out 0s;
+}
