@@ -1,27 +1,40 @@
 {
   "name": "jquery-drawer",
+  "version": "3.0.0-beta.1",
   "description": "A small CSS3 and jQuery plugin for app style drawer menu.",
-  "version": "2.4.0",
   "keywords": [
     "jquery",
-    "css3",
+    "drawer",
+    "menu",
     "responsive"
   ],
   "homepage": "http://git.blivesta.com/drawer",
-  "author": "blivesta",
+  "bugs": {
+    "url": "https://github.com/blivesta/drawer/issues"
+  },
   "license": "MIT",
+  "main": "dist/js/jquery.drawer.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/blivesta/drawer.git"
+  },
+  "author": "Yasuyuki Enomoto <enmt@blivesta.com> (http://blivesta.com/)",
+  "scripts":{
+    "setup": "npm i && gulp build"
   },
   "dependencies": {
     "jquery": ">= 1.9.0",
     "iscroll": "~5.1.3"
   },
   "devDependencies": {
-    "browser-sync": "^2.2.1",
-    "gulp": "^3.8.10",
-    "gulptasks":"^0.10.0",
-    "run-sequence": "^1.0.2"
+    "del":"^1.2.0",
+    "gulp":"^3.9.0",
+    "gulp-cssnext": "^1.0.1",
+    "gulp-header":"^1.2.2",
+    "gulp-jshint":"^1.11.2",
+    "gulp-rename":"^1.2.2",
+    "gulp-uglify":"^1.2.0",
+    "jshint-stylish":"^2.0.1",
+    "run-sequence":"^1.1.1"
   }
 }
