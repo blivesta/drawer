@@ -69,7 +69,12 @@
       var $this = $(this);
       options = $this.data(namespace).options;
       var open = $this.hasClass(options.openClass);
-      open ? methods.close.call(_this) : methods.open.call(_this);
+
+      if(open){
+        methods.close.call(_this);
+      } else {
+        methods.open.call(_this);
+      }
     },
 
     open: function(options) {
