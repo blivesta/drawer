@@ -11,7 +11,7 @@
   'use strict';
   var namespace = 'drawer';
   var touches = typeof document.ontouchstart != 'undefined';
-  var methods = {
+  var __ = {
     init: function(options) {
       options = $.extend({
         mastaClass:        'drawer-main',
@@ -48,12 +48,12 @@
         $('.' + options.toggleClass + ', .' + options.apiToggleClass)
           .off('click.' + namespace)
           .on('click.' + namespace, function() {
-            methods.toggle.call(_this);
+            __.toggle.call(_this);
             drawerScroll.refresh();
           });
 
         $(window).resize(function() {
-          methods.close.call(_this);
+          __.close.call(_this);
           drawerScroll.refresh();
         });
 
@@ -71,9 +71,9 @@
       var open = $this.hasClass(options.openClass);
 
       if(open){
-        methods.close.call(_this);
+        __.close.call(_this);
       } else {
-        methods.open.call(_this);
+        __.open.call(_this);
       }
     },
 
@@ -132,10 +132,10 @@
   };
 
   $.fn.drawer = function(method) {
-    if (methods[method]) {
-      return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+    if (__[method]) {
+      return __[method].apply(this, Array.prototype.slice.call(arguments, 1));
     } else if (typeof method === 'object' || !method) {
-      return methods.init.apply(this, arguments);
+      return __.init.apply(this, arguments);
     } else {
       $.error('Method ' + method + ' does not exist on jQuery.' + namespace);
     }
