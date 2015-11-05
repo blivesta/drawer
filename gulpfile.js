@@ -1,5 +1,7 @@
 'use strict';
 
+var browserSync = require('browser-sync');
+var browserReload = browserSync.reload;
 var cssnext = require('gulp-cssnext');
 var del = require('del');
 var gulp = require('gulp');
@@ -10,7 +12,6 @@ var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
 var stylish = require('jshint-stylish');
 var uglify = require('gulp-uglify');
-
 var banner = [
 '/*!',
 ' * <%= pkg.name %> v<%= pkg.version %>',
@@ -23,8 +24,10 @@ var banner = [
 
 var dirs = {
   src:'./src',
-  dist:'./dist'
+  dist:'./dist',
+  sandbox:'./sandbox'
 };
+
 
 gulp.task('css', function () {
   return gulp
@@ -45,6 +48,7 @@ gulp.task('css', function () {
     .pipe(gulp.dest(dirs.dist + '/css'));
 });
 
+
 gulp.task('js', function(){
   return gulp
     .src(dirs.src + '/js/drawer.js')
@@ -59,19 +63,33 @@ gulp.task('js', function(){
     .pipe(gulp.dest(dirs.dist + '/js'));
 });
 
-gulp.task('cleanup', function(){
-  return del([ './dist' ]);
+
+gulp.task('cleanup', function(cb){
+  return del([ dirs.dist ], cb);
 });
 
-gulp.task('default',['build'], function(){
-  gulp.watch(['./src/css/**/*.css'], ['css']);
-  gulp.watch(['./src/js/*.js'], ['js']);
+
+gulp.task('serve', function() {
+  browserSync.init({
+    server: {
+      baseDir: '.',
+      index: dirs.sandbox + "/index.html"
+    }
+  });
+  gulp.watch([ dirs.src + '/css/**/*.css'], ['css']);
+  gulp.watch([ dirs.src + '/js/*.js'], ['js']);
+  gulp.watch([
+    dirs.dist + '/**/*.min.{css,js}',
+    dirs.sandbox + '/*.{css,html}'
+  ]).on('change', browserReload);
 });
 
-gulp.task('build', function(){
-  runSequence(
-    'cleanup',
-    ['js'],
-    'css'
-  );
+
+gulp.task('default', ['build'], function(cb) {
+  runSequence('serve', cb);
+});
+
+
+gulp.task('build', ['cleanup'], function(cb){
+  runSequence('js', 'css', cb);
 });
