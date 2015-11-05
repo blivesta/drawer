@@ -8,28 +8,28 @@
     factory(jQuery);
   }
 }(function($) {
-  "use strict";
-  var namespace = "drawer";
-  var touches = typeof document.ontouchstart != "undefined";
+  'use strict';
+  var namespace = 'drawer';
+  var touches = typeof document.ontouchstart != 'undefined';
   var methods = {
     init: function(options) {
       options = $.extend({
-        mastaClass:        "drawer-main",
-        toggleClass:       "drawer-toggle",
-        upperClass:        "drawer-overlay-upper",
-        openClass:         "drawer-open",
-        closeClass:        "drawer-close",
-        apiToggleClass:    "drawer-api-toggle",
-        responsiveClass:   "drawer-responsive",
-        dropdownClass:     "dropdown",
-        dropdownShown:     "shown.bs.dropdown",
-        dropdownHidden:    "hidden.bs.dropdown"
+        mastaClass:        'drawer-main',
+        toggleClass:       'drawer-toggle',
+        upperClass:        'drawer-overlay-upper',
+        openClass:         'drawer-open',
+        closeClass:        'drawer-close',
+        apiToggleClass:    'drawer-api-toggle',
+        responsiveClass:   'drawer-responsive',
+        dropdownClass:     'dropdown',
+        dropdownShown:     'shown.bs.dropdown',
+        dropdownHidden:    'hidden.bs.dropdown'
       }, options);
       return this.each(function() {
         var _this = this;
         var $this = $(this);
         var data = $this.data(namespace);
-        var $upper = $("<div>").addClass(options.upperClass+" "+options.toggleClass);
+        var $upper = $('<div>').addClass(options.upperClass+' '+options.toggleClass);
 
         if (!data) {
           options = $.extend({}, options);
@@ -40,14 +40,14 @@
 
         $this.append($upper);
 
-        var drawerScroll = new IScroll("."+options.mastaClass, {
+        var drawerScroll = new IScroll('.'+options.mastaClass, {
           mouseWheel:true,
           preventDefault: false
         });
 
-        $("." + options.toggleClass + ", ." + options.apiToggleClass)
-          .off("click." + namespace)
-          .on("click." + namespace, function() {
+        $('.' + options.toggleClass + ', .' + options.apiToggleClass)
+          .off('click.' + namespace)
+          .on('click.' + namespace, function() {
             methods.toggle.call(_this);
             drawerScroll.refresh();
           });
@@ -57,7 +57,7 @@
           drawerScroll.refresh();
         });
 
-        $("." + options.dropdownClass)
+        $('.' + options.dropdownClass)
         .on(options.dropdownShown, function() { drawerScroll.refresh(); })
         .on(options.dropdownHidden, function() { drawerScroll.refresh(); });
 
@@ -81,7 +81,7 @@
       var $this = $(this);
       options = $this.data(namespace).options;
       if (touches) {
-        $this.on("touchmove." + namespace, function(event) {
+        $this.on('touchmove.' + namespace, function(event) {
           event.preventDefault();
         });
       }
@@ -90,7 +90,7 @@
         .addClass(options.openClass)
         .drawerCallback(function(){
           $this.css({
-            "overflow": "hidden"
+            'overflow': 'hidden'
           }).trigger('drawer.opened');
         });
     },
@@ -99,14 +99,14 @@
       var $this = $(this);
       options = $this.data(namespace).options;
       if (touches) {
-        $this.off("touchmove." + namespace);
+        $this.off('touchmove.' + namespace);
       }
       $this
         .removeClass(options.openClass)
         .addClass(options.closeClass)
         .drawerCallback(function(){
           $this.css({
-            "overflow": "auto"
+            'overflow': 'auto'
           }).trigger('drawer.closed');
         });
     },
@@ -114,7 +114,7 @@
     destroy: function() {
       return this.each(function() {
         var $this = $(this);
-        $(window).unbind("." + namespace);
+        $(window).unbind('.' + namespace);
         $this.removeData(namespace);
       });
     }
@@ -122,7 +122,7 @@
   };
 
   $.fn.drawerCallback = function(callback){
-    var end = "transitionend webkitTransitionEnd mozTransitionEnd oTransitionEnd MSTransitionEnd";
+    var end = 'transitionend webkitTransitionEnd mozTransitionEnd oTransitionEnd MSTransitionEnd';
     return this.each(function() {
       $(this).bind(end, function(){
         $(this).unbind(end);
@@ -134,10 +134,10 @@
   $.fn.drawer = function(method) {
     if (methods[method]) {
       return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
-    } else if (typeof method === "object" || !method) {
+    } else if (typeof method === 'object' || !method) {
       return methods.init.apply(this, arguments);
     } else {
-      $.error("Method " + method + " does not exist on jQuery." + namespace);
+      $.error('Method ' + method + ' does not exist on jQuery.' + namespace);
     }
   };
 
