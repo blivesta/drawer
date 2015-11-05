@@ -2,12 +2,16 @@
 
 var browserSync = require('browser-sync');
 var browserReload = browserSync.reload;
-var cssnext = require('gulp-cssnext');
+var cssnano = require('cssnano');
+var cssnested = require('postcss-nested')
+var cssnext = require('postcss-cssnext');
+var cssimport = require('postcss-import')
 var del = require('del');
 var gulp = require('gulp');
 var header = require('gulp-header');
 var jshint = require('gulp-jshint');
 var pkg = require('./package.json');
+var postcss = require('gulp-postcss');
 var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
 var stylish = require('jshint-stylish');
@@ -30,20 +34,17 @@ var dirs = {
 
 
 gulp.task('css', function () {
+  var processors = [
+    cssimport,
+    cssnested,
+    cssnext,
+  ];
   return gulp
     .src(dirs.src + '/css/drawer.css')
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
-    .pipe(cssnext({
-      browsers: ['last 2 versions'],
-      sourcemap: true
-    }))
+    .pipe(header(banner, { pkg: pkg }))
+    .pipe(postcss(processors))
     .pipe(gulp.dest(dirs.dist + '/css'))
-    .pipe(cssnext({
-      compress: true,
-      sourcemap: false
-    }))
+    .pipe(postcss([cssnano]))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(dirs.dist + '/css'));
 });
