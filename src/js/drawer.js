@@ -122,10 +122,11 @@
   };
 
   $.fn.drawerCallback = function(callback){
-    var end = 'transitionend webkitTransitionEnd mozTransitionEnd oTransitionEnd MSTransitionEnd';
+    var end = 'transitionend webkitTransitionEnd';
     return this.each(function() {
-      $(this).bind(end, function(){
-        $(this).unbind(end);
+      var $this = $(this);
+      $this.on(end, function(){
+        $this.off(end);
         return callback.call(this);
       });
     });
