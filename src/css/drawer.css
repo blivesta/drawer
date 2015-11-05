@@ -35,5 +35,5 @@
   --drawer-dropdown-zIndex:     5000;
   --drawer-hamburger-zIndex:    5400;
 
-  --drawer-transition:          all .4s ease-out 0s;
+  --drawer-transition:          all .8s cubic-bezier(0.190, 1.000, 0.220, 1.000);
 }
