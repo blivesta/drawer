@@ -1,0 +1,21 @@
+/* position
+ * -------------------------------------- */
+.drawer-left .drawer-main {
+  left: calc(0 - var(--drawer-width-phone));
+  transition: var(--drawer-transition);
+}
+
+.drawer-left.drawer-open .drawer-main {
+  left: 0;
+}
+
+/* hamburger position
+ * -------------------------------------- */
+.drawer-left .drawer-hamburger {
+  left: 0;
+  transition: var(--drawer-transition);
+}
+
+.drawer-left.drawer-open .drawer-hamburger {
+  left: var(--drawer-width-phone);
+}

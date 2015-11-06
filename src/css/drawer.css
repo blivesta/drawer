@@ -1,4 +1,8 @@
-@import "core.css";
+@import "main.css";
+@import "position/top";
+@import "position/left";
+@import "position/right";
+@import "overlay-upper.css";
 @import "hamburger.css";
 @import "nav.css";
 @import "navbar.css";

@@ -1,5 +1,9 @@
 /* drawer navbar
  * -------------------------------------- */
+body.drawer-navbar.drawer-fixed {
+  padding-top: 0;
+}
+
 .drawer-navbar-default {
   background-color: var(--drawer-nav-bg-color);
   box-shadow: inset 0 0px 0px rgba(0,0,0,.5);
