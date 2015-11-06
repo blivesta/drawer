@@ -1,5 +1,3 @@
-/* position
- * -------------------------------------- */
 .drawer-left .drawer-main {
   left: calc(0 - var(--drawer-width-phone));
   transition: var(--drawer-transition);
@@ -9,8 +7,7 @@
   left: 0;
 }
 
-/* hamburger position
- * -------------------------------------- */
+/* hamburger */
 .drawer-left .drawer-hamburger {
   left: 0;
   transition: var(--drawer-transition);

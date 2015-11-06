@@ -11,10 +11,12 @@
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
+
 .drawer-dropdown.open .caret,
 .drawer-dropdown-hover.open .caret {
   transform: rotate(180deg);
 }
+
 .dropdown-backdrop {
   position: fixed;
   z-index: 990;

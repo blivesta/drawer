@@ -1,5 +1,3 @@
-/* position
- * -------------------------------------- */
 .drawer-top .drawer-main {
   width: 100%;
   height: auto;
@@ -12,12 +10,11 @@
   transform: translate3d(0, 0, 0);
 }
 
-
-/* hamburger position
- * -------------------------------------- */
+/* hamburger */
 .drawer-top .drawer-hamburger {
   right: 0;
 }
+
 .drawer-top.drawer-open .drawer-hamburger {
   z-index: var(--drawer-hamburger-zIndex);
   right: 0;

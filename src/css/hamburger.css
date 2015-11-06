@@ -12,6 +12,7 @@
   background: 0;
   background-color: transparent;
 }
+
 .drawer-hamburger:hover {
   cursor: pointer;
 }
@@ -21,6 +22,7 @@
   display: block;
   margin-top: 10px;
 }
+
 .drawer-hamburger-icon,
 .drawer-hamburger-icon:before,
 .drawer-hamburger-icon:after {
@@ -30,6 +32,7 @@
   border-radius: 1px;
   background-color: var(--drawer-hamburger-bg-color);
 }
+
 .drawer-hamburger-icon:before,
 .drawer-hamburger-icon:after {
   position: absolute;
@@ -37,19 +40,24 @@
   left: 0;
   content: ' ';
 }
+
 .drawer-hamburger-icon:after {
   top: 10px;
 }
+
 .drawer-open .drawer-hamburger-icon {
   background-color: transparent;
 }
+
 .drawer-open .drawer-hamburger-icon:before,
 .drawer-open .drawer-hamburger-icon:after {
   top: 0;
 }
+
 .drawer-open .drawer-hamburger-icon:before {
   transform: rotate(45deg);
 }
+
 .drawer-open .drawer-hamburger-icon:after {
   transform: rotate(-45deg);
 }

@@ -1,5 +1,3 @@
-/* main
- * -------------------------------------- */
 .drawer-main {
   position: fixed;
   z-index: var(--drawer-main-zIndex);
