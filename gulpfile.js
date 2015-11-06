@@ -74,7 +74,7 @@ gulp.task('serve', function() {
   browserSync.init({
     server: {
       baseDir: '.',
-      index: dirs.sandbox + "/index.html"
+      directory: true
     }
   });
   gulp.watch([ dirs.src + '/css/**/*.css'], ['css']);
