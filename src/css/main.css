@@ -1,8 +1,0 @@
-.drawer-main {
-  position: fixed;
-  z-index: var(--drawer-main-zIndex);
-  top: 0;
-  overflow: hidden;
-  width: var(--drawer-width-phone);
-  height: 100%;
-}
