@@ -1,0 +1,18 @@
+.drawer-dark .drawer-main {
+  background-color: var(--drawer-dark-bg-color);
+  color: var(--drawer-dark-text-color);
+}
+
+.drawer-dark .drawer-main a {
+  color: var(--drawer-dark-link-color);
+}
+
+.drawer-dark a:hover {
+  color: var(--drawer-dark-hover-color);
+  background-color: #000;
+}
+
+/* dropdown */
+.drawer-dark .dropdown-menu {
+  background-color: var(--drawer-dark-bg-color);
+}
