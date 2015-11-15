@@ -10,7 +10,7 @@
   ],
   "homepage": "http://git.blivesta.com/drawer",
   "license": "MIT",
-  "main": "dist/js/jquery.drawer.js",
+  "main": "dist/js/drawer.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/blivesta/drawer.git"

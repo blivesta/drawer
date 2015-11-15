@@ -56,7 +56,6 @@ gulp.task('js', function(){
     .pipe(jshint())
     .pipe(jshint.reporter(stylish))
     .pipe(header(banner, { pkg:pkg }))
-    .pipe(rename({prefix: 'jquery.'}))
     .pipe(gulp.dest(dirs.dist + '/js'))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))

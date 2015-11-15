@@ -10,7 +10,7 @@
   "homepage": "http://git.blivesta.com/drawer",
   "main": [
     "dist/css/drawer.min.css",
-    "dist/js/jquery.drawer.min.js"
+    "dist/js/drawer.min.js"
   ],
   "ignore": [
     ".*"
