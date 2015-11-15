@@ -29,6 +29,10 @@
           close: 'drawer-close',
           dropdown: 'drawer-dropdown'
         },
+        events: {
+          opened: 'drawer.opened',
+          closed: 'drawer.closed'
+        }
       };
 
       return this.each(function() {
@@ -99,6 +103,7 @@
           $this.css({
             'overflow': 'hidden'
           }).trigger('drawer.opened');
+          $this.trigger(__.settings.events.opened);
         });
     },
 
@@ -115,6 +120,7 @@
           $this.css({
             'overflow': 'auto'
           }).trigger('drawer.closed');
+          $this.trigger(__.settings.events.closed);
         });
     },
 
