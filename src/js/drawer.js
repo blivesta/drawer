@@ -14,6 +14,10 @@
   var __ = {
     init: function(options) {
       options = $.extend({
+        iscroll: {
+          mouseWheel: true,
+          preventDefault: false
+        },
       }, options);
 
       __.settings = {
@@ -41,21 +45,18 @@
         }
 
         $this.append($upper);
+          var iScroll = new IScroll('.' + __.settings.class.nav, options.iscroll);
 
-        var drawerScroll = new IScroll('.'+options.mastaClass, {
-          mouseWheel:true,
-          preventDefault: false
-        });
 
           $(document).on('click.' + namespace, '.' + __.settings.class.toggle, function() {
             __.toggle.call(_this);
             return iScroll.refresh();
           });
 
-        $(window).resize(function() {
-          __.close.call(_this);
-          drawerScroll.refresh();
-        });
+          $(window).resize(function() {
+            __.close.call(_this);
+            return iScroll.refresh();
+          });
 
           $('.' + __.settings.class.dropdown)
             .on(options.dropdownEvents.opened + ', ' + options.dropdownEvents.closed, function() {
