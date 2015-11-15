@@ -38,10 +38,7 @@
 
         if (!data) {
           options = $.extend({}, options);
-          $this.data(namespace, {
-            options: options
-          });
-        }
+          $this.data(namespace, { options: options });
 
           var iScroll = new IScroll('.' + __.settings.class.nav, options.iscroll);
 
@@ -124,7 +121,7 @@
     destroy: function() {
       return this.each(function() {
         var $this = $(this);
-        $(window).unbind('.' + namespace);
+        $(window).off('.' + namespace);
         $this.removeData(namespace);
       });
     }
