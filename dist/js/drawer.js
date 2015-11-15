@@ -21,107 +21,123 @@
   var __ = {
     init: function(options) {
       options = $.extend({
-        mastaClass:        'drawer-main',
-        toggleClass:       'drawer-toggle',
-        upperClass:        'drawer-overlay-upper',
-        openClass:         'drawer-open',
-        closeClass:        'drawer-close',
-        apiToggleClass:    'drawer-api-toggle',
-        responsiveClass:   'drawer-responsive',
-        dropdownClass:     'dropdown',
-        dropdownShown:     'shown.bs.dropdown',
-        dropdownHidden:    'hidden.bs.dropdown'
+        iscroll: {
+          mouseWheel: true,
+          preventDefault: false
+        },
+        dropdownEvents: {
+          opened: 'shown.bs.dropdown',
+          closed: 'hidden.bs.dropdown'
+        }
       }, options);
+
+      __.settings = {
+        state: false,
+        class: {
+          nav: 'drawer-nav',
+          toggle: 'drawer-toggle',
+          upper: 'drawer-overlay',
+          open: 'drawer-open',
+          close: 'drawer-close',
+          dropdown: 'drawer-dropdown'
+        },
+        events: {
+          opened: 'drawer.opened',
+          closed: 'drawer.closed'
+        }
+      };
+
       return this.each(function() {
         var _this = this;
         var $this = $(this);
         var data = $this.data(namespace);
-        var $upper = $('<div>').addClass(options.upperClass+' '+options.toggleClass);
 
         if (!data) {
           options = $.extend({}, options);
-          $this.data(namespace, {
-            options: options
-          });
-        }
+          $this.data(namespace, { options: options });
 
-        $this.append($upper);
+          var iScroll = new IScroll('.' + __.settings.class.nav, options.iscroll);
 
-        var drawerScroll = new IScroll('.'+options.mastaClass, {
-          mouseWheel:true,
-          preventDefault: false
-        });
+          __.addOverlay.call(_this);
 
-        $('.' + options.toggleClass + ', .' + options.apiToggleClass)
-          .off('click.' + namespace)
-          .on('click.' + namespace, function() {
+          $(document).on('click.' + namespace, '.' + __.settings.class.toggle, function() {
             __.toggle.call(_this);
-            drawerScroll.refresh();
+            return iScroll.refresh();
           });
 
-        $(window).resize(function() {
-          __.close.call(_this);
-          drawerScroll.refresh();
-        });
+          $(window).resize(function() {
+            __.close.call(_this);
+            return iScroll.refresh();
+          });
 
-        $('.' + options.dropdownClass)
-        .on(options.dropdownShown, function() { drawerScroll.refresh(); })
-        .on(options.dropdownHidden, function() { drawerScroll.refresh(); });
+          $('.' + __.settings.class.dropdown)
+            .on(options.dropdownEvents.opened + ', ' + options.dropdownEvents.closed, function() {
+              return iScroll.refresh();
+            });
+        }
 
       }); // end each
     },
 
-    toggle: function(options) {
+    addOverlay: function(options) {
       var _this = this;
       var $this = $(this);
       options = $this.data(namespace).options;
-      var open = $this.hasClass(options.openClass);
+      var $upper = $('<div>').addClass(__.settings.class.upper + ' ' + __.settings.class.toggle);
 
-      if(open){
-        __.close.call(_this);
+      return $this.append($upper);
+    },
+
+    toggle: function() {
+      var _this = this;
+
+      if (__.settings.state){
+        return __.close.call(_this);
       } else {
-        __.open.call(_this);
+        return __.open.call(_this);
       }
     },
 
     open: function(options) {
       var $this = $(this);
       options = $this.data(namespace).options;
+
       if (touches) {
         $this.on('touchmove.' + namespace, function(event) {
           event.preventDefault();
         });
       }
-      $this
-        .removeClass(options.closeClass)
-        .addClass(options.openClass)
+
+      return $this
+        .removeClass(__.settings.class.close)
+        .addClass(__.settings.class.open)
+        .css({ 'overflow': 'hidden' })
         .drawerCallback(function(){
-          $this.css({
-            'overflow': 'hidden'
-          }).trigger('drawer.opened');
+          __.settings.state = true;
+          $this.trigger(__.settings.events.opened);
         });
     },
 
     close: function(options) {
       var $this = $(this);
       options = $this.data(namespace).options;
-      if (touches) {
-        $this.off('touchmove.' + namespace);
-      }
-      $this
-        .removeClass(options.openClass)
-        .addClass(options.closeClass)
+
+      if (touches) $this.off('touchmove.' + namespace);
+
+      return $this
+        .removeClass(__.settings.class.open)
+        .addClass(__.settings.class.close)
+        .css({ 'overflow': 'auto' })
         .drawerCallback(function(){
-          $this.css({
-            'overflow': 'auto'
-          }).trigger('drawer.closed');
+          __.settings.state = false;
+          $this.trigger(__.settings.events.closed);
         });
     },
 
     destroy: function() {
       return this.each(function() {
         var $this = $(this);
-        $(window).unbind('.' + namespace);
+        $(window).off('.' + namespace);
         $this.removeData(namespace);
       });
     }
