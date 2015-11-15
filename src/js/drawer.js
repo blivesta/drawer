@@ -35,7 +35,6 @@
         var _this = this;
         var $this = $(this);
         var data = $this.data(namespace);
-        var $upper = $('<div>').addClass(options.upperClass+' '+options.toggleClass);
 
         if (!data) {
           options = $.extend({}, options);
@@ -44,9 +43,9 @@
           });
         }
 
-        $this.append($upper);
           var iScroll = new IScroll('.' + __.settings.class.nav, options.iscroll);
 
+          __.addOverlay.call(_this);
 
           $(document).on('click.' + namespace, '.' + __.settings.class.toggle, function() {
             __.toggle.call(_this);
@@ -67,11 +66,17 @@
       }); // end each
     },
 
-    toggle: function(options) {
+    addOverlay: function(options) {
       var _this = this;
       var $this = $(this);
       options = $this.data(namespace).options;
-      var open = $this.hasClass(options.openClass);
+      var $upper = $('<div>').addClass(__.settings.class.upper + ' ' + __.settings.class.toggle);
+
+      return $this.append($upper);
+    },
+
+    toggle: function() {
+      var _this = this;
 
       if(open){
         __.close.call(_this);
