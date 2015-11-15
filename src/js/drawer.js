@@ -18,6 +18,10 @@
           mouseWheel: true,
           preventDefault: false
         },
+        dropdownEvents: {
+          opened: 'shown.bs.dropdown',
+          closed: 'hidden.bs.dropdown'
+        }
       }, options);
 
       __.settings = {
