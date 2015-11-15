@@ -1,0 +1,40 @@
+:root {
+  --drawer-width: 260px;
+  --drawer-width-md: 200px;
+  --drawer-width-lg: var(--drawer-width);
+  --drawer-navbar-dropdown-width: var(--drawer-width);
+  --drawer-navbar-container-maxWidth: 1200px;
+
+  --drawer-top-nav-maxHeight: 100%;
+
+  --drawer-transition: all .8s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+
+  --drawer-font-size: 1rem;
+  --drawer-brand-font-size: 1.5rem;
+  --drawer-gutter-x: 1rem;
+  --drawer-navbar-height: 60px;
+
+  --drawer-overlay-zIndex: 100;
+  --drawer-nav-zIndex: calc(var(--drawer-overlay-zIndex) + 1);
+  --drawer-navbar-zIndex: calc(var(--drawer-overlay-zIndex) + 2);
+  --drawer-brand-zIndex: calc(var(--drawer-overlay-zIndex) + 3);
+  --drawer-hamburger-zIndex: calc(var(--drawer-overlay-zIndex) + 4);
+
+  --drawer-color: #555;
+  --drawer-bgColor: #222;
+  --drawer-borderColor: #333;
+  --drawer-linkColor: #888;
+  --drawer-hoverColor: #fff;
+  --drawer-hoverBgColor: #111;
+
+  --drawer-brand-color: #fff;
+  --drawer-hamburger-color: var(--drawer-linkColor);
+
+  --drawer-overlay-bgColor: rgba(0, 0, 0, .5);
+
+  --drawer-pageContants-bgColor: #fff;
+}
+
+@custom-media --drawer-viewport-sm (width <= 40em);
+@custom-media --drawer-viewport-md (width >= 48em);
+@custom-media --drawer-viewport-lg (width >= 75em);

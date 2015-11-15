@@ -1,0 +1,66 @@
+.drawer-nav {
+  background-color: var(--drawer-bgColor);
+  color: var(--drawer-color);
+  position: fixed;
+  z-index: var(--drawer-nav-zIndex);
+  top: 0;
+  overflow: hidden;
+  width: var(--drawer-width);
+  height: 100%;
+  transition: var(--drawer-transition);
+}
+
+.drawer-nav a,
+.drawer-nav a:hover {
+  text-decoration: none;
+}
+
+.drawer-nav a {
+  color: var(--drawer-linkColor);
+}
+
+.drawer-nav a:hover {
+  color: var(--drawer-hoverColor);
+  background-color: var(--drawer-hoverBgColor);
+}
+
+.drawer-nav a:focus {
+  outline: none;
+}
+
+.drawer-brand {
+  color: var(--drawer-brand-color) !important;
+  display: block;
+  font-size: var(--drawer-brand-font-size);
+  line-height: var(--drawer-navbar-height);
+  padding-right: var(--drawer-gutter-x);
+  padding-left: var(--drawer-gutter-x);
+}
+
+.drawer-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.drawer-menu-item {
+  padding: var(--drawer-gutter-x);
+  font-size: var(--drawer-font-size);
+  display: block;
+}
+
+/* overlay */
+.drawer-overlay {
+  background-color: var(--drawer-overlay-bgColor);
+  position: fixed;
+  z-index: var(--drawer-overlay-zIndex);
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.drawer-open .drawer-overlay {
+  display: block;
+}
