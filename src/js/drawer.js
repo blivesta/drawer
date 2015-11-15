@@ -21,6 +21,7 @@
       }, options);
 
       __.settings = {
+        state: false,
         class: {
           nav: 'drawer-nav',
           toggle: 'drawer-toggle',
@@ -79,10 +80,10 @@
     toggle: function() {
       var _this = this;
 
-      if(open){
-        __.close.call(_this);
+      if (__.settings.state){
+        return __.close.call(_this);
       } else {
-        __.open.call(_this);
+        return __.open.call(_this);
       }
     },
 
@@ -103,6 +104,7 @@
           $this.css({
             'overflow': 'hidden'
           }).trigger('drawer.opened');
+          __.settings.state = true;
           $this.trigger(__.settings.events.opened);
         });
     },
@@ -120,6 +122,7 @@
           $this.css({
             'overflow': 'auto'
           }).trigger('drawer.closed');
+          __.settings.state = false;
           $this.trigger(__.settings.events.closed);
         });
     },
