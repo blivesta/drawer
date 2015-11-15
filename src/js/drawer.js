@@ -14,17 +14,19 @@
   var __ = {
     init: function(options) {
       options = $.extend({
-        mastaClass:        'drawer-main',
-        toggleClass:       'drawer-toggle',
-        upperClass:        'drawer-overlay-upper',
-        openClass:         'drawer-open',
-        closeClass:        'drawer-close',
-        apiToggleClass:    'drawer-api-toggle',
-        responsiveClass:   'drawer-responsive',
-        dropdownClass:     'dropdown',
-        dropdownShown:     'shown.bs.dropdown',
-        dropdownHidden:    'hidden.bs.dropdown'
       }, options);
+
+      __.settings = {
+        class: {
+          nav: 'drawer-nav',
+          toggle: 'drawer-toggle',
+          upper: 'drawer-overlay',
+          open: 'drawer-open',
+          close: 'drawer-close',
+          dropdown: 'drawer-dropdown'
+        },
+      };
+
       return this.each(function() {
         var _this = this;
         var $this = $(this);
@@ -45,11 +47,9 @@
           preventDefault: false
         });
 
-        $('.' + options.toggleClass + ', .' + options.apiToggleClass)
-          .off('click.' + namespace)
-          .on('click.' + namespace, function() {
+          $(document).on('click.' + namespace, '.' + __.settings.class.toggle, function() {
             __.toggle.call(_this);
-            drawerScroll.refresh();
+            return iScroll.refresh();
           });
 
         $(window).resize(function() {
@@ -57,9 +57,11 @@
           drawerScroll.refresh();
         });
 
-        $('.' + options.dropdownClass)
-        .on(options.dropdownShown, function() { drawerScroll.refresh(); })
-        .on(options.dropdownHidden, function() { drawerScroll.refresh(); });
+          $('.' + __.settings.class.dropdown)
+            .on(options.dropdownEvents.opened + ', ' + options.dropdownEvents.closed, function() {
+              return iScroll.refresh();
+            });
+        }
 
       }); // end each
     },
@@ -80,14 +82,16 @@
     open: function(options) {
       var $this = $(this);
       options = $this.data(namespace).options;
+
       if (touches) {
         $this.on('touchmove.' + namespace, function(event) {
           event.preventDefault();
         });
       }
-      $this
-        .removeClass(options.closeClass)
-        .addClass(options.openClass)
+
+      return $this
+        .removeClass(__.settings.class.close)
+        .addClass(__.settings.class.open)
         .drawerCallback(function(){
           $this.css({
             'overflow': 'hidden'
@@ -98,12 +102,12 @@
     close: function(options) {
       var $this = $(this);
       options = $this.data(namespace).options;
-      if (touches) {
-        $this.off('touchmove.' + namespace);
-      }
-      $this
-        .removeClass(options.openClass)
-        .addClass(options.closeClass)
+
+      if (touches) $this.off('touchmove.' + namespace);
+
+      return $this
+        .removeClass(__.settings.class.open)
+        .addClass(__.settings.class.close)
         .drawerCallback(function(){
           $this.css({
             'overflow': 'auto'
