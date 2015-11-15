@@ -64,7 +64,7 @@
           });
 
           $('.' + __.settings.class.dropdown)
-            .on(options.dropdownEvents.opened + ', ' + options.dropdownEvents.closed, function() {
+            .on(options.dropdownEvents.opened + ' ' + options.dropdownEvents.closed, function() {
               return iScroll.refresh();
             });
         }
