@@ -2,9 +2,10 @@
   "name": "drawer",
   "description": "A small CSS3 and jQuery plugin for app style drawer menu.",
   "keywords": [
-    "jquery",
+    "jQuery",
+    "CSS",
     "drawer",
-    "menu",
+    "navigation",
     "responsive"
   ],
   "homepage": "http://git.blivesta.com/drawer",
