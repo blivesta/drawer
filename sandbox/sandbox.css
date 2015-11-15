@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: 'Avenir Next', 'Helvetica Neue', sans-serif;
+}
+
+.item {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.item--height800 {
+  height: 800px;
+}
+.item--height2000 {
+  height: 2000px;
+}
+
+.bg-indigo,
+.bg-pink,
+.bg-purple,
+.bg-cyan,
+.bg-yellow,
+.bg-green,
+.bg-brown,
+.bg-blueGrey,
+.bg-orange,
+.bg-black {
+  color: #fff;
+}
+
+.bg-indigo {
+  background-color: #3F51B5;
+}
+
+.bg-pink {
+  background-color: #E91E63;
+}
+
+.bg-purple {
+  background-color: #673AB7;
+}
+
+.bg-cyan {
+  background-color: #00BCD4;
+}
+
+.bg-yellow {
+  background-color: #FFEB3B;
+}
+
+.bg-green {
+  background-color: #4CAF50;
+}
+
+.bg-brown {
+  background-color: #795548;
+}
+
+.bg-blueGrey {
+  background-color: #607D8B;
+}
+
+.bg-orange {
+  background-color: orange;
+}
+
+.bg-black {
+  background-color: #000;
+}

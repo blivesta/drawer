@@ -29,7 +29,7 @@ var banner = [
 var dirs = {
   src:'./src',
   dist:'./dist',
-  sandbox:'./sandbox'
+  sandbox:'./sandbox',
 };
 
 
