@@ -3,7 +3,6 @@
 var browserSync = require('browser-sync');
 var browserReload = browserSync.reload;
 var cssnano = require('cssnano');
-var cssnested = require('postcss-nested')
 var cssnext = require('postcss-cssnext');
 var cssimport = require('postcss-import')
 var del = require('del');
@@ -36,7 +35,6 @@ var dirs = {
 gulp.task('css', function () {
   var processors = [
     cssimport,
-    cssnested,
     cssnext,
   ];
   return gulp
