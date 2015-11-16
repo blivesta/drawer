@@ -1,6 +1,6 @@
 /* dropdown */
 .drawer-dropdown-menu {
-  background-color: var(--drawer-bgColor);
+  background-color: var(--drawer-dropdown-bgColor);
   display: none;
   margin: 0;
   padding: 0;
@@ -14,11 +14,18 @@
 }
 
 .drawer-dropdown-menu-item {
+  color: var(--drawer-dropdown-color);
   display: block;
   padding:0;
   line-height: var(--drawer-navbar-height);
   padding-left: calc(var(--drawer-gutter-x) * 2);
   padding-right: var(--drawer-gutter-x);
+}
+
+.drawer-dropdown-menu-item:hover,
+.drawer-dropdown-menu-item:focus {
+  color: var(--drawer-dropdown-hover-color);
+  background-color: var(--drawer-dropdown-hover-bgColor);
 }
 
 /* open */

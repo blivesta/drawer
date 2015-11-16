@@ -16,12 +16,7 @@
 }
 
 .drawer-nav a {
-  color: var(--drawer-linkColor);
-}
-
-.drawer-nav a:hover {
-  color: var(--drawer-hoverColor);
-  background-color: var(--drawer-hoverBgColor);
+  color: var(--drawer-link-color);
 }
 
 .drawer-nav a:focus {
@@ -29,9 +24,10 @@
 }
 
 .drawer-brand {
-  color: var(--drawer-brand-color) !important;
+  color: var(--drawer-brand-color);
   display: block;
-  font-size: var(--drawer-brand-font-size);
+  font-size: var(--drawer-brand-fontSize);
+  font-weight: bold;
   line-height: var(--drawer-navbar-height);
   padding-right: var(--drawer-gutter-x);
   padding-left: var(--drawer-gutter-x);
@@ -45,8 +41,14 @@
 
 .drawer-menu-item {
   padding: var(--drawer-gutter-x);
-  font-size: var(--drawer-font-size);
+  font-size: var(--drawer-fontSize);
   display: block;
+}
+
+.drawer-menu-item:hover,
+.drawer-menu-item:focus {
+  color: var(--drawer-hover-color);
+  background-color: var(--drawer-hover-bgColor);
 }
 
 /* overlay */

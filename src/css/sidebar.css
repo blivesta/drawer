@@ -24,6 +24,7 @@
   /* Left */
   .drawer--sidebar.drawer--left .drawer-nav {
     left: 0;
+    border-right: 1px solid var(--drawer-borderColor);
   }
 
   .drawer--sidebar.drawer--left .drawer-contants {
@@ -33,6 +34,7 @@
   /* Right */
   .drawer--sidebar.drawer--right .drawer-nav {
     right: 0;
+    border-left: 1px solid var(--drawer-borderColor);
   }
 
   .drawer--sidebar.drawer--right .drawer-contants {
