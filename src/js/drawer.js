@@ -72,10 +72,9 @@
       }); // end each
     },
 
-    addOverlay: function(options) {
+    addOverlay: function() {
       var _this = this;
       var $this = $(this);
-      options = $this.data(namespace).options;
       var $upper = $('<div>').addClass(__.settings.class.upper + ' ' + __.settings.class.toggle);
 
       return $this.append($upper);
