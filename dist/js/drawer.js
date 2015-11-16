@@ -60,7 +60,7 @@
 
           __.addOverlay.call(_this);
 
-          $(document).on('click.' + namespace, '.' + __.settings.class.toggle, function() {
+          $('.' + __.settings.class.toggle).on('click.' + namespace, function() {
             __.toggle.call(_this);
             return iScroll.refresh();
           });
@@ -79,10 +79,9 @@
       }); // end each
     },
 
-    addOverlay: function(options) {
+    addOverlay: function() {
       var _this = this;
       var $this = $(this);
-      options = $this.data(namespace).options;
       var $upper = $('<div>').addClass(__.settings.class.upper + ' ' + __.settings.class.toggle);
 
       return $this.append($upper);
