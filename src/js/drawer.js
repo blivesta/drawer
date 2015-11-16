@@ -53,7 +53,7 @@
 
           __.addOverlay.call(_this);
 
-          $(document).on('click.' + namespace, '.' + __.settings.class.toggle, function() {
+          $('.' + __.settings.class.toggle).on('click.' + namespace, function() {
             __.toggle.call(_this);
             return iScroll.refresh();
           });
