@@ -1,6 +1,4 @@
 .drawer-nav {
-  background-color: var(--drawer-bgColor);
-  color: var(--drawer-color);
   position: fixed;
   z-index: var(--drawer-nav-zIndex);
   top: 0;
@@ -8,29 +6,19 @@
   width: var(--drawer-width);
   height: 100%;
   transition: var(--drawer-transition);
-}
-
-.drawer-nav a,
-.drawer-nav a:hover {
-  text-decoration: none;
-}
-
-.drawer-nav a {
-  color: var(--drawer-link-color);
-}
-
-.drawer-nav a:focus {
-  outline: none;
+  color: var(--drawer-color);
+  background-color: var(--drawer-bgColor);
 }
 
 .drawer-brand {
-  color: var(--drawer-brand-color);
-  display: block;
   font-size: var(--drawer-brand-fontSize);
   font-weight: bold;
   line-height: var(--drawer-navbar-height);
+  display: block;
   padding-right: var(--drawer-gutter-x);
   padding-left: var(--drawer-gutter-x);
+  text-decoration: none;
+  color: var(--drawer-brand-color);
 }
 
 .drawer-menu {
@@ -40,20 +28,21 @@
 }
 
 .drawer-menu-item {
-  padding: var(--drawer-gutter-x);
   font-size: var(--drawer-fontSize);
   display: block;
+  padding: var(--drawer-gutter-x);
+  text-decoration: none;
+  color: var(--drawer-link-color);
 }
 
-.drawer-menu-item:hover,
-.drawer-menu-item:focus {
+.drawer-menu-item:hover {
+  text-decoration: underline;
   color: var(--drawer-hover-color);
   background-color: var(--drawer-hover-bgColor);
 }
 
 /* overlay */
 .drawer-overlay {
-  background-color: var(--drawer-overlay-bgColor);
   position: fixed;
   z-index: var(--drawer-overlay-zIndex);
   top: 0;
@@ -61,6 +50,7 @@
   display: none;
   width: 100%;
   height: 100%;
+  background-color: var(--drawer-overlay-bgColor);
 }
 
 .drawer-open .drawer-overlay {

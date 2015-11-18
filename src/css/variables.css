@@ -21,22 +21,24 @@
   --drawer-color: #222;
   --drawer-bgColor: #fff;
 
-  --drawer-link-color: #222;
+  --drawer-link-color: var(--drawer-color);
   --drawer-hover-color: #555;
-  --drawer-hover-bgColor: #eee;
+  --drawer-hover-bgColor: transparent;
+  --drawer-focus-color: var(--drawer-link-color);
+  --drawer-focus-bgColor: #f5f5f5;
 
   --drawer-borderColor: #ddd;
 
-  --drawer-brand-color: #000;
+  --drawer-brand-color: var(--drawer-color);
 
-  --drawer-hamburger-color: #000;
+  --drawer-hamburger-color: var(--drawer-color);
 
   --drawer-overlay-bgColor: rgba(0, 0, 0, .2);
 
-  --drawer-dropdown-color: #fff;
-  --drawer-dropdown-bgColor: #fff;
-  --drawer-dropdown-hover-color: #555;
-  --drawer-dropdown-hover-bgColor: #f5f5f5;
+  --drawer-dropdown-color: var(--drawer-link-color);
+  --drawer-dropdown-bgColor: var(--drawer-bgColor);
+  --drawer-dropdown-hover-color: var(--drawer-hover-color);
+  --drawer-dropdown-hover-bgColor: transparent;
 
   --drawer-pageContants-bgColor: #fff;
 
