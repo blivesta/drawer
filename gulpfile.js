@@ -23,6 +23,7 @@ var banner = [
 ' * License : <%= pkg.license %>',
 ' * Author : <%= pkg.author %>',
 ' */',
+'',
 ''].join('\n');
 
 var dirs = {
@@ -39,10 +40,13 @@ gulp.task('css', function () {
   ];
   return gulp
     .src(dirs.src + '/css/drawer.css')
-    .pipe(header(banner, { pkg: pkg }))
     .pipe(postcss(processors))
+    .pipe(header(banner, { pkg: pkg }))
     .pipe(gulp.dest(dirs.dist + '/css'))
-    .pipe(postcss([cssnano]))
+    .pipe(postcss([
+      cssnano({ discardComments: { removeAll: true } })
+    ]))
+    .pipe(header(banner, { pkg: pkg }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(dirs.dist + '/css'));
 });
