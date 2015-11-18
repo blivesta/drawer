@@ -60,7 +60,7 @@ gulp.task('js', function(){
     .pipe(header(banner, { pkg:pkg }))
     .pipe(gulp.dest(dirs.dist + '/js'))
     .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(header(banner, { pkg:pkg }))
     .pipe(gulp.dest(dirs.dist + '/js'));
 });
