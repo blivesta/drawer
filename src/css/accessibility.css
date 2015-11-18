@@ -1,6 +1,11 @@
-/* Only display content to screen readers
- *
- * See: http://a11yproject.com/posts/how-to-hide-content */
+/*!------------------------------------*\
+    accessibility
+\*!------------------------------------*/
+
+/*!
+ * Only display content to screen readers
+ * See: http://a11yproject.com/posts/how-to-hide-content
+ */
 .sr-only {
   position: absolute;
   overflow: hidden;
@@ -12,9 +17,11 @@
   border: 0;
 }
 
-/* Use in conjunction with .sr-only to only display content when it's focused.
+/*!
+ * Use in conjunction with .sr-only to only display content when it's focused.
  * Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
- * Credit: HTML5 Boilerplate */
+ * Credit: HTML5 Boilerplate
+ */
 .sr-only-focusable:active,
 .sr-only-focusable:focus {
   position: static;

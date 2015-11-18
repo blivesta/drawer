@@ -1,3 +1,7 @@
+/*!------------------------------------*\
+    Hamburger
+\*!------------------------------------*/
+
 .drawer-hamburger {
   position: fixed;
   z-index: var(--drawer-hamburger-zIndex);

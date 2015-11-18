@@ -1,5 +1,8 @@
-/* .drawer modifier */
-.drawer--navbarTopGutter {
+/*!------------------------------------*\
+    Navbar
+\*!------------------------------------*/
+
+.drawer-topGutter {
   padding-top: var(--drawer-navbar-height);
 }
 
@@ -15,7 +18,7 @@
   width: 100%;
 }
 
-/* .drawer-navbar modifier */
+/*! .drawer-navbar modifier */
 .drawer-navbar--fixed {
   position: fixed;
 }
@@ -106,7 +109,7 @@
     padding: 0;
   }
 
-  /* dropdown */
+  /*! dropdown */
   .drawer-navbar .drawer-dropdown-menu {
     border: 1px solid var(--drawer-borderColor);
     position: absolute;

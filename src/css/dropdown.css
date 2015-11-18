@@ -1,4 +1,7 @@
-/* dropdown */
+/*!------------------------------------*\
+    Dropdown
+\*!------------------------------------*/
+
 .drawer-dropdown-menu {
   display: none;
   box-sizing: border-box;
@@ -29,12 +32,12 @@
   background-color: var(--drawer-dropdown-hover-bgColor);
 }
 
-/* open */
+/*! open */
 .drawer-dropdown.open > .drawer-dropdown-menu {
   display: block;
 }
 
-/* drawer-caret */
+/*! drawer-caret */
 .drawer-dropdown .drawer-caret {
   display: inline-block;
   width: 0;
@@ -48,7 +51,7 @@
   border-left: 4px solid transparent;
 }
 
-/* open */
+/*! open */
 .drawer-dropdown.open .drawer-caret {
   transform: rotate(180deg);
 }

@@ -1,3 +1,7 @@
+/*!------------------------------------*\
+    Right
+\*!------------------------------------*/
+
 .drawer--right .drawer-nav {
   right: 0;
   transform: translate3d(var(--drawer-width), 0, 0);
@@ -8,7 +12,7 @@
   transform: translate3d(0, 0, 0);
 }
 
-/* hamburger */
+/*! hamburger */
 .drawer--right .drawer-hamburger {
   right: 0;
   transform: translate3d(0, 0, 0);
@@ -18,7 +22,7 @@
   transform: translate3d(calc(0 - var(--drawer-width)), 0, 0);
 }
 
-/* navbar */
+/*! navbar */
 .drawer--right.drawer-open .drawer-navbar .drawer-hamburger {
   transform: translate3d(0, 0, 0);
 }
