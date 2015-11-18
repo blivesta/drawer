@@ -5,9 +5,12 @@
  * License : MIT
  * Author : blivesta <design@blivesta.com> (http://blivesta.com/)
  */
+
+/*!------------------------------------*\
+    Base
+\*!------------------------------------*/
+
 .drawer-nav {
-  background-color: #fff;
-  color: #222;
   position: fixed;
   z-index: 101;
   top: 0;
@@ -16,32 +19,22 @@
   height: 100%;
   -webkit-transition: all .8s cubic-bezier(0.190, 1.000, 0.220, 1.000);
   transition: all .8s cubic-bezier(0.190, 1.000, 0.220, 1.000);
-}
-
-.drawer-nav a,
-.drawer-nav a:hover {
-  text-decoration: none;
-}
-
-.drawer-nav a {
   color: #222;
-}
-
-.drawer-nav a:focus {
-  outline: none;
+  background-color: #fff;
 }
 
 .drawer-brand {
-  color: #000;
-  display: block;
   font-size: 24px;
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 60px;
+  display: block;
   padding-right: 16px;
   padding-right: 1rem;
   padding-left: 16px;
   padding-left: 1rem;
+  text-decoration: none;
+  color: #222;
 }
 
 .drawer-menu {
@@ -51,23 +44,23 @@
 }
 
 .drawer-menu-item {
-  padding: 16px;
-  padding: 1rem;
   font-size: 16px;
   font-size: 1rem;
   display: block;
+  padding: 16px;
+  padding: 1rem;
+  text-decoration: none;
+  color: #222;
 }
 
-.drawer-menu-item:hover,
-.drawer-menu-item:focus {
+.drawer-menu-item:hover {
+  text-decoration: underline;
   color: #555;
-  background-color: #eee;
+  background-color: transparent;
 }
 
-/* overlay */
+/*! overlay */
 .drawer-overlay {
-  background-color: #000000;
-  background-color: rgba(0, 0, 0, .2);
   position: fixed;
   z-index: 100;
   top: 0;
@@ -75,11 +68,17 @@
   display: none;
   width: 100%;
   height: 100%;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, .2);
 }
 
 .drawer-open .drawer-overlay {
   display: block;
 }
+/*!------------------------------------*\
+    Top
+\*!------------------------------------*/
+
 .drawer--top .drawer-nav {
   width: 100%;
   height: auto;
@@ -97,7 +96,7 @@
   padding-bottom: 0;
 }
 
-/* hamburger */
+/*! hamburger */
 .drawer--top .drawer-hamburger {
   right: 0;
 }
@@ -105,6 +104,10 @@
 .drawer--top.drawer-open .drawer-hamburger {
   right: 0;
 }
+/*!------------------------------------*\
+    Left
+\*!------------------------------------*/
+
 .drawer--left .drawer-nav {
   left: 0;
   -webkit-transform: translate3d(-260px, 0, 0);
@@ -116,7 +119,7 @@
           transform: translate3d(0, 0, 0);
 }
 
-/* hamburger */
+/*! hamburger */
 .drawer--left .drawer-hamburger {
   left: 0;
   -webkit-transform: translate3d(0, 0, 0);
@@ -128,11 +131,15 @@
           transform: translate3d(260px, 0, 0);
 }
 
-/* navbar */
+/*! navbar */
 .drawer--left.drawer-open .drawer-navbar .drawer-hamburger {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
+/*!------------------------------------*\
+    Right
+\*!------------------------------------*/
+
 .drawer--right .drawer-nav {
   right: 0;
   -webkit-transform: translate3d(260px, 0, 0);
@@ -145,7 +152,7 @@
           transform: translate3d(0, 0, 0);
 }
 
-/* hamburger */
+/*! hamburger */
 .drawer--right .drawer-hamburger {
   right: 0;
   -webkit-transform: translate3d(0, 0, 0);
@@ -157,11 +164,15 @@
           transform: translate3d(-260px, 0, 0);
 }
 
-/* navbar */
+/*! navbar */
 .drawer--right.drawer-open .drawer-navbar .drawer-hamburger {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
+/*!------------------------------------*\
+    Hamburger
+\*!------------------------------------*/
+
 .drawer-hamburger {
   position: fixed;
   z-index: 104;
@@ -194,7 +205,7 @@
 .drawer-hamburger-icon,
 .drawer-hamburger-icon:before,
 .drawer-hamburger-icon:after {
-  background-color: #000;
+  background-color: #222;
   width: 100%;
   height: 2px;
   -webkit-transition: all .8s cubic-bezier(0.190, 1.000, 0.220, 1.000);
@@ -233,9 +244,14 @@
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-/* Only display content to screen readers
- *
- * See: http://a11yproject.com/posts/how-to-hide-content */
+/*!------------------------------------*\
+    accessibility
+\*!------------------------------------*/
+
+/*!
+ * Only display content to screen readers
+ * See: http://a11yproject.com/posts/how-to-hide-content
+ */
 .sr-only {
   position: absolute;
   overflow: hidden;
@@ -247,9 +263,11 @@
   border: 0;
 }
 
-/* Use in conjunction with .sr-only to only display content when it's focused.
+/*!
+ * Use in conjunction with .sr-only to only display content when it's focused.
  * Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
- * Credit: HTML5 Boilerplate */
+ * Credit: HTML5 Boilerplate
+ */
 .sr-only-focusable:active,
 .sr-only-focusable:focus {
   position: static;
@@ -259,6 +277,10 @@
   height: auto;
   margin: 0;
 }
+/*!------------------------------------*\
+    Sidebar
+\*!------------------------------------*/
+
 .drawer--sidebar {
   background-color: #fff;
 }
@@ -284,7 +306,7 @@
     height: 100%;
   }
 
-  /* Left */
+  /*! Left */
   .drawer--sidebar.drawer--left .drawer-nav {
     left: 0;
     border-right: 1px solid #ddd;
@@ -294,7 +316,7 @@
     margin-left: 200px;
   }
 
-  /* Right */
+  /*! Right */
   .drawer--sidebar.drawer--right .drawer-nav {
     right: 0;
     border-left: 1px solid #ddd;
@@ -318,8 +340,11 @@
     margin-right: 260px;
   }
 }
-/* .drawer modifier */
-.drawer--navbarTopGutter {
+/*!------------------------------------*\
+    Navbar
+\*!------------------------------------*/
+
+.drawer-topGutter {
   padding-top: 60px;
 }
 
@@ -335,7 +360,7 @@
   width: 100%;
 }
 
-/* .drawer-navbar modifier */
+/*! .drawer-navbar modifier */
 .drawer-navbar--fixed {
   position: fixed;
 }
@@ -428,7 +453,7 @@
     padding: 0;
   }
 
-  /* dropdown */
+  /*! dropdown */
   .drawer-navbar .drawer-dropdown-menu {
     border: 1px solid #ddd;
     position: absolute;
@@ -440,44 +465,48 @@
   }
 
 }
-/* dropdown */
+/*!------------------------------------*\
+    Dropdown
+\*!------------------------------------*/
+
 .drawer-dropdown-menu {
-  background-color: #fff;
   display: none;
+  box-sizing: border-box;
+  width: 100%;
   margin: 0;
   padding: 0;
-  width:100%;
-  box-sizing: border-box;
+  background-color: #fff;
 }
 
 .drawer-dropdown-menu > li {
-  width:100%;
+  width: 100%;
   list-style: none;
 }
 
 .drawer-dropdown-menu-item {
-  color: #fff;
-  display: block;
-  padding:0;
   line-height: 60px;
-  padding-left: 32px;
-  padding-left: 2rem;
+  display: block;
+  padding: 0;
   padding-right: 16px;
   padding-right: 1rem;
+  padding-left: 32px;
+  padding-left: 2rem;
+  text-decoration: none;
+  color: #222;
 }
 
-.drawer-dropdown-menu-item:hover,
-.drawer-dropdown-menu-item:focus {
+.drawer-dropdown-menu-item:hover {
+  text-decoration: underline;
   color: #555;
-  background-color: #f5f5f5;
+  background-color: transparent;
 }
 
-/* open */
+/*! open */
 .drawer-dropdown.open > .drawer-dropdown-menu {
   display: block;
 }
 
-/* drawer-caret */
+/*! drawer-caret */
 .drawer-dropdown .drawer-caret {
   display: inline-block;
   width: 0;
@@ -496,7 +525,7 @@
   border-left: 4px solid transparent;
 }
 
-/* open */
+/*! open */
 .drawer-dropdown.open .drawer-caret {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
