@@ -1,11 +1,12 @@
 {
   "name": "jquery-drawer",
   "version": "3.0.0-beta.1",
-  "description": "A jQuery plugin for drawer menu.",
+  "description": "Flexible drawer menu using jQuery, iScroll and CSS.",
   "keywords": [
     "jQuery",
     "CSS",
     "drawer",
+    "iScroll",
     "navigation",
     "responsive"
   ],

@@ -1,6 +1,6 @@
 {
   "name": "drawer",
-  "description": "A jQuery plugin for drawer menu.",
+  "description": "Flexible drawer menu using jQuery, iScroll and CSS.",
   "keywords": [
     "jQuery",
     "CSS",
