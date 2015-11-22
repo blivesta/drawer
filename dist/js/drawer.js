@@ -1,6 +1,6 @@
 /*!
  * jquery-drawer v3.0.0-beta.1
- * A jQuery plugin for drawer menu of app style.
+ * Flexible drawer menu using jQuery, iScroll and CSS.
  * http://git.blivesta.com/drawer
  * License : MIT
  * Author : blivesta <design@blivesta.com> (http://blivesta.com/)

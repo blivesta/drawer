@@ -1,6 +1,6 @@
 /*!
  * jquery-drawer v3.0.0-beta.1
- * A jQuery plugin for drawer menu of app style.
+ * Flexible drawer menu using jQuery, iScroll and CSS.
  * http://git.blivesta.com/drawer
  * License : MIT
  * Author : blivesta <design@blivesta.com> (http://blivesta.com/)
@@ -24,15 +24,12 @@
 }
 
 .drawer-brand {
-  font-size: 24px;
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 60px;
   display: block;
-  padding-right: 16px;
-  padding-right: 1rem;
-  padding-left: 16px;
-  padding-left: 1rem;
+  padding-right: .75rem;
+  padding-left: .75rem;
   text-decoration: none;
   color: #222;
 }
@@ -44,11 +41,9 @@
 }
 
 .drawer-menu-item {
-  font-size: 16px;
   font-size: 1rem;
   display: block;
-  padding: 16px;
-  padding: 1rem;
+  padding: .75rem;
   text-decoration: none;
   color: #222;
 }
@@ -68,7 +63,6 @@
   display: none;
   width: 100%;
   height: 100%;
-  background-color: #000000;
   background-color: rgba(0, 0, 0, .2);
 }
 
@@ -82,6 +76,7 @@
 .drawer--top .drawer-nav {
   width: 100%;
   height: auto;
+  left:0;
   max-height: 100%;
   -webkit-transform: translate3d(0, -100%, 0);
           transform: translate3d(0, -100%, 0);
@@ -178,11 +173,9 @@
   z-index: 104;
   top: 0;
   display: block;
-  width: 64px;
-  padding-left: 16px;
-  padding-left: 1rem;
-  padding-right: 16px;
-  padding-right: 1rem;
+  width: 54px;
+  padding-left: .75rem;
+  padding-right: .75rem;
   padding-top: 18px;
   padding-bottom: 30px;
   border: 0;
@@ -194,6 +187,7 @@
 
 .drawer-hamburger:hover {
   cursor: pointer;
+  background-color: transparent;
 }
 
 .drawer-hamburger-icon {
@@ -285,7 +279,7 @@
   background-color: #fff;
 }
 
-.drawer--sidebar .drawer-contants {
+.drawer--sidebar .drawer-contents {
   background-color: #fff;
 }
 
@@ -312,7 +306,7 @@
     border-right: 1px solid #ddd;
   }
 
-  .drawer--sidebar.drawer--left .drawer-contants {
+  .drawer--sidebar.drawer--left .drawer-contents {
     margin-left: 200px;
   }
 
@@ -322,7 +316,7 @@
     border-left: 1px solid #ddd;
   }
 
-  .drawer--sidebar.drawer--right .drawer-contants {
+  .drawer--sidebar.drawer--right .drawer-contents {
     margin-right: 200px;
   }
 }
@@ -332,31 +326,29 @@
     width: 260px;
   }
 
-  .drawer--sidebar.drawer--left .drawer-contants {
+  .drawer--sidebar.drawer--left .drawer-contents {
     margin-left: 260px;
   }
 
-  .drawer--sidebar.drawer--right .drawer-contants {
+  .drawer--sidebar.drawer--right .drawer-contents {
     margin-right: 260px;
   }
 }
 /*!------------------------------------*\
     Navbar
 \*!------------------------------------*/
-
 .drawer-topGutter {
   padding-top: 60px;
 }
 
-.drawer-navbar,
 .drawer-navbar .drawer-navbar-header {
-  background-color: #fff;
   border-bottom: 1px solid #ddd;
+  background-color: #fff;
 }
 
 .drawer-navbar {
-  top:0;
   z-index: 102;
+  top: 0;
   width: 100%;
 }
 
@@ -366,22 +358,21 @@
 }
 
 .drawer-navbar-header {
-  position: absolute;
+  position: relative;
   z-index: 102;
   box-sizing: border-box;
   width: 100%;
   height: 60px;
-  padding: 0 16px;
-  padding: 0 1rem;
+  padding: 0 .75rem;
   text-align: center;
 }
 
 .drawer-navbar .drawer-brand {
   line-height: 60px;
+  display: inline-block;
   padding-top: 0;
   padding-bottom: 0;
   text-decoration: none;
-  display: inline-block;
 }
 
 .drawer-navbar .drawer-brand:hover {
@@ -396,8 +387,12 @@
   padding-bottom: 120px;
 }
 
-
 @media (min-width: 48em) {
+  .drawer-navbar {
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+  }
+
   .drawer-navbar .drawer-navbar-header {
     border-bottom: 0;
   }
@@ -441,12 +436,12 @@
   .drawer-navbar .drawer-nav {
     position: relative;
     left: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
     overflow: visible;
     width: auto;
     height: 60px;
     padding-top: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 
   .drawer-navbar .drawer-menu {
@@ -455,15 +450,14 @@
 
   /*! dropdown */
   .drawer-navbar .drawer-dropdown-menu {
-    border: 1px solid #ddd;
     position: absolute;
     width: 260px;
+    border: 1px solid #ddd;
   }
 
   .drawer-navbar .drawer-dropdown-menu-item {
-    padding-left: 1rem;
+    padding-left: .75rem;
   }
-
 }
 /*!------------------------------------*\
     Dropdown
@@ -487,10 +481,8 @@
   line-height: 60px;
   display: block;
   padding: 0;
-  padding-right: 16px;
-  padding-right: 1rem;
-  padding-left: 32px;
-  padding-left: 2rem;
+  padding-right: .75rem;
+  padding-left: 1.5rem;
   text-decoration: none;
   color: #222;
 }
