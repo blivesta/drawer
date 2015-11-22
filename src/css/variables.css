@@ -11,7 +11,7 @@
 
   --drawer-transition: all .8s cubic-bezier(0.190, 1.000, 0.220, 1.000);
 
-  --drawer-gutter-x: .75rem;
+  --drawer-gutter-x: 12px;
 
   --drawer-fontSize: 1rem;
   --drawer-borderColor: #ddd;
@@ -29,7 +29,7 @@
   --drawer-brand-color: var(--drawer-color);
 
   --drawer-hamburger-color: var(--drawer-color);
-  --drawer-hamburger-width: 54px;
+  --drawer-hamburger-width: 32px;
   --drawer-hamburger-bgColor: transparent;
   --drawer-hamburger-hover-bgColor: transparent;
 

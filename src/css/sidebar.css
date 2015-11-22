@@ -12,7 +12,7 @@
 
 @media (--drawer-viewport-md) {
 
-  .drawer--sidebar .drawer-toggle {
+  .drawer--sidebar .drawer-hamburger {
     display: none;
     visibility: hidden;
   }
