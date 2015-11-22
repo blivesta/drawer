@@ -6,8 +6,8 @@
   background-color: var(--drawer-bgColor);
 }
 
-.drawer--sidebar .drawer-contants {
-  background-color: var(--drawer-pageContants-bgColor);
+.drawer--sidebar .drawer-contents {
+  background-color: var(--drawer-pageContents-bgColor);
 }
 
 @media (--drawer-viewport-md) {
@@ -31,7 +31,7 @@
     border-right: 1px solid var(--drawer-borderColor);
   }
 
-  .drawer--sidebar.drawer--left .drawer-contants {
+  .drawer--sidebar.drawer--left .drawer-contents {
     margin-left: var(--drawer-width-md);
   }
 
@@ -41,7 +41,7 @@
     border-left: 1px solid var(--drawer-borderColor);
   }
 
-  .drawer--sidebar.drawer--right .drawer-contants {
+  .drawer--sidebar.drawer--right .drawer-contents {
     margin-right: var(--drawer-width-md);
   }
 }
@@ -51,11 +51,11 @@
     width: var(--drawer-width-lg);
   }
 
-  .drawer--sidebar.drawer--left .drawer-contants {
+  .drawer--sidebar.drawer--left .drawer-contents {
     margin-left: var(--drawer-width-lg);
   }
 
-  .drawer--sidebar.drawer--right .drawer-contants {
+  .drawer--sidebar.drawer--right .drawer-contents {
     margin-right: var(--drawer-width-lg);
   }
 }

@@ -40,7 +40,7 @@
   --drawer-dropdown-hover-color: var(--drawer-hover-color);
   --drawer-dropdown-hover-bgColor: transparent;
 
-  --drawer-pageContants-bgColor: #fff;
+  --drawer-pageContents-bgColor: #fff;
 
   --drawer-overlay-zIndex: 100;
   --drawer-nav-zIndex: calc(var(--drawer-overlay-zIndex) + 1);
