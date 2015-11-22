@@ -3,25 +3,16 @@
 \*!------------------------------------*/
 
 .drawer--left .drawer-nav {
-  left: 0;
-  transform: translate3d(calc(0 - var(--drawer-width)), 0, 0);
+  left: calc(0 - var(--drawer-width));
+  transition: left var(--drawer-transitionDuration) var(--drawer-transitionFunction);
 }
 
-.drawer--left.drawer-open .drawer-nav {
-  transform: translate3d(0, 0, 0);
-}
-
-/*! hamburger */
-.drawer--left .drawer-hamburger {
+.drawer--left.drawer-open .drawer-nav,
+.drawer--left .drawer-hamburger,
+.drawer--left.drawer-open .drawer-navbar .drawer-hamburger {
   left: 0;
-  transform: translate3d(0, 0, 0);
 }
 
 .drawer--left.drawer-open .drawer-hamburger {
-  transform: translate3d(var(--drawer-width), 0, 0);
-}
-
-/*! navbar */
-.drawer--left.drawer-open .drawer-navbar .drawer-hamburger {
-  transform: translate3d(0, 0, 0);
+  left: var(--drawer-width);
 }

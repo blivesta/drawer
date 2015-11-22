@@ -9,7 +9,8 @@
 
   --drawer-top-nav-maxHeight: 100%;
 
-  --drawer-transition: all .8s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  --drawer-transitionDuration: .6s;
+  --drawer-transitionFunction: cubic-bezier(0.190, 1.000, 0.220, 1.000);
 
   --drawer-gutter-x: 12px;
 

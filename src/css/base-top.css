@@ -3,26 +3,19 @@
 \*!------------------------------------*/
 
 .drawer--top .drawer-nav {
+  top: calc(0 - var(--drawer-top-nav-maxHeight));
+  left: 0;
   width: 100%;
   height: auto;
-  left:0;
   max-height: var(--drawer-top-nav-maxHeight);
-  transform: translate3d(0, -100%, 0);
+  transition: top var(--drawer-transitionDuration) var(--drawer-transitionFunction);
 }
 
 .drawer--top.drawer-open .drawer-nav {
-  transform: translate3d(0, 0, 0);
+  top: 0;
 }
 
-.drawer--top.drawer-open .drawer-menu {
-  padding-bottom: 0;
-}
-
-/*! hamburger */
-.drawer--top .drawer-hamburger {
-  right: 0;
-}
-
+.drawer--top .drawer-hamburger,
 .drawer--top.drawer-open .drawer-hamburger {
   right: 0;
 }

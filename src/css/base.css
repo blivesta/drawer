@@ -9,7 +9,6 @@
   overflow: hidden;
   width: var(--drawer-width);
   height: 100%;
-  transition: var(--drawer-transition);
   color: var(--drawer-color);
   background-color: var(--drawer-bgColor);
 }
