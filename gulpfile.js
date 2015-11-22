@@ -36,7 +36,12 @@ var dirs = {
 gulp.task('css', function () {
   var processors = [
     cssimport,
-    cssnext,
+    cssnext({
+      features: {
+        colorRgba: false,
+        rem: false
+      }
+    })
   ];
   return gulp
     .src(dirs.src + '/css/drawer.css')
