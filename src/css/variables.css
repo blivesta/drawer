@@ -14,26 +14,21 @@
   --drawer-gutter-x: .75rem;
 
   --drawer-fontSize: 1rem;
-
-  --drawer-brand-fontSize: 1.5rem;
-  --drawer-brand-fontWeight: bold;
+  --drawer-borderColor: #ddd;
 
   --drawer-color: #222;
   --drawer-bgColor: #fff;
-
   --drawer-link-color: var(--drawer-color);
   --drawer-hover-color: #555;
   --drawer-hover-bgColor: transparent;
   --drawer-focus-color: var(--drawer-link-color);
   --drawer-focus-bgColor: #f5f5f5;
 
-  --drawer-borderColor: #ddd;
-
+  --drawer-brand-fontSize: 1.5rem;
+  --drawer-brand-fontWeight: bold;
   --drawer-brand-color: var(--drawer-color);
 
   --drawer-hamburger-color: var(--drawer-color);
-
-  --drawer-overlay-bgColor: rgba(0, 0, 0, .2);
   --drawer-hamburger-width: 54px;
   --drawer-hamburger-bgColor: transparent;
   --drawer-hamburger-hover-bgColor: transparent;
@@ -44,6 +39,7 @@
   --drawer-dropdown-hover-bgColor: transparent;
 
   --drawer-pageContents-bgColor: #fff;
+  --drawer-overlay-bgColor: rgba(0, 0, 0, .2);
 
   --drawer-overlay-zIndex: 100;
   --drawer-nav-zIndex: calc(var(--drawer-overlay-zIndex) + 1);

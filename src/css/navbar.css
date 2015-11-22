@@ -1,19 +1,18 @@
 /*!------------------------------------*\
     Navbar
 \*!------------------------------------*/
-
 .drawer-topGutter {
   padding-top: var(--drawer-navbar-height);
 }
 
 .drawer-navbar .drawer-navbar-header {
-  background-color: var(--drawer-bgColor);
   border-bottom: 1px solid var(--drawer-borderColor);
+  background-color: var(--drawer-bgColor);
 }
 
 .drawer-navbar {
-  top:0;
   z-index: var(--drawer-navbar-zIndex);
+  top: 0;
   width: 100%;
 }
 
@@ -34,10 +33,10 @@
 
 .drawer-navbar .drawer-brand {
   line-height: var(--drawer-navbar-height);
+  display: inline-block;
   padding-top: 0;
   padding-bottom: 0;
   text-decoration: none;
-  display: inline-block;
 }
 
 .drawer-navbar .drawer-brand:hover {
@@ -51,7 +50,6 @@
 .drawer-navbar .drawer-menu {
   padding-bottom: calc(var(--drawer-navbar-height) * 2);
 }
-
 
 @media (--drawer-viewport-md) {
   .drawer-navbar {
@@ -102,11 +100,11 @@
   .drawer-navbar .drawer-nav {
     position: relative;
     left: 0;
-    transform: translate3d(0, 0, 0);
     overflow: visible;
     width: auto;
     height: var(--drawer-navbar-height);
     padding-top: 0;
+    transform: translate3d(0, 0, 0);
   }
 
   .drawer-navbar .drawer-menu {
@@ -115,13 +113,12 @@
 
   /*! dropdown */
   .drawer-navbar .drawer-dropdown-menu {
-    border: 1px solid var(--drawer-borderColor);
     position: absolute;
     width: var(--drawer-navbar-dropdown-width);
+    border: 1px solid var(--drawer-borderColor);
   }
 
   .drawer-navbar .drawer-dropdown-menu-item {
     padding-left: var(--drawer-gutter-x);
   }
-
 }
