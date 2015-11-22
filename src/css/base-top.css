@@ -5,6 +5,7 @@
 .drawer--top .drawer-nav {
   width: 100%;
   height: auto;
+  left:0;
   max-height: var(--drawer-top-nav-maxHeight);
   transform: translate3d(0, -100%, 0);
 }

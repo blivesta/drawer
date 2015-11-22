@@ -6,7 +6,6 @@
   padding-top: var(--drawer-navbar-height);
 }
 
-.drawer-navbar,
 .drawer-navbar .drawer-navbar-header {
   background-color: var(--drawer-bgColor);
   border-bottom: 1px solid var(--drawer-borderColor);
@@ -24,7 +23,7 @@
 }
 
 .drawer-navbar-header {
-  position: absolute;
+  position: relative;
   z-index: var(--drawer-navbar-zIndex);
   box-sizing: border-box;
   width: 100%;
@@ -55,6 +54,11 @@
 
 
 @media (--drawer-viewport-md) {
+  .drawer-navbar {
+    border-bottom: 1px solid var(--drawer-borderColor);
+    background-color: var(--drawer-bgColor);
+  }
+
   .drawer-navbar .drawer-navbar-header {
     border-bottom: 0;
   }
