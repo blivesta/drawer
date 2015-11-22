@@ -7,7 +7,7 @@
   z-index: var(--drawer-hamburger-zIndex);
   top: 0;
   display: block;
-  width: 64px;
+  width: var(--drawer-hamburger-width);
   padding-left: var(--drawer-gutter-x);
   padding-right: var(--drawer-gutter-x);
   padding-top: 18px;
@@ -15,11 +15,12 @@
   border: 0;
   outline: 0;
   transition: var(--drawer-transition);
-  background-color: transparent;
+  background-color: var(--drawer-hamburger-bgColor);
 }
 
 .drawer-hamburger:hover {
   cursor: pointer;
+  background-color: var(--drawer-hamburger-hover-bgColor);
 }
 
 .drawer-hamburger-icon {

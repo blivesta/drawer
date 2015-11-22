@@ -34,6 +34,9 @@
   --drawer-hamburger-color: var(--drawer-color);
 
   --drawer-overlay-bgColor: rgba(0, 0, 0, .2);
+  --drawer-hamburger-width: 54px;
+  --drawer-hamburger-bgColor: transparent;
+  --drawer-hamburger-hover-bgColor: transparent;
 
   --drawer-dropdown-color: var(--drawer-link-color);
   --drawer-dropdown-bgColor: var(--drawer-bgColor);
