@@ -53,20 +53,24 @@
 
 @media #{$drawer-viewport-md} {
   .drawer-navbar {
+    height: $drawer-navbar-height;
     border-bottom: 1px solid $drawer-borderColor;
     background-color: $drawer-bgColor;
-    height: $drawer-navbar-height;
   }
 
   .drawer-navbar .drawer-navbar-header {
-    border-bottom: 0;
+    position: relative;
+    display: block;
+    float: left;
+    width: auto;
+    padding: 0;
+    border: 0;
   }
 
   .drawer-navbar .drawer-menu--right {
     float: right;
   }
 
-  .drawer-navbar .drawer-menu--left,
   .drawer-navbar .drawer-menu li {
     float: left;
   }
@@ -75,18 +79,6 @@
     line-height: $drawer-navbar-height;
     padding-top: 0;
     padding-bottom: 0;
-  }
-
-  .drawer-navbar-header {
-    position: relative;
-    float: left;
-    width: auto;
-    padding: 0;
-    border: 0;
-  }
-
-  .drawer-navbar .drawer-brand {
-    display: block;
   }
 
   .drawer-navbar .drawer-hamburger {
