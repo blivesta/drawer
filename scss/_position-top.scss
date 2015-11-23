@@ -1,0 +1,20 @@
+/*!------------------------------------*\
+    Top
+\*!------------------------------------*/
+.drawer--top .drawer-nav {
+  top: (0 - $drawer-top-nav-maxHeight);
+  left: 0;
+  width: 100%;
+  height: auto;
+  max-height: $drawer-top-nav-maxHeight;
+  transition: top $drawer-transitionDuration $drawer-transitionFunction;
+}
+
+.drawer--top.drawer-open .drawer-nav {
+  top: 0;
+}
+
+.drawer--top .drawer-hamburger,
+.drawer--top.drawer-open .drawer-hamburger {
+  right: 0;
+}

@@ -1,0 +1,60 @@
+/*!------------------------------------*\
+    Base
+\*!------------------------------------*/
+.drawer-nav {
+  position: fixed;
+  z-index: $drawer-nav-zIndex;
+  top: 0;
+  overflow: hidden;
+  width: $drawer-width;
+  height: 100%;
+  color: $drawer-color;
+  background-color: $drawer-bgColor;
+}
+
+.drawer-brand {
+  font-size: $drawer-brand-fontSize;
+  font-weight: bold;
+  line-height: $drawer-navbar-height;
+  display: block;
+  padding-right: $drawer-gutter-x;
+  padding-left: $drawer-gutter-x;
+  text-decoration: none;
+  color: $drawer-brand-color;
+}
+
+.drawer-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.drawer-menu-item {
+  font-size: $drawer-fontSize;
+  display: block;
+  padding: $drawer-gutter-x;
+  text-decoration: none;
+  color: $drawer-link-color;
+}
+
+.drawer-menu-item:hover {
+  text-decoration: underline;
+  color: $drawer-hover-color;
+  background-color: $drawer-hover-bgColor;
+}
+
+/*! overlay */
+.drawer-overlay {
+  position: fixed;
+  z-index: $drawer-overlay-zIndex;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: $drawer-overlay-bgColor;
+}
+
+.drawer-open .drawer-overlay {
+  display: block;
+}

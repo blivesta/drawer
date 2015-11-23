@@ -1,0 +1,120 @@
+/*!------------------------------------*\
+    Navbar
+\*!------------------------------------*/
+.drawer--navbarTopGutter {
+  padding-top: $drawer-navbar-height;
+}
+
+.drawer-navbar .drawer-navbar-header {
+  border-bottom: 1px solid $drawer-borderColor;
+  background-color: $drawer-bgColor;
+}
+
+.drawer-navbar {
+  z-index: $drawer-navbar-zIndex;
+  top: 0;
+  width: 100%;
+}
+
+/*! .drawer-navbar modifier */
+.drawer-navbar--fixed {
+  position: fixed;
+}
+
+.drawer-navbar-header {
+  position: relative;
+  z-index: $drawer-navbar-zIndex;
+  box-sizing: border-box;
+  width: 100%;
+  height: $drawer-navbar-height;
+  padding: 0 $drawer-gutter-x;
+  text-align: center;
+}
+
+.drawer-navbar .drawer-brand {
+  line-height: $drawer-navbar-height;
+  display: inline-block;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-decoration: none;
+}
+
+.drawer-navbar .drawer-brand:hover {
+  background-color: transparent;
+}
+
+.drawer-navbar .drawer-nav {
+  padding-top: $drawer-navbar-height;
+}
+
+.drawer-navbar .drawer-menu {
+  padding-bottom: ($drawer-navbar-height * 2);
+}
+
+@media #{$drawer-viewport-md} {
+  .drawer-navbar {
+    border-bottom: 1px solid $drawer-borderColor;
+    background-color: $drawer-bgColor;
+    height: $drawer-navbar-height;
+  }
+
+  .drawer-navbar .drawer-navbar-header {
+    border-bottom: 0;
+  }
+
+  .drawer-navbar .drawer-menu--right {
+    float: right;
+  }
+
+  .drawer-navbar .drawer-menu--left,
+  .drawer-navbar .drawer-menu li {
+    float: left;
+  }
+
+  .drawer-navbar .drawer-menu-item {
+    line-height: $drawer-navbar-height;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .drawer-navbar-header {
+    position: relative;
+    float: left;
+    width: auto;
+    padding: 0;
+    border: 0;
+  }
+
+  .drawer-navbar .drawer-brand {
+    display: block;
+  }
+
+  .drawer-navbar .drawer-hamburger {
+    display: none;
+  }
+
+  .drawer-navbar .drawer-nav {
+    position: relative;
+    left: 0;
+    overflow: visible;
+    width: auto;
+    height: $drawer-navbar-height;
+    padding-top: 0;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .drawer-navbar .drawer-menu {
+    padding: 0;
+  }
+
+  /*! dropdown */
+  .drawer-navbar .drawer-dropdown-menu {
+    position: absolute;
+    width: $drawer-navbar-dropdown-width;
+    border: 1px solid $drawer-borderColor;
+  }
+
+  .drawer-navbar .drawer-dropdown-menu-item {
+    padding-left: $drawer-gutter-x;
+  }
+}

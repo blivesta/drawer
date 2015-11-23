@@ -1,0 +1,50 @@
+
+
+
+$drawer-width: 16.25rem !default;
+$drawer-width-md: 12.5rem !default;
+$drawer-width-lg: $drawer-width !default;
+$drawer-navbar-dropdown-width: $drawer-width !default;
+$drawer-container-maxWidth-sm: 48rem !default;
+$drawer-container-maxWidth-md: 60rem !default;
+$drawer-container-maxWidth-lg: 70rem !default;
+$drawer-navbar-height: 3.75rem !default;
+$drawer-top-nav-maxHeight: 100% !default;
+$drawer-transitionDuration: .6s !default;
+$drawer-transitionFunction: cubic-bezier(0.190, 1.000, 0.220, 1.000) !default;
+$drawer-gutter-x: .75rem !default;
+$drawer-fontSize: 1rem !default;
+$drawer-borderColor: #ddd !default;
+$drawer-color: #222 !default;
+$drawer-bgColor: #fff !default;
+$drawer-link-color: $drawer-color !default;
+$drawer-hover-color: #555 !default;
+$drawer-hover-bgColor: transparent !default;
+$drawer-focus-color: $drawer-link-color !default;
+$drawer-focus-bgColor: #f5f5f5 !default;
+$drawer-brand-fontSize: 1.5rem !default;
+$drawer-brand-fontWeight: bold !default;
+$drawer-brand-color: $drawer-color !default;
+$drawer-hamburger-color: $drawer-color !default;
+$drawer-hamburger-width: 2rem !default;
+$drawer-hamburger-bgColor: transparent !default;
+$drawer-hamburger-hover-bgColor: transparent !default;
+$drawer-dropdown-color: $drawer-link-color !default;
+$drawer-dropdown-bgColor: $drawer-bgColor !default;
+$drawer-dropdown-hover-color: $drawer-hover-color !default;
+$drawer-dropdown-hover-bgColor: transparent !default;
+$drawer-pageContents-bgColor: #fff !default;
+$drawer-overlay-bgColor: rgba(0, 0, 0, .2) !default;
+$drawer-overlay-zIndex: 100 !default;
+$drawer-nav-zIndex: ($drawer-overlay-zIndex + 1) !default;
+$drawer-navbar-zIndex: ($drawer-overlay-zIndex + 2) !default;
+$drawer-brand-zIndex: ($drawer-overlay-zIndex + 3) !default;
+$drawer-hamburger-zIndex: ($drawer-overlay-zIndex + 4) !default;
+
+
+
+$drawer-viewport-sm: '(min-width: 40em)' !default;
+$drawer-viewport-md: '(min-width: 64em)' !default;
+$drawer-viewport-lg: '(min-width: 75em)' !default;
+
+

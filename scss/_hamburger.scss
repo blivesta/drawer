@@ -1,0 +1,70 @@
+/*!------------------------------------*\
+    Hamburger
+\*!------------------------------------*/
+.drawer-hamburger {
+  position: fixed;
+  z-index: $drawer-hamburger-zIndex;
+  top: 0;
+  display: block;
+  box-sizing: content-box;
+  width: $drawer-hamburger-width;
+  padding: 0;
+  padding-top: 18px;
+  padding-right: $drawer-gutter-x;
+  padding-bottom: 30px;
+  padding-left: $drawer-gutter-x;
+  transition: all $drawer-transitionDuration $drawer-transitionFunction;
+  transform: translate3d(0, 0, 0);
+  border: 0;
+  outline: 0;
+  background-color: $drawer-hamburger-bgColor;
+}
+
+.drawer-hamburger:hover {
+  cursor: pointer;
+  background-color: $drawer-hamburger-hover-bgColor;
+}
+
+.drawer-hamburger-icon {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+}
+
+.drawer-hamburger-icon,
+.drawer-hamburger-icon:before,
+.drawer-hamburger-icon:after {
+  width: 100%;
+  height: 2px;
+  transition: all $drawer-transitionDuration $drawer-transitionFunction;
+  background-color: $drawer-hamburger-color;
+}
+
+.drawer-hamburger-icon:before,
+.drawer-hamburger-icon:after {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  content: ' ';
+}
+
+.drawer-hamburger-icon:after {
+  top: 10px;
+}
+
+.drawer-open .drawer-hamburger-icon {
+  background-color: transparent;
+}
+
+.drawer-open .drawer-hamburger-icon:before,
+.drawer-open .drawer-hamburger-icon:after {
+  top: 0;
+}
+
+.drawer-open .drawer-hamburger-icon:before {
+  transform: rotate(45deg);
+}
+
+.drawer-open .drawer-hamburger-icon:after {
+  transform: rotate(-45deg);
+}
