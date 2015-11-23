@@ -1,7 +1,6 @@
 /*!------------------------------------*\
     Hamburger
 \*!------------------------------------*/
-
 .drawer-hamburger {
   position: fixed;
   z-index: var(--drawer-hamburger-zIndex);
@@ -15,6 +14,7 @@
   padding-bottom: 30px;
   padding-left: var(--drawer-gutter-x);
   transition: all var(--drawer-transitionDuration) var(--drawer-transitionFunction);
+  transform: translate3d(0, 0, 0);
   border: 0;
   outline: 0;
   background-color: var(--drawer-hamburger-bgColor);
