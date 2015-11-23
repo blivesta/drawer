@@ -5,6 +5,7 @@ var browserReload = browserSync.reload;
 var cssnano = require('cssnano');
 var cssnext = require('postcss-cssnext');
 var cssimport = require('postcss-import')
+var cssscss = require('gulp-css-scss');
 var del = require('del');
 var gulp = require('gulp');
 var header = require('gulp-header');
@@ -12,8 +13,10 @@ var jshint = require('gulp-jshint');
 var pkg = require('./package.json');
 var postcss = require('gulp-postcss');
 var rename = require('gulp-rename');
+var replace = require('gulp-replace');
 var runSequence = require('run-sequence');
 var stylish = require('jshint-stylish');
+var strip = require('gulp-strip-comments');
 var uglify = require('gulp-uglify');
 var banner = [
 '/*!',
@@ -30,10 +33,11 @@ var dirs = {
   src:'./src',
   dist:'./dist',
   sandbox:'./sandbox',
+  scss:'./scss'
 };
 
 
-gulp.task('css', function () {
+gulp.task('css', ['cssscss'], function () {
   var processors = [
     cssimport,
     cssnext({
@@ -57,6 +61,25 @@ gulp.task('css', function () {
 });
 
 
+gulp.task('cssscss', ['cssscss:all'], function () {
+  return gulp
+    .src([ dirs.scss + '/_drawer.scss' ])
+    .pipe(rename({ basename: 'drawer' }))
+    .pipe(gulp.dest(dirs.scss))
+});
+
+
+gulp.task('cssscss:all', function () {
+  return gulp
+    .src([ dirs.src + '/css/*.css' ])
+    .pipe(cssscss())
+    .pipe(strip({ safe: true }))
+    .pipe(replace('\n\n\n\n\n\n\n', ''))
+    .pipe(rename({ prefix: '_' }))
+    .pipe(gulp.dest(dirs.scss))
+});
+
+
 gulp.task('js', function(){
   return gulp
     .src(dirs.src + '/js/drawer.js')
@@ -72,7 +95,10 @@ gulp.task('js', function(){
 
 
 gulp.task('cleanup', function(cb){
-  return del([ dirs.dist ], cb);
+  return del([
+    dirs.dist,
+    dirs.scss
+  ], cb);
 });
 
 
