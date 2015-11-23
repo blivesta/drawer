@@ -29,7 +29,7 @@
         class: {
           nav: 'drawer-nav',
           toggle: 'drawer-toggle',
-          upper: 'drawer-overlay',
+          overlay: 'drawer-overlay',
           open: 'drawer-open',
           close: 'drawer-close',
           dropdown: 'drawer-dropdown'
@@ -75,9 +75,9 @@
     addOverlay: function() {
       var _this = this;
       var $this = $(this);
-      var $upper = $('<div>').addClass(__.settings.class.upper + ' ' + __.settings.class.toggle);
+      var $overlay = $('<div>').addClass(__.settings.class.overlay + ' ' + __.settings.class.toggle);
 
-      return $this.append($upper);
+      return $this.append($overlay);
     },
 
     toggle: function() {
