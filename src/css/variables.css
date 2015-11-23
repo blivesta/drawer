@@ -1,18 +1,18 @@
 :root {
-  --drawer-width: 260px;
-  --drawer-width-md: 200px;
+  --drawer-width: 16.25rem;
+  --drawer-width-md: 12.5rem;
   --drawer-width-lg: var(--drawer-width);
   --drawer-navbar-dropdown-width: var(--drawer-width);
   --drawer-navbar-container-maxWidth: 1200px;
 
-  --drawer-navbar-height: 60px;
+  --drawer-navbar-height: 3.75rem;
 
   --drawer-top-nav-maxHeight: 100%;
 
   --drawer-transitionDuration: .6s;
   --drawer-transitionFunction: cubic-bezier(0.190, 1.000, 0.220, 1.000);
 
-  --drawer-gutter-x: 12px;
+  --drawer-gutter-x: .75rem;
 
   --drawer-fontSize: 1rem;
   --drawer-borderColor: #ddd;
@@ -30,7 +30,7 @@
   --drawer-brand-color: var(--drawer-color);
 
   --drawer-hamburger-color: var(--drawer-color);
-  --drawer-hamburger-width: 32px;
+  --drawer-hamburger-width: 2rem;
   --drawer-hamburger-bgColor: transparent;
   --drawer-hamburger-hover-bgColor: transparent;
 
