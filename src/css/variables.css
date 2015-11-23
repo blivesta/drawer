@@ -49,6 +49,6 @@
   --drawer-hamburger-zIndex: calc(var(--drawer-overlay-zIndex) + 4);
 }
 
-@custom-media --drawer-viewport-sm (width <= 40em);
-@custom-media --drawer-viewport-md (width >= 48em);
-@custom-media --drawer-viewport-lg (width >= 75em);
+@custom-media --drawer-viewport-sm (min-width: 40em);
+@custom-media --drawer-viewport-md (min-width: 64em);
+@custom-media --drawer-viewport-lg (min-width: 75em);
