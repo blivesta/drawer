@@ -1,5 +1,5 @@
 /*!
- * jquery-drawer v3.0.0-beta.1
+ * jquery-drawer v3.0.0
  * Flexible drawer menu using jQuery, iScroll and CSS.
  * http://git.blivesta.com/drawer
  * License : MIT
