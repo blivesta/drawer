@@ -1,7 +1,6 @@
 /*!------------------------------------*\
     Sidebar
 \*!------------------------------------*/
-
 .drawer--sidebar {
   background-color: var(--drawer-bgColor);
 }
@@ -11,7 +10,6 @@
 }
 
 @media (--drawer-viewport-md) {
-
   .drawer--sidebar .drawer-hamburger {
     display: none;
     visibility: hidden;
