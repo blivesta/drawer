@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-teal">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sandbox: Drawer - Navbar Left (position: fixed)</title>
+  <title>Sandbox: Drawer Top with fixed navbar</title>
   <link href="sandbox.css" rel="stylesheet">
   <link href="../dist/css/drawer.css" rel="stylesheet">
 </head>
-<body class="drawer drawer--left drawer-topGutter">
+<body class="drawer drawer--top drawer--navbarTopGutter">
 
   <header class="drawer-navbar drawer-navbar--fixed" role="banner">
-    <div class="drawer-navbar-container">
+    <div class="drawer-container">
       <div class="drawer-navbar-header">
-        <a class="drawer-brand drawer-brand--navber" href="./index.html">Drawer</a>
+        <a class="drawer-brand" href="./index.html">Drawer</a>
         <button type="button" class="drawer-toggle drawer-hamburger">
           <span class="sr-only">toggle navigation</span>
           <span class="drawer-hamburger-icon"></span>
@@ -22,19 +22,27 @@
 
       <nav class="drawer-nav" role="navigation">
         <ul class="drawer-menu">
+          <li><a class="drawer-menu-item" href="./top.html">Top</a></li>
           <li><a class="drawer-menu-item" href="./index.html">Left</a></li>
           <li><a class="drawer-menu-item" href="./right.html">Right</a></li>
-          <li><a class="drawer-menu-item" href="./top.html">Top</a></li>
           <li class="drawer-dropdown">
-            <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+            <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
               Navbar <span class="drawer-caret"></span>
             </a>
             <ul class="drawer-dropdown-menu">
-              <li><a class="drawer-dropdown-menu-item" href="./navbar-left.html">Left <small>(position: fixed)</small></a></li>
-              <li><a class="drawer-dropdown-menu-item" href="./navbar-left-static.html">Left <small>(position: static)</small></a></li>
-              <li><a class="drawer-dropdown-menu-item" href="./navbar-right.html">Right <small>(position: fixed)</small></a></li>
-              <li><a class="drawer-dropdown-menu-item" href="./navbar-top.html">Top <small>(position: fixed)</small></a></li>
-              <li><a class="drawer-dropdown-menu-item" href="./navbar-dropdown-hover.html">Dropdown hover</a></li>
+              <li><a class="drawer-dropdown-menu-item" href="./navbar-top.html">Top</a></li>
+              <li><a class="drawer-dropdown-menu-item" href="./navbar-left.html">Left</a></li>
+              <li><a class="drawer-dropdown-menu-item" href="./navbar-right.html">Right</a></li>
+            </ul>
+          </li>
+          <li class="drawer-dropdown">
+            <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+              Fixed navbar <span class="drawer-caret"></span>
+            </a>
+            <ul class="drawer-dropdown-menu">
+              <li><a class="drawer-dropdown-menu-item" href="./fixed-navbar-top.html">Top</a></li>
+              <li><a class="drawer-dropdown-menu-item" href="./fixed-navbar-left.html">Left</a></li>
+              <li><a class="drawer-dropdown-menu-item" href="./fixed-navbar-right.html">Right</a></li>
             </ul>
           </li>
           <li class="drawer-dropdown">
@@ -53,12 +61,9 @@
   </header>
 
   <!-- content -->
-  <main role="main" class="sandbox">
-    <section class="item bg-pink">
-      <h1>Drawer: Navbar dropdown hover</h1>
-    </section>
-    <section class="item item--height800">
-      <h2>Contents</h2>
+  <main role="main">
+    <section class="item">
+      <h1>Drawer Top with fixed navbar</h1>
     </section>
   </main>
 
@@ -69,9 +74,6 @@
   <script>
     $(document).ready(function() {
       $('.drawer').drawer();
-      $('.drawer-dropdown').hover(function(){
-        $('[data-toggle="dropdown"]', this).trigger('click');
-      });
     });
   </script>
 

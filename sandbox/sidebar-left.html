@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sandbox: Drawer - Sidebar Left</title>
+  <title>Sandbox: Drawer Left with sidebar</title>
   <link href="sandbox.css" rel="stylesheet">
   <link href="../dist/css/drawer.min.css" rel="stylesheet">
 </head>
@@ -19,19 +19,27 @@
     <nav class="drawer-nav" role="navigation">
       <ul class="drawer-menu">
         <li><a class="drawer-brand" href="./index.html">Drawer</a></li>
+        <li><a class="drawer-menu-item" href="./top.html">Top</a></li>
         <li><a class="drawer-menu-item" href="./index.html">Left</a></li>
         <li><a class="drawer-menu-item" href="./right.html">Right</a></li>
-        <li><a class="drawer-menu-item" href="./top.html">Top</a></li>
         <li class="drawer-dropdown">
-          <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+          <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
             Navbar <span class="drawer-caret"></span>
           </a>
           <ul class="drawer-dropdown-menu">
-            <li><a class="drawer-dropdown-menu-item" href="./navbar-left.html">Left <small>(position: fixed)</small></a></li>
-            <li><a class="drawer-dropdown-menu-item" href="./navbar-left-static.html">Left <small>(position: static)</small></a></li>
-            <li><a class="drawer-dropdown-menu-item" href="./navbar-right.html">Right <small>(position: fixed)</small></a></li>
-            <li><a class="drawer-dropdown-menu-item" href="./navbar-top.html">Top <small>(position: fixed)</small></a></li>
-            <li><a class="drawer-dropdown-menu-item" href="./navbar-dropdown-hover.html">Dropdown hover</a></li>
+            <li><a class="drawer-dropdown-menu-item" href="./navbar-top.html">Top</a></li>
+            <li><a class="drawer-dropdown-menu-item" href="./navbar-left.html">Left</a></li>
+            <li><a class="drawer-dropdown-menu-item" href="./navbar-right.html">Right</a></li>
+          </ul>
+        </li>
+        <li class="drawer-dropdown">
+          <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+            Fixed navbar <span class="drawer-caret"></span>
+          </a>
+          <ul class="drawer-dropdown-menu">
+            <li><a class="drawer-dropdown-menu-item" href="./fixed-navbar-top.html">Top</a></li>
+            <li><a class="drawer-dropdown-menu-item" href="./fixed-navbar-left.html">Left</a></li>
+            <li><a class="drawer-dropdown-menu-item" href="./fixed-navbar-right.html">Right</a></li>
           </ul>
         </li>
         <li class="drawer-dropdown">
@@ -50,12 +58,9 @@
   </header>
 
   <!-- content -->
-  <main role="main" class="drawer-contents sandbox">
-    <section class="item bg-blueGrey">
-      <h1>Drawer: Sidebar Left</h1>
-    </section>
-    <section class="item item--height2000">
-      <h2>Contents</h2>
+  <main role="main" class="drawer-contents">
+    <section class="item bg-amber">
+      <h1>Drawer Left with Sidebar</h1>
     </section>
   </main>
 
