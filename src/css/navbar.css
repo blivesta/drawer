@@ -1,7 +1,7 @@
 /*!------------------------------------*\
     Navbar
 \*!------------------------------------*/
-.drawer-topGutter {
+.drawer--navbarTopGutter {
   padding-top: var(--drawer-navbar-height);
 }
 
@@ -55,6 +55,7 @@
   .drawer-navbar {
     border-bottom: 1px solid var(--drawer-borderColor);
     background-color: var(--drawer-bgColor);
+    height: var(--drawer-navbar-height);
   }
 
   .drawer-navbar .drawer-navbar-header {
