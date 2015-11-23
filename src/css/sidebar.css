@@ -44,6 +44,11 @@
   .drawer--sidebar.drawer--right .drawer-contents {
     margin-right: var(--drawer-width-md);
   }
+
+  /*! container */
+  .drawer--sidebar .drawer-container {
+    max-width: var(--drawer-container-maxWidth-sm);
+  }
 }
 
 @media (--drawer-viewport-lg) {
@@ -57,5 +62,10 @@
 
   .drawer--sidebar.drawer--right .drawer-contents {
     margin-right: var(--drawer-width-lg);
+  }
+
+  /*! container */
+  .drawer--sidebar .drawer-container {
+    max-width: var(--drawer-container-maxWidth-md);
   }
 }

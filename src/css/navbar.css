@@ -76,11 +76,6 @@
     padding-bottom: 0;
   }
 
-  .drawer-navbar-container {
-    max-width: var(--drawer-navbar-container-maxWidth);
-    margin: 0 auto;
-  }
-
   .drawer-navbar-header {
     position: relative;
     float: left;

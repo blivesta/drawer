@@ -3,7 +3,9 @@
   --drawer-width-md: 12.5rem;
   --drawer-width-lg: var(--drawer-width);
   --drawer-navbar-dropdown-width: var(--drawer-width);
-  --drawer-navbar-container-maxWidth: 1200px;
+  --drawer-container-maxWidth-sm: 48rem;
+  --drawer-container-maxWidth-md: 60rem;
+  --drawer-container-maxWidth-lg: 70rem;
 
   --drawer-navbar-height: 3.75rem;
 

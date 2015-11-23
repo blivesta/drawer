@@ -1,0 +1,19 @@
+/*!------------------------------------*\
+    Container
+\*!------------------------------------*/
+.drawer-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (--drawer-viewport-md) {
+  .drawer-container {
+    max-width: var(--drawer-container-maxWidth-md);
+  }
+}
+
+@media (--drawer-viewport-lg) {
+  .drawer-container {
+    max-width: var(--drawer-container-maxWidth-lg);
+  }
+}
