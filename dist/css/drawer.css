@@ -9,13 +9,12 @@
 /*!------------------------------------*\
     Base
 \*!------------------------------------*/
-
 .drawer-nav {
   position: fixed;
   z-index: 101;
   top: 0;
   overflow: hidden;
-  width: 260px;
+  width: 16.25rem;
   height: 100%;
   color: #222;
   background-color: #fff;
@@ -24,10 +23,10 @@
 .drawer-brand {
   font-size: 1.5rem;
   font-weight: bold;
-  line-height: 60px;
+  line-height: 3.75rem;
   display: block;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-right: .75rem;
+  padding-left: .75rem;
   text-decoration: none;
   color: #222;
 }
@@ -41,7 +40,7 @@
 .drawer-menu-item {
   font-size: 1rem;
   display: block;
-  padding: 12px;
+  padding: .75rem;
   text-decoration: none;
   color: #222;
 }
@@ -70,7 +69,6 @@
 /*!------------------------------------*\
     Top
 \*!------------------------------------*/
-
 .drawer--top .drawer-nav {
   top: -100%;
   left: 0;
@@ -92,9 +90,8 @@
 /*!------------------------------------*\
     Left
 \*!------------------------------------*/
-
 .drawer--left .drawer-nav {
-  left: -260px;
+  left: -16.25rem;
   -webkit-transition: left .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
   transition: left .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
 }
@@ -106,14 +103,13 @@
 }
 
 .drawer--left.drawer-open .drawer-hamburger {
-  left: 260px;
+  left: 16.25rem;
 }
 /*!------------------------------------*\
     Right
 \*!------------------------------------*/
-
 .drawer--right .drawer-nav {
-  right: -260px;
+  right: -16.25rem;
   -webkit-transition: right .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
   transition: right .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
 }
@@ -125,26 +121,27 @@
 }
 
 .drawer--right.drawer-open .drawer-hamburger {
-  right: 260px;
+  right: 16.25rem;
 }
 /*!------------------------------------*\
     Hamburger
 \*!------------------------------------*/
-
 .drawer-hamburger {
   position: fixed;
   z-index: 104;
   top: 0;
   display: block;
   box-sizing: content-box;
-  width: 32px;
+  width: 2rem;
   padding: 0;
   padding-top: 18px;
-  padding-right: 12px;
+  padding-right: .75rem;
   padding-bottom: 30px;
-  padding-left: 12px;
+  padding-left: .75rem;
   -webkit-transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
   transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   border: 0;
   outline: 0;
   background-color: transparent;
@@ -239,7 +236,6 @@
 /*!------------------------------------*\
     Sidebar
 \*!------------------------------------*/
-
 .drawer--sidebar {
   background-color: #fff;
 }
@@ -248,8 +244,7 @@
   background-color: #fff;
 }
 
-@media (min-width: 48em) {
-
+@media (min-width: 64em) {
   .drawer--sidebar .drawer-hamburger {
     display: none;
     visibility: hidden;
@@ -261,7 +256,7 @@
         -ms-transform: none;
             transform: none;
     position: fixed;
-    width: 200px;
+    width: 12.5rem;
     height: 100%;
   }
 
@@ -272,7 +267,7 @@
   }
 
   .drawer--sidebar.drawer--left .drawer-contents {
-    margin-left: 200px;
+    margin-left: 12.5rem;
   }
 
   /*! Right */
@@ -282,28 +277,38 @@
   }
 
   .drawer--sidebar.drawer--right .drawer-contents {
-    margin-right: 200px;
+    margin-right: 12.5rem;
+  }
+
+  /*! container */
+  .drawer--sidebar .drawer-container {
+    max-width: 48rem;
   }
 }
 
 @media (min-width: 75em) {
   .drawer--sidebar .drawer-nav {
-    width: 260px;
+    width: 16.25rem;
   }
 
   .drawer--sidebar.drawer--left .drawer-contents {
-    margin-left: 260px;
+    margin-left: 16.25rem;
   }
 
   .drawer--sidebar.drawer--right .drawer-contents {
-    margin-right: 260px;
+    margin-right: 16.25rem;
+  }
+
+  /*! container */
+  .drawer--sidebar .drawer-container {
+    max-width: 60rem;
   }
 }
 /*!------------------------------------*\
     Navbar
 \*!------------------------------------*/
-.drawer-topGutter {
-  padding-top: 60px;
+.drawer--navbarTopGutter {
+  padding-top: 3.75rem;
 }
 
 .drawer-navbar .drawer-navbar-header {
@@ -327,13 +332,13 @@
   z-index: 102;
   box-sizing: border-box;
   width: 100%;
-  height: 60px;
-  padding: 0 12px;
+  height: 3.75rem;
+  padding: 0 .75rem;
   text-align: center;
 }
 
 .drawer-navbar .drawer-brand {
-  line-height: 60px;
+  line-height: 3.75rem;
   display: inline-block;
   padding-top: 0;
   padding-bottom: 0;
@@ -345,17 +350,18 @@
 }
 
 .drawer-navbar .drawer-nav {
-  padding-top: 60px;
+  padding-top: 3.75rem;
 }
 
 .drawer-navbar .drawer-menu {
-  padding-bottom: 120px;
+  padding-bottom: 7.5rem;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   .drawer-navbar {
     border-bottom: 1px solid #ddd;
     background-color: #fff;
+    height: 3.75rem;
   }
 
   .drawer-navbar .drawer-navbar-header {
@@ -372,14 +378,9 @@
   }
 
   .drawer-navbar .drawer-menu-item {
-    line-height: 60px;
+    line-height: 3.75rem;
     padding-top: 0;
     padding-bottom: 0;
-  }
-
-  .drawer-navbar-container {
-    max-width: 1200px;
-    margin: 0 auto;
   }
 
   .drawer-navbar-header {
@@ -403,7 +404,7 @@
     left: 0;
     overflow: visible;
     width: auto;
-    height: 60px;
+    height: 3.75rem;
     padding-top: 0;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
@@ -416,18 +417,17 @@
   /*! dropdown */
   .drawer-navbar .drawer-dropdown-menu {
     position: absolute;
-    width: 260px;
+    width: 16.25rem;
     border: 1px solid #ddd;
   }
 
   .drawer-navbar .drawer-dropdown-menu-item {
-    padding-left: 12px;
+    padding-left: .75rem;
   }
 }
 /*!------------------------------------*\
     Dropdown
 \*!------------------------------------*/
-
 .drawer-dropdown-menu {
   display: none;
   box-sizing: border-box;
@@ -443,11 +443,11 @@
 }
 
 .drawer-dropdown-menu-item {
-  line-height: 60px;
+  line-height: 3.75rem;
   display: block;
   padding: 0;
-  padding-right: 12px;
-  padding-left: 24px;
+  padding-right: .75rem;
+  padding-left: 1.5rem;
   text-decoration: none;
   color: #222;
 }
@@ -487,4 +487,23 @@
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+/*!------------------------------------*\
+    Container
+\*!------------------------------------*/
+.drawer-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 64em) {
+  .drawer-container {
+    max-width: 60rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .drawer-container {
+    max-width: 70rem;
+  }
 }
