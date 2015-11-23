@@ -17,10 +17,6 @@
         iscroll: {
           mouseWheel: true,
           preventDefault: false
-        },
-        dropdownEvents: {
-          opened: 'shown.bs.dropdown',
-          closed: 'hidden.bs.dropdown'
         }
       }, options);
 
@@ -37,6 +33,10 @@
         events: {
           opened: 'drawer.opened',
           closed: 'drawer.closed'
+        },
+        dropdownEvents: {
+          opened: 'shown.bs.dropdown',
+          closed: 'hidden.bs.dropdown'
         }
       };
 
@@ -64,7 +64,7 @@
           });
 
           $('.' + __.settings.class.dropdown)
-            .on(options.dropdownEvents.opened + ' ' + options.dropdownEvents.closed, function() {
+            .on(__.settings.dropdownEvents.opened + ' ' + __.settings.dropdownEvents.closed, function() {
               return iScroll.refresh();
             });
         }
