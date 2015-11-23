@@ -1,0 +1,17 @@
+/*!------------------------------------*\
+    Right
+\*!------------------------------------*/
+.drawer--right .drawer-nav {
+  right: calc(0 - var(--drawer-width));
+  transition: right var(--drawer-transitionDuration) var(--drawer-transitionFunction);
+}
+
+.drawer--right.drawer-open .drawer-nav,
+.drawer--right .drawer-hamburger,
+.drawer--right.drawer-open .drawer-navbar .drawer-hamburger {
+  right: 0;
+}
+
+.drawer--right.drawer-open .drawer-hamburger {
+  right: var(--drawer-width);
+}
