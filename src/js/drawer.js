@@ -17,7 +17,8 @@
         iscroll: {
           mouseWheel: true,
           preventDefault: false
-        }
+        },
+        showOverlay: true
       }, options);
 
       __.settings = {
@@ -51,7 +52,9 @@
 
           var iScroll = new IScroll('.' + __.settings.class.nav, options.iscroll);
 
-          __.addOverlay.call(_this);
+          if (options.showOverlay) {
+            __.addOverlay.call(_this);
+          }
 
           $('.' + __.settings.class.toggle).on('click.' + namespace, function() {
             __.toggle.call(_this);
