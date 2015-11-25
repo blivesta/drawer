@@ -6,27 +6,32 @@
 
 > Flexible drawer menu using jQuery, iScroll and CSS.
 
-## Demo & Installation
+## [Demo & Installation](http://git.blivesta.com/drawer/)
 
-http://git.blivesta.com/drawer/
+### CDN
 
-## CDN
+cdnjs
 
-[cdnjs](https://cdnjs.com/libraries/drawer)
- - css/drawer.css
- - css/drawer.min.css
- - js/drawer.js
- - js/drawer.min.js
+- [jQuery](https://cdnjs.com/libraries/jquery)
+- [iScroll](https://cdnjs.com/libraries/iScroll)
+- [Drawer](https://cdnjs.com/libraries/drawer)
 
-[jsDelivr](http://jsdelivr.com/#!drawer)
-- drawer.min.css
-- drawer.min.js
+### Package Managers
 
+npm
 
-## Contributing
+```
+$ npm install jquery iscroll jquery-drawer
+```
 
-To contribute to Drawer, clone this repo locally and commit your code.
-Please check that everything works before opening a pull-request.
+bower
+
+```
+$ bower install drawer
+```
+## Dependencies
+- [jQuery 1.7](https://github.com/jquery/jquery)
+- [iScroll 5](https://github.com/cubiq/iscroll)
 
 ## Development
 
@@ -55,5 +60,10 @@ $ gulp
 - [@jasonniebauer](https://github.com/jasonniebauer)
 - [@mrDinckleman](https://github.com/mrDinckleman)
 
-##License
+## Contributing
+
+To contribute to Drawer, clone this repo locally and commit your code.
+Please check that everything works before opening a pull-request.
+
+## License
 Copyright 2014-2015 Released under the [MIT license](https://github.com/blivesta/drawer/blob/master/LICENSE.md).
