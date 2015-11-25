@@ -18,6 +18,7 @@ var runSequence = require('run-sequence');
 var stylish = require('jshint-stylish');
 var strip = require('gulp-strip-comments');
 var uglify = require('gulp-uglify');
+
 var banner = [
 '/*!',
 ' * <%= pkg.name %> v<%= pkg.version %>',
@@ -28,6 +29,8 @@ var banner = [
 ' */',
 '',
 ''].join('\n');
+
+var cleanupLine = '\n\n\n\n\n\n\n';
 
 var dirs = {
   src:'./src',
@@ -61,22 +64,27 @@ gulp.task('css', ['cssscss'], function () {
 });
 
 
-gulp.task('cssscss', ['cssscss:all'], function () {
+gulp.task('cssscss', ['cssscss:drawer'], function () {
   return gulp
-    .src([ dirs.scss + '/_drawer.scss' ])
-    .pipe(rename({ basename: 'drawer' }))
-    .pipe(gulp.dest(dirs.scss))
+    .src([
+      '!' + dirs.src + '/css/drawer.css',
+      dirs.src + '/css/*.css'
+     ])
+    .pipe(cssscss())
+    .pipe(strip({ safe: true }))
+    .pipe(replace(cleanupLine, ''))
+    .pipe(rename({ prefix: '_' }))
+    .pipe(gulp.dest(dirs.scss));
 });
 
 
-gulp.task('cssscss:all', function () {
+gulp.task('cssscss:drawer', function () {
   return gulp
-    .src([ dirs.src + '/css/*.css' ])
+    .src([ dirs.src + '/css/drawer.css' ])
     .pipe(cssscss())
     .pipe(strip({ safe: true }))
-    .pipe(replace('\n\n\n\n\n\n\n', ''))
-    .pipe(rename({ prefix: '_' }))
-    .pipe(gulp.dest(dirs.scss))
+    .pipe(replace(cleanupLine, ''))
+    .pipe(gulp.dest(dirs.scss));
 });
 
 
