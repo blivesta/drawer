@@ -59,6 +59,7 @@ $ gulp
 - [@PeterDaveHello](https://github.com/PeterDaveHello)
 - [@jasonniebauer](https://github.com/jasonniebauer)
 - [@mrDinckleman](https://github.com/mrDinckleman)
+- [@magicmarkker](https://github.com/magicmarkker)
 
 ## Contributing
 
