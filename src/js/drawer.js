@@ -23,14 +23,6 @@
 
       __.settings = {
         state: false,
-        class: {
-          nav: 'drawer-nav',
-          toggle: 'drawer-toggle',
-          overlay: 'drawer-overlay',
-          open: 'drawer-open',
-          close: 'drawer-close',
-          dropdown: 'drawer-dropdown'
-        },
         events: {
           opened: 'drawer.opened',
           closed: 'drawer.closed'
@@ -40,6 +32,15 @@
           closed: 'hidden.bs.dropdown'
         }
       };
+
+      __.settings.class = $.extend({
+        nav: 'drawer-nav',
+        toggle: 'drawer-toggle',
+        overlay: 'drawer-overlay',
+        open: 'drawer-open',
+        close: 'drawer-close',
+        dropdown: 'drawer-dropdown'
+      }, options.class);
 
       return this.each(function() {
         var _this = this;
