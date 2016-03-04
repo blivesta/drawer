@@ -51,7 +51,7 @@
           options = $.extend({}, options);
           $this.data(namespace, { options: options });
 
-          var iScroll = new IScroll('.' + __.settings.class.nav, options.iscroll);
+          __.refresh.call(_this);
 
           if (options.showOverlay) {
             __.addOverlay.call(_this);
@@ -59,21 +59,28 @@
 
           $('.' + __.settings.class.toggle).on('click.' + namespace, function() {
             __.toggle.call(_this);
-            return iScroll.refresh();
+            return _this.iScroll.refresh();
           });
 
           $(window).resize(function() {
             __.close.call(_this);
-            return iScroll.refresh();
+            return _this.iScroll.refresh();
           });
 
           $('.' + __.settings.class.dropdown)
             .on(__.settings.dropdownEvents.opened + ' ' + __.settings.dropdownEvents.closed, function() {
-              return iScroll.refresh();
+              return _this.iScroll.refresh();
             });
         }
 
       }); // end each
+    },
+
+    refresh: function refreshIScroll() {
+      this.iScroll = new IScroll(
+        '.' + __.settings.class.nav,
+        $(this).data(namespace).options.iscroll
+      );
     },
 
     addOverlay: function() {
