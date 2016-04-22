@@ -1,4 +1,4 @@
-;(function (factory) {
+;(function umd(factory) {
   'use strict';
   if (typeof define === 'function' && define.amd) {
     define(['jquery'], factory);
@@ -7,12 +7,12 @@
   } else {
     factory(jQuery);
   }
-}(function($) {
+}(function Drawer($) {
   'use strict';
   var namespace = 'drawer';
   var touches = typeof document.ontouchstart != 'undefined';
   var __ = {
-    init: function(options) {
+    init: function init(options) {
       options = $.extend({
         iscroll: {
           mouseWheel: true,
@@ -42,7 +42,7 @@
         dropdown: 'drawer-dropdown'
       }, options.class);
 
-      return this.each(function() {
+      return this.each(function instantiateDrawer() {
         var _this = this;
         var $this = $(this);
         var data = $this.data(namespace);
@@ -57,18 +57,18 @@
             __.addOverlay.call(_this);
           }
 
-          $('.' + __.settings.class.toggle).on('click.' + namespace, function() {
+          $('.' + __.settings.class.toggle).on('click.' + namespace, function toggle() {
             __.toggle.call(_this);
             return _this.iScroll.refresh();
           });
 
-          $(window).resize(function() {
+          $(window).resize(function close() {
             __.close.call(_this);
             return _this.iScroll.refresh();
           });
 
           $('.' + __.settings.class.dropdown)
-            .on(__.settings.dropdownEvents.opened + ' ' + __.settings.dropdownEvents.closed, function() {
+            .on(__.settings.dropdownEvents.opened + ' ' + __.settings.dropdownEvents.closed, function onOpenedOrClosed() {
               return _this.iScroll.refresh();
             });
         }
@@ -76,14 +76,14 @@
       }); // end each
     },
 
-    refresh: function refreshIScroll() {
+    refresh: function refresh() {
       this.iScroll = new IScroll(
         '.' + __.settings.class.nav,
         $(this).data(namespace).options.iscroll
       );
     },
 
-    addOverlay: function() {
+    addOverlay: function addOverlay() {
       var _this = this;
       var $this = $(this);
       var $overlay = $('<div>').addClass(__.settings.class.overlay + ' ' + __.settings.class.toggle);
@@ -91,22 +91,22 @@
       return $this.append($overlay);
     },
 
-    toggle: function() {
+    toggle: function toggle() {
       var _this = this;
 
-      if (__.settings.state){
+      if (__.settings.state) {
         return __.close.call(_this);
       } else {
         return __.open.call(_this);
       }
     },
 
-    open: function(options) {
+    open: function open(options) {
       var $this = $(this);
       options = $this.data(namespace).options;
 
       if (touches) {
-        $this.on('touchmove.' + namespace, function(event) {
+        $this.on('touchmove.' + namespace, function disableTouch(event) {
           event.preventDefault();
         });
       }
@@ -115,13 +115,13 @@
         .removeClass(__.settings.class.close)
         .addClass(__.settings.class.open)
         .css({ 'overflow': 'hidden' })
-        .drawerCallback(function(){
+        .drawerCallback(function triggerOpenedListeners() {
           __.settings.state = true;
           $this.trigger(__.settings.events.opened);
         });
     },
 
-    close: function(options) {
+    close: function close(options) {
       var $this = $(this);
       options = $this.data(namespace).options;
 
@@ -131,14 +131,14 @@
         .removeClass(__.settings.class.open)
         .addClass(__.settings.class.close)
         .css({ 'overflow': 'auto' })
-        .drawerCallback(function(){
+        .drawerCallback(function triggerClosedListeners() {
           __.settings.state = false;
           $this.trigger(__.settings.events.closed);
         });
     },
 
-    destroy: function() {
-      return this.each(function() {
+    destroy: function destroy() {
+      return this.each(function destroyEach() {
         var $this = $(this);
         $(window).off('.' + namespace);
         $this.removeData(namespace);
@@ -147,18 +147,18 @@
 
   };
 
-  $.fn.drawerCallback = function(callback){
+  $.fn.drawerCallback = function drawerCallback(callback) {
     var end = 'transitionend webkitTransitionEnd';
-    return this.each(function() {
+    return this.each(function setAnimationEndHandler() {
       var $this = $(this);
-      $this.on(end, function(){
+      $this.on(end, function invokeCallbackOnAnimationEnd() {
         $this.off(end);
         return callback.call(this);
       });
     });
   };
 
-  $.fn.drawer = function(method) {
+  $.fn.drawer = function drawer(method) {
     if (__[method]) {
       return __[method].apply(this, Array.prototype.slice.call(arguments, 1));
     } else if (typeof method === 'object' || !method) {
