@@ -101,9 +101,8 @@
       }
     },
 
-    open: function open(options) {
+    open: function open() {
       var $this = $(this);
-      options = $this.data(namespace).options;
 
       if (touches) {
         $this.on('touchmove.' + namespace, function disableTouch(event) {
@@ -121,9 +120,8 @@
         });
     },
 
-    close: function close(options) {
+    close: function close() {
       var $this = $(this);
-      options = $this.data(namespace).options;
 
       if (touches) $this.off('touchmove.' + namespace);
 
