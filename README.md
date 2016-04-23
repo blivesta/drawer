@@ -21,13 +21,13 @@ cdnjs
 npm
 
 ```
-$ npm install jquery iscroll jquery-drawer
+$ npm install jquery-drawer jquery iscroll
 ```
 
 bower
 
 ```
-$ bower install drawer
+$ bower install drawer jquery iscroll
 ```
 ## Dependencies
 - [jQuery 1.7](https://github.com/jquery/jquery)
@@ -60,6 +60,7 @@ $ gulp
 - [@jasonniebauer](https://github.com/jasonniebauer)
 - [@mrDinckleman](https://github.com/mrDinckleman)
 - [@magicmarkker](https://github.com/magicmarkker)
+- [@mrodrigues](https://github.com/mrodrigues)
 
 ## Contributing
 
@@ -67,4 +68,4 @@ To contribute to Drawer, clone this repo locally and commit your code.
 Please check that everything works before opening a pull-request.
 
 ## License
-Copyright 2014-2015 Released under the [MIT license](https://github.com/blivesta/drawer/blob/master/LICENSE.md).
+Copyright 2014-2016 Released under the [MIT license](https://github.com/blivesta/drawer/blob/master/LICENSE.md).
