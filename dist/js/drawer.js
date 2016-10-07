@@ -1,5 +1,5 @@
 /*!
- * jquery-drawer v3.2.0
+ * jquery-drawer v3.2.1
  * Flexible drawer menu using jQuery, iScroll and CSS.
  * http://git.blivesta.com/drawer
  * License : MIT
@@ -70,7 +70,7 @@
             return _this.iScroll.refresh();
           });
 
-          $(window).resize(function close() {
+          $(window).on('resize.' + namespace, function close() {
             __.close.call(_this);
             return _this.iScroll.refresh();
           });
@@ -92,7 +92,6 @@
     },
 
     addOverlay: function addOverlay() {
-      var _this = this;
       var $this = $(this);
       var $overlay = $('<div>').addClass(__.settings.class.overlay + ' ' + __.settings.class.toggle);
 
@@ -145,9 +144,16 @@
 
     destroy: function destroy() {
       return this.each(function destroyEach() {
+        var _this = this;
         var $this = $(this);
-        $(window).off('.' + namespace);
-        $this.removeData(namespace);
+        $('.' + __.settings.class.toggle).off('click.' + namespace);
+        $(window).off('resize.' + namespace);
+        $('.' + __.settings.class.dropdown).off(__.settings.dropdownEvents.opened + ' ' + __.settings.dropdownEvents.closed);
+        _this.iScroll.destroy();
+        $this
+          .removeData(namespace)
+          .find('.' + __.settings.class.overlay)
+          .remove();
       });
     }
 
