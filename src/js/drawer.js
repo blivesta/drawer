@@ -84,7 +84,6 @@
     },
 
     addOverlay: function addOverlay() {
-      var _this = this;
       var $this = $(this);
       var $overlay = $('<div>').addClass(__.settings.class.overlay + ' ' + __.settings.class.toggle);
 
