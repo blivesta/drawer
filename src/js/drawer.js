@@ -62,7 +62,7 @@
             return _this.iScroll.refresh();
           });
 
-          $(window).resize(function close() {
+          $(window).on('resize.' + namespace, function close() {
             __.close.call(_this);
             return _this.iScroll.refresh();
           });
@@ -136,9 +136,16 @@
 
     destroy: function destroy() {
       return this.each(function destroyEach() {
+        var _this = this;
         var $this = $(this);
-        $(window).off('.' + namespace);
-        $this.removeData(namespace);
+        $('.' + __.settings.class.toggle).off('click.' + namespace);
+        $(window).off('resize.' + namespace);
+        $('.' + __.settings.class.dropdown).off(__.settings.dropdownEvents.opened + ' ' + __.settings.dropdownEvents.closed);
+        _this.iScroll.destroy();
+        $this
+          .removeData(namespace)
+          .find('.' + __.settings.class.overlay)
+          .remove();
       });
     }
 
