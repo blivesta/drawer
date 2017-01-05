@@ -112,7 +112,6 @@
       return $this
         .removeClass(__.settings.class.close)
         .addClass(__.settings.class.open)
-        .css({ 'overflow': 'hidden' })
         .drawerCallback(function triggerOpenedListeners() {
           __.settings.state = true;
           $this.trigger(__.settings.events.opened);
@@ -127,7 +126,6 @@
       return $this
         .removeClass(__.settings.class.open)
         .addClass(__.settings.class.close)
-        .css({ 'overflow': 'auto' })
         .drawerCallback(function triggerClosedListeners() {
           __.settings.state = false;
           $this.trigger(__.settings.events.closed);

@@ -58,3 +58,7 @@
 .drawer-open .drawer-overlay {
   display: block;
 }
+
+.drawer-open {
+  overflow: hidden;
+}
