@@ -191,13 +191,11 @@
 
 .drawer-open .drawer-hamburger-icon:before {
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
 .drawer-open .drawer-hamburger-icon:after {
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 /*!------------------------------------*\
@@ -253,7 +251,6 @@
   .drawer--sidebar .drawer-nav {
     display: block;
     -webkit-transform: none;
-        -ms-transform: none;
             transform: none;
     position: fixed;
     width: 12.5rem;
@@ -466,7 +463,6 @@
   transition: transform .2s ease, opacity .2s ease;
   transition: transform .2s ease, opacity .2s ease, -webkit-transform .2s ease;
   -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
           transform: rotate(0deg);
   vertical-align: middle;
   border-top: 4px solid;
@@ -477,7 +473,6 @@
 /*! open */
 .drawer-dropdown.open .drawer-caret {
   -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 /*!------------------------------------*\
