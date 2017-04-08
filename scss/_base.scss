@@ -1,6 +1,11 @@
 /*!------------------------------------*\
     Base
 \*!------------------------------------*/
+
+.drawer-open {
+  overflow: hidden !important;
+}
+
 .drawer-nav {
   position: fixed;
   z-index: $drawer-nav-zIndex;
@@ -57,8 +62,4 @@
 
 .drawer-open .drawer-overlay {
   display: block;
-}
-
-.drawer-open {
-  overflow: hidden;
 }
