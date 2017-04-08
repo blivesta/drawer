@@ -1,5 +1,5 @@
 /*!
- * jquery-drawer v3.2.1
+ * jquery-drawer v3.2.2
  * Flexible drawer menu using jQuery, iScroll and CSS.
  * http://git.blivesta.com/drawer
  * License : MIT
@@ -57,6 +57,7 @@
 }
 
 /*! overlay */
+
 .drawer-overlay {
   position: fixed;
   z-index: 100;
@@ -71,9 +72,11 @@
 .drawer-open .drawer-overlay {
   display: block;
 }
+
 /*!------------------------------------*\
     Top
 \*!------------------------------------*/
+
 .drawer--top .drawer-nav {
   top: -100%;
   left: 0;
@@ -92,9 +95,11 @@
 .drawer--top.drawer-open .drawer-hamburger {
   right: 0;
 }
+
 /*!------------------------------------*\
     Left
 \*!------------------------------------*/
+
 .drawer--left .drawer-nav {
   left: -16.25rem;
   -webkit-transition: left .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
@@ -110,9 +115,11 @@
 .drawer--left.drawer-open .drawer-hamburger {
   left: 16.25rem;
 }
+
 /*!------------------------------------*\
     Right
 \*!------------------------------------*/
+
 .drawer--right .drawer-nav {
   right: -16.25rem;
   -webkit-transition: right .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
@@ -128,9 +135,11 @@
 .drawer--right.drawer-open .drawer-hamburger {
   right: 16.25rem;
 }
+
 /*!------------------------------------*\
     Hamburger
 \*!------------------------------------*/
+
 .drawer-hamburger {
   position: fixed;
   z-index: 104;
@@ -203,6 +212,7 @@
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
+
 /*!------------------------------------*\
     accessibility
 \*!------------------------------------*/
@@ -211,6 +221,7 @@
  * Only display content to screen readers
  * See: http://a11yproject.com/posts/how-to-hide-content
  */
+
 .sr-only {
   position: absolute;
   overflow: hidden;
@@ -227,6 +238,7 @@
  * Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
  * Credit: HTML5 Boilerplate
  */
+
 .sr-only-focusable:active,
 .sr-only-focusable:focus {
   position: static;
@@ -236,9 +248,11 @@
   height: auto;
   margin: 0;
 }
+
 /*!------------------------------------*\
     Sidebar
 \*!------------------------------------*/
+
 .drawer--sidebar {
   background-color: #fff;
 }
@@ -306,9 +320,11 @@
     max-width: 60rem;
   }
 }
+
 /*!------------------------------------*\
     Navbar
 \*!------------------------------------*/
+
 .drawer--navbarTopGutter {
   padding-top: 3.75rem;
 }
@@ -325,6 +341,7 @@
 }
 
 /*! .drawer-navbar modifier */
+
 .drawer-navbar--fixed {
   position: fixed;
 }
@@ -419,9 +436,11 @@
     padding-left: .75rem;
   }
 }
+
 /*!------------------------------------*\
     Dropdown
 \*!------------------------------------*/
+
 .drawer-dropdown-menu {
   display: none;
   box-sizing: border-box;
@@ -453,11 +472,13 @@
 }
 
 /*! open */
+
 .drawer-dropdown.open > .drawer-dropdown-menu {
   display: block;
 }
 
 /*! drawer-caret */
+
 .drawer-dropdown .drawer-caret {
   display: inline-block;
   width: 0;
@@ -476,13 +497,16 @@
 }
 
 /*! open */
+
 .drawer-dropdown.open .drawer-caret {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
+
 /*!------------------------------------*\
     Container
 \*!------------------------------------*/
+
 .drawer-container {
   margin-right: auto;
   margin-left: auto;
