@@ -21,16 +21,16 @@ cdnjs
 npm
 
 ```
-$ npm install jquery-drawer jquery iscroll
+$ npm install jquery-drawer jquery@2.2.4 iscroll
 ```
 
 bower
 
 ```
-$ bower install drawer jquery iscroll
+$ bower install drawer jquery#2.2.4 iscroll
 ```
 ## Dependencies
-- [jQuery 1.7](https://github.com/jquery/jquery)
+- [jQuery 1.9.1+](https://github.com/jquery/jquery)
 - [iScroll 5](https://github.com/cubiq/iscroll)
 
 ## Development
@@ -61,6 +61,7 @@ $ gulp
 - [@mrDinckleman](https://github.com/mrDinckleman)
 - [@magicmarkker](https://github.com/magicmarkker)
 - [@mrodrigues](https://github.com/mrodrigues)
+- [@leorochael](https://github.com/leorochael)
 
 ## Contributing
 
