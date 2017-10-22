@@ -2,6 +2,7 @@
 
 ![Bower version](https://img.shields.io/bower/v/drawer.svg?style=flat)
 [![npm version](https://img.shields.io/npm/v/jquery-drawer.svg?style=flat)](https://www.npmjs.com/package/jquery-drawer)
+[![jsDelivr Hits](https://data.jsdelivr.com/v1/package/npm/jquery-drawer/badge?style=rounded)](https://www.jsdelivr.com/package/npm/jquery-drawer)
 [![Build Status](https://img.shields.io/travis/blivesta/drawer/master.svg?style=flat)](https://travis-ci.org/blivesta/drawer)
 
 > Flexible drawer menu using jQuery, iScroll and CSS.
