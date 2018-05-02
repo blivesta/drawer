@@ -10,11 +10,12 @@
   position: fixed;
   z-index: $drawer-nav-zIndex;
   top: 0;
-  overflow: hidden;
+  overflow-x: auto;
   width: $drawer-width;
   height: 100%;
   color: $drawer-color;
   background-color: $drawer-bgColor;
+  -webkit-overflow-scrolling: touch;
 }
 
 .drawer-brand {

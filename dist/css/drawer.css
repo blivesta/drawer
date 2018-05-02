@@ -18,11 +18,12 @@
   position: fixed;
   z-index: 101;
   top: 0;
-  overflow: hidden;
+  overflow-x: auto;
   width: 16.25rem;
   height: 100%;
   color: #222;
   background-color: #fff;
+  -webkit-overflow-scrolling: touch;
 }
 
 .drawer-brand {
@@ -83,7 +84,6 @@
   width: 100%;
   height: auto;
   max-height: 100%;
-  -webkit-transition: top .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
   transition: top .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
 }
 
@@ -102,7 +102,6 @@
 
 .drawer--left .drawer-nav {
   left: -16.25rem;
-  -webkit-transition: left .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
   transition: left .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
 }
 
@@ -122,7 +121,6 @@
 
 .drawer--right .drawer-nav {
   right: -16.25rem;
-  -webkit-transition: right .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
   transition: right .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
 }
 
@@ -152,10 +150,8 @@
   padding-right: .75rem;
   padding-bottom: 30px;
   padding-left: .75rem;
-  -webkit-transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
   transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   border: 0;
   outline: 0;
   background-color: transparent;
@@ -177,7 +173,6 @@
 .drawer-hamburger-icon:after {
   width: 100%;
   height: 2px;
-  -webkit-transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
   transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
   background-color: #222;
 }
@@ -204,13 +199,11 @@
 }
 
 .drawer-open .drawer-hamburger-icon:before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .drawer-open .drawer-hamburger-icon:after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 /*!------------------------------------*\
@@ -269,8 +262,7 @@
 
   .drawer--sidebar .drawer-nav {
     display: block;
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
     position: fixed;
     width: 12.5rem;
     height: 100%;
@@ -417,8 +409,7 @@
     width: auto;
     height: 3.75rem;
     padding-top: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 
   .drawer-navbar .drawer-menu {
@@ -484,12 +475,8 @@
   width: 0;
   height: 0;
   margin-left: 4px;
-  -webkit-transition: opacity .2s ease, -webkit-transform .2s ease;
-  transition: opacity .2s ease, -webkit-transform .2s ease;
   transition: transform .2s ease, opacity .2s ease;
-  transition: transform .2s ease, opacity .2s ease, -webkit-transform .2s ease;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transform: rotate(0deg);
   vertical-align: middle;
   border-top: 4px solid;
   border-right: 4px solid transparent;
@@ -499,8 +486,7 @@
 /*! open */
 
 .drawer-dropdown.open .drawer-caret {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 /*!------------------------------------*\
