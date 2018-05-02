@@ -14,10 +14,6 @@
   var __ = {
     init: function init(options) {
       options = $.extend({
-        iscroll: {
-          mouseWheel: true,
-          preventDefault: false
-        },
         showOverlay: true
       }, options);
 
@@ -51,36 +47,16 @@
           options = $.extend({}, options);
           $this.data(namespace, { options: options });
 
-          __.refresh.call(_this);
-
           if (options.showOverlay) {
             __.addOverlay.call(_this);
           }
 
           $('.' + __.settings.class.toggle).on('click.' + namespace, function toggle() {
-            __.toggle.call(_this);
-            return _this.iScroll.refresh();
+            return __.toggle.call(_this);
           });
-
-          $(window).on('resize.' + namespace, function close() {
-            __.close.call(_this);
-            return _this.iScroll.refresh();
-          });
-
-          $('.' + __.settings.class.dropdown)
-            .on(__.settings.dropdownEvents.opened + ' ' + __.settings.dropdownEvents.closed, function onOpenedOrClosed() {
-              return _this.iScroll.refresh();
-            });
         }
 
       }); // end each
-    },
-
-    refresh: function refresh() {
-      this.iScroll = new IScroll(
-        '.' + __.settings.class.nav,
-        $(this).data(namespace).options.iscroll
-      );
     },
 
     addOverlay: function addOverlay() {
@@ -137,9 +113,7 @@
         var _this = this;
         var $this = $(this);
         $('.' + __.settings.class.toggle).off('click.' + namespace);
-        $(window).off('resize.' + namespace);
         $('.' + __.settings.class.dropdown).off(__.settings.dropdownEvents.opened + ' ' + __.settings.dropdownEvents.closed);
-        _this.iScroll.destroy();
         $this
           .removeData(namespace)
           .find('.' + __.settings.class.overlay)
